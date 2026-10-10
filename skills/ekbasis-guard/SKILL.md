@@ -1,67 +1,98 @@
 ---
 name: ekbasis-guard
-description: Consult the Ekbasis consequence model BEFORE destructive or irreversible actions (git history work, rm on important data, database DDL/DML without WHERE, killing processes, deleting cloud resources, sending messages to many people). Use when about to run a command that could lose work, break production, or leak information — especially when the agent itself is unsure whether the action is safe.
+description: Consult the Ekbasis consequence model BEFORE actions that are hard to undo (git history work, rm/mv over data without a backup, database DDL/DML without a narrow WHERE, killing processes you did not start, deleting cloud resources, payments, cancellations, sharing links, sending messages to many people). Use when about to run a command or click that could lose work, break production, move money or leak information, especially when you cannot see every effect. Ekbasis forecasts what the action will do in this state; it does not decide for you.
 ---
 
 # Ekbasis guard: foresee before you act
 
-Ekbasis is a consequence model: given the **state** of the world and an **action**, it predicts what happens (calibrated, one forward pass, no LLM reasoning). This skill tells you when to consult it and how to read the answer.
+Ekbasis is a consequence model: given the **state** of the world and an **action**, it returns **calibrated
+probabilities** for typed questions (what happens, will work be lost, how many files keep their changes) in one
+forward pass. It does not write text or decide. You decide, with the human, what to do with the forecast.
+
+Full reference for agents (formats, errors, feedback): https://openinterp.org/ekbasis/agents.md
 
 ## When to consult
 
-Consult **before** any action that is hard to undo, in any of these classes:
+Before any action that is hard to undo:
 
-- **git**: history rewrites (`reset --hard`, `checkout -f`, `branch -D`, `push --force`, `filter-branch`), anything that touches uncommitted work or unreachable commits
-- **files**: `rm`/`mv`/`>` over data that has no backup or is not in git; globs; anything touching directories you did not create this session
-- **databases**: `DROP`, `TRUNCATE`, `DELETE`/`UPDATE` without WHERE, migrations (up AND down) on production
-- **processes**: `kill` of a PID you did not create yourself this session (stale notes lie — check `ps` first)
-- **cloud/infra**: deleting namespaces/PVCs/secrets, scaling down before peaks, switching contexts, `apply` with the wrong `--context`
-- **communication**: sending to more than ~5 people, reply-all, forwarding outside the original circle
+- **git**: `reset --hard`, `checkout -f`, `checkout -- <path>`, `restore`, `clean -fd`, `branch -D`, `stash drop/clear`,
+  `push --force`, history rewrites; anything touching uncommitted work or commits only one side has
+- **files**: `rm`/`mv`/`>` over data that is not in git or backed up; globs; folders you did not create this session
+- **databases**: `DROP`, `TRUNCATE`, `DELETE`/`UPDATE` without a narrow `WHERE`, migrations on real data
+- **processes / infra**: `kill` of a PID you did not start (stale notes lie: check `ps` first), deleting namespaces,
+  volumes or secrets, scaling down, `apply` with the wrong context
+- **apps and messages**: transfers and payments, cancellations, sharing links, deleting cloud files, reply-all or
+  sending outside the original circle, recurring calendar events
 
-If the action only creates new files, reads state, or is trivially undoable — **skip the consult**. Over-asking trains the human to click through.
+If the action only reads, creates something new, or is trivially undoable, **skip the consult**. Asking about
+everything trains the human to click through warnings.
 
 ## How to consult
 
-**CLI (when it is a git or shell command):**
+Setup: `pip install "git+https://github.com/OpenInterpretability/ekbasis"`, then
+`EKBASIS_URL=https://openinterp.org/api/v1` and `EKBASIS_API_KEY=ekb_…` (key at https://openinterp.org/console), or
+`EKBASIS_URL` pointing at your own server (open weights).
+
+**Git and shell commands — the CLI builds the state for you:**
 
 ```bash
-EKBASIS_URL=http://your-server:8010 ekbasis git-check -- "git reset --hard"
-EKBASIS_URL=http://your-server:8010 ekbasis shell-check -- "rm -rf $TMPDIR/*"
+ekbasis git-check -- "git reset --hard"
+ekbasis shell-check -- "rm -r build/"            # prototype
+ekbasis git-check -- "git checkout main" && git checkout main
 ```
 
-Exit codes: `0` ok · `2` RISKY (may lose work) · `3` cannot judge (**treat as risky**). `&&` chains: `ekbasis git-check -- "git checkout main" && git checkout main`.
+Exit codes: `0` no risk found · `2` RISKY · `3` CANNOT FORESEE (**treat it like 2**) · `1` usage error.
 
-**Raw API (when the action is not a shell command — calendar, mail, cloud, plans):**
+**Anything else — the raw API:** `POST $EKBASIS_URL/v1/systemone` with `Authorization: Bearer $EKBASIS_API_KEY`:
 
-```bash
-curl $EKBASIS_URL/v1/systemone -H "Content-Type: application/json" -d '{
-  "state": "<what exists now, the facts that matter>",
-  "questions": {"q": {"type": "choice", "instructions": "What happens if ...?",
-                      "options": ["<bad outcome>", "<good outcome>"]}}}'
+```json
+{"state": "Checking account available balance: $180.20. About to: transfer $250.00 to savings.",
+ "read_once": true,
+ "questions": {
+   "outcome": {"type": "choice", "instructions": "What happens with the transfer?",
+               "options": ["transfer succeeds", "transfer fails: insufficient funds"]},
+   "loss": {"type": "noul", "instructions": "Is any money lost or charged as a fee?",
+            "criteria": {"true": "money is lost or a fee is charged", "false": "no money is lost"}}}}
 ```
 
-Question types: `choice` (pick among outcomes), `noul`/`boolean` (yes/no loss question, returns `probability` of true), `score` (how many / how much). Several questions about one state go in **one request** (shared prefix, ~0.6 s for 3).
-
-## How to read the answer
-
-- **RISKY / p(bad) ≥ 0.5**: pause, show the human the reason, do not proceed without confirmation.
-- **ok / p(bad) < 0.2**: proceed.
-- **cannot judge**: the state is missing a fact — go **collect the missing fact** (read the file, check `ps`, look at the calendar) and ask again. Do not guess.
-- **Confidence is calibration, not decoration**: 0.59–0.84 on an ambiguous state means *the model honestly lacks information* — the same signals it shows at 0.99 when the world is fully described. Treat < 0.9 on a destructive action as "check first".
+Types: `choice` (list the outcomes, including the bad one), `noul` (yes/no with written criteria; `probability` is
+P(true)), `score` (a count or level with each value described). Put several questions about one state in one request
+with `"read_once": true`: the state is paid for once (3 questions: 261 input tokens instead of 420).
 
 ## The state you send
 
-Write the facts the action touches, not the whole world: the balance, the file list, the free space, the branch/remote divergence, the PID map, the current context. The git client already builds this for you (`git-check`). For raw API calls, 3–8 concrete facts beat 3 pages of context. States over ~30k tokens are refused.
+1. End with `About to: <exact command or click>`.
+2. Put the numbers in: balances, sizes, counts, limits, dates with time zones.
+3. Write the hidden consequences and rules you know of (the backup that exists, the fare rule that cancels the
+   return flight, the subfolder a link also exposes).
+4. Describe what is, not what you hope ("untracked: config.yaml", not "config is safe").
+5. Only the facts the action touches.
+
+## How to read the answer
+
+| Answer | What to do |
+|---|---|
+| p(bad) ≥ 0.5, or RISKY (exit 2) | Do not run it. Tell the human the reason in one line and offer the safer route (stash first, add a WHERE, back up, `--force-with-lease`, a narrower link). Run only after explicit confirmation. |
+| 0.2 ≤ p(bad) < 0.5 | For anything irreversible, treat as risky: ask, or take the safer route. |
+| p(bad) < 0.2 | No warning. **Not proof of safety**: keep your normal confirmations, backups and the human's instructions. |
+| Confidence ≈ 0.5–0.85 | The state is ambiguous or missing a fact. Collect it (read the file, `git status`, list the folder, read the policy) and ask again. Do not guess. |
+| CANNOT FORESEE (exit 3), HTTP 401/402/403/5xx, timeout | Fail closed: treat as risky; do not run the irreversible action without the human. |
+
+Never let Ekbasis override the human's explicit instruction or a policy you were given. When the request itself names
+the harmful action, confirm before doing it.
 
 ## Measured reference (Ekbasis-27B-INT4, October 2026)
 
 - Classic git losses: 8/8 flagged at 98–99%; 9 safe commands: 0 false alarms
-- 85-scenario intensive suite across money/disk/mail/calendar/cloud/db/deploy/shell/numeric/plans: 83/83
-- Known gap: `git push --force` against a diverged remote (remote loss is not flagged today) — double-check force-pushes yourself
-- Latency: ~0.5 s per check on GPU, 5–12 s on Mac MLX
+- Force-push over commits the remote holds: flagged since client 0.1.7
+- Agents in pre-registered studies: harmful actions fell for every model tested; Claude Sonnet on real apps 25.0% → 4.2%
+  (https://doi.org/10.5281/zenodo.23197341); Kubernetes: Haiku 66.7% → 5.6% (`docs/K8S_STUDY.md`)
+- Weak spots: domains far from training, never-seen command types, obfuscated commands; `shell-check` misses
+  `curl … | bash` and `kill -9 -1`. A warning layer, not a security boundary.
+- Latency: 0.4–2.5 s per check on the hosted API; 5–12 s on a Mac (MLX)
 
 ## Chaining in scripts
 
 ```bash
-ekbasis git-check -- "git reset --hard" || { echo "guard says: check first"; exit 2; }
+ekbasis git-check -- "git reset --hard" || { echo "Ekbasis: check first"; exit 2; }
 ```

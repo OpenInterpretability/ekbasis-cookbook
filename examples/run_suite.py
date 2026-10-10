@@ -3,6 +3,7 @@
 
 Usage:
     EKBASIS_URL=http://your-server:8010 python run_suite.py scenarios_intensive.jsonl
+    EKBASIS_URL=https://openinterp.org/api/v1 EKBASIS_API_KEY=ekb_... python run_suite.py scenarios_intensive.jsonl
 
 Each line: {"id", "domain", "state", "question": {...}, "expect"}
     expect: int    -> index into question.options that is the correct answer
@@ -20,7 +21,10 @@ URL = os.environ.get("EKBASIS_URL", "http://127.0.0.1:8000") + "/v1/systemone"
 def ask(state, question):
     body = json.dumps({"state": state, "questions": {"q": question}}).encode()
     t0 = time.time()
-    r = json.load(urllib.request.urlopen(urllib.request.Request(URL, body, {"Content-Type": "application/json"}), timeout=90))
+    headers = {"Content-Type": "application/json", "User-Agent": "ekbasis-cookbook/run_suite"}
+    if os.environ.get("EKBASIS_API_KEY"):
+        headers["Authorization"] = "Bearer " + os.environ["EKBASIS_API_KEY"]
+    r = json.load(urllib.request.urlopen(urllib.request.Request(URL, body, headers), timeout=90))
     return r["answers"]["q"], time.time() - t0
 
 def main(path):
