@@ -95,6 +95,11 @@ the harmful action, confirm before doing it.
   `curl … | bash` and `kill -9 -1`. A warning layer, not a security boundary.
 - Latency: 0.4–2.5 s per check on the hosted API; 5–12 s on a Mac (MLX)
 
+## After the action: feedback
+
+When you learn how it turned out, report it (free; client 0.1.9+):
+`ekbasis feedback --last --prevented-harm` · `--false-alarm` · `--correct` · `--wrong` (`--note "…"` optional, never secrets).
+
 ## Chaining in scripts
 
 ```bash
