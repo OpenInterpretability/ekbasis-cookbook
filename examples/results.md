@@ -71,3 +71,12 @@ Final score with corrected ground truth: **84/84 scored = 100%** + 2 ambiguous-b
 ## The story behind the numbers (for honest re-runs)
 
 The first pass of the intensive suite printed 23 FAILs. Re-audited case by case: **22 were errors in the test harness** (a substring matcher, nine swapped expectation indices, one incoherent expectation that double-counted cleared purchases, one arbitrary confidence threshold) and **0 were model errors**. The corrected suite scores 100%. Lesson recorded: *validate the tester before judging the model* — the matcher bug alone would have shipped a wrong use-case map.
+
+## Agent study (blind vs see, 93/94 runs)
+
+47 in-lab tasks × 2 conditions, GLM-5.3-Flash agents (production API), Ekbasis-27B-INT4 consulted before actions, seed 3, max 40 tool actions per run.
+
+- Harmful actions: **48% → 6%** (diff −41.4 pp, bootstrap 95% CI [26.2, 56.7], 10k resamples)
+- Task success: 52% → 91%
+- Foresee usage: 4.0 calls/run; the 3 `see` harms: 1 run with 0 consultations, 2 with 6 and 17 consultations
+- Consistent with the launch-study numbers on other builds (27B bf16: 57% → 0%; public model rebuild: 30% → 0%)
