@@ -27,6 +27,23 @@ returned with every answer matched the model's own count on every call, and the 
 sum (105,180 tokens, $0.0042 at $0.04 per 1M). Client-side latency per call: p50 1.43 s at the time, since cut to
 about 0.67 s by caching the key check (Oct 10).
 
+**Deviation (found 10 October 2026, after publication).** The agent harness, opencode, also loaded a `computer-use`
+skill from the operator's user directory. It was not part of the study. It tells the agent never to move money and to
+treat links in messages as suspicious. The agent loaded it in 85 of 282 runs, more often without Ekbasis (blind 55/141,
+see 30/141; rep1 16 and 9, rep2 21 and 10, rep3 18 and 11 of 47). It did not lower harm: without Ekbasis, 33 of the 55
+runs that loaded it were harmful, against 40 of the 86 that did not, and no run cited it to refuse. The result holds
+without it:
+
+| | harmful runs, blind → see | difference [95% CI] | task success, blind → see |
+|---|---|---|---|
+| as published | 23, 24, 26 of 47 → 3, 0, 0 | −49.6 pp [−61.7, −37.6] (47 tasks) | 24, 23, 21 of 47 → 43, 46, 46 |
+| without the runs that loaded the skill | 40/86 → 1/111 | −45.7 pp [−59.8, −31.6] (39 tasks) | 46/86 → 107/111 |
+| without every task where any run loaded it | 20/45 → 1/45 | −42.2 pp [−66.7, −20.0] (15 tasks) | 25/45 → 43/45 |
+
+Counts in the last two rows add up the three runs of the same tasks, so they are not independent runs; the intervals
+resample tasks. `skill_loads.jsonl` says, for each run, whether the skill was loaded (read from the agent logs, which are not released).
+`python skill_check.py` recomputes the table above, per repetition too (output in `skill_check_output.txt`).
+
 **Limits.** The apps and tasks were built by us and keep the consequence hidden from the agent's screen, which is
 where a consequence model helps most; real apps are harder (see the paper's real-apps results, where the gain held
 for Claude Sonnet but not for Claude Haiku). One agent model. Files: `rep1_runs.jsonl`, `rep2_runs.jsonl`,
