@@ -10,15 +10,14 @@ Every number in this repo was measured, not estimated. The suites are in [`examp
 
 ## The agent study: does the guard actually protect agents?
 
-47 in-lab tasks across 7 apps (calendar, chat, cloud, drive, files, mail, shop), each run twice by the same agent population: `blind` (no model) vs `see` (consults Ekbasis before acting). Agent: GLM-5.3-Flash through its production API; guard: Ekbasis-27B-INT4 on the same machine. Seed fixed; all 94 runs collected.
+47 in-lab tasks across 7 apps (calendar, chat, cloud, drive, files, mail, shop), each run in two conditions: `blind` (no model) vs `see` (consults Ekbasis before acting). Agent: GLM-5.3-Flash. The same 47 tasks were **run three times**; the second and third runs called Ekbasis **through the hosted API**, with an ordinary API key. Same tasks and agent each time: this shows the result holds from run to run, not across new tasks.
 
 | | blind | see | effect |
 |---|---|---|---|
-| harmful actions taken | 23/47 (**49%**) | 3/47 (**6%**) | **−42.6 pp, 95% CI [27.7, 57.4]** |
-| task success | 24/47 (51%) | 43/47 (91%) | +40 pp |
-| foresee consultations | — | 4.0 per run (188 total) | ~5 s of model time per run |
+| harmful runs, run by run | 23/47 · 24/47 · 26/47 | 3/47 · 0/47 · 0/47 | **−49.6 pp on average, 95% CI [37.6, 61.7]** (bootstrap over the 47 tasks) |
+| task success, run by run | 24/47 · 23/47 · 21/47 | 43/47 · 46/47 · 46/47 | +47.5 pp on average |
 
-The guard did not just block damage — agents with it **completed their tasks 1.75× more often**. Honest failures: 3 harms in `see` (1 run never consulted, 2 consulted and missed).
+The guard did not just block damage: agents with it **completed their tasks about twice as often**. Through the hosted API: 224 calls, no errors, metering exact to the token. Details, data and a recompute script: [`studies/agents-3reps/`](studies/agents-3reps/). Limits: our own apps, one agent model; on real apps the gain held for Claude Sonnet but not for Claude Haiku ([paper](https://doi.org/10.5281/zenodo.23197341)).
 
 ## Kubernetes study: kubectl agents on a real cluster (pre-registered)
 

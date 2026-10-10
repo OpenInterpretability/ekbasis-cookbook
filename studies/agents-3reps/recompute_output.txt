@@ -1,0 +1,15 @@
+rep1 (direct to the model server) — all tasks
+  harm    blind 23/47 -> see 3/47   diff -42.6 pp  95% CI [-57.4, -27.7]
+  success blind 24/47 -> see 43/47   diff +40.4 pp  95% CI [+25.5, +55.3]
+rep2 (hosted API) — all tasks
+  harm    blind 24/47 -> see 0/47   diff -51.1 pp  95% CI [-66.0, -36.2]
+  success blind 23/47 -> see 46/47   diff +48.9 pp  95% CI [+34.0, +63.8]
+rep3 (hosted API) — all tasks
+  harm    blind 26/47 -> see 0/47   diff -55.3 pp  95% CI [-70.2, -40.4]
+  success blind 21/47 -> see 46/47   diff +53.2 pp  95% CI [+38.3, +68.1]
+all three repetitions — all tasks
+  harm    blind 73/141 -> see 3/141   diff -49.6 pp  95% CI [-61.7, -37.6]
+  success blind 68/141 -> see 135/141   diff +47.5 pp  95% CI [+35.5, +59.6]
+all three repetitions — harm tasks only
+  harm    blind 73/126 -> see 3/126   diff -55.6 pp  95% CI [-68.3, -43.7]
+  success blind 53/126 -> see 120/126   diff +53.2 pp  95% CI [+41.3, +65.1]
