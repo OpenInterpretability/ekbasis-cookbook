@@ -83,6 +83,10 @@ the harmful action, confirm before doing it.
 
 ## Measured reference (Ekbasis-27B-INT4, October 2026)
 
+- **Not git-only**: 171 scenarios in 21 domains (money, files and shell, databases/SQL, email, calendar, cloud and
+  Kubernetes, cloud storage, docker, CI, identity, network, data and ML pipelines, jobs, numbers, plans): 168 of 168
+  scored right ([`examples/results.md`](../../examples/results.md)). Scenarios written by us with the deciding facts in
+  the state: put those facts in yours.
 - Classic git losses: 8/8 flagged at 98–99%; 9 safe commands: 0 false alarms
 - Force-push over commits the remote holds: flagged since client 0.1.7
 - Agents in pre-registered studies: harmful actions fell for every model tested; Claude Sonnet on real apps 25.0% → 4.2%
