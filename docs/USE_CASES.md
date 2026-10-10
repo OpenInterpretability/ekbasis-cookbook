@@ -32,7 +32,7 @@ All numbers measured on **Ekbasis-27B-INT4** (4× B200, TP4, co-tenant with a pr
 
 ## Weak spots measured (design around them)
 
-1. **`git push --force` with a diverged remote** — the model reads the local state and answers "ok" (and predicts the command *fails*, when force-push actually succeeds and overwrites the remote). Remote loss is outside the current question framing and outside the client's ref-simulation rules. **Until fixed: always double-check force-pushes yourself** (or add a client rule).
+1. **`git push --force` with a diverged remote** — the model reads the local state and answers "ok" (and predicts the command *fails*, when force-push actually succeeds and overwrites the remote). Remote loss is outside the current question framing and outside the client's ref-simulation rules. **Fixed in client 0.1.7:** the hook now asks when a force-push would overwrite commits the remote holds that the local branch does not (`--force-with-lease` stays safe by design).
 2. **`shell-check` is a prototype** — `curl … | bash` and `kill -9 -1` pass today; catastrophic shell patterns like `dd of=/dev/sda` return "cannot judge" (fail-closed, exit 3 — treated as risky).
 3. **Very large states (>32k tokens)** are refused (clean 422). The right pattern: send the *slice the action touches*, not the whole world — the git client does this (8 files, 12 branches max).
 

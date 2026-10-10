@@ -37,7 +37,7 @@ An agent that can foresee consequences makes fewer irreversible mistakes. This r
 
 ### Known gaps (do not rely on these without your own check)
 
-1. **`git push --force` with a diverged remote** — the model answers "ok" (it predicts the command *fails* instead of succeeding and overwriting the remote). Neither the model nor the client rules flag remote loss today. Fix planned: client-side rule.
+1. **`git push --force` with a diverged remote** — the model answers "ok" (it predicts the command *fails* instead of succeeding and overwriting the remote). Neither the model nor the client rules flag remote loss today. Fixed in client 0.1.7 ([PR #1](https://github.com/OpenInterpretability/ekbasis/pull/1)): the hook now asks when a force-push would overwrite remote commits; `--force-with-lease` stays safe by design.
 2. **`shell-check` is a prototype** — `curl … | bash` and `kill -9 -1` pass today.
 3. **States > ~32k tokens** are refused with a clean 422 (the client's git world stays under it by design: 8 files, 12 branches max).
 
