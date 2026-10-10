@@ -1,0 +1,861 @@
+{
+ "seed": 20261011,
+ "excluded_from_frame_leftover_tags": 14,
+ "strata": {
+  "('inj', 'workspace', True)": 279,
+  "('clean', 'workspace', None)": 385,
+  "('inj', 'workspace', False)": 181,
+  "('inj', 'travel', False)": 67,
+  "('clean', 'travel', None)": 90,
+  "('inj', 'travel', True)": 20,
+  "('clean', 'slack', None)": 28,
+  "('inj', 'slack', True)": 19,
+  "('inj', 'slack', False)": 50,
+  "('inj', 'banking', True)": 28,
+  "('clean', 'banking', None)": 44,
+  "('inj', 'banking', False)": 15
+ },
+ "sample": [
+  {
+   "id": "agentdojo/banking.json#37",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/banking.json#33",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/banking.json#60",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/banking.json#25",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/banking.json#22",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/banking.json#1",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/banking.json#66",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/banking.json#28",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/banking.json#40",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#16",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#89",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#10",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#9",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#85",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#5",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#36",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#91",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#78",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#67",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#22",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#84",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#1",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#90",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/slack.json#40",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#19",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#156",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#166",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#68",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#80",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#71",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#62",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#176",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#52",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#152",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#100",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#125",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#150",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#168",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#28",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#155",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#18",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/travel.json#165",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#510",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#677",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#232",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#9",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#309",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#621",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#184",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#650",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#494",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#85",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#516",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#440",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#47",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#632",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#372",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#825",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#159",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#251",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#730",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#382",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#141",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#80",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#675",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#397",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#546",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#33",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#509",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#454",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#422",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#413",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#746",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#471",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#366",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#541",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#844",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#585",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#766",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#227",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#188",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#595",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#759",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#196",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#354",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#543",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#826",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#819",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#482",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#313",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#725",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#22",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#662",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#579",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#336",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#845",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#108",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#629",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#782",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#248",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#577",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#283",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#569",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#723",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#620",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#112",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#65",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#330",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#712",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#522",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#542",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#116",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#86",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#148",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#724",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#757",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#720",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#793",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#800",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#606",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#36",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#229",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#840",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#805",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#709",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#552",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#169",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#455",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#137",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#35",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#783",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#618",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#139",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#534",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#566",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#176",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#603",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#684",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#262",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/workspace.json#628",
+   "injected": true
+  },
+  {
+   "id": "agentdojo/banking.json#82",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/banking.json#67",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/banking.json#39",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/banking.json#85",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/banking.json#72",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/slack.json#98",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/slack.json#72",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/slack.json#20",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/travel.json#57",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/travel.json#147",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/travel.json#90",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/travel.json#48",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/travel.json#111",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/travel.json#38",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/travel.json#41",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/travel.json#82",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/travel.json#21",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/travel.json#171",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#590",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#750",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#586",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#557",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#433",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#416",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#276",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#186",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#551",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#504",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#233",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#833",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#643",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#666",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#610",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#717",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#358",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#96",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#630",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#715",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#576",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#104",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#282",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#191",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#726",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#708",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#284",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#838",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#375",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#658",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#179",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#400",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#286",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#38",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#291",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#680",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#669",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#113",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#589",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#706",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#707",
+   "injected": false
+  },
+  {
+   "id": "agentdojo/workspace.json#200",
+   "injected": false
+  }
+ ],
+ "p2_excluded_no_attacker_entity": [
+  "agentdojo/banking.json#37",
+  "agentdojo/travel.json#19",
+  "agentdojo/travel.json#156",
+  "agentdojo/travel.json#166",
+  "agentdojo/travel.json#68",
+  "agentdojo/travel.json#71",
+  "agentdojo/travel.json#176",
+  "agentdojo/travel.json#52",
+  "agentdojo/travel.json#152",
+  "agentdojo/travel.json#100",
+  "agentdojo/travel.json#125",
+  "agentdojo/travel.json#150",
+  "agentdojo/travel.json#168",
+  "agentdojo/travel.json#28",
+  "agentdojo/travel.json#155",
+  "agentdojo/travel.json#18",
+  "agentdojo/travel.json#165",
+  "agentdojo/workspace.json#85",
+  "agentdojo/workspace.json#440",
+  "agentdojo/workspace.json#159",
+  "agentdojo/workspace.json#33",
+  "agentdojo/workspace.json#366",
+  "agentdojo/workspace.json#541",
+  "agentdojo/workspace.json#188",
+  "agentdojo/workspace.json#725",
+  "agentdojo/workspace.json#336",
+  "agentdojo/workspace.json#577",
+  "agentdojo/workspace.json#620",
+  "agentdojo/workspace.json#112",
+  "agentdojo/workspace.json#330",
+  "agentdojo/workspace.json#116",
+  "agentdojo/workspace.json#724",
+  "agentdojo/workspace.json#800",
+  "agentdojo/workspace.json#709",
+  "agentdojo/workspace.json#139",
+  "agentdojo/workspace.json#534",
+  "agentdojo/workspace.json#566",
+  "agentdojo/workspace.json#176",
+  "agentdojo/workspace.json#684"
+ ]
+}

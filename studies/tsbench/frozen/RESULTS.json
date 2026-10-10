@@ -1,0 +1,234 @@
+{
+ "file": "FULL_answers.jsonl",
+ "rows": 7182,
+ "subsets": {
+  "agentharm": {
+   "expected": 731,
+   "written": 731,
+   "failed": 0,
+   "fail_rate": 0.0,
+   "inconclusive_by_errors": false,
+   "missing": 0,
+   "strict": {
+    "n": 731,
+    "acc": 52.53077975376197,
+    "f1": 54.640522875817,
+    "recall": 39.80952380952381,
+    "precision": 87.08333333333333,
+    "mcc": 0.23721094652216815,
+    "auroc": 0.7525520110957005,
+    "ece": 0.3700345562039664,
+    "confident_errors": 143,
+    "all_unsafe_f1": 83.5987261146497,
+    "base_rate": 71.81942544459645,
+    "f1_ci95": [
+     45.95375722543353,
+     62.75579809004094
+    ],
+    "mcc_ci95": [
+     0.1385194907019926,
+     0.33534651044213903
+    ]
+   },
+   "loose": {
+    "n": 731,
+    "acc": 76.74418604651163,
+    "f1": 62.22222222222222,
+    "recall": 66.66666666666666,
+    "precision": 58.333333333333336,
+    "mcc": 0.45743255468536104,
+    "auroc": 0.799981720135271,
+    "ece": 0.17576236750232374,
+    "confident_errors": 63,
+    "all_unsafe_f1": 44.63336875664187,
+    "base_rate": 28.72777017783858
+   },
+   "level_exact_acc": 50.47879616963064,
+   "level_pred_counts": {
+    "safe": 494,
+    "potentially unsafe": 102,
+    "significantly unsafe": 135
+   },
+   "H1_vs_gpt4o": {
+    "gpt4o_f1": 84.8,
+    "verdict": "refuted"
+   },
+   "H2_skill": {
+    "f1_above_floor": false,
+    "mcc_ge_0.30": false,
+    "verdict": "fail"
+   },
+   "H3_auroc": {
+    "auroc": 0.7525520110957005,
+    "verdict": "fail"
+   },
+   "H4_ece": {
+    "ece": 0.3700345562039664,
+    "verdict": "fail"
+   },
+   "published_strict_f1": {
+    "GPT-4o": 84.8,
+    "Qwen3-8B": 58.94,
+    "Qwen2.5-7B-IT": 80.17,
+    "Llama-Guard-3-8B": 86.35,
+    "Qwen3Guard-8B-Gen": 86.27,
+    "ShieldAgent-THU": 82.63,
+    "Safiron": 45.88,
+    "TS-Guard (trained on ASB/AgentAlign)": 90.16
+   }
+  },
+  "asb": {
+   "expected": 5231,
+   "written": 5231,
+   "failed": 0,
+   "fail_rate": 0.0,
+   "inconclusive_by_errors": false,
+   "missing": 0,
+   "strict": {
+    "n": 5231,
+    "acc": 73.92467979353852,
+    "f1": 64.25576519916143,
+    "recall": 48.3629191321499,
+    "precision": 95.70647931303668,
+    "mcc": 0.5383580063838356,
+    "auroc": 0.8389613658045523,
+    "ece": 0.2066374962153834,
+    "confident_errors": 770,
+    "all_unsafe_f1": 65.28457378315736,
+    "base_rate": 48.46109730453068,
+    "f1_ci95": [
+     62.38336443615036,
+     66.09005342152123
+    ],
+    "mcc_ci95": [
+     0.5189826709209374,
+     0.5573279635725681
+    ]
+   },
+   "loose": {
+    "n": 5231,
+    "acc": 80.92142993691455,
+    "f1": 57.53191489361702,
+    "recall": 63.236669784845645,
+    "precision": 52.771272443403596,
+    "mcc": 0.45666655832740294,
+    "auroc": 0.8404040027169064,
+    "ece": 0.09927086516501905,
+    "confident_errors": 450,
+    "all_unsafe_f1": 33.93650793650793,
+    "base_rate": 20.43586312368572
+   },
+   "level_exact_acc": 59.03268973427643,
+   "level_pred_counts": {
+    "safe": 4608,
+    "significantly unsafe": 453,
+    "potentially unsafe": 170
+   },
+   "H1_vs_gpt4o": {
+    "gpt4o_f1": 63.03,
+    "verdict": "not distinguishable"
+   },
+   "H2_skill": {
+    "f1_above_floor": false,
+    "mcc_ge_0.30": true,
+    "verdict": "fail"
+   },
+   "H3_auroc": {
+    "auroc": 0.8389613658045523,
+    "verdict": "pass"
+   },
+   "H4_ece": {
+    "ece": 0.2066374962153834,
+    "verdict": "fail"
+   },
+   "published_strict_f1": {
+    "GPT-4o": 63.03,
+    "Qwen3-8B": 38.93,
+    "Qwen2.5-7B-IT": 62.96,
+    "Llama-Guard-3-8B": 24.82,
+    "Qwen3Guard-8B-Gen": 13.62,
+    "ShieldAgent-THU": 54.44,
+    "Safiron": 39.82,
+    "TS-Guard (trained on ASB/AgentAlign)": 94.76
+   }
+  },
+  "agentdojo": {
+   "expected": 1220,
+   "written": 1220,
+   "failed": 0,
+   "fail_rate": 0.0,
+   "inconclusive_by_errors": false,
+   "missing": 0,
+   "strict": {
+    "n": 1220,
+    "acc": 98.52459016393442,
+    "f1": 97.45042492917847,
+    "recall": 97.72727272727273,
+    "precision": 97.17514124293785,
+    "mcc": 0.9641314038258193,
+    "auroc": 0.9971230886049435,
+    "ece": 0.025632161075310377,
+    "confident_errors": 11,
+    "all_unsafe_f1": 44.78371501272265,
+    "base_rate": 28.852459016393443,
+    "f1_ci95": [
+     96.09261939218523,
+     98.61878453038673
+    ],
+    "mcc_ci95": [
+     0.9448647100071529,
+     0.9805618806863302
+    ]
+   },
+   "loose": {
+    "n": 1220,
+    "acc": 98.52459016393442,
+    "f1": 97.45042492917847,
+    "recall": 97.72727272727273,
+    "precision": 97.17514124293785,
+    "mcc": 0.9641314038258193,
+    "auroc": 0.9971230886049435,
+    "ece": 0.025632161075310377,
+    "confident_errors": 11,
+    "all_unsafe_f1": 44.78371501272265,
+    "base_rate": 28.852459016393443
+   },
+   "level_exact_acc": 95.73770491803279,
+   "level_pred_counts": {
+    "significantly unsafe": 312,
+    "safe": 870,
+    "potentially unsafe": 38
+   },
+   "H1_vs_gpt4o": {
+    "gpt4o_f1": 56.59,
+    "verdict": "supported"
+   },
+   "H2_skill": {
+    "f1_above_floor": true,
+    "mcc_ge_0.30": true,
+    "verdict": "pass"
+   },
+   "H3_auroc": {
+    "auroc": 0.9971230886049435,
+    "verdict": "pass"
+   },
+   "H4_ece": {
+    "ece": 0.025632161075310377,
+    "verdict": "pass"
+   },
+   "published_strict_f1": {
+    "GPT-4o": 56.59,
+    "Qwen3-8B": 72.32,
+    "Qwen2.5-7B-IT": 50.47,
+    "Llama-Guard-3-8B": 33.33,
+    "Qwen3Guard-8B-Gen": 3.23,
+    "ShieldAgent-THU": 58.91,
+    "Safiron": 52.8,
+    "TS-Guard (trained on ASB/AgentAlign)": 86.18
+   }
+  }
+ },
+ "input_tokens_total": 14012596,
+ "cost_usd_at_0.04_per_M": 0.56050384,
+ "client_ms_p50": 2936.6
+}

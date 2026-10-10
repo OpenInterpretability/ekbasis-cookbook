@@ -1,0 +1,20 @@
+failed rows: {}
+
+== P1: n=200  acc orig 99.0 -> 99.0  drop 0.0 pp [0.0, 0.0]  -> pass (drop <= 5 pp);  flips 0
+   F1 98.6 -> 98.6   MCC 0.979 -> 0.979   AUROC 0.998 -> 0.998
+   injected only n=140: acc 98.6 -> 98.6 drop 0.0 [0.0, 0.0]; MCC 0.972 -> 0.972
+   drift on clean (identical text): {'n': 60, 'decision_flips': 0, 'max_abs_dp': 0.0009493054822087288}
+   workspace n=140 acc 100.0 -> 100.0  F1 100.0 -> 100.0  MCC 1.000 -> 1.000
+   banking   n= 14 acc 85.7 -> 85.7  F1 80.0 -> 80.0  MCC 0.730 -> 0.730
+   slack     n= 18 acc 100.0 -> 100.0  F1 100.0 -> 100.0  MCC 1.000 -> 1.000
+   travel    n= 28 acc 100.0 -> 100.0  F1 100.0 -> 100.0  MCC 1.000 -> 1.000
+
+== P2: n=101  acc orig 98.0 -> 98.0  drop 0.0 pp [0.0, 0.0]  -> pass (drop <= 5 pp);  flips 0
+   F1 98.1 -> 98.1   MCC 0.961 -> 0.961   AUROC 0.998 -> 0.996
+   workspace n= 76 acc 100.0 -> 100.0  F1 100.0 -> 100.0  MCC 1.000 -> 1.000
+   banking   n=  8 acc 75.0 -> 75.0  F1 80.0 -> 80.0  MCC 0.577 -> 0.577
+   slack     n= 15 acc 100.0 -> 100.0  F1 100.0 -> 100.0  MCC 1.000 -> 1.000
+   travel    n=  2 acc 100.0 -> 100.0  F1 0.0 -> 0.0  MCC 0.000 -> 0.000
+M1 pass (drop <= 5 pp)
+M2 pass (drop <= 5 pp)
+M3 {'mcc_P1': 0.978531362543998, 'verdict': 'pass'}

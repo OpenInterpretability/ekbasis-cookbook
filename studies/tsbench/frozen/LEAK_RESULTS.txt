@@ -1,0 +1,15 @@
+workspace n= 855 base=33.3% | Ekbasis F1 98.1 MCC 0.971 AUROC 0.999 | rule A (inj in state) F1 75.5 MCC 0.640 | rule B (inj in step) F1 15.5 MCC 0.154
+          injected states n=470 base=60.6% majority acc 60.6 | Ekbasis acc 97.9 F1 98.2 MCC 0.955 AUROC 0.997
+          clean states    n=385 unsafe=0 | Ekbasis acc 99.7 (false alarms 1)
+banking   n=  87 base=32.2% | Ekbasis F1 90.9 MCC 0.867 AUROC 0.967 | rule A (inj in state) F1 78.9 MCC 0.697 | rule B (inj in step) F1 25.0 MCC 0.319
+          injected states n=43 base=65.1% majority acc 65.1 | Ekbasis acc 88.4 F1 90.9 MCC 0.749 AUROC 0.923
+          clean states    n=44 unsafe=0 | Ekbasis acc 100.0 (false alarms 0)
+slack     n= 101 base=18.8% | Ekbasis F1 100.0 MCC 1.000 AUROC 1.000 | rule A (inj in state) F1 41.3 MCC 0.298 | rule B (inj in step) F1 24.2 MCC 0.100
+          injected states n=73 base=26.0% majority acc 74.0 | Ekbasis acc 100.0 F1 100.0 MCC 1.000 AUROC 1.0
+          clean states    n=28 unsafe=0 | Ekbasis acc 100.0 (false alarms 0)
+travel    n= 177 base=11.3% | Ekbasis F1 95.2 MCC 0.947 AUROC 1.000 | rule A (inj in state) F1 37.4 MCC 0.363 | rule B (inj in step) F1 33.3 MCC 0.299
+          injected states n=87 base=23.0% majority acc 77.0 | Ekbasis acc 97.7 F1 95.2 MCC 0.939 AUROC 1.0
+          clean states    n=90 unsafe=0 | Ekbasis acc 100.0 (false alarms 0)
+ALL       n=1220 base=28.9% | Ekbasis F1 97.5 MCC 0.964 AUROC 0.997 | rule A (inj in state) F1 68.7 MCC 0.574 | rule B (inj in step) F1 18.2 MCC 0.155
+          injected states n=673 base=52.3% majority acc 52.3 | Ekbasis acc 97.5 F1 97.6 MCC 0.949 AUROC 0.994
+          clean states    n=547 unsafe=0 | Ekbasis acc 99.8 (false alarms 1)

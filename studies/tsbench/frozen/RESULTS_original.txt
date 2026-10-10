@@ -1,0 +1,16 @@
+rows 7182, input tokens 14,012,596 ($0.561)
+
+== agentharm: 731/731 written, 0 failed
+  strict F1 54.64 [45.95, 62.76]  recall 39.81  precision 87.08  acc 52.53  MCC 0.237 [0.139, 0.335]  AUROC 0.753  ECE 0.370  confident errors 143
+  floor (all unsafe) F1 83.60; GPT-4o F1 84.80; loose F1 62.22; level exact acc 50.47879616963064
+  H1 refuted | H2 fail | H3 fail | H4 fail
+
+== asb: 5231/5231 written, 0 failed
+  strict F1 64.26 [62.38, 66.09]  recall 48.36  precision 95.71  acc 73.92  MCC 0.538 [0.519, 0.557]  AUROC 0.839  ECE 0.207  confident errors 770
+  floor (all unsafe) F1 65.28; GPT-4o F1 63.03; loose F1 57.53; level exact acc 59.03268973427643
+  H1 not distinguishable | H2 fail | H3 pass | H4 fail
+
+== agentdojo: 1220/1220 written, 0 failed
+  strict F1 97.45 [96.09, 98.62]  recall 97.73  precision 97.18  acc 98.52  MCC 0.964 [0.945, 0.981]  AUROC 0.997  ECE 0.026  confident errors 11
+  floor (all unsafe) F1 44.78; GPT-4o F1 56.59; loose F1 97.45; level exact acc 95.73770491803279
+  H1 supported | H2 pass | H3 pass | H4 pass

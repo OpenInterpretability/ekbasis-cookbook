@@ -1,0 +1,267 @@
+{
+ "workspace": {
+  "n": 855,
+  "base_rate": 33.333333333333336,
+  "ekbasis": {
+   "n": 855,
+   "acc": 98.71345029239767,
+   "f1": 98.07355516637477,
+   "recall": 98.24561403508771,
+   "precision": 97.9020979020979,
+   "mcc": 0.9710813583374094,
+   "auroc": 0.9987780855647892
+  },
+  "rule_injection_in_state": {
+   "n": 855,
+   "acc": 78.3625730994152,
+   "f1": 75.49668874172187,
+   "recall": 100.0,
+   "precision": 60.63829787234043,
+   "mcc": 0.6399800528806396
+  },
+  "rule_injection_in_action": {
+   "n": 855,
+   "acc": 68.18713450292397,
+   "f1": 15.527950310559005,
+   "recall": 8.771929824561402,
+   "precision": 67.56756756756756,
+   "mcc": 0.1544511281749515
+  },
+  "ekbasis_on_injected_states": {
+   "n": 470,
+   "acc": 97.87234042553192,
+   "f1": 98.24561403508771,
+   "recall": 98.24561403508771,
+   "precision": 98.24561403508771,
+   "mcc": 0.9554291133238502,
+   "auroc": 0.9972593646277856,
+   "base_rate": 60.638297872340424,
+   "majority_acc": 60.638297872340424
+  },
+  "ekbasis_on_clean_states": {
+   "n": 385,
+   "acc": 99.74025974025975,
+   "f1": 0.0,
+   "recall": 0.0,
+   "precision": 0.0,
+   "mcc": 0.0,
+   "auroc": null,
+   "base_rate": 0.0,
+   "majority_acc": 100.0
+  },
+  "unsafe_without_injection_in_state": 0,
+  "truncated": 99
+ },
+ "banking": {
+  "n": 87,
+  "base_rate": 32.18390804597701,
+  "ekbasis": {
+   "n": 87,
+   "acc": 94.25287356321839,
+   "f1": 90.9090909090909,
+   "recall": 89.28571428571429,
+   "precision": 92.5925925925926,
+   "mcc": 0.867400896534033,
+   "auroc": 0.9670096852300242
+  },
+  "rule_injection_in_state": {
+   "n": 87,
+   "acc": 82.75862068965517,
+   "f1": 78.87323943661973,
+   "recall": 100.0,
+   "precision": 65.11627906976744,
+   "mcc": 0.696859332043342
+  },
+  "rule_injection_in_action": {
+   "n": 87,
+   "acc": 72.41379310344827,
+   "f1": 25.0,
+   "recall": 14.285714285714285,
+   "precision": 100.0,
+   "mcc": 0.31866762207083776
+  },
+  "ekbasis_on_injected_states": {
+   "n": 43,
+   "acc": 88.37209302325581,
+   "f1": 90.9090909090909,
+   "recall": 89.28571428571429,
+   "precision": 92.5925925925926,
+   "mcc": 0.7489005757177688,
+   "auroc": 0.9226190476190477,
+   "base_rate": 65.11627906976744,
+   "majority_acc": 65.11627906976744
+  },
+  "ekbasis_on_clean_states": {
+   "n": 44,
+   "acc": 100.0,
+   "f1": 0.0,
+   "recall": 0.0,
+   "precision": 0.0,
+   "mcc": 0.0,
+   "auroc": null,
+   "base_rate": 0.0,
+   "majority_acc": 100.0
+  },
+  "unsafe_without_injection_in_state": 0,
+  "truncated": 0
+ },
+ "slack": {
+  "n": 101,
+  "base_rate": 18.81188118811881,
+  "ekbasis": {
+   "n": 101,
+   "acc": 100.0,
+   "f1": 100.0,
+   "recall": 100.0,
+   "precision": 100.0,
+   "mcc": 1.0,
+   "auroc": 1.0
+  },
+  "rule_injection_in_state": {
+   "n": 101,
+   "acc": 46.53465346534654,
+   "f1": 41.30434782608695,
+   "recall": 100.0,
+   "precision": 26.027397260273972,
+   "mcc": 0.29811749265235304
+  },
+  "rule_injection_in_action": {
+   "n": 101,
+   "acc": 75.24752475247524,
+   "f1": 24.242424242424242,
+   "recall": 21.052631578947366,
+   "precision": 28.57142857142857,
+   "mcc": 0.10017785204958238
+  },
+  "ekbasis_on_injected_states": {
+   "n": 73,
+   "acc": 100.0,
+   "f1": 100.0,
+   "recall": 100.0,
+   "precision": 100.0,
+   "mcc": 1.0,
+   "auroc": 1.0,
+   "base_rate": 26.027397260273972,
+   "majority_acc": 73.97260273972603
+  },
+  "ekbasis_on_clean_states": {
+   "n": 28,
+   "acc": 100.0,
+   "f1": 0.0,
+   "recall": 0.0,
+   "precision": 0.0,
+   "mcc": 0.0,
+   "auroc": null,
+   "base_rate": 0.0,
+   "majority_acc": 100.0
+  },
+  "unsafe_without_injection_in_state": 0,
+  "truncated": 0
+ },
+ "travel": {
+  "n": 177,
+  "base_rate": 11.299435028248588,
+  "ekbasis": {
+   "n": 177,
+   "acc": 98.87005649717514,
+   "f1": 95.23809523809523,
+   "recall": 100.0,
+   "precision": 90.9090909090909,
+   "mcc": 0.9473701141470122,
+   "auroc": 0.9998407643312102
+  },
+  "rule_injection_in_state": {
+   "n": 177,
+   "acc": 62.14689265536724,
+   "f1": 37.38317757009346,
+   "recall": 100.0,
+   "precision": 22.988505747126435,
+   "mcc": 0.36301686343253203
+  },
+  "rule_injection_in_action": {
+   "n": 177,
+   "acc": 88.70056497175142,
+   "f1": 33.33333333333333,
+   "recall": 25.0,
+   "precision": 50.0,
+   "mcc": 0.29913519401247984
+  },
+  "ekbasis_on_injected_states": {
+   "n": 87,
+   "acc": 97.70114942528735,
+   "f1": 95.23809523809523,
+   "recall": 100.0,
+   "precision": 90.9090909090909,
+   "mcc": 0.9391239891667627,
+   "auroc": 0.9996268656716418,
+   "base_rate": 22.988505747126435,
+   "majority_acc": 77.01149425287356
+  },
+  "ekbasis_on_clean_states": {
+   "n": 90,
+   "acc": 100.0,
+   "f1": 0.0,
+   "recall": 0.0,
+   "precision": 0.0,
+   "mcc": 0.0,
+   "auroc": null,
+   "base_rate": 0.0,
+   "majority_acc": 100.0
+  },
+  "unsafe_without_injection_in_state": 0,
+  "truncated": 0
+ },
+ "ALL": {
+  "n": 1220,
+  "base_rate": 28.852459016393443,
+  "ekbasis": {
+   "n": 1220,
+   "acc": 98.52459016393442,
+   "f1": 97.45042492917847,
+   "recall": 97.72727272727273,
+   "precision": 97.17514124293785,
+   "mcc": 0.9641314038258193,
+   "auroc": 0.9971230886049435
+  },
+  "rule_injection_in_state": {
+   "n": 1220,
+   "acc": 73.68852459016394,
+   "f1": 68.6829268292683,
+   "recall": 100.0,
+   "precision": 52.30312035661219,
+   "mcc": 0.574113289802997
+  },
+  "rule_injection_in_action": {
+   "n": 1220,
+   "acc": 72.04918032786885,
+   "f1": 18.225419664268586,
+   "recall": 10.795454545454545,
+   "precision": 58.46153846153847,
+   "mcc": 0.1550312425380141
+  },
+  "ekbasis_on_injected_states": {
+   "n": 673,
+   "acc": 97.47399702823179,
+   "f1": 97.5886524822695,
+   "recall": 97.72727272727273,
+   "precision": 97.45042492917847,
+   "mcc": 0.9493697871726808,
+   "auroc": 0.9936101670914755,
+   "base_rate": 52.30312035661218,
+   "majority_acc": 52.30312035661218
+  },
+  "ekbasis_on_clean_states": {
+   "n": 547,
+   "acc": 99.81718464351006,
+   "f1": 0.0,
+   "recall": 0.0,
+   "precision": 0.0,
+   "mcc": 0.0,
+   "auroc": null,
+   "base_rate": 0.0,
+   "majority_acc": 100.0
+  },
+  "unsafe_without_injection_in_state": 0,
+  "truncated": 99
+ }
+}
