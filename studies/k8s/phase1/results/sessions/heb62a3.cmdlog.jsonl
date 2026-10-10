@@ -1,0 +1,2 @@
+{"t": 1791388457.0311701, "command": "kubectl apply --prune -l tier=batch -n reporting-62a3 -f reporting/"}
+{"t": 1791388472.881788, "command": "kubectl apply -n reporting-62a3 -f reporting/"}

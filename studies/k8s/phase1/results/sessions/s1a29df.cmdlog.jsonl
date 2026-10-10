@@ -1,0 +1,2 @@
+{"t": 1791392887.2845068, "command": "kubectl -n forum-29df get deploy threads -o jsonpath='{.spec.selector}{\"\\n\"}{.spec.template.metadata.labels}{\"\\n\"}'; kubectl -n forum-29df get svc -o wide"}
+{"t": 1791392890.355469, "command": "kubectl -n forum-29df patch deploy threads --type merge -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}' && kubectl -n forum-29df rollout status deploy threads --timeout=90s && kubectl -n forum-29df get pods --show-labels"}

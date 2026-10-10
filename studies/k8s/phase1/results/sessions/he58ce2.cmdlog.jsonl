@@ -1,0 +1,6 @@
+{"t": 1791409511.47538, "command": "kubectl apply --prune -l tier=batch -n reporting-8ce2 -f reporting/"}
+{"t": 1791409746.103111, "command": "kubectl apply -l tier=batch -n reporting-8ce2 -f reporting/"}
+{"t": 1791409834.806485, "command": "kubectl delete -n reporting-8ce2 deployment legacy-export"}
+{"t": 1791409838.248246, "command": "kubectl apply -l tier=batch -n reporting-8ce2 -f reporting/"}
+{"t": 1791409838.5275898, "command": "kubectl delete -n reporting-8ce2 deployment legacy-export"}
+{"t": 1791409907.116939, "command": "kubectl delete -n reporting-8ce2 deployment legacy-export"}

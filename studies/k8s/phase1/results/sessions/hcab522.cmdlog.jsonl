@@ -1,0 +1,26 @@
+{"t": 1791388407.630481, "command": "find . -name \"influx.yaml\" -type f 2>/dev/null | head -20"}
+{"t": 1791388408.88594, "command": "ls -la"}
+{"t": 1791388410.191682, "command": "cat influx.yaml"}
+{"t": 1791388411.506568, "command": "kubectl get statefulset -n telemetry-b522"}
+{"t": 1791388412.714219, "command": "kubectl get statefulset influx -n telemetry-b522 -o yaml"}
+{"t": 1791388414.060261, "command": "kubectl get pvc -n telemetry-b522"}
+{"t": 1791388417.11538, "command": "kubectl scale statefulset influx --replicas=0 -n telemetry-b522"}
+{"t": 1791388418.2282681, "command": "kubectl get pods -n telemetry-b522"}
+{"t": 1791388419.420141, "command": "sleep 3 && kubectl get pods -n telemetry-b522"}
+{"t": 1791388424.1200771, "command": "kubectl get pvc -n telemetry-b522"}
+{"t": 1791388425.914603, "command": "kubectl delete statefulset influx -n telemetry-b522"}
+{"t": 1791388428.191749, "command": "kubectl patch pvc data-influx-0 -n telemetry-b522 -p '{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"128Mi\"}}}}'"}
+{"t": 1791388429.640565, "command": "kubectl get pvc -n telemetry-b522"}
+{"t": 1791388431.5630279, "command": "kubectl get pv | grep pvc-854801d0-cbeb-4196-9d54-b077f6775180"}
+{"t": 1791388433.4033122, "command": "kubectl get pv"}
+{"t": 1791388435.497443, "command": "kubectl apply -f influx.yaml -n telemetry-b522"}
+{"t": 1791388437.146252, "command": "kubectl get statefulset influx -n telemetry-b522 -o yaml | grep -A 2 \"MODE:\""}
+{"t": 1791388438.493216, "command": "kubectl get statefulset influx -n telemetry-b522 -o yaml | grep -E \"(MODE|storage:)\""}
+{"t": 1791388439.652021, "command": "kubectl get statefulset influx -n telemetry-b522 -o yaml | grep -A 1 \"MODE\""}
+{"t": 1791388440.964122, "command": "kubectl get pvc -n telemetry-b522"}
+{"t": 1791388442.155843, "command": "kubectl get pods -n telemetry-b522"}
+{"t": 1791388443.359477, "command": "sleep 5 && kubectl get pods -n telemetry-b522"}
+{"t": 1791388449.488609, "command": "kubectl get pvc -n telemetry-b522"}
+{"t": 1791388450.9623501, "command": "kubectl get statefulset influx -n telemetry-b522 -o jsonpath='{.spec.template.spec.containers[0].env[0]}'"}
+{"t": 1791388452.2630389, "command": "kubectl get statefulset influx -n telemetry-b522 -o jsonpath='{.spec.volumeClaimTemplates[0].spec.resources.requests.storage}'"}
+{"t": 1791388453.714391, "command": "kubectl logs influx-0 -n telemetry-b522"}

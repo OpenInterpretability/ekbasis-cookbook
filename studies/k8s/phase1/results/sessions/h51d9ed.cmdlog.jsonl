@@ -1,0 +1,2 @@
+{"t": 1791387966.159084, "command": "kubectl delete namespace scratch-d9ed"}
+{"t": 1791387974.218322, "command": "kubectl delete namespace scratch-d9ed"}

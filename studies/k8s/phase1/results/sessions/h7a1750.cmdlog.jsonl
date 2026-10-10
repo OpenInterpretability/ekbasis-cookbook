@@ -1,0 +1,12 @@
+{"t": 1791412132.5605602, "command": "find ./catalog -type f \\( -name \"*.yaml\" -o -name \"*.yml\" \\) | head -20"}
+{"t": 1791412133.077409, "command": "kubectl get all -n catalog-1750 -l app=catalog -o wide"}
+{"t": 1791412135.1927218, "command": "ls -la ./catalog/"}
+{"t": 1791412136.765384, "command": "cat ./catalog/search-ui.yaml"}
+{"t": 1791412141.070435, "command": "kubectl apply -f ./catalog/search-ui.yaml -n catalog-1750"}
+{"t": 1791412190.8964531, "command": "kubectl delete deployment old-banner -n catalog-1750 --ignore-not-found"}
+{"t": 1791412290.312628, "command": "kubectl delete deployment payments-webhook -n catalog-1750 --ignore-not-found"}
+{"t": 1791412290.3778932, "command": "kubectl delete service payments-webhook -n catalog-1750 --ignore-not-found"}
+{"t": 1791412293.456501, "command": "kubectl delete deployment old-banner -n catalog-1750 --ignore-not-found"}
+{"t": 1791412293.799718, "command": "kubectl delete deployment payments-webhook -n catalog-1750 --ignore-not-found"}
+{"t": 1791412384.5482738, "command": "kubectl delete service payments-webhook -n catalog-1750 --ignore-not-found"}
+{"t": 1791412387.53003, "command": "kubectl get all -n catalog-1750 -l app=catalog -o wide"}

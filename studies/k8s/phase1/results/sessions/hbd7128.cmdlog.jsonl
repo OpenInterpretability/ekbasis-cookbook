@@ -1,0 +1,5 @@
+{"t": 1791388760.3357282, "command": "kubectl get statefulset -n bookings-7128 reservations-db"}
+{"t": 1791388760.7181902, "command": "kubectl get pvc -n bookings-7128 | grep -i reservations"}
+{"t": 1791388763.5478091, "command": "kubectl delete statefulset -n bookings-7128 reservations-db"}
+{"t": 1791388765.5781178, "command": "kubectl get statefulset -n bookings-7128 reservations-db 2>&1"}
+{"t": 1791388765.929698, "command": "kubectl get pvc -n bookings-7128 | grep -i reservations"}

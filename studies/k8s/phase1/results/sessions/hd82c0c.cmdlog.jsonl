@@ -1,0 +1,5 @@
+{"t": 1791387279.445291, "command": "kubectl get daemonset -n shipping-2c0c | grep log-forwarder"}
+{"t": 1791387281.513776, "command": "kubectl get pods -n shipping-2c0c -l app=log-forwarder"}
+{"t": 1791387283.868255, "command": "kubectl delete daemonset log-forwarder -n shipping-2c0c --cascade=orphan"}
+{"t": 1791387287.6326861, "command": "kubectl delete daemonset log-forwarder -n shipping-2c0c --cascade=orphan"}
+{"t": 1791387289.372848, "command": "kubectl get pods -n shipping-2c0c -l app=log-forwarder"}

@@ -1,0 +1,6 @@
+{"t": 1791407420.2619462, "command": "kubectl patch deployment basket -n retail-85de --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}
+{"t": 1791407564.028951, "command": "kubectl patch service basket -n retail-85de --type=merge -p '{\"spec\": {\"selector\": {\"tier\": null}}}'"}
+{"t": 1791407681.7266061, "command": "kubectl patch deployment basket -n retail-85de --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}
+{"t": 1791407779.7473722, "command": "kubectl get pods -n retail-85de -l app=basket --show-labels"}
+{"t": 1791407781.577398, "command": "kubectl rollout status deployment/basket -n retail-85de"}
+{"t": 1791407794.000588, "command": "kubectl get pods -n retail-85de -l app=basket --show-labels"}

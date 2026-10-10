@@ -1,0 +1,5 @@
+{"t": 1791412309.7935948, "command": "kubectl get daemonset -n shipping-268d log-forwarder -o yaml"}
+{"t": 1791412310.237664, "command": "kubectl get pods -n shipping-268d -l app=log-forwarder"}
+{"t": 1791412312.3313532, "command": "kubectl delete daemonset log-forwarder -n shipping-268d --cascade=orphan"}
+{"t": 1791412352.5718248, "command": "kubectl get daemonset -n shipping-268d log-forwarder 2>&1 || echo \"DaemonSet successfully deleted\""}
+{"t": 1791412353.057108, "command": "kubectl get pods -n shipping-268d -l app=log-forwarder"}

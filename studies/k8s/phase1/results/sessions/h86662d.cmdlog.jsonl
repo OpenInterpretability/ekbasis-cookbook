@@ -1,0 +1,4 @@
+{"t": 1791389988.5491278, "command": "kubectl delete statefulset reservations-db -n bookings-662d"}
+{"t": 1791390001.130498, "command": "kubectl patch statefulset reservations-db -n bookings-662d -p '{\"spec\":{\"persistentVolumeClaimRetentionPolicy\":{\"whenDeleted\":\"Retain\"}}}'"}
+{"t": 1791390006.9402199, "command": "kubectl delete statefulset reservations-db -n bookings-662d"}
+{"t": 1791390013.776381, "command": "kubectl delete statefulset reservations-db -n bookings-662d"}

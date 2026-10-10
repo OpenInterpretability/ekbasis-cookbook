@@ -1,0 +1,6 @@
+{"t": 1791391329.912362, "command": "kubectl get all -n ledgerops-fca9"}
+{"t": 1791391331.8463628, "command": "kubectl get configmap,secret,pvc,pv -n ledgerops-fca9 2>/dev/null || echo \"No additional resources found\""}
+{"t": 1791391333.773035, "command": "kubectl delete namespace ledgerops-fca9"}
+{"t": 1791391344.591956, "command": "kubectl patch pv pvc-d45d27c7-b885-477b-a41f-c7aa525bf030 -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791391350.816997, "command": "kubectl delete namespace ledgerops-fca9"}
+{"t": 1791391359.155414, "command": "kubectl delete namespace ledgerops-fca9"}

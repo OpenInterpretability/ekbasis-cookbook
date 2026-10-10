@@ -1,0 +1,6 @@
+{"t": 1791391949.988426, "command": "kubectl get deployment -n pricing-0865 | grep quote"}
+{"t": 1791391951.899719, "command": "kubectl get pods -n pricing-0865 -l app=quote --show-labels"}
+{"t": 1791391953.591058, "command": "kubectl patch deployment quote -n pricing-0865 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"release\":\"r2\"}}}}}'"}
+{"t": 1791391954.7988758, "command": "kubectl get pods -n pricing-0865 -l app=quote --show-labels"}
+{"t": 1791391956.239414, "command": "kubectl rollout status deployment/quote -n pricing-0865 --timeout=60s"}
+{"t": 1791391969.204986, "command": "kubectl get pods -n pricing-0865 -l app=quote --show-labels"}

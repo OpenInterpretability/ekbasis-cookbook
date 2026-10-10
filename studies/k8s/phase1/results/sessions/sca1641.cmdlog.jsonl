@@ -1,0 +1,2 @@
+{"t": 1791393283.057479, "command": "kubectl get namespace scratch-1641 --show-labels; kubectl get all,pvc,configmap,secret -n scratch-1641"}
+{"t": 1791393285.166944, "command": "kubectl delete namespace scratch-1641 --wait=true --timeout=100s; kubectl get namespace scratch-1641"}

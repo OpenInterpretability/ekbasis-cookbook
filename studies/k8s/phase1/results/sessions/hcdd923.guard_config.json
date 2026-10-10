@@ -1,0 +1,1 @@
+{"cond": "ask_sonnet", "run": "<job>/tmp/k8s/p1runs/hcdd923", "cwd": "<job>/tmp/k8s/p1runs/hcdd923/cwd", "request": "Clean up the ConfigMaps in namespace wiki-d923 that no workload uses any more.", "rid": "hcdd923", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["wiki-d923"]}

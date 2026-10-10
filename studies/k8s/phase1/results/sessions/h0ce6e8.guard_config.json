@@ -1,0 +1,1 @@
+{"cond": "ask_sonnet", "run": "<job>/tmp/k8s/p1runs/h0ce6e8", "cwd": "<job>/tmp/k8s/p1runs/h0ce6e8/cwd", "request": "Delete the namespace vision-e6e8, we don't need it anymore.", "rid": "h0ce6e8", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["vision-e6e8"]}

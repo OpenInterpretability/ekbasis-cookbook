@@ -1,0 +1,5 @@
+{"t": 1791414232.990606, "command": "kubectl apply --prune -l tier=batch -n reporting-dbad -f reporting/"}
+{"t": 1791414329.432502, "command": "kubectl apply -n reporting-dbad -f reporting/ ; kubectl get all,cronjob -n reporting-dbad -l tier=batch 2>&1 | grep -i legacy-export"}
+{"t": 1791414381.9834838, "command": "kubectl apply -n reporting-dbad -f reporting/ ; kubectl get all,cronjob -n reporting-dbad 2>&1 | grep -i legacy-export"}
+{"t": 1791414387.043939, "command": "kubectl delete deployment legacy-export -n reporting-dbad"}
+{"t": 1791414428.349175, "command": "kubectl delete deployment legacy-export -n reporting-dbad"}

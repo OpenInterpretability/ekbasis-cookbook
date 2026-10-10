@@ -1,0 +1,4 @@
+{"t": 1791411671.722632, "command": "kubectl get deployments -n identity-9310"}
+{"t": 1791411672.0810602, "command": "kubectl get pods -n identity-9310 -l app=authn"}
+{"t": 1791411673.9882739, "command": "kubectl delete deployment authn -n identity-9310 --cascade=orphan"}
+{"t": 1791411741.9915829, "command": "kubectl get pods -n identity-9310 -l app=authn"}

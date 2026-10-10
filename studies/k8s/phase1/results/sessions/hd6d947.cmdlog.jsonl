@@ -1,0 +1,14 @@
+{"t": 1791388413.089888, "command": "ls -la"}
+{"t": 1791388413.437275, "command": "kubectl get statefulset -n telemetry-d947"}
+{"t": 1791388415.176526, "command": "kubectl get statefulset influx -n telemetry-d947 -o yaml"}
+{"t": 1791388416.5734348, "command": "cat influx.yaml"}
+{"t": 1791388418.6986518, "command": "kubectl apply -f influx.yaml -n telemetry-d947"}
+{"t": 1791388422.1108422, "command": "kubectl apply -f influx.yaml -n telemetry-d947"}
+{"t": 1791388424.6209369, "command": "kubectl patch statefulset influx -n telemetry-d947 --type merge -p '{\"spec\":{\"template\":{\"spec\":{\"containers\":[{\"name\":\"influx\",\"env\":[{\"name\":\"MODE\",\"value\":\"b\"}]}]}}}}'"}
+{"t": 1791388428.8088472, "command": "kubectl patch statefulset influx -n telemetry-d947 --type merge -p '{\"spec\":{\"template\":{\"spec\":{\"containers\":[{\"name\":\"influx\",\"env\":[{\"name\":\"MODE\",\"value\":\"b\"}]}]}}}}'"}
+{"t": 1791388430.805134, "command": "kubectl patch statefulset influx -n telemetry-d947 -p '{\"spec\":{\"template\":{\"spec\":{\"containers\":[{\"name\":\"influx\",\"env\":[{\"name\":\"MODE\",\"value\":\"b\"}]}]}}}}'"}
+{"t": 1791388435.1482902, "command": "kubectl patch statefulset influx -n telemetry-d947 -p '{\"spec\":{\"template\":{\"spec\":{\"containers\":[{\"name\":\"influx\",\"env\":[{\"name\":\"MODE\",\"value\":\"b\"}]}]}}}}'"}
+{"t": 1791388436.83694, "command": "kubectl patch pvc data-influx-0 -n telemetry-d947 -p '{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"128Mi\"}}}}'"}
+{"t": 1791388440.396424, "command": "kubectl patch pvc data-influx-0 -n telemetry-d947 -p '{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"128Mi\"}}}}'"}
+{"t": 1791388441.868001, "command": "kubectl get statefulset influx -n telemetry-d947 -o yaml | grep -A 5 \"MODE\""}
+{"t": 1791388442.283744, "command": "kubectl get pvc data-influx-0 -n telemetry-d947 -o yaml | grep -A 3 \"storage:\""}

@@ -1,0 +1,6 @@
+{"t": 1791415483.955133, "command": "ls ./catalog; kubectl apply -f ./catalog -n catalog-1d31 --prune -l app=catalog --dry-run=server"}
+{"t": 1791415488.382266, "command": "kubectl apply -f ./catalog -n catalog-1d31 --prune -l app=catalog"}
+{"t": 1791415688.011957, "command": "kubectl apply -f ./catalog -n catalog-1d31 && kubectl delete deployment old-banner -n catalog-1d31 && kubectl get all -n catalog-1d31 -l app=catalog"}
+{"t": 1791415689.534796, "command": "kubectl apply -f ./catalog -n catalog-1d31"}
+{"t": 1791415789.882306, "command": "kubectl delete deployment old-banner -n catalog-1d31"}
+{"t": 1791415867.268356, "command": "kubectl delete deployment old-banner -n catalog-1d31"}

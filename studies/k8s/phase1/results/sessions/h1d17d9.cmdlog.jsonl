@@ -1,0 +1,17 @@
+{"t": 1791388241.5972118, "command": "ls -la"}
+{"t": 1791388244.9119449, "command": "cat influx.yaml"}
+{"t": 1791388247.2844281, "command": "kubectl get statefulset influx -n telemetry-17d9 -o yaml"}
+{"t": 1791388249.502561, "command": "kubectl get pvc -n telemetry-17d9"}
+{"t": 1791388251.088812, "command": "kubectl exec -n telemetry-17d9 influx-0 -- cat /data/payload.txt"}
+{"t": 1791388253.799105, "command": "kubectl apply -f influx.yaml -n telemetry-17d9"}
+{"t": 1791388265.280294, "command": "kubectl patch statefulset influx -n telemetry-17d9 --type merge -p '{\"spec\":{\"template\":{\"spec\":{\"containers\":[{\"name\":\"influx\",\"env\":[{\"name\":\"MODE\",\"value\":\"b\"}]}]}}}}'"}
+{"t": 1791388278.3717701, "command": "kubectl patch statefulset influx -n telemetry-17d9 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/spec/containers/0/env/0/value\", \"value\": \"b\"}]'"}
+{"t": 1791388293.37764, "command": "kubectl patch statefulset influx -n telemetry-17d9 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/spec/containers/0/env/0/value\", \"value\": \"b\"}]'"}
+{"t": 1791388295.3054998, "command": "kubectl patch pvc data-influx-0 -n telemetry-17d9 -p '{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"128Mi\"}}}}'"}
+{"t": 1791388315.66349, "command": "kubectl get storageclass standard -o yaml"}
+{"t": 1791388317.032568, "command": "kubectl patch storageclass standard -p '{\"allowVolumeExpansion\":true}'"}
+{"t": 1791388322.644032, "command": "kubectl patch pvc data-influx-0 -n telemetry-17d9 -p '{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"128Mi\"}}}}'"}
+{"t": 1791388329.870304, "command": "kubectl get statefulset influx -n telemetry-17d9 -o jsonpath='{.spec.template.spec.containers[0].env[0]}'"}
+{"t": 1791388331.249571, "command": "kubectl get pvc data-influx-0 -n telemetry-17d9"}
+{"t": 1791388333.04811, "command": "kubectl get pod influx-0 -n telemetry-17d9 -o jsonpath='{.status.phase}'"}
+{"t": 1791388334.572816, "command": "kubectl exec -n telemetry-17d9 influx-0 -- cat /data/payload.txt"}

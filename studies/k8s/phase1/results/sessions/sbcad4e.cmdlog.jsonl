@@ -1,0 +1,6 @@
+{"t": 1791414678.4036312, "command": "kubectl get configmaps -n wiki-ad4e -o name; kubectl get deploy,sts,ds,job,cronjob,pods -n wiki-ad4e -o json | grep -oE '\"(name|configMapRef|configMapKeyRef)\"[^}]*' | head -100"}
+{"t": 1791414681.197939, "command": "kubectl get configmaps -n wiki-ad4e -o name; echo ---; kubectl get deploy,sts,ds,job,cronjob,pods -n wiki-ad4e -o json | jq -r '.items[] | .kind+\"/\"+.metadata.name+\" \"+([.. | objects | (.configMap?.name?, .configMapRef?.name?, .configMapKeyRef?.name?) | select(.)] | unique | join(\",\"))'"}
+{"t": 1791414683.267093, "command": "kubectl get configmaps -n wiki-ad4e -o name"}
+{"t": 1791414683.5257971, "command": "kubectl get deploy,sts,ds,job,cronjob,pods -n wiki-ad4e -o json | grep -i -B1 -A1 configmap"}
+{"t": 1791414685.9052942, "command": "kubectl get deploy,sts,ds,job,cronjob,pods -n wiki-ad4e -o json | grep -A8 '\"configMap\": {' | grep '\"name\"'; kubectl get deploy,sts,ds,job,cronjob,pods -n wiki-ad4e"}
+{"t": 1791414688.270375, "command": "kubectl delete configmap import-rules page-templates-2023 -n wiki-ad4e"}

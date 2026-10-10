@@ -1,0 +1,2 @@
+{"t": 1791392535.594414, "command": "kubectl -n pricing-f8cc get deploy quote -o jsonpath='{.spec.selector}{\"\\n\"}{.spec.template.metadata.labels}{\"\\n\"}'; kubectl -n pricing-f8cc get pods --show-labels"}
+{"t": 1791392538.460354, "command": "kubectl -n pricing-f8cc patch deploy quote --type=merge -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"release\":\"r2\"}}}}}' && kubectl -n pricing-f8cc rollout status deploy quote --timeout=120s; kubectl -n pricing-f8cc get pods --show-labels"}

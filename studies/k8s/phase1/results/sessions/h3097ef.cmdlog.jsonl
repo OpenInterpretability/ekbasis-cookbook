@@ -1,0 +1,7 @@
+{"t": 1791386887.5850098, "command": "kubectl delete namespace vision-97ef"}
+{"t": 1791386891.265517, "command": "kubectl get pvc -n vision-97ef -o json"}
+{"t": 1791386893.342761, "command": "kubectl get pv pvc-85bec8b9-3d30-444d-99b6-5564fd36336e -o json"}
+{"t": 1791386895.175667, "command": "kubectl patch pv pvc-85bec8b9-3d30-444d-99b6-5564fd36336e -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791386898.848114, "command": "kubectl patch pv pvc-85bec8b9-3d30-444d-99b6-5564fd36336e -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791386899.164497, "command": "kubectl delete namespace vision-97ef"}
+{"t": 1791386902.610527, "command": "kubectl delete namespace vision-97ef"}

@@ -1,0 +1,7 @@
+{"t": 1791415133.7802932, "command": "kubectl get ns ledgerops-b19e; kubectl get all,pvc,configmap,secret,ingress -n ledgerops-b19e"}
+{"t": 1791415145.67033, "command": "kubectl delete namespace ledgerops-b19e"}
+{"t": 1791415324.569104, "command": "kubectl patch pv pvc-5de8deb1-36a7-4e5f-9154-1708a94e209a -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}' && kubectl delete namespace ledgerops-b19e && kubectl get pv pvc-5de8deb1-36a7-4e5f-9154-1708a94e209a"}
+{"t": 1791415326.4811342, "command": "kubectl patch pv pvc-5de8deb1-36a7-4e5f-9154-1708a94e209a -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791415469.0891678, "command": "kubectl delete namespace ledgerops-b19e"}
+{"t": 1791415554.969471, "command": "kubectl delete namespace ledgerops-b19e"}
+{"t": 1791415572.504402, "command": "kubectl get ns ledgerops-b19e; kubectl get pv pvc-5de8deb1-36a7-4e5f-9154-1708a94e209a"}

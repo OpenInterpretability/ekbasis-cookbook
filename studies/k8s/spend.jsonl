@@ -1,0 +1,541 @@
+{"t": "2026-10-07T10:37:07", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F6_noexecute_taint.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01753}
+{"t": "2026-10-07T10:37:07", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F6_noexecute_taint.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017366}
+{"t": "2026-10-07T10:37:08", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F6_noexecute_taint.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01729}
+{"t": "2026-10-07T10:37:09", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F6_noexecute_taint.1.harm", "model": ["claude-sonnet-5-5"], "usd": 0.020661000000000002}
+{"t": "2026-10-07T10:37:10", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F6_noexecute_taint.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017626}
+{"t": "2026-10-07T10:37:10", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F6_noexecute_taint.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017145999999999998}
+{"t": "2026-10-07T10:37:11", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F6_noexecute_taint.1.safe", "model": ["claude-sonnet-5-5"], "usd": 0.019609}
+{"t": "2026-10-07T10:37:12", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F6_noexecute_taint.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01749}
+{"t": "2026-10-07T10:37:14", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F6_noexecute_taint.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017218}
+{"t": "2026-10-07T10:37:14", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F6_noexecute_taint.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017482}
+{"t": "2026-10-07T10:37:14", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F6_noexecute_taint.2.harm", "model": ["claude-sonnet-5-5"], "usd": 0.020261}
+{"t": "2026-10-07T10:37:16", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F6_noexecute_taint.2.safe", "model": ["claude-sonnet-5-5"], "usd": 0.019269}
+{"t": "2026-10-07T10:37:17", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F1_ns_delete.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017784}
+{"t": "2026-10-07T10:37:17", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F1_ns_delete.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018318}
+{"t": "2026-10-07T10:37:18", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F1_ns_delete.1.harm", "model": ["claude-sonnet-5-5"], "usd": 0.021369}
+{"t": "2026-10-07T10:37:19", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F1_ns_delete.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017725}
+{"t": "2026-10-07T10:37:20", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F1_ns_delete.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018328}
+{"t": "2026-10-07T10:37:21", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F1_ns_delete.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018278}
+{"t": "2026-10-07T10:37:21", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F1_ns_delete.1.safe", "model": ["claude-sonnet-5-5"], "usd": 0.021369}
+{"t": "2026-10-07T10:37:22", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F1_ns_delete.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017714}
+{"t": "2026-10-07T10:37:23", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F1_ns_delete.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.0189}
+{"t": "2026-10-07T10:37:24", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F1_ns_delete.2.harm", "model": ["claude-sonnet-5-5"], "usd": 0.022993}
+{"t": "2026-10-07T10:37:25", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F1_ns_delete.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018825}
+{"t": "2026-10-07T10:37:25", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F1_ns_delete.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018264}
+{"t": "2026-10-07T10:37:28", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F2_template_labels.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017286}
+{"t": "2026-10-07T10:37:28", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F1_ns_delete.2.safe", "model": ["claude-sonnet-5-5"], "usd": 0.022945}
+{"t": "2026-10-07T10:37:28", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F1_ns_delete.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018886}
+{"t": "2026-10-07T10:37:31", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F2_template_labels.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017646}
+{"t": "2026-10-07T10:37:32", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F2_template_labels.1.harm", "model": ["claude-sonnet-5-5"], "usd": 0.019661}
+{"t": "2026-10-07T10:37:32", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F2_template_labels.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017282}
+{"t": "2026-10-07T10:37:34", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F2_template_labels.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.020477000000000002}
+{"t": "2026-10-07T10:37:35", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F2_template_labels.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017312}
+{"t": "2026-10-07T10:37:36", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F2_template_labels.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017676}
+{"t": "2026-10-07T10:37:36", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F2_template_labels.1.safe", "model": ["claude-sonnet-5-5"], "usd": 0.020825}
+{"t": "2026-10-07T10:37:38", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F2_template_labels.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017296}
+{"t": "2026-10-07T10:37:39", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F2_template_labels.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017664}
+{"t": "2026-10-07T10:37:39", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F2_template_labels.2.harm", "model": ["claude-sonnet-5-5"], "usd": 0.021409}
+{"t": "2026-10-07T10:37:41", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F2_template_labels.2.safe", "model": ["claude-sonnet-5-5"], "usd": 0.020901}
+{"t": "2026-10-07T10:37:41", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F3_immutable_apply.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017834}
+{"t": "2026-10-07T10:37:42", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F3_immutable_apply.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01817}
+{"t": "2026-10-07T10:37:44", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F3_immutable_apply.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017806}
+{"t": "2026-10-07T10:37:44", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F3_immutable_apply.1.harm", "model": ["claude-sonnet-5-5"], "usd": 0.022122999999999997}
+{"t": "2026-10-07T10:37:45", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F3_immutable_apply.1.safe", "model": ["claude-sonnet-5-5"], "usd": 0.020929}
+{"t": "2026-10-07T10:37:45", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F3_immutable_apply.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01808}
+{"t": "2026-10-07T10:37:46", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F3_immutable_apply.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018946}
+{"t": "2026-10-07T10:37:47", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F3_immutable_apply.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018618}
+{"t": "2026-10-07T10:37:48", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F3_immutable_apply.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018528}
+{"t": "2026-10-07T10:37:50", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F3_immutable_apply.2.harm", "model": ["claude-sonnet-5-5"], "usd": 0.024589}
+{"t": "2026-10-07T10:37:51", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F4_apply_prune.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01874}
+{"t": "2026-10-07T10:37:52", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F3_immutable_apply.2.safe", "model": ["claude-sonnet-5-5"], "usd": 0.025447}
+{"t": "2026-10-07T10:37:53", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F4_apply_prune.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.019472}
+{"t": "2026-10-07T10:37:55", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F4_apply_prune.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018744}
+{"t": "2026-10-07T10:37:56", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F4_apply_prune.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.019466}
+{"t": "2026-10-07T10:37:57", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F3_immutable_apply.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.022427000000000002}
+{"t": "2026-10-07T10:37:59", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F4_apply_prune.1.harm", "model": ["claude-sonnet-5-5"], "usd": 0.027959}
+{"t": "2026-10-07T10:38:01", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F4_apply_prune.1.safe", "model": ["claude-sonnet-5-5"], "usd": 0.027521}
+{"t": "2026-10-07T10:38:03", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F4_apply_prune.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.021131}
+{"t": "2026-10-07T10:38:04", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F4_apply_prune.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.021711}
+{"t": "2026-10-07T10:38:06", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F4_apply_prune.2.harm", "model": ["claude-sonnet-5-5"], "usd": 0.027672999999999996}
+{"t": "2026-10-07T10:38:06", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F4_apply_prune.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.019525999999999998}
+{"t": "2026-10-07T10:38:08", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F4_apply_prune.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.021033999999999997}
+{"t": "2026-10-07T10:38:10", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F5_replace_force.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017526}
+{"t": "2026-10-07T10:38:12", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F4_apply_prune.2.safe", "model": ["claude-sonnet-5-5"], "usd": 0.029345}
+{"t": "2026-10-07T10:38:14", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F5_replace_force.1.harm", "model": ["claude-sonnet-5-5"], "usd": 0.023927}
+{"t": "2026-10-07T10:38:15", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F5_replace_force.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.02113}
+{"t": "2026-10-07T10:38:18", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F5_replace_force.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.020103000000000003}
+{"t": "2026-10-07T10:38:18", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F5_replace_force.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017685}
+{"t": "2026-10-07T10:38:19", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F5_replace_force.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.020294000000000003}
+{"t": "2026-10-07T10:38:19", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F5_replace_force.1.safe", "model": ["claude-sonnet-5-5"], "usd": 0.024681}
+{"t": "2026-10-07T10:38:21", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F5_replace_force.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01833}
+{"t": "2026-10-07T10:38:21", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F5_replace_force.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017684}
+{"t": "2026-10-07T10:38:25", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F5_replace_force.2.harm", "model": ["claude-sonnet-5-5"], "usd": 0.023525}
+{"t": "2026-10-07T10:38:27", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F5_replace_force.2.safe", "model": ["claude-sonnet-5-5"], "usd": 0.023971000000000003}
+{"t": "2026-10-07T10:38:27", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F5_replace_force.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.020259}
+{"t": "2026-10-07T10:38:27", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F5_replace_force.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.020065}
+{"t": "2026-10-07T10:38:28", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F7_quota_scale.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017968}
+{"t": "2026-10-07T10:38:29", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F7_quota_scale.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01807}
+{"t": "2026-10-07T10:38:30", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F7_quota_scale.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017968}
+{"t": "2026-10-07T10:38:31", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F7_quota_scale.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01807}
+{"t": "2026-10-07T10:38:33", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F7_quota_scale.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017376}
+{"t": "2026-10-07T10:38:34", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F7_quota_scale.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017478}
+{"t": "2026-10-07T10:38:35", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F7_quota_scale.1.harm", "model": ["claude-sonnet-5-5"], "usd": 0.025301}
+{"t": "2026-10-07T10:38:35", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F7_quota_scale.1.safe", "model": ["claude-sonnet-5-5"], "usd": 0.021737}
+{"t": "2026-10-07T10:38:37", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F7_quota_scale.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017372}
+{"t": "2026-10-07T10:38:38", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F7_quota_scale.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017482}
+{"t": "2026-10-07T10:38:40", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F7_quota_scale.2.safe", "model": ["claude-sonnet-5-5"], "usd": 0.020157}
+{"t": "2026-10-07T10:38:40", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F8_configmap_delete.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017422}
+{"t": "2026-10-07T10:38:40", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F7_quota_scale.2.harm", "model": ["claude-sonnet-5-5"], "usd": 0.023321}
+{"t": "2026-10-07T10:38:41", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F8_configmap_delete.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01757}
+{"t": "2026-10-07T10:38:43", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F8_configmap_delete.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017562}
+{"t": "2026-10-07T10:38:43", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F8_configmap_delete.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017426}
+{"t": "2026-10-07T10:38:44", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F8_configmap_delete.1.harm", "model": ["claude-sonnet-5-5"], "usd": 0.019373}
+{"t": "2026-10-07T10:38:46", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F8_configmap_delete.1.safe", "model": ["claude-sonnet-5-5"], "usd": 0.019353}
+{"t": "2026-10-07T10:38:46", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F8_configmap_delete.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017536}
+{"t": "2026-10-07T10:38:46", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F8_configmap_delete.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017676}
+{"t": "2026-10-07T10:38:47", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F8_configmap_delete.2.harm", "model": ["claude-sonnet-5-5"], "usd": 0.019689}
+{"t": "2026-10-07T10:38:49", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F8_configmap_delete.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017548}
+{"t": "2026-10-07T10:38:49", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F8_configmap_delete.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01768}
+{"t": "2026-10-07T10:38:50", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F9_cascade.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017151}
+{"t": "2026-10-07T10:38:51", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F8_configmap_delete.2.safe", "model": ["claude-sonnet-5-5"], "usd": 0.019725}
+{"t": "2026-10-07T10:38:51", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F9_cascade.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017364}
+{"t": "2026-10-07T10:38:52", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F9_cascade.1.harm", "model": ["claude-sonnet-5-5"], "usd": 0.019061}
+{"t": "2026-10-07T10:38:53", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F9_cascade.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017128}
+{"t": "2026-10-07T10:38:54", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F9_cascade.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017224}
+{"t": "2026-10-07T10:38:54", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F9_cascade.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017447999999999998}
+{"t": "2026-10-07T10:38:56", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F9_cascade.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017008}
+{"t": "2026-10-07T10:38:56", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F9_cascade.1.safe", "model": ["claude-sonnet-5-5"], "usd": 0.020025}
+{"t": "2026-10-07T10:38:56", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F9_cascade.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017228}
+{"t": "2026-10-07T10:38:58", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F9_cascade.2.harm", "model": ["claude-sonnet-5-5"], "usd": 0.018617}
+{"t": "2026-10-07T10:38:59", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F9_cascade.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017024}
+{"t": "2026-10-07T10:38:59", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F9_cascade.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01724}
+{"t": "2026-10-07T10:39:00", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F10_sts_pvc_retention.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018528}
+{"t": "2026-10-07T10:39:01", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F9_cascade.2.safe", "model": ["claude-sonnet-5-5"], "usd": 0.018669}
+{"t": "2026-10-07T10:39:01", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F10_sts_pvc_retention.1.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.019088}
+{"t": "2026-10-07T10:39:03", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F10_sts_pvc_retention.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.019015999999999998}
+{"t": "2026-10-07T10:39:04", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F10_sts_pvc_retention.1.harm", "model": ["claude-sonnet-5-5"], "usd": 0.023377}
+{"t": "2026-10-07T10:39:04", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F10_sts_pvc_retention.1.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018444}
+{"t": "2026-10-07T10:39:05", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F10_sts_pvc_retention.1.safe", "model": ["claude-sonnet-5-5"], "usd": 0.023145}
+{"t": "2026-10-07T10:39:06", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F10_sts_pvc_retention.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018998}
+{"t": "2026-10-07T10:39:07", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F10_sts_pvc_retention.2.harm", "model": ["claude-haiku-4-5-20251001"], "usd": 0.019464}
+{"t": "2026-10-07T10:39:08", "ws": "K8S", "phase": "probe", "what": "forecaster H0", "id": "F10_sts_pvc_retention.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01898}
+{"t": "2026-10-07T10:39:09", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F10_sts_pvc_retention.2.harm", "model": ["claude-sonnet-5-5"], "usd": 0.025697}
+{"t": "2026-10-07T10:39:09", "ws": "K8S", "phase": "probe", "what": "forecaster H1", "id": "F10_sts_pvc_retention.2.safe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.019434}
+{"t": "2026-10-07T10:39:10", "ws": "K8S", "phase": "probe", "what": "forecaster S1", "id": "F10_sts_pvc_retention.2.safe", "model": ["claude-sonnet-5-5"], "usd": 0.024073}
+{"t": "2026-10-07T10:54:35", "ws": "K8S", "phase": "pilot", "what": "agent P1_staging_cleanup", "model": ["claude-haiku-4-5-20251001"], "usd": 0.0244504}
+{"t": "2026-10-07T10:55:35", "ws": "K8S", "phase": "pilot", "what": "agent P2_label_standardize", "model": ["claude-haiku-4-5-20251001"], "usd": 0.0149321}
+{"t": "2026-10-07T10:56:38", "ws": "K8S", "phase": "pilot", "what": "agent P3_gpu_taint", "model": ["claude-haiku-4-5-20251001"], "usd": 0.0065564}
+{"t": "2026-10-07T10:57:43", "ws": "K8S", "phase": "pilot", "what": "agent P4_unused_configmap", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006249999999999999}
+{"t": "2026-10-07T10:59:08", "ws": "K8S", "phase": "pilot", "what": "agent P5_sts_recreate", "model": ["claude-haiku-4-5-20251001"], "usd": 0.0139991}
+{"t": "2026-10-07T11:00:23", "ws": "K8S", "phase": "pilot", "what": "agent P6_deploy_handover", "model": ["claude-haiku-4-5-20251001"], "usd": 0.011935300000000001}
+{"t": "2026-10-07T11:01:37", "ws": "K8S", "phase": "pilot", "what": "agent C1_sandbox_cleanup", "model": ["claude-haiku-4-5-20251001"], "usd": 0.0061577}
+{"t": "2026-10-07T11:02:32", "ws": "K8S", "phase": "pilot", "what": "agent C2_scale_ok", "model": ["claude-haiku-4-5-20251001"], "usd": 0.0063539}
+{"t": "2026-10-07", "ws": "K8S", "phase": "tests", "what": "harness test: claude -p auth with empty HOME (not logged in)", "model": ["claude-haiku-4-5-20251001"], "usd": 0.0}
+{"t": "2026-10-07", "ws": "K8S", "phase": "tests", "what": "harness test: allowedTools/env-file echo", "model": ["claude-haiku-4-5-20251001"], "usd": 0.015076}
+{"t": "2026-10-07", "ws": "K8S", "phase": "tests", "what": "harness test: bypass + policy hook + env file", "model": ["claude-haiku-4-5-20251001"], "usd": 0.007759}
+{"t": "2026-10-07", "ws": "K8S", "phase": "tests", "what": "harness test: synthetic forecaster prompt (Haiku)", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018961}
+{"t": "2026-10-07", "ws": "K8S", "phase": "tests", "what": "harness test: stream-json two-turn session (Phase 1 user channel)", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006939}
+{"t": "2026-10-07T11:54:01", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet smoke", "model": ["claude-sonnet-5-5"], "usd": 0.025459}
+{"t": "2026-10-07T11:54:08", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet smoke", "model": ["claude-sonnet-5-5"], "usd": 0.031025}
+{"t": "2026-10-07T11:54:13", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet smoke", "model": ["claude-sonnet-5-5"], "usd": 0.025327}
+{"t": "2026-10-07T11:54:20", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet smoke", "model": ["claude-sonnet-5-5"], "usd": 0.028709}
+{"t": "2026-10-07T12:16:51", "ws": "K8S", "phase": "phase1", "what": "agent p F5b_notifier_force blind haiku s1 p15a623", "model": ["claude-haiku-4-5-20251001"], "usd": 0.024605}
+{"t": "2026-10-07T12:17:18", "ws": "K8S", "phase": "phase1", "what": "agent p F1a_ledgerops_cleanup blind haiku s1 pbc484e", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01426}
+{"t": "2026-10-07T12:17:21", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet pb2a113", "model": ["claude-sonnet-5-5"], "usd": 0.027519}
+{"t": "2026-10-07T12:17:25", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet pb2a113", "model": ["claude-sonnet-5-5"], "usd": 0.029019000000000003}
+{"t": "2026-10-07T12:17:37", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet pb2a113", "model": ["claude-sonnet-5-5"], "usd": 0.027187}
+{"t": "2026-10-07T12:17:43", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet p4911c9", "model": ["claude-sonnet-5-5"], "usd": 0.023991}
+{"t": "2026-10-07T12:17:47", "ws": "K8S", "phase": "phase1", "what": "agent p F1a_ledgerops_cleanup ask_always haiku s1 p30b53d", "model": ["claude-haiku-4-5-20251001"], "usd": 0.042048, "usd_before_fix": 0.125947}
+{"t": "2026-10-07T12:17:47", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet pb2a113", "model": ["claude-sonnet-5-5"], "usd": 0.030111}
+{"t": "2026-10-07T12:18:05", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet p4911c9", "model": ["claude-sonnet-5-5"], "usd": 0.022087}
+{"t": "2026-10-07T12:18:17", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet p4911c9", "model": ["claude-sonnet-5-5"], "usd": 0.022111}
+{"t": "2026-10-07T12:18:23", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet p6a6c43", "model": ["claude-sonnet-5-5"], "usd": 0.027097}
+{"t": "2026-10-07T12:18:30", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet p6a6c43", "model": ["claude-sonnet-5-5"], "usd": 0.027065}
+{"t": "2026-10-07T12:18:38", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet p6a6c43", "model": ["claude-sonnet-5-5"], "usd": 0.026691}
+{"t": "2026-10-07T12:19:00", "ws": "K8S", "phase": "phase1", "what": "agent p F1a_ledgerops_cleanup ask_sonnet haiku s1 pb2a113", "model": ["claude-haiku-4-5-20251001"], "usd": 0.020227, "usd_before_fix": 0.036472}
+{"t": "2026-10-07T12:19:04", "ws": "K8S", "phase": "phase1", "what": "agent p F2a_basket_labels ask_sonnet haiku s1 p4911c9", "model": ["claude-haiku-4-5-20251001"], "usd": 0.016244, "usd_before_fix": 0.034496}
+{"t": "2026-10-07T12:19:25", "ws": "K8S", "phase": "phase1", "what": "agent p F5b_notifier_force ask_sonnet haiku s1 p6a6c43", "model": ["claude-haiku-4-5-20251001"], "usd": 0.008846}
+{"t": "2026-10-07T12:20:10", "ws": "K8S", "phase": "phase1", "what": "agent p F5b_notifier_force ask_always haiku s1 p567de9", "model": ["claude-haiku-4-5-20251001"], "usd": 0.013632, "usd_before_fix": 0.03024}
+{"t": "2026-10-07T12:20:19", "ws": "K8S", "phase": "phase1", "what": "agent p F2a_basket_labels blind haiku s1 p597b2c", "model": ["claude-haiku-4-5-20251001"], "usd": 0.012607}
+{"t": "2026-10-07T12:20:58", "ws": "K8S", "phase": "phase1", "what": "agent p F2a_basket_labels ask_always haiku s1 p3d211a", "model": ["claude-haiku-4-5-20251001"], "usd": 0.031034, "usd_before_fix": 0.106765}
+{"t": "2026-10-07T12:23:55", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hc32047", "model": ["claude-sonnet-5-5"], "usd": 0.023646999999999998}
+{"t": "2026-10-07T12:23:59", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hc32047", "model": ["claude-sonnet-5-5"], "usd": 0.025134999999999998}
+{"t": "2026-10-07T12:24:09", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hc32047", "model": ["claude-sonnet-5-5"], "usd": 0.024097}
+{"t": "2026-10-07T12:24:20", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hc32047", "model": ["claude-sonnet-5-5"], "usd": 0.026175}
+{"t": "2026-10-07T12:25:16", "ws": "K8S", "phase": "phase1", "what": "agent h F4b_reporting_prune ask_always haiku s1 h2d7393", "model": ["claude-haiku-4-5-20251001"], "usd": 0.024467}
+{"t": "2026-10-07T12:25:23", "ws": "K8S", "phase": "phase1", "what": "agent h F1a_ledgerops_cleanup ask_always haiku s1 h727be3", "model": ["claude-haiku-4-5-20251001"], "usd": 0.028099}
+{"t": "2026-10-07T12:25:25", "ws": "K8S", "phase": "phase1", "what": "agent h F1b_vision_delete_ns ask_sonnet haiku s1 hc32047", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01298}
+{"t": "2026-10-07T12:25:48", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h57899d", "model": ["claude-sonnet-5-5"], "usd": 0.027864999999999997}
+{"t": "2026-10-07T12:25:53", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h70a73c", "model": ["claude-sonnet-5-5"], "usd": 0.024159}
+{"t": "2026-10-07T12:25:56", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h57899d", "model": ["claude-sonnet-5-5"], "usd": 0.027055}
+{"t": "2026-10-07T12:26:05", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h70a73c", "model": ["claude-sonnet-5-5"], "usd": 0.021983}
+{"t": "2026-10-07T12:26:08", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h57899d", "model": ["claude-sonnet-5-5"], "usd": 0.027417}
+{"t": "2026-10-07T12:26:16", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h70a73c", "model": ["claude-sonnet-5-5"], "usd": 0.022355}
+{"t": "2026-10-07T12:26:22", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h70a73c", "model": ["claude-sonnet-5-5"], "usd": 0.024923}
+{"t": "2026-10-07T12:26:32", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h70a73c", "model": ["claude-sonnet-5-5"], "usd": 0.022210999999999998}
+{"t": "2026-10-07T12:26:33", "ws": "K8S", "phase": "phase1", "what": "agent h F4b_reporting_prune blind haiku s1 hc23520", "model": ["claude-haiku-4-5-20251001"], "usd": 0.007022}
+{"t": "2026-10-07T12:26:39", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h70a73c", "model": ["claude-sonnet-5-5"], "usd": 0.022258999999999998}
+{"t": "2026-10-07T12:26:57", "ws": "K8S", "phase": "phase1", "what": "agent h F5b_notifier_force ask_sonnet haiku s1 h57899d", "model": ["claude-haiku-4-5-20251001"], "usd": 0.008823}
+{"t": "2026-10-07T12:27:28", "ws": "K8S", "phase": "phase1", "what": "agent h F2b_quote_release ask_sonnet haiku s1 h70a73c", "model": ["claude-haiku-4-5-20251001"], "usd": 0.023011}
+{"t": "2026-10-07T12:27:47", "ws": "K8S", "phase": "phase1", "what": "agent h F5b_notifier_force blind haiku s1 h25fd08", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006424}
+{"t": "2026-10-07T12:28:22", "ws": "K8S", "phase": "phase1", "what": "agent h C4_pipeline_v1 blind haiku s1 hbe3711", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006346}
+{"t": "2026-10-07T12:28:51", "ws": "K8S", "phase": "phase1", "what": "agent h F9b_logforwarder_handover blind haiku s1 h7e39ce", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01435}
+{"t": "2026-10-07T12:28:57", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet he78f53", "model": ["claude-sonnet-5-5"], "usd": 0.021407}
+{"t": "2026-10-07T12:29:25", "ws": "K8S", "phase": "phase1", "what": "agent h F1b_vision_delete_ns ask_always haiku s1 h3097ef", "model": ["claude-haiku-4-5-20251001"], "usd": 0.026498}
+{"t": "2026-10-07T12:29:47", "ws": "K8S", "phase": "phase1", "what": "agent h F9b_logforwarder_handover ask_sonnet haiku s1 he78f53", "model": ["claude-haiku-4-5-20251001"], "usd": 0.013314}
+{"t": "2026-10-07T12:30:06", "ws": "K8S", "phase": "phase1", "what": "agent h C5_content_db_delete blind haiku s1 h633978", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006394}
+{"t": "2026-10-07T12:30:44", "ws": "K8S", "phase": "phase1", "what": "agent h F4a_catalog_sync ask_always haiku s1 h0658eb", "model": ["claude-haiku-4-5-20251001"], "usd": 0.027913}
+{"t": "2026-10-07T12:30:45", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hbe49a9", "model": ["claude-sonnet-5-5"], "usd": 0.026851}
+{"t": "2026-10-07T12:30:50", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hbe49a9", "model": ["claude-sonnet-5-5"], "usd": 0.030369}
+{"t": "2026-10-07T12:30:57", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hbe49a9", "model": ["claude-sonnet-5-5"], "usd": 0.026683}
+{"t": "2026-10-07T12:31:04", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hbe49a9", "model": ["claude-sonnet-5-5"], "usd": 0.026834999999999998}
+{"t": "2026-10-07T12:31:13", "ws": "K8S", "phase": "phase1", "what": "agent h F1b_vision_delete_ns blind haiku s1 h4fc4ab", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006122}
+{"t": "2026-10-07T12:31:58", "ws": "K8S", "phase": "phase1", "what": "agent h F10b_kafka_scale_down ask_sonnet haiku s1 hbe49a9", "model": ["claude-haiku-4-5-20251001"], "usd": 0.011321}
+{"t": "2026-10-07T12:32:07", "ws": "K8S", "phase": "phase1", "what": "agent h F4a_catalog_sync blind haiku s1 he84a6e", "model": ["claude-haiku-4-5-20251001"], "usd": 0.024521}
+{"t": "2026-10-07T12:32:51", "ws": "K8S", "phase": "phase1", "what": "agent h F8b_wiki_cleanup ask_always haiku s1 h3a87b7", "model": ["claude-haiku-4-5-20251001"], "usd": 0.038818}
+{"t": "2026-10-07T12:34:12", "ws": "K8S", "phase": "phase1", "what": "agent h F6b_maintenance_noexecute ask_always haiku s1 h0b6cd7", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01369}
+{"t": "2026-10-07T12:34:47", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0499fa", "model": ["claude-sonnet-5-5"], "usd": 0.023863}
+{"t": "2026-10-07T12:34:49", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hcf2f56", "model": ["claude-sonnet-5-5"], "usd": 0.027547}
+{"t": "2026-10-07T12:34:55", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0499fa", "model": ["claude-sonnet-5-5"], "usd": 0.023882999999999998}
+{"t": "2026-10-07T12:34:56", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hcf2f56", "model": ["claude-sonnet-5-5"], "usd": 0.029071}
+{"t": "2026-10-07T12:35:02", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0499fa", "model": ["claude-sonnet-5-5"], "usd": 0.021578999999999997}
+{"t": "2026-10-07T12:35:03", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hcf2f56", "model": ["claude-sonnet-5-5"], "usd": 0.027202999999999998}
+{"t": "2026-10-07T12:35:13", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hcf2f56", "model": ["claude-sonnet-5-5"], "usd": 0.030948999999999997}
+{"t": "2026-10-07T12:35:15", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0499fa", "model": ["claude-sonnet-5-5"], "usd": 0.025539}
+{"t": "2026-10-07T12:35:33", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0499fa", "model": ["claude-sonnet-5-5"], "usd": 0.026123}
+{"t": "2026-10-07T12:35:36", "ws": "K8S", "phase": "phase1", "what": "agent h F9b_logforwarder_handover ask_always haiku s1 hd82c0c", "model": ["claude-haiku-4-5-20251001"], "usd": 0.016973}
+{"t": "2026-10-07T12:35:42", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0499fa", "model": ["claude-sonnet-5-5"], "usd": 0.027603}
+{"t": "2026-10-07T12:36:25", "ws": "K8S", "phase": "phase1", "what": "agent h F1a_ledgerops_cleanup ask_sonnet haiku s1 hcf2f56", "model": ["claude-haiku-4-5-20251001"], "usd": 0.019608}
+{"t": "2026-10-07T12:36:35", "ws": "K8S", "phase": "phase1", "what": "agent h F5a_tiles_selector ask_sonnet haiku s1 h0499fa", "model": ["claude-haiku-4-5-20251001"], "usd": 0.037173}
+{"t": "2026-10-07T12:37:01", "ws": "K8S", "phase": "phase1", "what": "agent h F10b_kafka_scale_down blind haiku s1 h0d7dac", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006498}
+{"t": "2026-10-07T12:37:15", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hcdd923", "model": ["claude-sonnet-5-5"], "usd": 0.022366999999999998}
+{"t": "2026-10-07T12:38:13", "ws": "K8S", "phase": "phase1", "what": "agent h F8b_wiki_cleanup ask_sonnet haiku s1 hcdd923", "model": ["claude-haiku-4-5-20251001"], "usd": 0.035411}
+{"t": "2026-10-07T12:38:29", "ws": "K8S", "phase": "phase1", "what": "agent h F5a_tiles_selector blind haiku s1 h83533b", "model": ["claude-haiku-4-5-20251001"], "usd": 0.028006}
+{"t": "2026-10-07T12:38:46", "ws": "K8S", "phase": "phase1", "what": "agent h F10a_reservations_recreate ask_always haiku s1 h000af0", "model": ["claude-haiku-4-5-20251001"], "usd": 0.014229}
+{"t": "2026-10-07T12:39:36", "ws": "K8S", "phase": "phase1", "what": "agent h C6_collector_scale ask_always haiku s1 h5aeec1", "model": ["claude-haiku-4-5-20251001"], "usd": 0.009946}
+{"t": "2026-10-07T12:40:06", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h2a0055", "model": ["claude-sonnet-5-5"], "usd": 0.018663}
+{"t": "2026-10-07T12:40:53", "ws": "K8S", "phase": "phase1", "what": "agent h C3_ml_noschedule ask_sonnet haiku s1 h2a0055", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006497}
+{"t": "2026-10-07T12:42:07", "ws": "K8S", "phase": "phase1", "what": "agent h F2b_quote_release blind haiku s1 hdcc44b", "model": ["claude-haiku-4-5-20251001"], "usd": 0.010683}
+{"t": "2026-10-07T12:42:11", "ws": "K8S", "phase": "phase1", "what": "agent h C5_content_db_delete ask_always haiku s1 h96bb0d", "model": ["claude-haiku-4-5-20251001"], "usd": 0.009861}
+{"t": "2026-10-07T12:42:34", "ws": "K8S", "phase": "phase1", "what": "agent h F3a_taxcalc_v2 ask_always haiku s1 hbcaf1d", "model": ["claude-haiku-4-5-20251001"], "usd": 0.02904}
+{"t": "2026-10-07T12:43:22", "ws": "K8S", "phase": "phase1", "what": "agent h C6_collector_scale blind haiku s1 h04d975", "model": ["claude-haiku-4-5-20251001"], "usd": 0.008514}
+{"t": "2026-10-07T12:43:53", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hb57260", "model": ["claude-sonnet-5-5"], "usd": 0.021634999999999998}
+{"t": "2026-10-07T12:44:40", "ws": "K8S", "phase": "phase1", "what": "agent h F6a_gpu_reserve ask_sonnet haiku s1 hb57260", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006553}
+{"t": "2026-10-07T12:45:50", "ws": "K8S", "phase": "phase1", "what": "agent h C3_ml_noschedule blind haiku s1 h884d0b", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006578}
+{"t": "2026-10-07T12:46:11", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h51d9ed", "model": ["claude-sonnet-5-5"], "usd": 0.021639}
+{"t": "2026-10-07T12:47:09", "ws": "K8S", "phase": "phase1", "what": "agent h F9a_authn_handover ask_always haiku s1 h3d5f98", "model": ["claude-haiku-4-5-20251001"], "usd": 0.016085}
+{"t": "2026-10-07T12:47:12", "ws": "K8S", "phase": "phase1", "what": "agent h C1_scratch_delete ask_sonnet haiku s1 h51d9ed", "model": ["claude-haiku-4-5-20251001"], "usd": 0.009486}
+{"t": "2026-10-07T12:47:38", "ws": "K8S", "phase": "phase1", "what": "agent h F3a_taxcalc_v2 blind haiku s1 h0fe40e", "model": ["claude-haiku-4-5-20251001"], "usd": 0.037307}
+{"t": "2026-10-07T12:47:43", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hb81efe", "model": ["claude-sonnet-5-5"], "usd": 0.022175}
+{"t": "2026-10-07T12:48:10", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h79f9e1", "model": ["claude-sonnet-5-5"], "usd": 0.022411}
+{"t": "2026-10-07T12:48:16", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h79f9e1", "model": ["claude-sonnet-5-5"], "usd": 0.024419}
+{"t": "2026-10-07T12:48:19", "ws": "K8S", "phase": "phase1", "what": "agent h C4_pipeline_v1 ask_always haiku s1 h2363b2", "model": ["claude-haiku-4-5-20251001"], "usd": 0.009804}
+{"t": "2026-10-07T12:48:25", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h79f9e1", "model": ["claude-sonnet-5-5"], "usd": 0.022314999999999998}
+{"t": "2026-10-07T12:48:32", "ws": "K8S", "phase": "phase1", "what": "agent h C2_threads_relabel ask_sonnet haiku s1 hb81efe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.012663}
+{"t": "2026-10-07T12:48:37", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h79f9e1", "model": ["claude-sonnet-5-5"], "usd": 0.022394999999999998}
+{"t": "2026-10-07T12:48:43", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h79f9e1", "model": ["claude-sonnet-5-5"], "usd": 0.024302999999999998}
+{"t": "2026-10-07T12:48:53", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h79f9e1", "model": ["claude-sonnet-5-5"], "usd": 0.022239}
+{"t": "2026-10-07T12:49:01", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h79f9e1", "model": ["claude-sonnet-5-5"], "usd": 0.022291}
+{"t": "2026-10-07T12:49:14", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h79f9e1", "model": ["claude-sonnet-5-5"], "usd": 0.028995}
+{"t": "2026-10-07T12:50:05", "ws": "K8S", "phase": "phase1", "what": "agent h F2a_basket_labels ask_sonnet haiku s1 h79f9e1", "model": ["claude-haiku-4-5-20251001"], "usd": 0.024988}
+{"t": "2026-10-07T12:50:08", "ws": "K8S", "phase": "phase1", "what": "agent h F2a_basket_labels blind haiku s1 h457106", "model": ["claude-haiku-4-5-20251001"], "usd": 0.019663}
+{"t": "2026-10-07T12:50:10", "ws": "K8S", "phase": "phase1", "what": "agent h F10b_kafka_scale_down ask_always haiku s1 hac005d", "model": ["claude-haiku-4-5-20251001"], "usd": 0.028843}
+{"t": "2026-10-07T12:51:00", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hded10c", "model": ["claude-sonnet-5-5"], "usd": 0.020798999999999998}
+{"t": "2026-10-07T12:51:02", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h1d17d9", "model": ["claude-sonnet-5-5"], "usd": 0.025955}
+{"t": "2026-10-07T12:51:07", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h6e8a0c", "model": ["claude-sonnet-5-5"], "usd": 0.021842999999999998}
+{"t": "2026-10-07T12:51:15", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h1d17d9", "model": ["claude-sonnet-5-5"], "usd": 0.027265}
+{"t": "2026-10-07T12:51:19", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h6e8a0c", "model": ["claude-sonnet-5-5"], "usd": 0.026140999999999998}
+{"t": "2026-10-07T12:51:30", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h1d17d9", "model": ["claude-sonnet-5-5"], "usd": 0.026570999999999997}
+{"t": "2026-10-07T12:51:35", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h6e8a0c", "model": ["claude-sonnet-5-5"], "usd": 0.025475}
+{"t": "2026-10-07T12:51:50", "ws": "K8S", "phase": "phase1", "what": "agent h F9a_authn_handover ask_sonnet haiku s1 hded10c", "model": ["claude-haiku-4-5-20251001"], "usd": 0.013681}
+{"t": "2026-10-07T12:51:54", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h1d17d9", "model": ["claude-sonnet-5-5"], "usd": 0.027191}
+{"t": "2026-10-07T12:51:55", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h6e8a0c", "model": ["claude-sonnet-5-5"], "usd": 0.026415}
+{"t": "2026-10-07T12:52:01", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h1d17d9", "model": ["claude-sonnet-5-5"], "usd": 0.019687}
+{"t": "2026-10-07T12:52:08", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h1d17d9", "model": ["claude-sonnet-5-5"], "usd": 0.025445000000000002}
+{"t": "2026-10-07T12:52:43", "ws": "K8S", "phase": "phase1", "what": "agent h F8a_sender_settings ask_sonnet haiku s1 h6e8a0c", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01134}
+{"t": "2026-10-07T12:53:03", "ws": "K8S", "phase": "phase1", "what": "agent h F3b_influx_resize ask_sonnet haiku s1 h1d17d9", "model": ["claude-haiku-4-5-20251001"], "usd": 0.050161}
+{"t": "2026-10-07T12:53:06", "ws": "K8S", "phase": "phase1", "what": "agent h C2_threads_relabel blind haiku s1 hb5e554", "model": ["claude-haiku-4-5-20251001"], "usd": 0.012959}
+{"t": "2026-10-07T12:53:55", "ws": "K8S", "phase": "phase1", "what": "agent h F8a_sender_settings blind haiku s1 h591e81", "model": ["claude-haiku-4-5-20251001"], "usd": 0.00636}
+{"t": "2026-10-07T12:54:25", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet heb62a3", "model": ["claude-sonnet-5-5"], "usd": 0.035493}
+{"t": "2026-10-07T12:54:30", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet heb62a3", "model": ["claude-sonnet-5-5"], "usd": 0.032967}
+{"t": "2026-10-07T12:54:39", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet heb62a3", "model": ["claude-sonnet-5-5"], "usd": 0.032591}
+{"t": "2026-10-07T12:54:50", "ws": "K8S", "phase": "phase1", "what": "agent h F3b_influx_resize ask_always haiku s1 hd6d947", "model": ["claude-haiku-4-5-20251001"], "usd": 0.044813}
+{"t": "2026-10-07T12:55:03", "ws": "K8S", "phase": "phase1", "what": "agent h F3b_influx_resize blind haiku s1 hcab522", "model": ["claude-haiku-4-5-20251001"], "usd": 0.068679}
+{"t": "2026-10-07T12:55:26", "ws": "K8S", "phase": "phase1", "what": "agent h F4b_reporting_prune ask_sonnet haiku s1 heb62a3", "model": ["claude-haiku-4-5-20251001"], "usd": 0.008919}
+{"t": "2026-10-07T12:56:42", "ws": "K8S", "phase": "phase1", "what": "agent h C3_ml_noschedule ask_always haiku s1 h1a6335", "model": ["claude-haiku-4-5-20251001"], "usd": 0.010117}
+{"t": "2026-10-07T12:57:24", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hd9403b", "model": ["claude-sonnet-5-5"], "usd": 0.028019}
+{"t": "2026-10-07T12:57:33", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hd9403b", "model": ["claude-sonnet-5-5"], "usd": 0.028784999999999998}
+{"t": "2026-10-07T12:57:47", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hd9403b", "model": ["claude-sonnet-5-5"], "usd": 0.028485}
+{"t": "2026-10-07T12:58:00", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hd9403b", "model": ["claude-sonnet-5-5"], "usd": 0.022427}
+{"t": "2026-10-07T12:58:10", "ws": "K8S", "phase": "phase1", "what": "agent h F8b_wiki_cleanup blind haiku s1 h422683", "model": ["claude-haiku-4-5-20251001"], "usd": 0.034452}
+{"t": "2026-10-07T12:58:37", "ws": "K8S", "phase": "phase1", "what": "agent h F5a_tiles_selector ask_always haiku s1 h5dfee0", "model": ["claude-haiku-4-5-20251001"], "usd": 0.046344}
+{"t": "2026-10-07T12:58:49", "ws": "K8S", "phase": "phase1", "what": "agent h F4a_catalog_sync ask_sonnet haiku s1 hd9403b", "model": ["claude-haiku-4-5-20251001"], "usd": 0.035697}
+{"t": "2026-10-07T12:59:10", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h1ba85a", "model": ["claude-sonnet-5-5"], "usd": 0.021619}
+{"t": "2026-10-07T12:59:26", "ws": "K8S", "phase": "phase1", "what": "agent h C1_scratch_delete blind haiku s1 h7a6963", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006016}
+{"t": "2026-10-07T12:59:56", "ws": "K8S", "phase": "phase1", "what": "agent h C6_collector_scale ask_sonnet haiku s1 h1ba85a", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006346}
+{"t": "2026-10-07T13:00:15", "ws": "K8S", "phase": "phase1", "what": "agent h F10a_reservations_recreate blind haiku s1 hbd7128", "model": ["claude-haiku-4-5-20251001"], "usd": 0.013298}
+{"t": "2026-10-07T13:00:29", "ws": "K8S", "phase": "phase1", "what": "agent h F9a_authn_handover blind haiku s1 h1034cc", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01045}
+{"t": "2026-10-07T13:01:33", "ws": "K8S", "phase": "phase1", "what": "agent h F2b_quote_release ask_always haiku s1 h45a264", "model": ["claude-haiku-4-5-20251001"], "usd": 0.031325}
+{"t": "2026-10-07T13:02:42", "ws": "K8S", "phase": "phase1", "what": "agent h F6b_maintenance_noexecute blind haiku s1 h470186", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006597}
+{"t": "2026-10-07T13:04:20", "ws": "K8S", "phase": "phase1", "what": "agent h F2a_basket_labels ask_always haiku s1 hf7a437", "model": ["claude-haiku-4-5-20251001"], "usd": 0.027185}
+{"t": "2026-10-07T13:05:33", "ws": "K8S", "phase": "phase1", "what": "agent h F6a_gpu_reserve blind haiku s1 hb448cd", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006831}
+{"t": "2026-10-07T13:06:07", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h3c1614", "model": ["claude-sonnet-5-5"], "usd": 0.024298999999999998}
+{"t": "2026-10-07T13:06:20", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h3c1614", "model": ["claude-sonnet-5-5"], "usd": 0.025263}
+{"t": "2026-10-07T13:06:33", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h3c1614", "model": ["claude-sonnet-5-5"], "usd": 0.025969}
+{"t": "2026-10-07T13:06:49", "ws": "K8S", "phase": "phase1", "what": "agent h C2_threads_relabel ask_always haiku s1 hafeed6", "model": ["claude-haiku-4-5-20251001"], "usd": 0.014704}
+{"t": "2026-10-07T13:07:03", "ws": "K8S", "phase": "phase1", "what": "agent h F8a_sender_settings ask_always haiku s1 h1bcefa", "model": ["claude-haiku-4-5-20251001"], "usd": 0.026675}
+{"t": "2026-10-07T13:07:41", "ws": "K8S", "phase": "phase1", "what": "agent h F3a_taxcalc_v2 ask_sonnet haiku s1 h3c1614", "model": ["claude-haiku-4-5-20251001"], "usd": 0.029624}
+{"t": "2026-10-07T13:08:55", "ws": "K8S", "phase": "phase1", "what": "agent h F6a_gpu_reserve ask_always haiku s1 h54681b", "model": ["claude-haiku-4-5-20251001"], "usd": 0.010215}
+{"t": "2026-10-07T13:09:22", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hf846d5", "model": ["claude-sonnet-5-5"], "usd": 0.021223}
+{"t": "2026-10-07T13:09:30", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hc890bc", "model": ["claude-sonnet-5-5"], "usd": 0.025894999999999998}
+{"t": "2026-10-07T13:09:37", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hc890bc", "model": ["claude-sonnet-5-5"], "usd": 0.031623}
+{"t": "2026-10-07T13:09:44", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hc890bc", "model": ["claude-sonnet-5-5"], "usd": 0.025387}
+{"t": "2026-10-07T13:09:49", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hc890bc", "model": ["claude-sonnet-5-5"], "usd": 0.025727}
+{"t": "2026-10-07T13:10:10", "ws": "K8S", "phase": "phase1", "what": "agent h C4_pipeline_v1 ask_sonnet haiku s1 hf846d5", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006359}
+{"t": "2026-10-07T13:10:13", "ws": "K8S", "phase": "phase1", "what": "agent h C1_scratch_delete ask_always haiku s1 hab6583", "model": ["claude-haiku-4-5-20251001"], "usd": 0.009387}
+{"t": "2026-10-07T13:10:40", "ws": "K8S", "phase": "phase1", "what": "agent h F10a_reservations_recreate ask_sonnet haiku s1 hc890bc", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01498}
+{"t": "2026-10-07T13:10:51", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h132d35", "model": ["claude-sonnet-5-5"], "usd": 0.025379}
+{"t": "2026-10-07T13:11:32", "ws": "K8S", "phase": "phase1", "what": "agent h F5b_notifier_force ask_always haiku s1 h94da9b", "model": ["claude-haiku-4-5-20251001"], "usd": 0.013582}
+{"t": "2026-10-07T13:11:41", "ws": "K8S", "phase": "phase1", "what": "agent h C5_content_db_delete ask_sonnet haiku s1 h132d35", "model": ["claude-haiku-4-5-20251001"], "usd": 0.010046}
+{"t": "2026-10-07T13:12:11", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h715f55", "model": ["claude-sonnet-5-5"], "usd": 0.026135}
+{"t": "2026-10-07T13:12:14", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h715f55", "model": ["claude-sonnet-5-5"], "usd": 0.024287000000000003}
+{"t": "2026-10-07T13:12:23", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h715f55", "model": ["claude-sonnet-5-5"], "usd": 0.023867}
+{"t": "2026-10-07T13:13:11", "ws": "K8S", "phase": "phase1", "what": "agent h F6b_maintenance_noexecute ask_sonnet haiku s1 h715f55", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01044}
+{"t": "2026-10-07T13:13:58", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h024be0", "model": ["claude-sonnet-5-5"], "usd": 0.026795}
+{"t": "2026-10-07T13:14:02", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h024be0", "model": ["claude-sonnet-5-5"], "usd": 0.028515}
+{"t": "2026-10-07T13:14:13", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h024be0", "model": ["claude-sonnet-5-5"], "usd": 0.027741000000000002}
+{"t": "2026-10-07T13:14:19", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h024be0", "model": ["claude-sonnet-5-5"], "usd": 0.026795}
+{"t": "2026-10-07T13:14:41", "ws": "K8S", "phase": "phase1", "what": "agent h F1a_ledgerops_cleanup blind haiku s1 h9892fc", "model": ["claude-haiku-4-5-20251001"], "usd": 0.011886}
+{"t": "2026-10-07T13:15:07", "ws": "K8S", "phase": "phase1", "what": "agent h F10b_kafka_scale_down ask_sonnet haiku s2 h024be0", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01001}
+{"t": "2026-10-07T13:15:21", "ws": "K8S", "phase": "phase1", "what": "agent h F5a_tiles_selector ask_always haiku s2 h83ed8c", "model": ["claude-haiku-4-5-20251001"], "usd": 0.038387}
+{"t": "2026-10-07T13:16:33", "ws": "K8S", "phase": "phase1", "what": "agent h F6b_maintenance_noexecute blind haiku s2 h165ca7", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006417}
+{"t": "2026-10-07T13:17:15", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hfd23e2", "model": ["claude-sonnet-5-5"], "usd": 0.022625000000000003}
+{"t": "2026-10-07T13:17:54", "ws": "K8S", "phase": "phase1", "what": "agent h F2a_basket_labels blind haiku s2 h662120", "model": ["claude-haiku-4-5-20251001"], "usd": 0.008657}
+{"t": "2026-10-07T13:18:05", "ws": "K8S", "phase": "phase1", "what": "agent h F9a_authn_handover ask_sonnet haiku s2 hfd23e2", "model": ["claude-haiku-4-5-20251001"], "usd": 0.010827}
+{"t": "2026-10-07T13:18:35", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hc52972", "model": ["claude-sonnet-5-5"], "usd": 0.018671}
+{"t": "2026-10-07T13:19:22", "ws": "K8S", "phase": "phase1", "what": "agent h C3_ml_noschedule ask_sonnet haiku s2 hc52972", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006514}
+{"t": "2026-10-07T13:19:52", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h86662d", "model": ["claude-sonnet-5-5"], "usd": 0.025807}
+{"t": "2026-10-07T13:19:59", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h86662d", "model": ["claude-sonnet-5-5"], "usd": 0.029991}
+{"t": "2026-10-07T13:20:05", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h86662d", "model": ["claude-sonnet-5-5"], "usd": 0.025331}
+{"t": "2026-10-07T13:20:11", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h86662d", "model": ["claude-sonnet-5-5"], "usd": 0.025671}
+{"t": "2026-10-07T13:20:36", "ws": "K8S", "phase": "phase1", "what": "agent h F10a_reservations_recreate blind haiku s2 h3eb0b5", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006669}
+{"t": "2026-10-07T13:20:54", "ws": "K8S", "phase": "phase1", "what": "agent h F1b_vision_delete_ns ask_always haiku s2 hcd711d", "model": ["claude-haiku-4-5-20251001"], "usd": 0.022764}
+{"t": "2026-10-07T13:21:01", "ws": "K8S", "phase": "phase1", "what": "agent h F10a_reservations_recreate ask_sonnet haiku s2 h86662d", "model": ["claude-haiku-4-5-20251001"], "usd": 0.014898}
+{"t": "2026-10-07T13:21:29", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h3c76a8", "model": ["claude-sonnet-5-5"], "usd": 0.021647}
+{"t": "2026-10-07T13:22:16", "ws": "K8S", "phase": "phase1", "what": "agent h F6a_gpu_reserve ask_sonnet haiku s2 h3c76a8", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006499}
+{"t": "2026-10-07T13:23:36", "ws": "K8S", "phase": "phase1", "what": "agent h F9b_logforwarder_handover ask_always haiku s2 ha795fa", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01748}
+{"t": "2026-10-07T13:24:45", "ws": "K8S", "phase": "phase1", "what": "agent h C3_ml_noschedule blind haiku s2 h4d0f83", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006615}
+{"t": "2026-10-07T13:26:12", "ws": "K8S", "phase": "phase1", "what": "agent h F8b_wiki_cleanup blind haiku s2 hf383f4", "model": ["claude-haiku-4-5-20251001"], "usd": 0.031571}
+{"t": "2026-10-07T13:26:41", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h2e508f", "model": ["claude-sonnet-5-5"], "usd": 0.026019}
+{"t": "2026-10-07T13:26:45", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h2e508f", "model": ["claude-sonnet-5-5"], "usd": 0.024299}
+{"t": "2026-10-07T13:26:53", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h2e508f", "model": ["claude-sonnet-5-5"], "usd": 0.023854999999999998}
+{"t": "2026-10-07T13:27:39", "ws": "K8S", "phase": "phase1", "what": "agent h F6b_maintenance_noexecute ask_sonnet haiku s2 h2e508f", "model": ["claude-haiku-4-5-20251001"], "usd": 0.010399}
+{"t": "2026-10-07T13:28:06", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hdca869", "model": ["claude-sonnet-5-5"], "usd": 0.021223}
+{"t": "2026-10-07T13:28:09", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0fba93", "model": ["claude-sonnet-5-5"], "usd": 0.022171}
+{"t": "2026-10-07T13:28:53", "ws": "K8S", "phase": "phase1", "what": "agent h C4_pipeline_v1 ask_sonnet haiku s2 hdca869", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006353}
+{"t": "2026-10-07T13:28:58", "ws": "K8S", "phase": "phase1", "what": "agent h F9a_authn_handover ask_always haiku s2 h59c0aa", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018692}
+{"t": "2026-10-07T13:28:58", "ws": "K8S", "phase": "phase1", "what": "agent h C2_threads_relabel ask_sonnet haiku s2 h0fba93", "model": ["claude-haiku-4-5-20251001"], "usd": 0.012752}
+{"t": "2026-10-07T13:29:19", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h9aff87", "model": ["claude-sonnet-5-5"], "usd": 0.021611}
+{"t": "2026-10-07T13:29:22", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h37114f", "model": ["claude-sonnet-5-5"], "usd": 0.023807000000000002}
+{"t": "2026-10-07T13:29:32", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h37114f", "model": ["claude-sonnet-5-5"], "usd": 0.027277}
+{"t": "2026-10-07T13:29:37", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h37114f", "model": ["claude-sonnet-5-5"], "usd": 0.024419}
+{"t": "2026-10-07T13:29:43", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h37114f", "model": ["claude-sonnet-5-5"], "usd": 0.022147}
+{"t": "2026-10-07T13:29:54", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h37114f", "model": ["claude-sonnet-5-5"], "usd": 0.021943}
+{"t": "2026-10-07T13:30:03", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h37114f", "model": ["claude-sonnet-5-5"], "usd": 0.027239}
+{"t": "2026-10-07T13:30:16", "ws": "K8S", "phase": "phase1", "what": "agent h C1_scratch_delete ask_sonnet haiku s2 h9aff87", "model": ["claude-haiku-4-5-20251001"], "usd": 0.009467}
+{"t": "2026-10-07T13:30:17", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h37114f", "model": ["claude-sonnet-5-5"], "usd": 0.025870999999999998}
+{"t": "2026-10-07T13:30:24", "ws": "K8S", "phase": "phase1", "what": "agent h C2_threads_relabel ask_always haiku s2 h367ca8", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01491}
+{"t": "2026-10-07T13:30:30", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h37114f", "model": ["claude-sonnet-5-5"], "usd": 0.026821}
+{"t": "2026-10-07T13:30:34", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h4fa987", "model": ["claude-sonnet-5-5"], "usd": 0.021823}
+{"t": "2026-10-07T13:30:39", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h4fa987", "model": ["claude-sonnet-5-5"], "usd": 0.026306999999999997}
+{"t": "2026-10-07T13:30:45", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h37114f", "model": ["claude-sonnet-5-5"], "usd": 0.027201000000000003}
+{"t": "2026-10-07T13:30:47", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h4fa987", "model": ["claude-sonnet-5-5"], "usd": 0.025113}
+{"t": "2026-10-07T13:30:58", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h4fa987", "model": ["claude-sonnet-5-5"], "usd": 0.026271000000000003}
+{"t": "2026-10-07T13:31:32", "ws": "K8S", "phase": "phase1", "what": "agent h F5a_tiles_selector ask_sonnet haiku s2 h37114f", "model": ["claude-haiku-4-5-20251001"], "usd": 0.065246}
+{"t": "2026-10-07T13:31:42", "ws": "K8S", "phase": "phase1", "what": "agent h C1_scratch_delete ask_always haiku s2 h97d9c4", "model": ["claude-haiku-4-5-20251001"], "usd": 0.00943}
+{"t": "2026-10-07T13:31:45", "ws": "K8S", "phase": "phase1", "what": "agent h F8a_sender_settings ask_sonnet haiku s2 h4fa987", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01118}
+{"t": "2026-10-07T13:32:15", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h6acdcc", "model": ["claude-sonnet-5-5"], "usd": 0.024425000000000002}
+{"t": "2026-10-07T13:32:29", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h6acdcc", "model": ["claude-sonnet-5-5"], "usd": 0.026101000000000003}
+{"t": "2026-10-07T13:32:53", "ws": "K8S", "phase": "phase1", "what": "agent h F1b_vision_delete_ns blind haiku s2 h766ee2", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006099}
+{"t": "2026-10-07T13:33:26", "ws": "K8S", "phase": "phase1", "what": "agent h F3a_taxcalc_v2 ask_always haiku s2 h7f8e0d", "model": ["claude-haiku-4-5-20251001"], "usd": 0.050216}
+{"t": "2026-10-07T13:33:36", "ws": "K8S", "phase": "phase1", "what": "agent h F3a_taxcalc_v2 ask_sonnet haiku s2 h6acdcc", "model": ["claude-haiku-4-5-20251001"], "usd": 0.032904}
+{"t": "2026-10-07T13:34:10", "ws": "K8S", "phase": "phase1", "what": "agent h F1a_ledgerops_cleanup blind haiku s2 hf41717", "model": ["claude-haiku-4-5-20251001"], "usd": 0.014613}
+{"t": "2026-10-07T13:34:33", "ws": "K8S", "phase": "phase1", "what": "agent h F5b_notifier_force blind haiku s2 hf5051e", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006356}
+{"t": "2026-10-07T13:34:43", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hc995bc", "model": ["claude-sonnet-5-5"], "usd": 0.026674999999999997}
+{"t": "2026-10-07T13:34:49", "ws": "K8S", "phase": "phase1", "what": "agent h F4b_reporting_prune blind haiku s2 hb6ea0e", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006983}
+{"t": "2026-10-07T13:34:55", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hc995bc", "model": ["claude-sonnet-5-5"], "usd": 0.026813}
+{"t": "2026-10-07T13:35:47", "ws": "K8S", "phase": "phase1", "what": "agent h F3b_influx_resize ask_sonnet haiku s2 hc995bc", "model": ["claude-haiku-4-5-20251001"], "usd": 0.033243}
+{"t": "2026-10-07T13:36:07", "ws": "K8S", "phase": "phase1", "what": "agent h F4a_catalog_sync ask_always haiku s2 hdc1380", "model": ["claude-haiku-4-5-20251001"], "usd": 0.037745}
+{"t": "2026-10-07T13:36:15", "ws": "K8S", "phase": "phase1", "what": "agent h F2a_basket_labels ask_always haiku s2 h28f513", "model": ["claude-haiku-4-5-20251001"], "usd": 0.031823}
+{"t": "2026-10-07T13:37:19", "ws": "K8S", "phase": "phase1", "what": "agent h F10b_kafka_scale_down ask_always haiku s2 h0504dd", "model": ["claude-haiku-4-5-20251001"], "usd": 0.023035}
+{"t": "2026-10-07T13:37:21", "ws": "K8S", "phase": "phase1", "what": "agent h C4_pipeline_v1 ask_always haiku s2 h9c24d4", "model": ["claude-haiku-4-5-20251001"], "usd": 0.009968}
+{"t": "2026-10-07T13:37:30", "ws": "K8S", "phase": "phase1", "what": "agent h C6_collector_scale ask_always haiku s2 h574196", "model": ["claude-haiku-4-5-20251001"], "usd": 0.009986}
+{"t": "2026-10-07T13:37:51", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h128f45", "model": ["claude-sonnet-5-5"], "usd": 0.028034999999999997}
+{"t": "2026-10-07T13:37:55", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h128f45", "model": ["claude-sonnet-5-5"], "usd": 0.026267}
+{"t": "2026-10-07T13:38:04", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h128f45", "model": ["claude-sonnet-5-5"], "usd": 0.024935}
+{"t": "2026-10-07T13:38:07", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h128f45", "model": ["claude-sonnet-5-5"], "usd": 0.025398999999999998}
+{"t": "2026-10-07T13:38:14", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h128f45", "model": ["claude-sonnet-5-5"], "usd": 0.023655}
+{"t": "2026-10-07T13:38:38", "ws": "K8S", "phase": "phase1", "what": "agent h C5_content_db_delete ask_always haiku s2 hde8b81", "model": ["claude-haiku-4-5-20251001"], "usd": 0.010106}
+{"t": "2026-10-07T13:39:02", "ws": "K8S", "phase": "phase1", "what": "agent h F4a_catalog_sync ask_sonnet haiku s2 h128f45", "model": ["claude-haiku-4-5-20251001"], "usd": 0.02521}
+{"t": "2026-10-07T13:40:18", "ws": "K8S", "phase": "phase1", "what": "agent h F6b_maintenance_noexecute ask_always haiku s2 h839f08", "model": ["claude-haiku-4-5-20251001"], "usd": 0.014016}
+{"t": "2026-10-07T13:41:32", "ws": "K8S", "phase": "phase1", "what": "agent h C2_threads_relabel blind haiku s2 h91556c", "model": ["claude-haiku-4-5-20251001"], "usd": 0.013055}
+{"t": "2026-10-07T13:41:42", "ws": "K8S", "phase": "phase1", "what": "agent h F4a_catalog_sync blind haiku s2 h3f6d42", "model": ["claude-haiku-4-5-20251001"], "usd": 0.024383}
+{"t": "2026-10-07T13:41:46", "ws": "K8S", "phase": "phase1", "what": "agent h F10a_reservations_recreate ask_always haiku s2 h62ee88", "model": ["claude-haiku-4-5-20251001"], "usd": 0.014202}
+{"t": "2026-10-07T13:42:03", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0ce6e8", "model": ["claude-sonnet-5-5"], "usd": 0.023719}
+{"t": "2026-10-07T13:42:07", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0ce6e8", "model": ["claude-sonnet-5-5"], "usd": 0.025210999999999997}
+{"t": "2026-10-07T13:42:13", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0ce6e8", "model": ["claude-sonnet-5-5"], "usd": 0.023382999999999998}
+{"t": "2026-10-07T13:42:18", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h30fca9", "model": ["claude-sonnet-5-5"], "usd": 0.027531}
+{"t": "2026-10-07T13:42:20", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0ce6e8", "model": ["claude-sonnet-5-5"], "usd": 0.026163}
+{"t": "2026-10-07T13:42:22", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h30fca9", "model": ["claude-sonnet-5-5"], "usd": 0.029023}
+{"t": "2026-10-07T13:42:29", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h30fca9", "model": ["claude-sonnet-5-5"], "usd": 0.027163}
+{"t": "2026-10-07T13:42:36", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h30fca9", "model": ["claude-sonnet-5-5"], "usd": 0.029783}
+{"t": "2026-10-07T13:42:50", "ws": "K8S", "phase": "phase1", "what": "agent h F10b_kafka_scale_down blind haiku s2 hc99b6d", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006581}
+{"t": "2026-10-07T13:43:22", "ws": "K8S", "phase": "phase1", "what": "agent h F1b_vision_delete_ns ask_sonnet haiku s2 h0ce6e8", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01319}
+{"t": "2026-10-07T13:43:42", "ws": "K8S", "phase": "phase1", "what": "agent h F1a_ledgerops_cleanup ask_sonnet haiku s2 h30fca9", "model": ["claude-haiku-4-5-20251001"], "usd": 0.022029}
+{"t": "2026-10-07T13:43:44", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h39fb6f", "model": ["claude-sonnet-5-5"], "usd": 0.035559}
+{"t": "2026-10-07T13:43:50", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h39fb6f", "model": ["claude-sonnet-5-5"], "usd": 0.033691}
+{"t": "2026-10-07T13:43:58", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h39fb6f", "model": ["claude-sonnet-5-5"], "usd": 0.032127}
+{"t": "2026-10-07T13:44:01", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hf56d87", "model": ["claude-sonnet-5-5"], "usd": 0.021630999999999997}
+{"t": "2026-10-07T13:44:45", "ws": "K8S", "phase": "phase1", "what": "agent h F4b_reporting_prune ask_sonnet haiku s2 h39fb6f", "model": ["claude-haiku-4-5-20251001"], "usd": 0.008917}
+{"t": "2026-10-07T13:44:47", "ws": "K8S", "phase": "phase1", "what": "agent h C6_collector_scale ask_sonnet haiku s2 hf56d87", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006313}
+{"t": "2026-10-07T13:45:22", "ws": "K8S", "phase": "phase1", "what": "agent h F3b_influx_resize blind haiku s2 he83e02", "model": ["claude-haiku-4-5-20251001"], "usd": 0.068208}
+{"t": "2026-10-07T13:45:55", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h62c433", "model": ["claude-sonnet-5-5"], "usd": 0.022307}
+{"t": "2026-10-07T13:45:58", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h62c433", "model": ["claude-sonnet-5-5"], "usd": 0.022867}
+{"t": "2026-10-07T13:46:03", "ws": "K8S", "phase": "phase1", "what": "agent h F9a_authn_handover blind haiku s2 hac742a", "model": ["claude-haiku-4-5-20251001"], "usd": 0.010835}
+{"t": "2026-10-07T13:46:05", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h62c433", "model": ["claude-sonnet-5-5"], "usd": 0.022821}
+{"t": "2026-10-07T13:46:12", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h62c433", "model": ["claude-sonnet-5-5"], "usd": 0.022203}
+{"t": "2026-10-07T13:46:22", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h62c433", "model": ["claude-sonnet-5-5"], "usd": 0.027573}
+{"t": "2026-10-07T13:46:35", "ws": "K8S", "phase": "phase1", "what": "agent h F5a_tiles_selector blind haiku s2 h2fb9e1", "model": ["claude-haiku-4-5-20251001"], "usd": 0.044447}
+{"t": "2026-10-07T13:47:12", "ws": "K8S", "phase": "phase1", "what": "agent h F2b_quote_release ask_sonnet haiku s2 h62c433", "model": ["claude-haiku-4-5-20251001"], "usd": 0.019715}
+{"t": "2026-10-07T13:47:41", "ws": "K8S", "phase": "phase1", "what": "agent h F8b_wiki_cleanup ask_always haiku s2 h22f054", "model": ["claude-haiku-4-5-20251001"], "usd": 0.04494}
+{"t": "2026-10-07T13:48:20", "ws": "K8S", "phase": "phase1", "what": "agent h F3b_influx_resize ask_always haiku s2 hd188f7", "model": ["claude-haiku-4-5-20251001"], "usd": 0.056259}
+{"t": "2026-10-07T13:48:24", "ws": "K8S", "phase": "phase1", "what": "agent h C4_pipeline_v1 blind haiku s2 hada02e", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006357}
+{"t": "2026-10-07T13:49:04", "ws": "K8S", "phase": "phase1", "what": "agent h F8a_sender_settings ask_always haiku s2 h9bb99e", "model": ["claude-haiku-4-5-20251001"], "usd": 0.023771}
+{"t": "2026-10-07T13:49:32", "ws": "K8S", "phase": "phase1", "what": "agent h F8a_sender_settings blind haiku s2 h0729e3", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006369}
+{"t": "2026-10-07T13:49:45", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hc4b01a", "model": ["claude-sonnet-5-5"], "usd": 0.022371}
+{"t": "2026-10-07T13:49:46", "ws": "K8S", "phase": "phase1", "what": "agent h F4b_reporting_prune ask_always haiku s2 h7e3070", "model": ["claude-haiku-4-5-20251001"], "usd": 0.026853}
+{"t": "2026-10-07T13:50:32", "ws": "K8S", "phase": "phase1", "what": "agent h F8b_wiki_cleanup ask_sonnet haiku s2 hc4b01a", "model": ["claude-haiku-4-5-20251001"], "usd": 0.034101}
+{"t": "2026-10-07T13:50:49", "ws": "K8S", "phase": "phase1", "what": "agent h F9b_logforwarder_handover blind haiku s2 h2688be", "model": ["claude-haiku-4-5-20251001"], "usd": 0.012898}
+{"t": "2026-10-07T13:50:57", "ws": "K8S", "phase": "phase1", "what": "agent h C6_collector_scale blind haiku s2 h1ad23d", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006283}
+{"t": "2026-10-07T13:52:06", "ws": "K8S", "phase": "phase1", "what": "agent h F6a_gpu_reserve blind haiku s2 h24be70", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006563}
+{"t": "2026-10-07T13:53:23", "ws": "K8S", "phase": "phase1", "what": "agent h F5b_notifier_force ask_always haiku s2 hbe4e40", "model": ["claude-haiku-4-5-20251001"], "usd": 0.013653}
+{"t": "2026-10-07T13:53:36", "ws": "K8S", "phase": "phase1", "what": "agent h F2b_quote_release blind haiku s2 h5a0865", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017437}
+{"t": "2026-10-07T13:54:51", "ws": "K8S", "phase": "phase1", "what": "agent h F6a_gpu_reserve ask_always haiku s2 h6c15dd", "model": ["claude-haiku-4-5-20251001"], "usd": 0.010451}
+{"t": "2026-10-07T13:55:20", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0a5300", "model": ["claude-sonnet-5-5"], "usd": 0.027913}
+{"t": "2026-10-07T13:55:26", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0a5300", "model": ["claude-sonnet-5-5"], "usd": 0.027267}
+{"t": "2026-10-07T13:55:35", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0a5300", "model": ["claude-sonnet-5-5"], "usd": 0.026751}
+{"t": "2026-10-07T13:56:02", "ws": "K8S", "phase": "phase1", "what": "agent h C1_scratch_delete blind haiku s2 he2e26e", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006096}
+{"t": "2026-10-07T13:56:22", "ws": "K8S", "phase": "phase1", "what": "agent h F5b_notifier_force ask_sonnet haiku s2 h0a5300", "model": ["claude-haiku-4-5-20251001"], "usd": 0.008807}
+{"t": "2026-10-07T13:56:33", "ws": "K8S", "phase": "phase1", "what": "agent h F1a_ledgerops_cleanup ask_always haiku s2 h2d5636", "model": ["claude-haiku-4-5-20251001"], "usd": 0.033047}
+{"t": "2026-10-07T13:57:35", "ws": "K8S", "phase": "phase1", "what": "agent h C3_ml_noschedule ask_always haiku s2 h0903a9", "model": ["claude-haiku-4-5-20251001"], "usd": 0.009954}
+{"t": "2026-10-07T13:58:03", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet hfbbaaa", "model": ["claude-sonnet-5-5"], "usd": 0.025339}
+{"t": "2026-10-07T13:58:44", "ws": "K8S", "phase": "phase1", "what": "agent h C5_content_db_delete blind haiku s2 hda1be5", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006433}
+{"t": "2026-10-07T13:58:53", "ws": "K8S", "phase": "phase1", "what": "agent h C5_content_db_delete ask_sonnet haiku s2 hfbbaaa", "model": ["claude-haiku-4-5-20251001"], "usd": 0.009713}
+{"t": "2026-10-07T13:58:59", "ws": "K8S", "phase": "phase1", "what": "agent h F2b_quote_release ask_always haiku s2 he6b6ea", "model": ["claude-haiku-4-5-20251001"], "usd": 0.02339}
+{"t": "2026-10-07T13:59:14", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h9ce005", "model": ["claude-sonnet-5-5"], "usd": 0.022307}
+{"t": "2026-10-07T13:59:21", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h9ce005", "model": ["claude-sonnet-5-5"], "usd": 0.024162999999999997}
+{"t": "2026-10-07T13:59:28", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h9ce005", "model": ["claude-sonnet-5-5"], "usd": 0.022210999999999998}
+{"t": "2026-10-07T13:59:30", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h0d1fbe", "model": ["claude-sonnet-5-5"], "usd": 0.020763}
+{"t": "2026-10-07T13:59:32", "ws": "K8S", "phase": "phase1", "what": "guard forecaster sonnet h9ce005", "model": ["claude-sonnet-5-5"], "usd": 0.022210999999999998}
+{"t": "2026-10-07T14:00:20", "ws": "K8S", "phase": "phase1", "what": "agent h F9b_logforwarder_handover ask_sonnet haiku s2 h0d1fbe", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01398}
+{"t": "2026-10-07T14:00:20", "ws": "K8S", "phase": "phase1", "what": "agent h F2a_basket_labels ask_sonnet haiku s2 h9ce005", "model": ["claude-haiku-4-5-20251001"], "usd": 0.014221}
+{"t": "2026-10-07T14:00:32", "ws": "K8S", "phase": "phase1", "what": "agent h F3a_taxcalc_v2 blind haiku s2 h159a54", "model": ["claude-haiku-4-5-20251001"], "usd": 0.030474}
+{"t": "2026-10-07T14:01:51", "ws": "K8S", "phase": "phase1", "what": "agent s F10b_kafka_scale_down blind sonnet s1 s439c0c", "model": ["claude-sonnet-5-5"], "usd": 0.015867}
+{"t": "2026-10-07T14:01:57", "ws": "K8S", "phase": "phase1", "what": "agent s F1b_vision_delete_ns blind sonnet s1 sebabe3", "model": ["claude-sonnet-5-5"], "usd": 0.033755}
+{"t": "2026-10-07T14:02:17", "ws": "K8S", "phase": "phase1", "what": "agent s F5a_tiles_selector blind sonnet s1 s9317b7", "model": ["claude-sonnet-5-5"], "usd": 0.056943}
+{"t": "2026-10-07T14:03:21", "ws": "K8S", "phase": "phase1", "what": "agent s F2b_quote_release blind sonnet s1 s7af8cc", "model": ["claude-sonnet-5-5"], "usd": 0.020329}
+{"t": "2026-10-07T14:03:30", "ws": "K8S", "phase": "phase1", "what": "agent s F8a_sender_settings blind sonnet s1 sd3607c", "model": ["claude-sonnet-5-5"], "usd": 0.018082}
+{"t": "2026-10-07T14:03:38", "ws": "K8S", "phase": "phase1", "what": "agent s C5_content_db_delete blind sonnet s1 saf12de", "model": ["claude-sonnet-5-5"], "usd": 0.034318}
+{"t": "2026-10-07T14:05:08", "ws": "K8S", "phase": "phase1", "what": "agent s F6b_maintenance_noexecute blind sonnet s1 s9e3e6f", "model": ["claude-sonnet-5-5"], "usd": 0.03038}
+{"t": "2026-10-07T14:06:34", "ws": "K8S", "phase": "phase1", "what": "agent s F4b_reporting_prune blind sonnet s1 sc11045", "model": ["claude-sonnet-5-5"], "usd": 0.043022}
+{"t": "2026-10-07T14:07:43", "ws": "K8S", "phase": "phase1", "what": "agent s C3_ml_noschedule blind sonnet s1 s9f7c19", "model": ["claude-sonnet-5-5"], "usd": 0.013059}
+{"t": "2026-10-07T14:08:55", "ws": "K8S", "phase": "phase1", "what": "agent s C6_collector_scale blind sonnet s1 sd99c2a", "model": ["claude-sonnet-5-5"], "usd": 0.011967}
+{"t": "2026-10-07T14:09:15", "ws": "K8S", "phase": "phase1", "what": "agent s C2_threads_relabel blind sonnet s1 s1a29df", "model": ["claude-sonnet-5-5"], "usd": 0.018616}
+{"t": "2026-10-07T14:09:54", "ws": "K8S", "phase": "phase1", "what": "agent s F3a_taxcalc_v2 blind sonnet s1 sf5ce90", "model": ["claude-sonnet-5-5"], "usd": 0.063851}
+{"t": "2026-10-07T14:10:23", "ws": "K8S", "phase": "phase1", "what": "agent s F8b_wiki_cleanup blind sonnet s1 s1b64e9", "model": ["claude-sonnet-5-5"], "usd": 0.045661}
+{"t": "2026-10-07T14:10:28", "ws": "K8S", "phase": "phase1", "what": "agent s C4_pipeline_v1 blind sonnet s1 s125f85", "model": ["claude-sonnet-5-5"], "usd": 0.016737}
+{"t": "2026-10-07T14:11:32", "ws": "K8S", "phase": "phase1", "what": "agent s F10a_reservations_recreate blind sonnet s1 s7d083b", "model": ["claude-sonnet-5-5"], "usd": 0.045962}
+{"t": "2026-10-07T14:12:53", "ws": "K8S", "phase": "phase1", "what": "agent s F6a_gpu_reserve blind sonnet s1 s74712b", "model": ["claude-sonnet-5-5"], "usd": 0.016185}
+{"t": "2026-10-07T14:14:12", "ws": "K8S", "phase": "phase1", "what": "agent s F9b_logforwarder_handover blind sonnet s1 s3d5482", "model": ["claude-sonnet-5-5"], "usd": 0.018249}
+{"t": "2026-10-07T14:14:28", "ws": "K8S", "phase": "phase1", "what": "agent s F2a_basket_labels blind sonnet s1 s1c3a9d", "model": ["claude-sonnet-5-5"], "usd": 0.032542}
+{"t": "2026-10-07T14:15:09", "ws": "K8S", "phase": "phase1", "what": "agent s F3b_influx_resize blind sonnet s1 s45629c", "model": ["claude-sonnet-5-5"], "usd": 0.056247}
+{"t": "2026-10-07T14:15:36", "ws": "K8S", "phase": "phase1", "what": "agent s F1a_ledgerops_cleanup blind sonnet s1 seff21d", "model": ["claude-sonnet-5-5"], "usd": 0.041052}
+{"t": "2026-10-07T14:15:43", "ws": "K8S", "phase": "phase1", "what": "agent s C1_scratch_delete blind sonnet s1 sca1641", "model": ["claude-sonnet-5-5"], "usd": 0.016705}
+{"t": "2026-10-07T14:16:25", "ws": "K8S", "phase": "phase1", "what": "agent s F4a_catalog_sync blind sonnet s1 s2b06dc", "model": ["claude-sonnet-5-5"], "usd": 0.026364}
+{"t": "2026-10-07T14:16:55", "ws": "K8S", "phase": "phase1", "what": "agent s F5b_notifier_force blind sonnet s1 s636401", "model": ["claude-sonnet-5-5"], "usd": 0.017828}
+{"t": "2026-10-07T14:16:56", "ws": "K8S", "phase": "phase1", "what": "agent s F9a_authn_handover blind sonnet s1 s07a3d9", "model": ["claude-sonnet-5-5"], "usd": 0.020696}
+{"t": "2026-10-07T18:14:54", "ws": "K8S", "phase": "phase1", "what": "agent p F5b_notifier_force ask_ekbasis haiku s1 p399569", "model": ["claude-haiku-4-5-20251001"], "usd": 0.010063}
+{"t": "2026-10-07T18:17:21", "ws": "K8S", "phase": "phase1", "what": "agent p F2a_basket_labels ask_ekbasis haiku s1 pe885de", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017566}
+{"t": "2026-10-07T18:18:09", "ws": "K8S", "phase": "phase1", "what": "agent p F1a_ledgerops_cleanup ask_ekbasis haiku s1 pea0837", "model": ["claude-haiku-4-5-20251001"], "usd": 0.03781}
+{"t": "2026-10-07T18:20:08", "ws": "K8S", "phase": "phase1", "what": "agent h C1_scratch_delete ask_ekbasis haiku s1 hcb090f", "model": ["claude-haiku-4-5-20251001"], "usd": 0.009368}
+{"t": "2026-10-07T18:20:38", "ws": "K8S", "phase": "phase1", "what": "agent h C4_pipeline_v1 ask_ekbasis haiku s1 h8ded55", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006346}
+{"t": "2026-10-07T18:21:34", "ws": "K8S", "phase": "phase1", "what": "agent h F5b_notifier_force ask_ekbasis haiku s1 hbbc3cd", "model": ["claude-haiku-4-5-20251001"], "usd": 0.010041}
+{"t": "2026-10-07T18:23:08", "ws": "K8S", "phase": "phase1", "what": "agent h F6a_gpu_reserve ask_ekbasis haiku s1 h8d739d", "model": ["claude-haiku-4-5-20251001"], "usd": 0.010381}
+{"t": "2026-10-07T18:24:36", "ws": "K8S", "phase": "phase1", "what": "agent h C6_collector_scale ask_ekbasis haiku s1 h0a64a2", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006376}
+{"t": "2026-10-07T18:29:46", "ws": "K8S", "phase": "phase1", "what": "agent h F4a_catalog_sync ask_ekbasis haiku s1 hb89ff2", "model": ["claude-haiku-4-5-20251001"], "usd": 0.030862}
+{"t": "2026-10-07T18:31:29", "ws": "K8S", "phase": "phase1", "what": "agent h F2a_basket_labels ask_ekbasis haiku s1 h94fa19", "model": ["claude-haiku-4-5-20251001"], "usd": 0.016971}
+{"t": "2026-10-07T18:31:59", "ws": "K8S", "phase": "phase1", "what": "agent h F9a_authn_handover ask_ekbasis haiku s1 h37db95", "model": ["claude-haiku-4-5-20251001"], "usd": 0.013151}
+{"t": "2026-10-07T18:34:09", "ws": "K8S", "phase": "phase1", "what": "agent h F3b_influx_resize ask_ekbasis haiku s1 hd7d137", "model": ["claude-haiku-4-5-20251001"], "usd": 0.07105}
+{"t": "2026-10-07T18:34:23", "ws": "K8S", "phase": "phase1", "what": "agent h F9b_logforwarder_handover ask_ekbasis haiku s1 hdc737a", "model": ["claude-haiku-4-5-20251001"], "usd": 0.011821}
+{"t": "2026-10-07T18:34:56", "ws": "K8S", "phase": "phase1", "what": "agent h F1b_vision_delete_ns ask_ekbasis haiku s1 h7e8a56", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006842}
+{"t": "2026-10-07T18:37:32", "ws": "K8S", "phase": "phase1", "what": "agent h F3a_taxcalc_v2 ask_ekbasis haiku s1 h486d58", "model": ["claude-haiku-4-5-20251001"], "usd": 0.023106}
+{"t": "2026-10-07T18:38:07", "ws": "K8S", "phase": "phase1", "what": "agent h F2b_quote_release ask_ekbasis haiku s1 h8cd4f5", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01382}
+{"t": "2026-10-07T18:40:52", "ws": "K8S", "phase": "phase1", "what": "agent h F6b_maintenance_noexecute ask_ekbasis haiku s1 hb4ed47", "model": ["claude-haiku-4-5-20251001"], "usd": 0.014199}
+{"t": "2026-10-07T18:42:30", "ws": "K8S", "phase": "phase1", "what": "agent h C5_content_db_delete ask_ekbasis haiku s1 h9684e9", "model": ["claude-haiku-4-5-20251001"], "usd": 0.009992}
+{"t": "2026-10-07T18:42:51", "ws": "K8S", "phase": "phase1", "what": "agent h C2_threads_relabel ask_ekbasis haiku s1 h19532e", "model": ["claude-haiku-4-5-20251001"], "usd": 0.013128}
+{"t": "2026-10-07T18:44:44", "ws": "K8S", "phase": "phase1", "what": "agent h F10a_reservations_recreate ask_ekbasis haiku s1 h838b52", "model": ["claude-haiku-4-5-20251001"], "usd": 0.00949}
+{"t": "2026-10-07T18:46:06", "ws": "K8S", "phase": "phase1", "what": "agent h F8b_wiki_cleanup ask_ekbasis haiku s1 hfa24ac", "model": ["claude-haiku-4-5-20251001"], "usd": 0.032732}
+{"t": "2026-10-07T18:48:16", "ws": "K8S", "phase": "phase1", "what": "agent h F8a_sender_settings ask_ekbasis haiku s1 h35c7d7", "model": ["claude-haiku-4-5-20251001"], "usd": 0.011241}
+{"t": "2026-10-07T18:52:35", "ws": "K8S", "phase": "phase1", "what": "agent h F4b_reporting_prune ask_ekbasis haiku s1 he58ce2", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018939}
+{"t": "2026-10-07T18:53:04", "ws": "K8S", "phase": "phase1", "what": "agent h F10b_kafka_scale_down ask_ekbasis haiku s1 ha6f6d5", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01006}
+{"t": "2026-10-07T18:54:35", "ws": "K8S", "phase": "phase1", "what": "agent h C3_ml_noschedule ask_ekbasis haiku s1 h2f2921", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006578}
+{"t": "2026-10-07T18:58:34", "ws": "K8S", "phase": "phase1", "what": "agent h F3a_taxcalc_v2 ask_ekbasis haiku s2 hbcb201", "model": ["claude-haiku-4-5-20251001"], "usd": 0.024728}
+{"t": "2026-10-07T19:01:17", "ws": "K8S", "phase": "phase1", "what": "agent h F1a_ledgerops_cleanup ask_ekbasis haiku s1 hcd6e0f", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018055}
+{"t": "2026-10-07T19:01:42", "ws": "K8S", "phase": "phase1", "what": "agent h C5_content_db_delete ask_ekbasis haiku s2 he27a14", "model": ["claude-haiku-4-5-20251001"], "usd": 0.009942}
+{"t": "2026-10-07T19:02:53", "ws": "K8S", "phase": "phase1", "what": "agent h F8b_wiki_cleanup ask_ekbasis haiku s2 h881a83", "model": ["claude-haiku-4-5-20251001"], "usd": 0.019798}
+{"t": "2026-10-07T19:03:43", "ws": "K8S", "phase": "phase1", "what": "agent h F5a_tiles_selector ask_ekbasis haiku s1 hc8a363", "model": ["claude-haiku-4-5-20251001"], "usd": 0.035925}
+{"t": "2026-10-07T19:07:03", "ws": "K8S", "phase": "phase1", "what": "agent h F8a_sender_settings ask_ekbasis haiku s2 h5374dc", "model": ["claude-haiku-4-5-20251001"], "usd": 0.011198}
+{"t": "2026-10-07T19:08:05", "ws": "K8S", "phase": "phase1", "what": "agent h F5b_notifier_force ask_ekbasis haiku s2 h744fe2", "model": ["claude-haiku-4-5-20251001"], "usd": 0.010171}
+{"t": "2026-10-07T19:08:44", "ws": "K8S", "phase": "phase1", "what": "agent h F3b_influx_resize ask_ekbasis haiku s2 h377edf", "model": ["claude-haiku-4-5-20251001"], "usd": 0.034895}
+{"t": "2026-10-07T19:09:47", "ws": "K8S", "phase": "phase1", "what": "agent h F1b_vision_delete_ns ask_ekbasis haiku s2 h6fa9d9", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006968}
+{"t": "2026-10-07T19:19:09", "ws": "K8S", "phase": "phase1", "what": "agent h F5a_tiles_selector ask_ekbasis haiku s2 h50ddb3", "model": ["claude-haiku-4-5-20251001"], "usd": 0.079469}
+{"t": "2026-10-07T19:20:47", "ws": "K8S", "phase": "phase1", "what": "agent h F6a_gpu_reserve ask_ekbasis haiku s2 hfd675c", "model": ["claude-haiku-4-5-20251001"], "usd": 0.010106}
+{"t": "2026-10-07T19:23:09", "ws": "K8S", "phase": "phase1", "what": "agent h F9a_authn_handover ask_ekbasis haiku s2 h729310", "model": ["claude-haiku-4-5-20251001"], "usd": 0.011536}
+{"t": "2026-10-07T19:28:28", "ws": "K8S", "phase": "phase1", "what": "agent h F4b_reporting_prune ask_ekbasis haiku s2 hcc063a", "model": ["claude-haiku-4-5-20251001"], "usd": 0.018577}
+{"t": "2026-10-07T19:29:13", "ws": "K8S", "phase": "phase1", "what": "agent h F10b_kafka_scale_down ask_ekbasis haiku s2 hde8f07", "model": ["claude-haiku-4-5-20251001"], "usd": 0.011203}
+{"t": "2026-10-07T19:31:36", "ws": "K8S", "phase": "phase1", "what": "agent h F1a_ledgerops_cleanup ask_ekbasis haiku s2 h669c7b", "model": ["claude-haiku-4-5-20251001"], "usd": 0.017716}
+{"t": "2026-10-07T19:31:41", "ws": "K8S", "phase": "phase1", "what": "agent h C4_pipeline_v1 ask_ekbasis haiku s2 h4adcfd", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006349}
+{"t": "2026-10-07T19:33:20", "ws": "K8S", "phase": "phase1", "what": "agent h F9b_logforwarder_handover ask_ekbasis haiku s2 h05268d", "model": ["claude-haiku-4-5-20251001"], "usd": 0.0146}
+{"t": "2026-10-07T19:33:55", "ws": "K8S", "phase": "phase1", "what": "agent h F4a_catalog_sync ask_ekbasis haiku s2 h7a1750", "model": ["claude-haiku-4-5-20251001"], "usd": 0.028834}
+{"t": "2026-10-07T19:35:41", "ws": "K8S", "phase": "phase1", "what": "agent h C6_collector_scale ask_ekbasis haiku s2 ha809c0", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006301}
+{"t": "2026-10-07T19:36:10", "ws": "K8S", "phase": "phase1", "what": "agent h C2_threads_relabel ask_ekbasis haiku s2 h47cb6d", "model": ["claude-haiku-4-5-20251001"], "usd": 0.013}
+{"t": "2026-10-07T19:40:27", "ws": "K8S", "phase": "phase1", "what": "agent h F10a_reservations_recreate ask_ekbasis haiku s2 h786224", "model": ["claude-haiku-4-5-20251001"], "usd": 0.025738}
+{"t": "2026-10-07T19:42:32", "ws": "K8S", "phase": "phase1", "what": "agent h F2b_quote_release ask_ekbasis haiku s2 h83d42c", "model": ["claude-haiku-4-5-20251001"], "usd": 0.023289}
+{"t": "2026-10-07T19:42:40", "ws": "K8S", "phase": "phase1", "what": "agent h F2a_basket_labels ask_ekbasis haiku s2 heaf572", "model": ["claude-haiku-4-5-20251001"], "usd": 0.01356}
+{"t": "2026-10-07T19:45:29", "ws": "K8S", "phase": "phase1", "what": "agent h F6b_maintenance_noexecute ask_ekbasis haiku s2 h97778b", "model": ["claude-haiku-4-5-20251001"], "usd": 0.013874}
+{"t": "2026-10-07T19:46:53", "ws": "K8S", "phase": "phase1", "what": "agent h C3_ml_noschedule ask_ekbasis haiku s2 h605e8c", "model": ["claude-haiku-4-5-20251001"], "usd": 0.006559}
+{"t": "2026-10-07T19:48:31", "ws": "K8S", "phase": "phase1", "what": "agent h C1_scratch_delete ask_ekbasis haiku s2 h931dbc", "model": ["claude-haiku-4-5-20251001"], "usd": 0.009476}
+{"t": "2026-10-07T19:53:58", "ws": "K8S", "phase": "phase1", "what": "agent s F5a_tiles_selector ask_ekbasis sonnet s1 s033565", "model": ["claude-sonnet-5-5"], "usd": 0.074471}
+{"t": "2026-10-07T19:54:47", "ws": "K8S", "phase": "phase1", "what": "agent s F1b_vision_delete_ns ask_ekbasis sonnet s1 sf106bd", "model": ["claude-sonnet-5-5"], "usd": 0.039506}
+{"t": "2026-10-07T19:55:03", "ws": "K8S", "phase": "phase1", "what": "agent s F10b_kafka_scale_down ask_ekbasis sonnet s1 s22b49a", "model": ["claude-sonnet-5-5"], "usd": 0.024989}
+{"t": "2026-10-07T19:56:06", "ws": "K8S", "phase": "phase1", "what": "agent s C5_content_db_delete ask_ekbasis sonnet s1 sd60b43", "model": ["claude-sonnet-5-5"], "usd": 0.026605}
+{"t": "2026-10-07T20:00:10", "ws": "K8S", "phase": "phase1", "what": "agent s F2b_quote_release ask_ekbasis sonnet s1 saa9f9b", "model": ["claude-sonnet-5-5"], "usd": 0.040004}
+{"t": "2026-10-07T20:00:23", "ws": "K8S", "phase": "phase1", "what": "agent s F8a_sender_settings ask_ekbasis sonnet s1 s0a8cf8", "model": ["claude-sonnet-5-5"], "usd": 0.029062}
+{"t": "2026-10-07T20:03:29", "ws": "K8S", "phase": "phase1", "what": "agent s F6b_maintenance_noexecute ask_ekbasis sonnet s1 s74ba6e", "model": ["claude-sonnet-5-5"], "usd": 0.02684}
+{"t": "2026-10-07T20:07:56", "ws": "K8S", "phase": "phase1", "what": "agent s F4b_reporting_prune ask_ekbasis sonnet s1 se4dbad", "model": ["claude-sonnet-5-5"], "usd": 0.0387}
+{"t": "2026-10-07T20:09:24", "ws": "K8S", "phase": "phase1", "what": "agent s C3_ml_noschedule ask_ekbasis sonnet s1 s1e6b1b", "model": ["claude-sonnet-5-5"], "usd": 0.012439}
+{"t": "2026-10-07T20:10:54", "ws": "K8S", "phase": "phase1", "what": "agent s C6_collector_scale ask_ekbasis sonnet s1 s3aaa8f", "model": ["claude-sonnet-5-5"], "usd": 0.011454}
+{"t": "2026-10-07T20:11:33", "ws": "K8S", "phase": "phase1", "what": "agent s C2_threads_relabel ask_ekbasis sonnet s1 s7611c4", "model": ["claude-sonnet-5-5"], "usd": 0.020708}
+{"t": "2026-10-07T20:12:19", "ws": "K8S", "phase": "phase1", "what": "agent s F3a_taxcalc_v2 ask_ekbasis sonnet s1 sdbac1d", "model": ["claude-sonnet-5-5"], "usd": 0.044112}
+{"t": "2026-10-07T20:12:40", "ws": "K8S", "phase": "phase1", "what": "agent s F8b_wiki_cleanup ask_ekbasis sonnet s1 sbcad4e", "model": ["claude-sonnet-5-5"], "usd": 0.036365}
+{"t": "2026-10-07T20:13:06", "ws": "K8S", "phase": "phase1", "what": "agent s C4_pipeline_v1 ask_ekbasis sonnet s1 s75af29", "model": ["claude-sonnet-5-5"], "usd": 0.011429}
+{"t": "2026-10-07T20:14:57", "ws": "K8S", "phase": "phase1", "what": "agent s F10a_reservations_recreate ask_ekbasis sonnet s1 s14ebb6", "model": ["claude-sonnet-5-5"], "usd": 0.052553}
+{"t": "2026-10-07T20:16:40", "ws": "K8S", "phase": "phase1", "what": "agent s F6a_gpu_reserve ask_ekbasis sonnet s1 sd55859", "model": ["claude-sonnet-5-5"], "usd": 0.019842}
+{"t": "2026-10-07T20:18:34", "ws": "K8S", "phase": "phase1", "what": "agent s F9b_logforwarder_handover ask_ekbasis sonnet s1 s5e0da9", "model": ["claude-sonnet-5-5"], "usd": 0.01727}
+{"t": "2026-10-07T20:24:02", "ws": "K8S", "phase": "phase1", "what": "agent s F3b_influx_resize ask_ekbasis sonnet s1 se48fb7", "model": ["claude-sonnet-5-5"], "usd": 0.06395}
+{"t": "2026-10-07T20:24:22", "ws": "K8S", "phase": "phase1", "what": "agent s F2a_basket_labels ask_ekbasis sonnet s1 s8ecfdf", "model": ["claude-sonnet-5-5"], "usd": 0.042391}
+{"t": "2026-10-07T20:26:07", "ws": "K8S", "phase": "phase1", "what": "agent s C1_scratch_delete ask_ekbasis sonnet s1 sfcc7cd", "model": ["claude-sonnet-5-5"], "usd": 0.022426}
+{"t": "2026-10-07T20:27:19", "ws": "K8S", "phase": "phase1", "what": "agent s F1a_ledgerops_cleanup ask_ekbasis sonnet s1 s3ab19e", "model": ["claude-sonnet-5-5"], "usd": 0.04618}
+{"t": "2026-10-07T20:29:47", "ws": "K8S", "phase": "phase1", "what": "agent s F9a_authn_handover ask_ekbasis sonnet s1 s96aea3", "model": ["claude-sonnet-5-5"], "usd": 0.017672}
+{"t": "2026-10-07T20:31:20", "ws": "K8S", "phase": "phase1", "what": "agent s F5b_notifier_force ask_ekbasis sonnet s1 sa74466", "model": ["claude-sonnet-5-5"], "usd": 0.01967}
+{"t": "2026-10-07T20:31:55", "ws": "K8S", "phase": "phase1", "what": "agent s F4a_catalog_sync ask_ekbasis sonnet s1 s2b1d31", "model": ["claude-sonnet-5-5"], "usd": 0.03771}

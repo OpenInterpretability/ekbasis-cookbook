@@ -1,0 +1,1 @@
+{"t": 1791412183.5613818, "command": "kubectl delete configmap pipeline-v1 -n ingest-dcfd"}

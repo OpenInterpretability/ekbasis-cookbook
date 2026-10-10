@@ -1,0 +1,12 @@
+{"t": 1791387088.509473, "command": "kubectl get configmaps -n wiki-87b7 -o name"}
+{"t": 1791387091.786718, "command": "kubectl get pods,deployments,statefulsets,daemonsets,cronjobs -n wiki-87b7 -o json | jq -r '.items[] | select(.spec != null) | .metadata.name + \": \" + (.spec.template.spec.volumes[]?.configMap.name // \"none\" | tostring)' 2>/dev/null || kubectl get all -n wiki-87b7 -o json | jq -r '.. | .configMap?.name? // empty' | sort -u"}
+{"t": 1791387093.6934028, "command": "kubectl get all -n wiki-87b7 -o json | grep -o '\"configMap\":{\"name\":\"[^\"]*\"' | grep -o '\"name\":\"[^\"]*' | cut -d'\"' -f4 | sort -u"}
+{"t": 1791387095.5697532, "command": "kubectl get pods,deployments,statefulsets,daemonsets,cronjobs -n wiki-87b7 -o yaml | grep -A 2 \"configMap:\" | grep \"name:\""}
+{"t": 1791387097.360642, "command": "kubectl get pods,deployments,statefulsets,daemonsets,cronjobs -n wiki-87b7"}
+{"t": 1791387099.200908, "command": "kubectl describe deployment wikiweb -n wiki-87b7 | grep -A 20 \"Volumes:\" | head -25"}
+{"t": 1791387101.96475, "command": "kubectl delete configmap import-rules page-templates-2023 theme -n wiki-87b7"}
+{"t": 1791387106.422923, "command": "kubectl get deployment wikiweb -n wiki-87b7 -o yaml | grep -A 100 \"volumes:\""}
+{"t": 1791387108.608473, "command": "kubectl get pods -n wiki-87b7 -o yaml | grep -E \"(configMapRef|configMapKeyRef|name: theme)\" -A 2 -B 2"}
+{"t": 1791387110.3909602, "command": "kubectl get pods -n wiki-87b7 -o yaml | grep -i theme"}
+{"t": 1791387113.985333, "command": "kubectl delete configmap import-rules page-templates-2023 -n wiki-87b7"}
+{"t": 1791387123.632716, "command": "kubectl delete configmap import-rules page-templates-2023 -n wiki-87b7"}

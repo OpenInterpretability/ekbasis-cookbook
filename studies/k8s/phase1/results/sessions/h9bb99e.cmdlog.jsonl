@@ -1,0 +1,6 @@
+{"t": 1791391684.4370072, "command": "kubectl delete configmap sender-settings -n courier-b99e"}
+{"t": 1791391687.940534, "command": "kubectl get deployment -n courier-b99e -o yaml | grep -A 20 -B 5 \"sender-settings\""}
+{"t": 1791391690.115104, "command": "kubectl patch deployment dispatcher -n courier-b99e --type json -p='[{\"op\": \"remove\", \"path\": \"/spec/template/spec/containers/0/envFrom\"}]'"}
+{"t": 1791391693.2746391, "command": "kubectl patch deployment dispatcher -n courier-b99e --type json -p='[{\"op\": \"remove\", \"path\": \"/spec/template/spec/containers/0/envFrom\"}]'"}
+{"t": 1791391694.683409, "command": "kubectl delete configmap sender-settings -n courier-b99e"}
+{"t": 1791391697.357806, "command": "kubectl delete configmap sender-settings -n courier-b99e"}

@@ -1,0 +1,5 @@
+{"t": 1791413326.83933, "command": "kubectl delete namespace vision-06bd"}
+{"t": 1791413462.612344, "command": "kubectl patch pv pvc-2303f6de-6612-4596-ac13-723da7a1de01 -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}' && kubectl delete namespace vision-06bd"}
+{"t": 1791413464.3917398, "command": "kubectl patch pv pvc-2303f6de-6612-4596-ac13-723da7a1de01 -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791413535.661624, "command": "kubectl delete namespace vision-06bd"}
+{"t": 1791413626.073693, "command": "kubectl delete namespace vision-06bd"}

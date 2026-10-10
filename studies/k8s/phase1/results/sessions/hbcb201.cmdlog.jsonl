@@ -1,0 +1,7 @@
+{"t": 1791410099.503229, "command": "cat taxcalc-v2.yaml"}
+{"t": 1791410100.851273, "command": "kubectl -n invoicing-b201 get deployment taxcalc -o yaml"}
+{"t": 1791410102.8855, "command": "kubectl -n invoicing-b201 apply -f taxcalc-v2.yaml"}
+{"t": 1791410159.046242, "command": "kubectl -n invoicing-b201 patch deployment taxcalc --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/spec/containers/0/env/0/value\", \"value\": \"2\"}]'"}
+{"t": 1791410248.0438578, "command": "kubectl -n invoicing-b201 rollout status deployment/taxcalc --timeout=5m"}
+{"t": 1791410262.2677262, "command": "kubectl -n invoicing-b201 get deployment taxcalc -o wide && echo -e \"\\n--- Pod status ---\" && kubectl -n invoicing-b201 get pods -l app=taxcalc -o wide"}
+{"t": 1791410264.584269, "command": "sleep 2 && kubectl -n invoicing-b201 get pods -l app=taxcalc -o wide && echo -e \"\\n--- Verify VERSION=2 ---\" && kubectl -n invoicing-b201 get pods -l app=taxcalc -o jsonpath='{range .items[*]}{.metadata.name}{\"\\t\"}{.spec.containers[0].env[0].value}{\"\\n\"}{end}'"}

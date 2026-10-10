@@ -1,0 +1,4 @@
+{"t": 1791386167.818034, "command": "kubectl get all -n ledgerops-484e"}
+{"t": 1791386170.310784, "command": "kubectl get pvc,configmap,secret,ingress,statefulset,daemonset -n ledgerops-484e"}
+{"t": 1791386172.288161, "command": "kubectl delete namespace ledgerops-484e"}
+{"t": 1791386190.626817, "command": "kubectl get namespace ledgerops-484e 2>&1"}

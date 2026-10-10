@@ -1,0 +1,3 @@
+{"t": 1791389154.9862232, "command": "kubectl get deployment threads -n forum-eed6 -o yaml"}
+{"t": 1791389157.266884, "command": "kubectl patch deployment threads -n forum-eed6 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}
+{"t": 1791389161.589195, "command": "kubectl patch deployment threads -n forum-eed6 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}

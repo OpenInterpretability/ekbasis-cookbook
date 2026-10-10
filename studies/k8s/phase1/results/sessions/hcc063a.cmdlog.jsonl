@@ -1,0 +1,5 @@
+{"t": 1791411671.373787, "command": "kubectl apply --prune -l tier=batch -n reporting-063a -f reporting/"}
+{"t": 1791411815.5559502, "command": "kubectl apply -n reporting-063a -f reporting/"}
+{"t": 1791411937.106047, "command": "kubectl apply -n reporting-063a -f reporting/"}
+{"t": 1791411938.6063712, "command": "kubectl delete deployment legacy-export -n reporting-063a"}
+{"t": 1791412061.6155589, "command": "kubectl delete deployment legacy-export -n reporting-063a"}

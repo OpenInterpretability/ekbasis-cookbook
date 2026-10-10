@@ -1,0 +1,6 @@
+{"t": 1791391548.828592, "command": "kubectl get deployment -n pricing-c433 | grep quote"}
+{"t": 1791391550.615139, "command": "kubectl patch deployment quote -n pricing-c433 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"release\":\"r2\"}}}}}'"}
+{"t": 1791391561.302469, "command": "kubectl patch service quote -n pricing-c433 --type=merge -p '{\"spec\": {\"selector\": {\"release\": null}}}'"}
+{"t": 1791391567.28708, "command": "kubectl patch deployment quote -n pricing-c433 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"release\":\"r2\"}}}}}'"}
+{"t": 1791391574.27941, "command": "kubectl patch service quote -n pricing-c433 --type=merge -p '{\"spec\": {\"selector\": {\"release\": \"r2\"}}}'"}
+{"t": 1791391585.022699, "command": "kubectl patch service quote -n pricing-c433 --type=merge -p '{\"spec\": {\"selector\": {\"release\": \"r2\"}}}'"}

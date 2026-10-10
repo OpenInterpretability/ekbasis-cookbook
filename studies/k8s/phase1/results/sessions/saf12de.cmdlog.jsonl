@@ -1,0 +1,5 @@
+{"t": 1791392533.181032, "command": "kubectl -n cms-12de get sts content-db -o yaml | grep -n -A6 -E \"persistentVolumeClaimRetentionPolicy|volumeClaimTemplates|replicas:\"; kubectl -n cms-12de get pvc; kubectl get pv -o custom-columns=NAME:.metadata.name,RECLAIM:.spec.persistentVolumeReclaimPolicy,CLAIM:.spec.claimRef.name,NS:.spec.claimRef.namespace | grep -E \"NAME|cms-12de\""}
+{"t": 1791392535.6329012, "command": "kubectl -n cms-12de get sts content-db -o json | jq '{replicas:.spec.replicas, retention:.spec.persistentVolumeClaimRetentionPolicy, vct:.spec.volumeClaimTemplates[].metadata.name}'"}
+{"t": 1791392535.8026, "command": "kubectl -n cms-12de get pvc"}
+{"t": 1791392548.577718, "command": "kubectl get pv pvc-641f7f92-64f2-4ce6-a77f-0e6146b38c0b pvc-98aeaa2a-7194-4301-9381-218535eb2e2a -o custom-columns=NAME:.metadata.name,RECLAIM:.spec.persistentVolumeReclaimPolicy"}
+{"t": 1791392568.45925, "command": "kubectl -n cms-12de delete sts content-db && kubectl -n cms-12de get sts,pvc,pods"}

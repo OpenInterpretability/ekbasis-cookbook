@@ -1,0 +1,6 @@
+{"t": 1791390976.972424, "command": "kubectl scale statefulset kafka-lite --replicas=1 -n streams-04dd"}
+{"t": 1791390981.0002198, "command": "kubectl scale statefulset kafka-lite --replicas=1 -n streams-04dd --cascade=orphan"}
+{"t": 1791390985.0230742, "command": "kubectl patch statefulset kafka-lite -n streams-04dd -p '{\"spec\":{\"persistentVolumeClaimRetentionPolicy\":{\"whenScaled\":\"Retain\"}}}'"}
+{"t": 1791390988.430157, "command": "kubectl patch statefulset kafka-lite -n streams-04dd -p '{\"spec\":{\"persistentVolumeClaimRetentionPolicy\":{\"whenScaled\":\"Retain\"}}}'"}
+{"t": 1791390989.030942, "command": "kubectl scale statefulset kafka-lite --replicas=1 -n streams-04dd"}
+{"t": 1791390992.278542, "command": "kubectl scale statefulset kafka-lite --replicas=1 -n streams-04dd"}

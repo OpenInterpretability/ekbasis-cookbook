@@ -1,0 +1,1 @@
+{"t": 1791386958.137344, "command": "kubectl delete statefulset content-db -n cms-3978"}

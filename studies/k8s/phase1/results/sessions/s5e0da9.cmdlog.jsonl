@@ -1,0 +1,2 @@
+{"t": 1791415022.104716, "command": "kubectl get ds log-forwarder -n shipping-0da9 -o wide; kubectl get pods -n shipping-0da9 -o wide"}
+{"t": 1791415023.926503, "command": "kubectl delete ds log-forwarder -n shipping-0da9 --cascade=orphan; kubectl get pods -n shipping-0da9"}

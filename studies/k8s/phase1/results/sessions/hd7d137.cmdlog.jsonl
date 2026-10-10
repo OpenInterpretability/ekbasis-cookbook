@@ -1,0 +1,27 @@
+{"t": 1791408207.198494, "command": "ls -la"}
+{"t": 1791408207.664654, "command": "kubectl get statefulset -n telemetry-d137"}
+{"t": 1791408209.127232, "command": "cat influx.yaml"}
+{"t": 1791408209.6392121, "command": "kubectl get statefulset influx -n telemetry-d137 -o yaml"}
+{"t": 1791408212.071434, "command": "kubectl get pvc -n telemetry-d137"}
+{"t": 1791408214.4904692, "command": "kubectl apply -f influx.yaml -n telemetry-d137"}
+{"t": 1791408258.998435, "command": "kubectl get pvc data-influx-0 -n telemetry-d137 -o yaml"}
+{"t": 1791408259.418746, "command": "kubectl get pv -n telemetry-d137"}
+{"t": 1791408261.1673112, "command": "kubectl delete statefulset influx -n telemetry-d137 --cascade=orphan"}
+{"t": 1791408391.197224, "command": "kubectl wait --for=delete statefulset/influx -n telemetry-d137 --timeout=30s 2>/dev/null || true"}
+{"t": 1791408393.821785, "command": "kubectl delete statefulset influx -n telemetry-d137 --cascade=orphan"}
+{"t": 1791408395.851288, "command": "kubectl delete pvc data-influx-0 -n telemetry-d137"}
+{"t": 1791408610.4817548, "command": "kubectl apply -f influx.yaml -n telemetry-d137"}
+{"t": 1791408615.166969, "command": "kubectl get pv pvc-e8cc1cb1-5697-45c8-a4f9-31009971ce3a -o yaml"}
+{"t": 1791408615.673385, "command": "kubectl get pvc data-influx-0 -n telemetry-d137 -o yaml"}
+{"t": 1791408617.8263721, "command": "kubectl patch pvc data-influx-0 -n telemetry-d137 -p '{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"128Mi\"}}}}'"}
+{"t": 1791408699.20074, "command": "kubectl patch pv pvc-e8cc1cb1-5697-45c8-a4f9-31009971ce3a -p '{\"spec\":{\"capacity\":{\"storage\":\"128Mi\"}}}'"}
+{"t": 1791408731.3716428, "command": "kubectl apply -f influx.yaml -n telemetry-d137"}
+{"t": 1791408793.298601, "command": "kubectl apply -f influx.yaml -n telemetry-d137"}
+{"t": 1791408795.020593, "command": "kubectl get statefulset influx -n telemetry-d137 -o yaml | grep -A 2 \"MODE\\|storage:\""}
+{"t": 1791408795.491574, "command": "kubectl get pods -n telemetry-d137"}
+{"t": 1791408796.013407, "command": "kubectl get pvc -n telemetry-d137"}
+{"t": 1791408797.6199522, "command": "kubectl logs influx-0 -n telemetry-d137"}
+{"t": 1791408798.05426, "command": "kubectl describe pod influx-0 -n telemetry-d137"}
+{"t": 1791408800.091443, "command": "kubectl get statefulset influx -n telemetry-d137 -o yaml | grep -A 5 \"env:\" | head -10"}
+{"t": 1791408800.8335302, "command": "kubectl get statefulset influx -n telemetry-d137 -o yaml | grep -A 3 \"volumeClaimTemplates:\" | grep storage"}
+{"t": 1791408801.421644, "command": "kubectl exec influx-0 -n telemetry-d137 -- cat /data/payload.txt"}

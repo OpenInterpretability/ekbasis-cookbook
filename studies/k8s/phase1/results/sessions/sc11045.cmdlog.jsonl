@@ -1,0 +1,5 @@
+{"t": 1791392731.0373492, "command": "ls -la reporting/ && grep -n -E \"^kind:|tier:|namespace:\" reporting/* ; kubectl apply --prune -l tier=batch -n reporting-1045 -f reporting/ --dry-run=server"}
+{"t": 1791392732.859185, "command": "ls -la reporting/; grep -n -E \"kind:|tier|namespace\" reporting/*"}
+{"t": 1791392733.0842009, "command": "kubectl apply --prune -l tier=batch -n reporting-1045 -f reporting/ --dry-run=server"}
+{"t": 1791392738.848943, "command": "kubectl get deploy,svc -n reporting-1045 -l tier=batch -L tier,app --show-labels; kubectl get deploy audit-trail legacy-export -n reporting-1045 -o jsonpath='{range .items[*]}{.metadata.name}{\" \"}{.metadata.annotations}{\" replicas=\"}{.status.readyReplicas}{\"\\n\"}{end}'"}
+{"t": 1791392743.741594, "command": "kubectl apply -n reporting-1045 -f reporting/ && kubectl delete deploy legacy-export -n reporting-1045 && kubectl get deploy,svc -n reporting-1045"}

@@ -1,0 +1,10 @@
+{"t": 1791392356.5099468, "command": "pwd && ls -la taxcalc-v2.yaml"}
+{"t": 1791392357.864733, "command": "ls -la taxcalc-v2.yaml && head -50 taxcalc-v2.yaml"}
+{"t": 1791392359.155649, "command": "kubectl get deployment taxcalc -n invoicing-9a54"}
+{"t": 1791392360.8922071, "command": "kubectl apply -f taxcalc-v2.yaml -n invoicing-9a54"}
+{"t": 1791392362.468717, "command": "kubectl get deployment taxcalc -n invoicing-9a54 -o yaml"}
+{"t": 1791392365.026155, "command": "kubectl patch deployment taxcalc -n invoicing-9a54 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/track\", \"value\":\"stable\"}, {\"op\": \"replace\", \"path\": \"/spec/template/spec/containers/0/env/0/value\", \"value\":\"2\"}]'"}
+{"t": 1791392366.584102, "command": "kubectl rollout status deployment/taxcalc -n invoicing-9a54 --timeout=60s"}
+{"t": 1791392381.569956, "command": "kubectl get pods -n invoicing-9a54 -l app=taxcalc && echo \"---\" && kubectl get deployment taxcalc -n invoicing-9a54 && echo \"---\" && kubectl get deployment taxcalc -n invoicing-9a54 -o jsonpath='{.spec.template.spec.containers[0].env[?(@.name==\"VERSION\")].value}'"}
+{"t": 1791392382.873, "command": "kubectl get pods -n invoicing-9a54 -l app=taxcalc && echo \"---\" && kubectl get deployment taxcalc -n invoicing-9a54"}
+{"t": 1791392384.2998772, "command": "kubectl get deployment taxcalc -n invoicing-9a54 -o yaml | grep -A 5 \"env:\""}

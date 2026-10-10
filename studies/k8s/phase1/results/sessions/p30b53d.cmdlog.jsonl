@@ -1,0 +1,9 @@
+{"t": 1791386168.43716, "command": "kubectl get all -n ledgerops-b53d"}
+{"t": 1791386171.230471, "command": "kubectl get configmap,secret,pvc,ingress,pv -n ledgerops-b53d 2>/dev/null"}
+{"t": 1791386174.2029052, "command": "kubectl delete namespace ledgerops-b53d"}
+{"t": 1791386181.887178, "command": "kubectl get pv pvc-3bf3c4ae-9a08-46e6-838b-afde02c4cf0f -o yaml"}
+{"t": 1791386184.558646, "command": "kubectl patch pv pvc-3bf3c4ae-9a08-46e6-838b-afde02c4cf0f -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791386191.496104, "command": "kubectl patch pv pvc-3bf3c4ae-9a08-46e6-838b-afde02c4cf0f -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791386193.956751, "command": "kubectl delete namespace ledgerops-b53d"}
+{"t": 1791386198.671914, "command": "kubectl delete namespace ledgerops-b53d"}
+{"t": 1791386217.519388, "command": "kubectl get pv pvc-3bf3c4ae-9a08-46e6-838b-afde02c4cf0f"}

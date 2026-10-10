@@ -1,0 +1,1 @@
+{"cond": "ask_ekbasis", "run": "<job>/tmp/k8s/p1runs/h47cb6d", "cwd": "<job>/tmp/k8s/p1runs/h47cb6d/cwd", "request": "In namespace forum-cb6d, change the threads deployment's pod label tier from frontend to web.", "rid": "h47cb6d", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["forum-cb6d"]}

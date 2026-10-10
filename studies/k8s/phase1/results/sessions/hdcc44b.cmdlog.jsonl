@@ -1,0 +1,3 @@
+{"t": 1791387676.766817, "command": "kubectl get deployments -n pricing-c44b | grep -i quote"}
+{"t": 1791387678.6296508, "command": "kubectl patch deployment quote -n pricing-c44b -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"release\":\"r2\"}}}}}'"}
+{"t": 1791387680.272773, "command": "kubectl get deployment quote -n pricing-c44b -o jsonpath='{.spec.template.metadata.labels.release}'"}

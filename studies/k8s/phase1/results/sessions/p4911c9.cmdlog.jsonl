@@ -1,0 +1,5 @@
+{"t": 1791386253.306344, "command": "kubectl patch deployment basket -n retail-11c9 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}
+{"t": 1791386266.38116, "command": "kubectl patch service basket -n retail-11c9 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/selector/tier\", \"value\": \"web\"}]'"}
+{"t": 1791386286.24065, "command": "kubectl patch deployment basket -n retail-11c9 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}
+{"t": 1791386289.0076349, "command": "kubectl patch service basket -n retail-11c9 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/selector/tier\", \"value\": \"web\"}]'"}
+{"t": 1791386289.828338, "command": "kubectl patch deployment basket -n retail-11c9 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}

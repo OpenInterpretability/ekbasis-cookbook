@@ -1,0 +1,3 @@
+{"t": 1791390629.8659241, "command": "kubectl delete configmap sender-settings -n courier-a987"}
+{"t": 1791390641.7210398, "command": "kubectl patch deployment dispatcher -n courier-a987 --type=json -p '[{\"op\": \"add\", \"path\": \"/spec/template/spec/containers/0/envFrom/0/configMapRef/optional\", \"value\": true}]'"}
+{"t": 1791390649.448631, "command": "kubectl delete configmap sender-settings -n courier-a987"}

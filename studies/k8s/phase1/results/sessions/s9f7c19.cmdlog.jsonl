@@ -1,0 +1,1 @@
+{"t": 1791392815.451966, "command": "kubectl taint node ekb-k8s-worker2 dedicated=ml:NoSchedule && kubectl get node ekb-k8s-worker2 -o jsonpath='{.spec.taints}'"}

@@ -1,0 +1,1 @@
+{"t": 1791388388.5936, "command": "kubectl delete configmap sender-settings -n courier-1e81"}

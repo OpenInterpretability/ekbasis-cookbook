@@ -1,0 +1,17 @@
+{"t": 1791391618.489804, "command": "ls -la <job>/tmp/k8s/p1runs/hd188f7/cwd/"}
+{"t": 1791391620.078453, "command": "cat <job>/tmp/k8s/p1runs/hd188f7/cwd/influx.yaml"}
+{"t": 1791391621.620773, "command": "kubectl get statefulset influx -n telemetry-88f7 -o yaml"}
+{"t": 1791391622.953752, "command": "kubectl get pvc -n telemetry-88f7"}
+{"t": 1791391624.3755178, "command": "kubectl exec -n telemetry-88f7 influx-0 -- cat /data/payload.txt"}
+{"t": 1791391627.4281979, "command": "kubectl apply -f <job>/tmp/k8s/p1runs/hd188f7/cwd/influx.yaml -n telemetry-88f7"}
+{"t": 1791391630.6500769, "command": "kubectl apply -f <job>/tmp/k8s/p1runs/hd188f7/cwd/influx.yaml -n telemetry-88f7"}
+{"t": 1791391632.473184, "command": "kubectl delete statefulset influx -n telemetry-88f7 --cascade=orphan"}
+{"t": 1791391635.8482602, "command": "kubectl delete statefulset influx -n telemetry-88f7 --cascade=orphan"}
+{"t": 1791391637.8482869, "command": "kubectl get pvc -n telemetry-88f7 && kubectl exec -n telemetry-88f7 influx-0 -- cat /data/payload.txt"}
+{"t": 1791391639.582047, "command": "kubectl patch pvc data-influx-0 -n telemetry-88f7 -p '{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"128Mi\"}}}}'"}
+{"t": 1791391642.580863, "command": "kubectl patch pvc data-influx-0 -n telemetry-88f7 -p '{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"128Mi\"}}}}'"}
+{"t": 1791391644.717659, "command": "kubectl apply -f <job>/tmp/k8s/p1runs/hd188f7/cwd/influx.yaml -n telemetry-88f7"}
+{"t": 1791391647.873467, "command": "kubectl apply -f <job>/tmp/k8s/p1runs/hd188f7/cwd/influx.yaml -n telemetry-88f7"}
+{"t": 1791391649.918289, "command": "kubectl get statefulset influx -n telemetry-88f7 -o yaml | grep -A 2 \"MODE\\|storage:\" && echo \"---\" && kubectl exec -n telemetry-88f7 influx-0 -- cat /data/payload.txt"}
+{"t": 1791391651.488157, "command": "kubectl get statefulset influx -n telemetry-88f7 -o jsonpath='{.spec.template.spec.containers[0].env[0].value}' && echo \"\" && kubectl get pvc -n telemetry-88f7 data-influx-0 -o jsonpath='{.spec.resources.requests.storage}'"}
+{"t": 1791391652.7582688, "command": "kubectl exec -n telemetry-88f7 influx-0 -- cat /data/payload.txt"}

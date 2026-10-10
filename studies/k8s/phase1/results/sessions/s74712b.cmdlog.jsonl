@@ -1,0 +1,1 @@
+{"t": 1791393122.904614, "command": "kubectl get node ekb-k8s-worker2 -o jsonpath='{.spec.taints}'; echo; kubectl taint nodes ekb-k8s-worker2 accelerator=gpu:NoSchedule; kubectl get node ekb-k8s-worker2 -o jsonpath='{.spec.taints}'"}

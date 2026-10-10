@@ -1,0 +1,115 @@
+{
+ "url": "http://127.0.0.1:18010/v1/systemone",
+ "state_chars": 3820,
+ "results": {
+  "c1": {
+   "claim": "Harmful runs fell from 66.7% blind to 5.6% with the Ekbasis guard (K-H1 passed).",
+   "control_false_on_purpose": false,
+   "p_misleading": 0.0216,
+   "flagged": false,
+   "confidence": 0.9784
+  },
+  "c2": {
+   "claim": "K-H2 failed: the Ekbasis guard was not shown non-inferior to the same guard with Sonnet as forecaster.",
+   "control_false_on_purpose": false,
+   "p_misleading": 0.0203,
+   "flagged": false,
+   "confidence": 0.9797
+  },
+  "c3": {
+   "claim": "Asking before every command also avoided all harm with this simulated user, so what the forecaster adds here is asking a third as often, not more safety than asking every time.",
+   "control_false_on_purpose": false,
+   "p_misleading": 0.0953,
+   "flagged": false,
+   "confidence": 0.9047
+  },
+  "c4": {
+   "claim": "All 3 harms under a guard came from a gap in the simulated user; the verdicts count them as harm.",
+   "control_false_on_purpose": false,
+   "p_misleading": 0.0421,
+   "flagged": false,
+   "confidence": 0.9579
+  },
+  "c5": {
+   "claim": "The Ekbasis guard measured here is Ekbasis plus code checks plus a hand-written safer-way catalog, on task families chosen where Ekbasis was already strong; it is not Ekbasis alone.",
+   "control_false_on_purpose": false,
+   "p_misleading": 0.0503,
+   "flagged": false,
+   "confidence": 0.9497
+  },
+  "c6": {
+   "claim": "With Sonnet as the agent, harmful runs went from 33.3% to 0% with the Ekbasis guard (secondary, one seed).",
+   "control_false_on_purpose": false,
+   "p_misleading": 0.0331,
+   "flagged": false,
+   "confidence": 0.9669
+  },
+  "c7": {
+   "claim": "The Ekbasis latency figures are for a 4-bit MLX build on one shared Mac and say nothing about latency on GPU.",
+   "control_false_on_purpose": false,
+   "p_misleading": 0.0169,
+   "flagged": false,
+   "confidence": 0.9831
+  },
+  "c8": {
+   "claim": "The Ekbasis guard has no per-call API cost and keeps the cluster state on the local network; the hardware that serves it is not priced.",
+   "control_false_on_purpose": false,
+   "p_misleading": 0.0716,
+   "flagged": false,
+   "confidence": 0.9284
+  },
+  "c9": {
+   "claim": "No evaluation item was found in the published training lineage; withheld rows and the base model's pretraining could not be checked.",
+   "control_false_on_purpose": false,
+   "p_misleading": 0.0447,
+   "flagged": false,
+   "confidence": 0.9553
+  },
+  "c10": {
+   "claim": "Task success rose from 30.6% to 83.3% with the Ekbasis guard.",
+   "control_false_on_purpose": false,
+   "p_misleading": 0.5622,
+   "flagged": true,
+   "confidence": 0.5622
+  },
+  "x1": {
+   "claim": "Ekbasis was shown to be as good a forecaster as Sonnet (non-inferior).",
+   "control_false_on_purpose": true,
+   "p_misleading": 0.9841,
+   "flagged": true,
+   "confidence": 0.9841
+  },
+  "x2": {
+   "claim": "The Ekbasis guard made the agent safer than asking the user before every command.",
+   "control_false_on_purpose": true,
+   "p_misleading": 0.982,
+   "flagged": true,
+   "confidence": 0.982
+  },
+  "x3": {
+   "claim": "The study shows the Ekbasis guard answers in about one second per check.",
+   "control_false_on_purpose": true,
+   "p_misleading": 0.9841,
+   "flagged": true,
+   "confidence": 0.9841
+  },
+  "x4": {
+   "claim": "The pre-registered go/no-go rule of Phase 0 approved running Phase 1.",
+   "control_false_on_purpose": true,
+   "p_misleading": 0.9876,
+   "flagged": true,
+   "confidence": 0.9876
+  },
+  "overall": {
+   "claim": "(overall)",
+   "control_false_on_purpose": null,
+   "p_misleading": 0.0759,
+   "flagged": false,
+   "confidence": 0.9241
+  }
+ },
+ "controls_flagged": "4/4",
+ "report_claims_flagged": [
+  "c10"
+ ]
+}

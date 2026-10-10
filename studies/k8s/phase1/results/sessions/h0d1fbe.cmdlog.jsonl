@@ -1,0 +1,5 @@
+{"t": 1791392362.686475, "command": "kubectl -n shipping-1fbe get daemonset log-forwarder"}
+{"t": 1791392363.245801, "command": "kubectl -n shipping-1fbe get pods -l app=log-forwarder -o wide"}
+{"t": 1791392365.62023, "command": "kubectl -n shipping-1fbe delete daemonset log-forwarder --cascade=orphan"}
+{"t": 1791392371.8897011, "command": "kubectl -n shipping-1fbe get pods -l app=log-forwarder -o wide"}
+{"t": 1791392372.382176, "command": "kubectl -n shipping-1fbe get pods -l app=log-forwarder -o json | jq '.items[0].metadata.ownerReferences'"}

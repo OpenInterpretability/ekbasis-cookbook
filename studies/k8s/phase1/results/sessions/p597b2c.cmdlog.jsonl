@@ -1,0 +1,3 @@
+{"t": 1791386368.3900712, "command": "kubectl get deployment basket -n retail-7b2c -o yaml"}
+{"t": 1791386370.4963999, "command": "kubectl patch deployment basket -n retail-7b2c --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}
+{"t": 1791386372.169038, "command": "kubectl get deployment basket -n retail-7b2c -o jsonpath='{.spec.template.metadata.labels}'"}

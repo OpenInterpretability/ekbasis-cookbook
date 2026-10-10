@@ -1,0 +1,3 @@
+{"t": 1791410490.7157629, "command": "kubectl get configmaps -n wiki-1a83"}
+{"t": 1791410491.3242161, "command": "kubectl get pods,deployments,statefulsets,daemonsets -n wiki-1a83 -o yaml"}
+{"t": 1791410494.094818, "command": "kubectl delete configmap import-rules page-templates-2023 -n wiki-1a83"}

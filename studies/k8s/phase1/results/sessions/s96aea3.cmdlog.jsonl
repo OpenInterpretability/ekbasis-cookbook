@@ -1,0 +1,2 @@
+{"t": 1791415654.0535529, "command": "kubectl -n identity-aea3 get deploy authn -o wide; kubectl -n identity-aea3 get pods --show-labels"}
+{"t": 1791415656.2088141, "command": "kubectl -n identity-aea3 delete deploy authn --cascade=orphan; kubectl -n identity-aea3 get deploy,rs,pods"}

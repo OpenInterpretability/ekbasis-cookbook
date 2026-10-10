@@ -1,0 +1,7 @@
+{"t": 1791388986.961979, "command": "kubectl patch deployment basket -n retail-a437 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791388992.184748, "command": "kubectl patch service basket -n retail-a437 -p '{\"spec\":{\"selector\":{\"tier\":\"web\"}}}'"}
+{"t": 1791388993.3369138, "command": "kubectl patch deployment basket -n retail-a437 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791388997.165997, "command": "kubectl patch deployment basket -n retail-a437 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791389003.389569, "command": "kubectl patch service basket -n retail-a437 -p '{\"spec\":{\"selector\":{\"tier\":\"web\"}}}' && kubectl patch deployment basket -n retail-a437 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791389005.2371259, "command": "kubectl patch service basket -n retail-a437 -p '{\"spec\":{\"selector\":{\"tier\":\"web\"}}}'"}
+{"t": 1791389010.695719, "command": "kubectl patch deployment basket -n retail-a437 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}

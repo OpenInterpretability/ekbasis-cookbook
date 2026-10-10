@@ -1,0 +1,4 @@
+{"t": 1791388248.8491142, "command": "kubectl -n identity-d10c get deployment authn -o yaml"}
+{"t": 1791388249.493623, "command": "kubectl -n identity-d10c get pods -l app=authn"}
+{"t": 1791388251.747735, "command": "kubectl -n identity-d10c delete deployment authn --cascade=orphan"}
+{"t": 1791388262.311681, "command": "kubectl -n identity-d10c get pods -l app=authn"}

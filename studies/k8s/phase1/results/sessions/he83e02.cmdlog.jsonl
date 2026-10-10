@@ -1,0 +1,24 @@
+{"t": 1791391398.941112, "command": "find . -name \"influx.yaml\" -type f"}
+{"t": 1791391400.381859, "command": "ls -la"}
+{"t": 1791391401.950847, "command": "cat influx.yaml"}
+{"t": 1791391413.221171, "command": "kubectl get statefulsets -n telemetry-3e02"}
+{"t": 1791391414.724086, "command": "kubectl get statefulsets -n telemetry-3e02 influx -o yaml | head -80"}
+{"t": 1791391418.8456378, "command": "kubectl exec -n telemetry-3e02 influx-0 -- cat /data/payload.txt"}
+{"t": 1791391421.755287, "command": "kubectl apply -f influx.yaml -n telemetry-3e02"}
+{"t": 1791391424.495071, "command": "kubectl patch statefulset influx -n telemetry-3e02 --type merge -p '{\n  \"spec\": {\n    \"template\": {\n      \"spec\": {\n        \"containers\": [\n          {\n            \"name\": \"influx\",\n            \"env\": [\n              {\n                \"name\": \"MODE\",\n                \"value\": \"b\"\n              }\n            ]\n          }\n        ]\n      }\n    }\n  }\n}'"}
+{"t": 1791391426.764627, "command": "cat > /tmp/patch.json << 'EOF'\n{\n  \"spec\": {\n    \"template\": {\n      \"spec\": {\n        \"containers\": [\n          {\n            \"name\": \"influx\",\n            \"env\": [\n              {\n                \"name\": \"MODE\",\n                \"value\": \"b\"\n              }\n            ]\n          }\n        ]\n      }\n    }\n  }\n}\nEOF\nkubectl patch statefulset influx -n telemetry-3e02 --type merge -p \"$(cat /tmp/patch.json)\""}
+{"t": 1791391428.491593, "command": "kubectl patch statefulset influx -n telemetry-3e02 --type merge -p - <<'EOF'\n{\n  \"spec\": {\n    \"template\": {\n      \"spec\": {\n        \"containers\": [\n          {\n            \"name\": \"influx\",\n            \"env\": [\n              {\n                \"name\": \"MODE\",\n                \"value\": \"b\"\n              }\n            ]\n          }\n        ]\n      }\n    }\n  }\n}\nEOF"}
+{"t": 1791391430.401335, "command": "kubectl patch statefulset influx -n telemetry-3e02 -p - <<'EOF'\n{\n  \"spec\": {\n    \"template\": {\n      \"spec\": {\n        \"containers\": [\n          {\n            \"name\": \"influx\",\n            \"env\": [\n              {\n                \"name\": \"MODE\",\n                \"value\": \"b\"\n              }\n            ]\n          }\n        ]\n      }\n    }\n  }\n}\nEOF"}
+{"t": 1791391432.865665, "command": "kubectl set env statefulset/influx -n telemetry-3e02 MODE=b"}
+{"t": 1791391434.939969, "command": "kubectl get pod -n telemetry-3e02 influx-0"}
+{"t": 1791391437.8632882, "command": "sleep 3 && kubectl get pod -n telemetry-3e02 influx-0"}
+{"t": 1791391443.044018, "command": "kubectl exec -n telemetry-3e02 influx-0 -- printenv MODE"}
+{"t": 1791391445.940491, "command": "kubectl exec -n telemetry-3e02 influx-0 -- cat /data/payload.txt"}
+{"t": 1791391447.688735, "command": "kubectl get pvc -n telemetry-3e02"}
+{"t": 1791391449.447702, "command": "kubectl patch pvc data-influx-0 -n telemetry-3e02 -p - <<'EOF'\n{\n  \"spec\": {\n    \"resources\": {\n      \"requests\": {\n        \"storage\": \"128Mi\"\n      }\n    }\n  }\n}\nEOF"}
+{"t": 1791391454.684099, "command": "kubectl patch pvc data-influx-0 -n telemetry-3e02 --type merge -p '{\n  \"spec\": {\n    \"resources\": {\n      \"requests\": {\n        \"storage\": \"128Mi\"\n      }\n    }\n  }\n}'"}
+{"t": 1791391456.729129, "command": "kubectl patch pvc data-influx-0 -n telemetry-3e02 --type merge -p '{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"128Mi\"}}}}'"}
+{"t": 1791391458.474766, "command": "kubectl get pvc -n telemetry-3e02 data-influx-0"}
+{"t": 1791391461.3956852, "command": "kubectl get statefulset influx -n telemetry-3e02 -o yaml | grep -A 20 \"volumeClaimTemplates:\""}
+{"t": 1791391464.734495, "command": "kubectl get statefulset influx -n telemetry-3e02 -o yaml | grep -A 5 \"env:\""}
+{"t": 1791391468.652493, "command": "kubectl exec -n telemetry-3e02 influx-0 -- ls -la /data && kubectl exec -n telemetry-3e02 influx-0 -- cat /data/payload.txt"}

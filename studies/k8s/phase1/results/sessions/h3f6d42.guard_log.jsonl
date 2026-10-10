@@ -1,0 +1,1 @@
+{"command": "find ./catalog -type f \\( -name \"*.yaml\" -o -name \"*.yml\" \\) | head -20", "decision": "policy_deny", "reason": "Not available in this environment: find. You can use kubectl and read-only text tools (base64, cat, column, cut, date, echo, egrep, grep, head, jq, kubectl, ls, printf, sleep, sort, tail, test, tr, uniq, wc).", "t": 1791391240.86795}

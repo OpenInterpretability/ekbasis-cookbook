@@ -1,0 +1,8 @@
+{"t": 1791409390.3614159, "command": "kubectl get configmaps -n wiki-24ac -o json"}
+{"t": 1791409390.929634, "command": "kubectl get pods -n wiki-24ac -o json"}
+{"t": 1791409391.424008, "command": "kubectl get deployments -n wiki-24ac -o json"}
+{"t": 1791409391.888863, "command": "kubectl get statefulsets -n wiki-24ac -o json"}
+{"t": 1791409392.529336, "command": "kubectl get daemonsets -n wiki-24ac -o json"}
+{"t": 1791409392.744458, "command": "kubectl get jobs -n wiki-24ac -o json"}
+{"t": 1791409396.07867, "command": "kubectl delete configmap page-templates-2023 -n wiki-24ac"}
+{"t": 1791409457.799264, "command": "kubectl delete configmap import-rules -n wiki-24ac"}

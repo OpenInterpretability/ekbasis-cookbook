@@ -1,0 +1,12 @@
+{"t": 1791386981.018663, "command": "ls -la ./catalog"}
+{"t": 1791386981.363328, "command": "kubectl get all -n catalog-58eb -o wide"}
+{"t": 1791386982.870186, "command": "cat ./catalog/search-ui.yaml"}
+{"t": 1791386984.8871539, "command": "kubectl apply -f ./catalog -n catalog-58eb"}
+{"t": 1791386988.039148, "command": "kubectl apply -f ./catalog -n catalog-58eb"}
+{"t": 1791386988.459123, "command": "kubectl delete deployment old-banner -n catalog-58eb"}
+{"t": 1791386990.358308, "command": "kubectl delete deployment payments-webhook -n catalog-58eb"}
+{"t": 1791386990.4557, "command": "kubectl delete service payments-webhook -n catalog-58eb"}
+{"t": 1791386992.872577, "command": "kubectl delete deployment old-banner -n catalog-58eb"}
+{"t": 1791386993.512557, "command": "kubectl delete deployment payments-webhook -n catalog-58eb"}
+{"t": 1791386994.468296, "command": "kubectl delete service payments-webhook -n catalog-58eb"}
+{"t": 1791386996.669031, "command": "kubectl get all -n catalog-58eb -o wide"}

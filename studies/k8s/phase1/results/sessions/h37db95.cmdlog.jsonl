@@ -1,0 +1,3 @@
+{"t": 1791408607.8017259, "command": "kubectl get deployment authn -n identity-db95 -o yaml"}
+{"t": 1791408610.6726122, "command": "kubectl delete deployment authn -n identity-db95 --cascade=orphan"}
+{"t": 1791408671.216278, "command": "kubectl get pods -n identity-db95 -l app=authn -o wide"}

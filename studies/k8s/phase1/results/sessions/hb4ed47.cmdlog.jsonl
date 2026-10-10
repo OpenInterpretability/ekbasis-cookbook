@@ -1,0 +1,3 @@
+{"t": 1791409109.2031622, "command": "kubectl taint node ekb-k8s-worker maintenance=planned:NoExecute"}
+{"t": 1791409171.447763, "command": "kubectl taint node ekb-k8s-worker maintenance=planned:NoSchedule"}
+{"t": 1791409203.462612, "command": "kubectl taint node ekb-k8s-worker maintenance=planned:NoSchedule"}

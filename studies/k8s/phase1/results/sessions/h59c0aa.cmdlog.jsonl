@@ -1,0 +1,5 @@
+{"t": 1791390482.453377, "command": "kubectl get deployment -n identity-c0aa authn -o yaml"}
+{"t": 1791390483.881821, "command": "kubectl get pods -n identity-c0aa -l app=authn"}
+{"t": 1791390485.3586822, "command": "kubectl delete deployment -n identity-c0aa authn --cascade=orphan"}
+{"t": 1791390489.390962, "command": "kubectl delete deployment -n identity-c0aa authn --cascade=orphan"}
+{"t": 1791390491.059052, "command": "kubectl get pods -n identity-c0aa -l app=authn && echo \"---\" && kubectl get deployment -n identity-c0aa authn 2>&1 || echo \"Deployment successfully deleted\""}

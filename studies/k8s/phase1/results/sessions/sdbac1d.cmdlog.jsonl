@@ -1,0 +1,5 @@
+{"t": 1791414585.867112, "command": "cat taxcalc-v2.yaml; kubectl -n invoicing-ac1d get deploy,pods -o wide"}
+{"t": 1791414588.238546, "command": "kubectl -n invoicing-ac1d get deploy taxcalc -o yaml | grep -v '^\\s*uid\\|resourceVersion' | head -70; kubectl -n invoicing-ac1d get svc,pdb -o wide"}
+{"t": 1791414589.919764, "command": "kubectl -n invoicing-ac1d get deploy taxcalc -o yaml | head -80; kubectl -n invoicing-ac1d get svc,pdb -o wide"}
+{"t": 1791414591.882943, "command": "kubectl -n invoicing-ac1d apply -f taxcalc-v2.yaml"}
+{"t": 1791414653.711821, "command": "kubectl -n invoicing-ac1d set env deploy/taxcalc VERSION=2 && kubectl -n invoicing-ac1d rollout status deploy/taxcalc --timeout=120s; kubectl -n invoicing-ac1d get deploy,pods,endpoints"}

@@ -1,0 +1,3 @@
+{"t": 1791413664.415615, "command": "kubectl -n cms-0b43 get statefulset content-db -o jsonpath='{.spec.persistentVolumeClaimRetentionPolicy}{\"\\n\"}{.spec.volumeClaimTemplates[*].metadata.name}{\"\\n\"}'; kubectl -n cms-0b43 get pvc"}
+{"t": 1791413666.277451, "command": "kubectl -n cms-0b43 delete statefulset content-db"}
+{"t": 1791413719.071689, "command": "kubectl -n cms-0b43 delete statefulset content-db && kubectl -n cms-0b43 get pvc"}

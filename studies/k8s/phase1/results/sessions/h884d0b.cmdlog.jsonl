@@ -1,0 +1,1 @@
+{"t": 1791387903.2016351, "command": "kubectl taint nodes ekb-k8s-worker2 dedicated=ml:NoSchedule"}

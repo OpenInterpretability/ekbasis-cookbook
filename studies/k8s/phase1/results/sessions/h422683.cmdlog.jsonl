@@ -1,0 +1,8 @@
+{"t": 1791388630.67253, "command": "kubectl get configmaps -n wiki-2683 -o name"}
+{"t": 1791388631.86348, "command": "kubectl get pods,deployments,statefulsets,daemonsets,jobs,cronjobs -n wiki-2683 -o yaml | grep -E \"^\\s+name:|configMap|valueFrom|items:\" | head -100"}
+{"t": 1791388634.011807, "command": "kubectl get pods,deployments,statefulsets,daemonsets,jobs,cronjobs -n wiki-2683 -o json | jq '.items[] | select(.spec.template.spec.volumes // .spec.volumes | select(. != null)) | {kind: .kind, name: .metadata.name}'"}
+{"t": 1791388635.558123, "command": "kubectl get pods -n wiki-2683 -o json"}
+{"t": 1791388636.090559, "command": "kubectl get deployments,statefulsets,daemonsets,jobs,cronjobs -n wiki-2683 -o json"}
+{"t": 1791388639.4263182, "command": "kubectl delete configmap import-rules -n wiki-2683"}
+{"t": 1791388639.8189828, "command": "kubectl delete configmap page-templates-2023 -n wiki-2683"}
+{"t": 1791388641.186079, "command": "kubectl get configmaps -n wiki-2683 -o name"}

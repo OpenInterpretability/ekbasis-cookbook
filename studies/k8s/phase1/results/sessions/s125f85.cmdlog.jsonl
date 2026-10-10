@@ -1,0 +1,2 @@
+{"t": 1791392976.537, "command": "kubectl get configmap pipeline-v1 -n ingest-5f85 -o yaml; echo ---; kubectl get pods,deploy,sts,ds,cronjob,job -n ingest-5f85 -o yaml | grep -n \"pipeline-v1\""}
+{"t": 1791392979.4929228, "command": "kubectl delete configmap pipeline-v1 -n ingest-5f85"}

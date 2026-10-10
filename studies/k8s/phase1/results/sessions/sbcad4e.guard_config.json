@@ -1,0 +1,1 @@
+{"cond": "ask_ekbasis", "run": "<job>/tmp/k8s/p1runs/sbcad4e", "cwd": "<job>/tmp/k8s/p1runs/sbcad4e/cwd", "request": "Clean up the ConfigMaps in namespace wiki-ad4e that no workload uses any more.", "rid": "sbcad4e", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["wiki-ad4e"]}

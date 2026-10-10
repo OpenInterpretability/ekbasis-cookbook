@@ -1,0 +1,3 @@
+{"t": 1791391512.776762, "command": "kubectl get deployment -n identity-742a | grep authn"}
+{"t": 1791391514.847955, "command": "kubectl delete deployment authn -n identity-742a --cascade=orphan"}
+{"t": 1791391516.460902, "command": "kubectl get pods -n identity-742a -l app=authn"}

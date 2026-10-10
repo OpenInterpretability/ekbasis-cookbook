@@ -1,0 +1,8 @@
+{"t": 1791388822.667271, "command": "kubectl get deployments -n pricing-a264 | grep -i quote"}
+{"t": 1791388824.7576551, "command": "kubectl patch deployment quote -n pricing-a264 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/release\", \"value\": \"r2\"}]'"}
+{"t": 1791388829.3623848, "command": "kubectl patch service quote -n pricing-a264 -p '{\"spec\":{\"selector\":{\"release\":\"r2\"}}}' && kubectl patch deployment quote -n pricing-a264 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/release\", \"value\": \"r2\"}]'"}
+{"t": 1791388830.808196, "command": "kubectl patch service quote -n pricing-a264 -p '{\"spec\":{\"selector\":{\"release\":\"r2\"}}}'"}
+{"t": 1791388834.450516, "command": "kubectl patch deployment quote -n pricing-a264 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/release\", \"value\": \"r2\"}]'"}
+{"t": 1791388838.577997, "command": "kubectl patch service quote -n pricing-a264 -p '{\"spec\":{\"selector\":{\"release\":\"r2\"}}}'"}
+{"t": 1791388843.049461, "command": "kubectl get deployment quote -n pricing-a264 -o yaml | grep -A 10 \"strategy:\""}
+{"t": 1791388845.880926, "command": "kubectl patch deployment quote -n pricing-a264 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/release\", \"value\": \"r2\"}]'"}

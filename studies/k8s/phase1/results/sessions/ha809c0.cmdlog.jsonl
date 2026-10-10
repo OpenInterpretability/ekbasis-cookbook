@@ -1,0 +1,1 @@
+{"t": 1791412424.4985752, "command": "kubectl scale deployment collector-api --replicas=4 -n beacon-09c0"}

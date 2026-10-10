@@ -1,0 +1,7 @@
+{"t": 1791388084.6553311, "command": "kubectl patch deployment basket -n retail-f9e1 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}
+{"t": 1791388099.486325, "command": "kubectl patch service basket -n retail-f9e1 --type=merge -p '{\"spec\": {\"selector\": {\"tier\": \"web\"}}}'"}
+{"t": 1791388109.838759, "command": "kubectl patch deployment basket -n retail-f9e1 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}
+{"t": 1791388127.1116521, "command": "kubectl patch service basket -n retail-f9e1 --type=merge -p '{\"spec\": {\"selector\": {\"tier\": null}}}'"}
+{"t": 1791388135.250677, "command": "kubectl patch deployment basket -n retail-f9e1 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}
+{"t": 1791388143.0445068, "command": "kubectl patch service basket -n retail-f9e1 --type=merge -p '{\"spec\": {\"selector\": {\"tier\": \"web\"}}}'"}
+{"t": 1791388157.48625, "command": "kubectl patch service basket -n retail-f9e1 --type=merge -p '{\"spec\": {\"selector\": {\"tier\": \"web\"}}}'"}

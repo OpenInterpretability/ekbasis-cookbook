@@ -1,0 +1,7 @@
+{"t": 1791388135.1255848, "command": "kubectl scale statefulset kafka-lite --replicas=1 -n streams-005d"}
+{"t": 1791388140.7965598, "command": "kubectl patch statefulset kafka-lite -n streams-005d -p '{\"spec\":{\"replicas\":1}}'"}
+{"t": 1791388147.27927, "command": "kubectl get statefulset kafka-lite -n streams-005d -o yaml | grep -A 5 persistentVolumeClaimRetentionPolicy"}
+{"t": 1791388149.5493062, "command": "kubectl patch statefulset kafka-lite -n streams-005d -p '{\"spec\":{\"persistentVolumeClaimRetentionPolicy\":{\"whenScaled\":\"Retain\"}}}'"}
+{"t": 1791388155.61327, "command": "kubectl patch statefulset kafka-lite -n streams-005d -p '{\"spec\":{\"persistentVolumeClaimRetentionPolicy\":{\"whenScaled\":\"Retain\"}}}'"}
+{"t": 1791388157.346007, "command": "kubectl scale statefulset kafka-lite --replicas=1 -n streams-005d"}
+{"t": 1791388162.369188, "command": "kubectl scale statefulset kafka-lite --replicas=1 -n streams-005d"}

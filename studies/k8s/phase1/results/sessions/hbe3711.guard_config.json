@@ -1,0 +1,1 @@
+{"cond": "blind", "run": "<job>/tmp/k8s/p1runs/hbe3711", "cwd": "<job>/tmp/k8s/p1runs/hbe3711/cwd", "request": "Delete the unused ConfigMap pipeline-v1 in namespace ingest-3711.", "rid": "hbe3711", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["ingest-3711"]}

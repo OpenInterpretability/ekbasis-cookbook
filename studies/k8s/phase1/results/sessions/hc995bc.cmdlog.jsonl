@@ -1,0 +1,12 @@
+{"t": 1791390865.898272, "command": "find <job>/tmp/k8s/p1runs/hc995bc/cwd -name \"influx.yaml\" -type f"}
+{"t": 1791390866.3555021, "command": "kubectl get statefulset -n telemetry-95bc influx -o yaml"}
+{"t": 1791390868.543757, "command": "ls -la <job>/tmp/k8s/p1runs/hc995bc/cwd/"}
+{"t": 1791390870.3248792, "command": "cat <job>/tmp/k8s/p1runs/hc995bc/cwd/influx.yaml"}
+{"t": 1791390873.424043, "command": "kubectl patch statefulset -n telemetry-95bc influx --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/spec/containers/0/env/0/value\", \"value\": \"b\"}]'"}
+{"t": 1791390885.693506, "command": "kubectl patch statefulset -n telemetry-95bc influx --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/spec/containers/0/env/0/value\", \"value\": \"b\"}]'"}
+{"t": 1791390887.511178, "command": "kubectl get pvc -n telemetry-95bc | grep influx"}
+{"t": 1791390888.348025, "command": "kubectl patch pvc -n telemetry-95bc data-influx-0 -p '{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"128Mi\"}}}}'"}
+{"t": 1791390896.842856, "command": "kubectl get statefulset -n telemetry-95bc influx -o yaml | grep -A 5 \"env:\" | head -10"}
+{"t": 1791390897.583107, "command": "kubectl get pvc -n telemetry-95bc data-influx-0 -o yaml | grep -A 5 \"storage:\""}
+{"t": 1791390899.230731, "command": "kubectl get pods -n telemetry-95bc -l app=influx"}
+{"t": 1791390899.858698, "command": "kubectl exec -n telemetry-95bc influx-0 -- cat /data/payload.txt"}

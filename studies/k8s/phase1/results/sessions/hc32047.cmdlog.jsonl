@@ -1,0 +1,4 @@
+{"t": 1791386626.539847, "command": "kubectl delete namespace vision-2047"}
+{"t": 1791386641.341634, "command": "kubectl patch pv pvc-06a99469-673b-4514-a924-b75020e7232f -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791386651.773665, "command": "kubectl delete namespace vision-2047"}
+{"t": 1791386663.3955998, "command": "kubectl delete namespace vision-2047"}

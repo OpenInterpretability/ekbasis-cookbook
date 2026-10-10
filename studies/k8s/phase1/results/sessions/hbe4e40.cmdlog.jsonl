@@ -1,0 +1,3 @@
+{"t": 1791391949.988547, "command": "kubectl replace --force -f notifier.yaml -n alerts-4e40"}
+{"t": 1791391954.1925602, "command": "kubectl apply -f notifier.yaml -n alerts-4e40"}
+{"t": 1791391956.860738, "command": "kubectl apply -f notifier.yaml -n alerts-4e40"}

@@ -1,0 +1,10 @@
+{"t": 1791386390.8100421, "command": "kubectl get deployment basket -n retail-211a -o yaml"}
+{"t": 1791386392.9605172, "command": "kubectl patch deployment basket -n retail-211a -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791386396.485991, "command": "kubectl get service basket -n retail-211a -o yaml"}
+{"t": 1791386397.111077, "command": "kubectl patch deployment basket -n retail-211a -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791386397.903896, "command": "kubectl patch service basket -n retail-211a -p '{\"spec\":{\"selector\":{\"tier\":\"web\"}}}'"}
+{"t": 1791386400.79702, "command": "kubectl patch deployment basket -n retail-211a -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791386401.715594, "command": "kubectl patch service basket -n retail-211a -p '{\"spec\":{\"selector\":{\"tier\":\"web\"}}}'"}
+{"t": 1791386404.571575, "command": "kubectl patch service basket -n retail-211a -p '{\"spec\":{\"selector\":{\"tier\":\"web\"}}}'"}
+{"t": 1791386407.758849, "command": "kubectl patch service basket -n retail-211a -p '{\"spec\":{\"selector\":{\"tier\":\"web\"}}}'"}
+{"t": 1791386408.420305, "command": "kubectl patch deployment basket -n retail-211a -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}

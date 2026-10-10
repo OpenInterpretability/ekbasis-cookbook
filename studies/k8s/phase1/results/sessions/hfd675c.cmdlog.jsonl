@@ -1,0 +1,2 @@
+{"t": 1791411572.474989, "command": "kubectl taint nodes ekb-k8s-worker2 accelerator=gpu:NoSchedule"}
+{"t": 1791411600.398475, "command": "kubectl taint nodes ekb-k8s-worker2 accelerator=gpu:NoSchedule"}

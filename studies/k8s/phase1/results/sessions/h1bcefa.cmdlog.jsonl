@@ -1,0 +1,7 @@
+{"t": 1791389157.384844, "command": "kubectl delete configmap sender-settings --namespace courier-cefa"}
+{"t": 1791389161.4548512, "command": "kubectl get deployment -n courier-cefa -o wide"}
+{"t": 1791389163.570558, "command": "kubectl get deployment dispatcher -n courier-cefa -o yaml"}
+{"t": 1791389165.826967, "command": "kubectl patch deployment dispatcher -n courier-cefa --type='json' -p='[{\"op\": \"remove\", \"path\": \"/spec/template/spec/containers/0/envFrom\"}]'"}
+{"t": 1791389169.282064, "command": "kubectl patch deployment dispatcher -n courier-cefa --type='json' -p='[{\"op\": \"remove\", \"path\": \"/spec/template/spec/containers/0/envFrom\"}]'"}
+{"t": 1791389170.922128, "command": "kubectl delete configmap sender-settings --namespace courier-cefa"}
+{"t": 1791389175.401243, "command": "kubectl delete configmap sender-settings --namespace courier-cefa"}

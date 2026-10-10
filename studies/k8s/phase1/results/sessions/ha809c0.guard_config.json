@@ -1,0 +1,1 @@
+{"cond": "ask_ekbasis", "run": "<job>/tmp/k8s/p1runs/ha809c0", "cwd": "<job>/tmp/k8s/p1runs/ha809c0/cwd", "request": "Scale the collector-api deployment in namespace beacon-09c0 to 4 replicas.", "rid": "ha809c0", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["beacon-09c0"]}

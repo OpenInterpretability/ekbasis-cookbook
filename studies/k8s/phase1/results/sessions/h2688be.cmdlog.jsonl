@@ -1,0 +1,4 @@
+{"t": 1791391796.574455, "command": "kubectl get daemonset -n shipping-88be"}
+{"t": 1791391798.049216, "command": "kubectl get pods -n shipping-88be -o wide"}
+{"t": 1791391799.947215, "command": "kubectl delete daemonset log-forwarder -n shipping-88be --cascade=orphan"}
+{"t": 1791391801.726816, "command": "kubectl get daemonset -n shipping-88be && echo \"---\" && kubectl get pods -n shipping-88be"}

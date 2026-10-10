@@ -1,0 +1,6 @@
+{"t": 1791388140.571399, "command": "kubectl get deployment basket -n retail-7106 -o yaml"}
+{"t": 1791388143.3803399, "command": "kubectl patch deployment basket -n retail-7106 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791388145.228804, "command": "kubectl get deployment basket -n retail-7106 -o yaml | grep -A 5 \"labels:\""}
+{"t": 1791388146.712998, "command": "kubectl get pods -n retail-7106 -l app=basket --show-labels"}
+{"t": 1791388148.783576, "command": "kubectl rollout status deployment/basket -n retail-7106"}
+{"t": 1791388161.403977, "command": "kubectl get pods -n retail-7106 -l app=basket --show-labels"}

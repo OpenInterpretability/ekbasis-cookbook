@@ -1,0 +1,13 @@
+{"t": 1791410645.2951849, "command": "find . -name \"influx.yaml\" -type f"}
+{"t": 1791410645.9703948, "command": "kubectl get statefulset -n telemetry-7edf influx -o yaml 2>/dev/null | head -50"}
+{"t": 1791410647.613376, "command": "ls -la *.yaml 2>/dev/null || ls -la"}
+{"t": 1791410648.909751, "command": "cat influx.yaml"}
+{"t": 1791410651.873299, "command": "kubectl apply -f influx.yaml -n telemetry-7edf"}
+{"t": 1791410719.418684, "command": "kubectl patch statefulset influx -n telemetry-7edf -p '{\"spec\":{\"template\":{\"spec\":{\"containers\":[{\"name\":\"influx\",\"env\":[{\"name\":\"MODE\",\"value\":\"b\"}]}]}}}}'"}
+{"t": 1791410809.62066, "command": "kubectl get pvc -n telemetry-7edf"}
+{"t": 1791410811.398398, "command": "kubectl patch pvc data-influx-0 -n telemetry-7edf -p '{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"128Mi\"}}}}'"}
+{"t": 1791410870.3980968, "command": "kubectl get statefulset influx -n telemetry-7edf -o yaml | grep -A 15 \"containers:\""}
+{"t": 1791410870.9241118, "command": "kubectl get pvc data-influx-0 -n telemetry-7edf"}
+{"t": 1791410871.4196239, "command": "kubectl get pods -n telemetry-7edf -l app=influx"}
+{"t": 1791410873.52043, "command": "kubectl get pvc data-influx-0 -n telemetry-7edf -o yaml | grep -A 5 \"resources:\""}
+{"t": 1791410875.088304, "command": "kubectl exec -n telemetry-7edf influx-0 -- cat /data/payload.txt"}

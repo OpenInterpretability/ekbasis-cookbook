@@ -1,0 +1,11 @@
+{"t": 1791390898.348415, "command": "find ./catalog -type f \\( -name \"*.yaml\" -o -name \"*.yml\" \\) | head -20"}
+{"t": 1791390899.648125, "command": "ls -la ./catalog/"}
+{"t": 1791390901.18868, "command": "cat ./catalog/search-ui.yaml"}
+{"t": 1791390902.888876, "command": "kubectl get all -n catalog-1380 -l app=catalog -o wide"}
+{"t": 1791390905.625587, "command": "kubectl apply -f ./catalog/search-ui.yaml -n catalog-1380"}
+{"t": 1791390908.703601, "command": "kubectl apply -f ./catalog/search-ui.yaml -n catalog-1380"}
+{"t": 1791390910.5342588, "command": "kubectl delete deployment old-banner -n catalog-1380"}
+{"t": 1791390913.489801, "command": "kubectl delete deployment old-banner -n catalog-1380"}
+{"t": 1791390914.9796338, "command": "kubectl delete deployment payments-webhook -n catalog-1380 && kubectl delete service payments-webhook -n catalog-1380"}
+{"t": 1791390916.2656798, "command": "kubectl delete deployment payments-webhook -n catalog-1380"}
+{"t": 1791390919.702722, "command": "kubectl get all -n catalog-1380 -l app=catalog -o wide"}

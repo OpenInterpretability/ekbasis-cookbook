@@ -1,0 +1,3 @@
+{"t": 1791388334.405032, "command": "kubectl get deployment threads -n forum-e554 -o yaml"}
+{"t": 1791388336.68958, "command": "kubectl patch deployment threads -n forum-e554 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791388338.543071, "command": "kubectl get deployment threads -n forum-e554 -o jsonpath='{.spec.template.metadata.labels}'"}

@@ -1,0 +1,6 @@
+{"t": 1791389979.017832, "command": "kubectl delete namespace vision-711d"}
+{"t": 1791389982.828765, "command": "kubectl get pv -n vision-711d --no-headers 2>/dev/null || kubectl get pv | grep vision-711d"}
+{"t": 1791389984.8598, "command": "kubectl patch pv pvc-679d067a-b292-46ff-84ed-a38368a5a3ee -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791389988.8605518, "command": "kubectl patch pv pvc-679d067a-b292-46ff-84ed-a38368a5a3ee -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791389990.208077, "command": "kubectl delete namespace vision-711d"}
+{"t": 1791389993.4851441, "command": "kubectl delete namespace vision-711d"}

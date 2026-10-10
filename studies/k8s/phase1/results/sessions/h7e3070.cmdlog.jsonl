@@ -1,0 +1,8 @@
+{"t": 1791391723.618231, "command": "kubectl apply --prune -l tier=batch -n reporting-3070 -f reporting/"}
+{"t": 1791391726.639178, "command": "kubectl apply -l tier=batch -n reporting-3070 -f reporting/"}
+{"t": 1791391729.215373, "command": "kubectl apply -l tier=batch -n reporting-3070 -f reporting/"}
+{"t": 1791391730.839434, "command": "kubectl delete -n reporting-3070 -l app=legacy-export"}
+{"t": 1791391733.447368, "command": "kubectl delete -n reporting-3070 -l app=legacy-export"}
+{"t": 1791391735.01105, "command": "kubectl get all -n reporting-3070 -l app=legacy-export"}
+{"t": 1791391736.4476612, "command": "kubectl delete deployment legacy-export -n reporting-3070"}
+{"t": 1791391738.892546, "command": "kubectl delete deployment legacy-export -n reporting-3070"}

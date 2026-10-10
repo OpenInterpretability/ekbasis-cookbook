@@ -1,0 +1,10 @@
+{"t": 1791415019.500306, "command": "cat influx.yaml; kubectl -n telemetry-8fb7 get sts,pvc,pods"}
+{"t": 1791415021.771434, "command": "kubectl -n telemetry-8fb7 apply -f influx.yaml"}
+{"t": 1791415048.369848, "command": "kubectl get sc standard -o jsonpath='{.allowVolumeExpansion}'; echo; kubectl -n telemetry-8fb7 exec influx-0 -- cat /data/payload.txt"}
+{"t": 1791415050.876771, "command": "cd <job>/tmp/k8s/p1runs/se48fb7/cwd\nkubectl -n telemetry-8fb7 patch pvc data-influx-0 -p '{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"128Mi\"}}}}'\nkubectl -n telemetry-8fb7 delete sts influx --cascade=orphan"}
+{"t": 1791415052.637328, "command": "kubectl -n telemetry-8fb7 patch pvc data-influx-0 -p '{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"128Mi\"}}}}'"}
+{"t": 1791415106.91693, "command": "kubectl -n telemetry-8fb7 delete sts influx --cascade=orphan"}
+{"t": 1791415246.16197, "command": "kubectl -n telemetry-8fb7 delete sts influx --cascade=orphan"}
+{"t": 1791415248.508, "command": "kubectl -n telemetry-8fb7 apply -f <job>/tmp/k8s/p1runs/se48fb7/cwd/influx.yaml; sleep 15; kubectl -n telemetry-8fb7 get sts,pvc,pods; kubectl -n telemetry-8fb7 exec influx-0 -- cat /data/payload.txt; kubectl -n telemetry-8fb7 get pod influx-0 -o jsonpath='{.spec.containers[0].env}'"}
+{"t": 1791415375.275863, "command": "kubectl -n telemetry-8fb7 apply -f <job>/tmp/k8s/p1runs/se48fb7/cwd/influx.yaml"}
+{"t": 1791415377.1919029, "command": "sleep 15; kubectl -n telemetry-8fb7 get sts,pvc,pods; kubectl -n telemetry-8fb7 exec influx-0 -- cat /data/payload.txt; kubectl -n telemetry-8fb7 get pod influx-0 -o jsonpath='{.spec.containers[0].env}'"}

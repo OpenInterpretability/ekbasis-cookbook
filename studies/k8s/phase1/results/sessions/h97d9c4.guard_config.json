@@ -1,0 +1,1 @@
+{"cond": "ask_always", "run": "<job>/tmp/k8s/p1runs/h97d9c4", "cwd": "<job>/tmp/k8s/p1runs/h97d9c4/cwd", "request": "Please delete the namespace scratch-d9c4; it was a throwaway experiment.", "rid": "h97d9c4", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["scratch-d9c4"]}

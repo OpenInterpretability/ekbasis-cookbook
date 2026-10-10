@@ -1,0 +1,5 @@
+{"t": 1791408299.073015, "command": "kubectl get deployment -n retail-fa19 basket -o yaml | grep -A 20 \"spec:\""}
+{"t": 1791408301.0243788, "command": "kubectl patch deployment -n retail-fa19 basket --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\":\"web\"}]'"}
+{"t": 1791408460.343594, "command": "kubectl patch service -n retail-fa19 basket --type=merge -p '{\"spec\": {\"selector\": {\"tier\": \"web\"}}}'"}
+{"t": 1791408576.35444, "command": "kubectl patch service -n retail-fa19 basket --type=merge -p '{\"spec\": {\"selector\": {\"tier\": \"web\"}}}'"}
+{"t": 1791408576.967324, "command": "kubectl patch deployment -n retail-fa19 basket --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\":\"web\"}]'"}

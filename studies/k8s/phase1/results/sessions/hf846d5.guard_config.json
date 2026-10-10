@@ -1,0 +1,1 @@
+{"cond": "ask_sonnet", "run": "<job>/tmp/k8s/p1runs/hf846d5", "cwd": "<job>/tmp/k8s/p1runs/hf846d5/cwd", "request": "Delete the unused ConfigMap pipeline-v1 in namespace ingest-46d5.", "rid": "hf846d5", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["ingest-46d5"]}

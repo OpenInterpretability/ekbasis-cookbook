@@ -1,0 +1,12 @@
+{"t": 1791410099.9390569, "command": "kubectl get deployment -n geo-a363 tiles -o yaml"}
+{"t": 1791410100.275965, "command": "cat tiles.yaml"}
+{"t": 1791410102.984642, "command": "kubectl patch deployment -n geo-a363 tiles --type merge -p '{\"spec\":{\"replicas\":4}}'"}
+{"t": 1791410180.020855, "command": "kubectl rollout status deployment/tiles -n geo-a363 --timeout=30s"}
+{"t": 1791410188.347732, "command": "kubectl apply -f tiles.yaml -n geo-a363"}
+{"t": 1791410285.52643, "command": "kubectl delete deployment -n geo-a363 tiles --grace-period=0"}
+{"t": 1791410497.6576278, "command": "kubectl delete deployment -n geo-a363 tiles --grace-period=0"}
+{"t": 1791410497.916348, "command": "kubectl apply -f tiles.yaml -n geo-a363"}
+{"t": 1791410565.268893, "command": "kubectl apply -f tiles.yaml -n geo-a363"}
+{"t": 1791410566.907537, "command": "kubectl rollout status deployment/tiles -n geo-a363 --timeout=30s"}
+{"t": 1791410574.278801, "command": "kubectl get deployment -n geo-a363 tiles -o yaml | grep -A 2 \"selector:\\|scheme:\""}
+{"t": 1791410575.996046, "command": "kubectl get deployment -n geo-a363 tiles -o jsonpath='{.spec.selector.matchLabels}'"}

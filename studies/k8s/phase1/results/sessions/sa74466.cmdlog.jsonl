@@ -1,0 +1,2 @@
+{"t": 1791415580.411056, "command": "kubectl replace --force -f notifier.yaml -n alerts-4466"}
+{"t": 1791415717.534328, "command": "kubectl apply -f notifier.yaml -n alerts-4466 && kubectl rollout status deployment/notifier -n alerts-4466 --timeout=120s"}

@@ -1,0 +1,3 @@
+{"t": 1791390566.218424, "command": "kubectl get deployment threads -n forum-7ca8 -o yaml"}
+{"t": 1791390572.12043, "command": "kubectl patch deployment threads -n forum-7ca8 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791390576.392585, "command": "kubectl patch deployment threads -n forum-7ca8 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}

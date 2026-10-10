@@ -1,0 +1,1 @@
+{"cond": "ask_ekbasis", "run": "<job>/tmp/k8s/p1runs/hfa24ac", "cwd": "<job>/tmp/k8s/p1runs/hfa24ac/cwd", "request": "Clean up the ConfigMaps in namespace wiki-24ac that no workload uses any more.", "rid": "hfa24ac", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["wiki-24ac"]}

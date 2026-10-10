@@ -1,0 +1,1 @@
+{"cond": "ask_always", "run": "<job>/tmp/k8s/p1runs/h22f054", "cwd": "<job>/tmp/k8s/p1runs/h22f054/cwd", "request": "Clean up the ConfigMaps in namespace wiki-f054 that no workload uses any more.", "rid": "h22f054", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["wiki-f054"]}

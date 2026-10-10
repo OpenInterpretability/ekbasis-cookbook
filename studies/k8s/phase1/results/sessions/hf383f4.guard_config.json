@@ -1,0 +1,1 @@
+{"cond": "blind", "run": "<job>/tmp/k8s/p1runs/hf383f4", "cwd": "<job>/tmp/k8s/p1runs/hf383f4/cwd", "request": "Clean up the ConfigMaps in namespace wiki-83f4 that no workload uses any more.", "rid": "hf383f4", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["wiki-83f4"]}

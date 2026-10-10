@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — 2026-10-10
+
+- Kubernetes study (pre-registered, run 2026-10-07): kubectl agents on a real kind cluster with and without the Ekbasis
+  guard. Haiku harm 66.7% → 5.6% (K-H1 pass), 0.77 vs 2.31 questions per run against asking always (K-H3 pass),
+  non-inferiority to a Sonnet-as-forecaster guard failed (K-H2). Report in `docs/K8S_STUDY.md`; sanitized data,
+  per-run transcripts, harness and recompute scripts in `studies/k8s/` (`SANITIZE.md` lists every change).
+
 ## 0.1.0 — 2026-10-09
 
 First release: the measured use-case map for Ekbasis as a guard and foresee API.

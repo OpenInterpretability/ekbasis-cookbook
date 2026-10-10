@@ -1,0 +1,2 @@
+{"t": 1791389824.6659079, "command": "kubectl patch deployment basket -n retail-2120 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791389826.725478, "command": "kubectl get deployment basket -n retail-2120 -o jsonpath='{.spec.template.metadata.labels}' | jq ."}

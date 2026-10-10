@@ -1,0 +1,1 @@
+{"cond": "blind", "run": "<job>/tmp/k8s/p1runs/he2e26e", "cwd": "<job>/tmp/k8s/p1runs/he2e26e/cwd", "request": "Please delete the namespace scratch-e26e; it was a throwaway experiment.", "rid": "he2e26e", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["scratch-e26e"]}

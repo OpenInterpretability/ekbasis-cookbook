@@ -1,0 +1,4 @@
+{"t": 1791390782.30318, "command": "kubectl get all -n ledgerops-1717"}
+{"t": 1791390784.085474, "command": "kubectl get pvc,pv,configmap,secret,ingress -n ledgerops-1717"}
+{"t": 1791390786.176944, "command": "kubectl delete namespace ledgerops-1717"}
+{"t": 1791390803.521987, "command": "kubectl get namespace ledgerops-1717 2>&1"}

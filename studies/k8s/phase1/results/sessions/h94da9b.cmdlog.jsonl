@@ -1,0 +1,3 @@
+{"t": 1791389435.844824, "command": "kubectl replace --force -f notifier.yaml -n alerts-da9b"}
+{"t": 1791389440.117996, "command": "kubectl apply -f notifier.yaml -n alerts-da9b"}
+{"t": 1791389444.142574, "command": "kubectl apply -f notifier.yaml -n alerts-da9b"}

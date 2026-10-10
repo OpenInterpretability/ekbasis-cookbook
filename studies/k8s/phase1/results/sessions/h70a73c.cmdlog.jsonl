@@ -1,0 +1,7 @@
+{"t": 1791386740.705319, "command": "kubectl get deployment -n pricing-a73c -o wide | grep -i quote"}
+{"t": 1791386743.484542, "command": "kubectl patch deployment quote -n pricing-a73c --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/release\", \"value\":\"r2\"}]'"}
+{"t": 1791386756.541394, "command": "kubectl get service quote -n pricing-a73c -o yaml"}
+{"t": 1791386758.5976021, "command": "kubectl patch service quote -n pricing-a73c -p '{\"spec\":{\"selector\":{\"app\":\"quote\"}}}'"}
+{"t": 1791386767.5548759, "command": "kubectl patch deployment quote -n pricing-a73c --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/release\", \"value\":\"r2\"}]'"}
+{"t": 1791386784.431461, "command": "kubectl patch service quote -n pricing-a73c --type=merge -p '{\"spec\": {\"selector\": {\"release\": null}}}'"}
+{"t": 1791386794.469877, "command": "kubectl patch deployment quote -n pricing-a73c --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/release\", \"value\":\"r2\"}]'"}

@@ -1,0 +1,8 @@
+{"t": 1791386624.2334778, "command": "kubectl get namespace ledgerops-7be3"}
+{"t": 1791386628.02219, "command": "kubectl get all -n ledgerops-7be3"}
+{"t": 1791386630.91816, "command": "kubectl delete namespace ledgerops-7be3"}
+{"t": 1791386639.291471, "command": "kubectl get pvc,pv -n ledgerops-7be3"}
+{"t": 1791386641.715064, "command": "kubectl patch pv pvc-c8ddbbc1-4f64-4ec9-a582-11a3abb0f677 -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791386647.979455, "command": "kubectl patch pv pvc-c8ddbbc1-4f64-4ec9-a582-11a3abb0f677 -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791386651.856289, "command": "kubectl delete namespace ledgerops-7be3"}
+{"t": 1791386657.593827, "command": "kubectl delete namespace ledgerops-7be3"}

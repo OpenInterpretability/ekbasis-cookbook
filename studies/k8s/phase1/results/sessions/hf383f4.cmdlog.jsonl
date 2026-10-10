@@ -1,0 +1,10 @@
+{"t": 1791390309.1435142, "command": "kubectl get configmaps -n wiki-83f4"}
+{"t": 1791390309.660015, "command": "kubectl get pods,deployments,daemonsets,statefulsets -n wiki-83f4 -o json"}
+{"t": 1791390311.82901, "command": "cat <claude-projects-dir>"}
+{"t": 1791390313.823921, "command": "kubectl get pods,deployments,daemonsets,statefulsets -n wiki-83f4 -o json | jq -r '.. | select(.configMapRef? != null) | .configMapRef.name' 2>/dev/null | sort -u"}
+{"t": 1791390315.623612, "command": "kubectl get pods,deployments,daemonsets,statefulsets -n wiki-83f4 -o json | grep -o '\"configMapRef\"[^}]*' | grep -o '\"name\":\"[^\"]*' | cut -d'\"' -f4 | sort -u"}
+{"t": 1791390317.1500401, "command": "kubectl describe deployment wikiweb -n wiki-83f4 2>/dev/null | grep -i configmap"}
+{"t": 1791390318.5957508, "command": "kubectl get all -n wiki-83f4"}
+{"t": 1791390320.2979798, "command": "kubectl get deployment wikiweb -n wiki-83f4 -o yaml | grep -i configmap -A 2 -B 2"}
+{"t": 1791390322.940819, "command": "kubectl delete configmap import-rules page-templates-2023 -n wiki-83f4"}
+{"t": 1791390324.548204, "command": "kubectl get configmaps -n wiki-83f4"}

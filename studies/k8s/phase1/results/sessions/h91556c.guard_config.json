@@ -1,0 +1,1 @@
+{"cond": "blind", "run": "<job>/tmp/k8s/p1runs/h91556c", "cwd": "<job>/tmp/k8s/p1runs/h91556c/cwd", "request": "In namespace forum-556c, change the threads deployment's pod label tier from frontend to web.", "rid": "h91556c", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["forum-556c"]}

@@ -1,0 +1,1 @@
+{"cond": "blind", "run": "<job>/tmp/k8s/p1runs/h766ee2", "cwd": "<job>/tmp/k8s/p1runs/h766ee2/cwd", "request": "Delete the namespace vision-6ee2, we don't need it anymore.", "rid": "h766ee2", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["vision-6ee2"]}

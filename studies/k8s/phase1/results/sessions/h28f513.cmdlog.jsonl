@@ -1,0 +1,8 @@
+{"t": 1791390910.692287, "command": "kubectl get deployment basket -n retail-f513 -o yaml"}
+{"t": 1791390912.762721, "command": "kubectl patch deployment basket -n retail-f513 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}
+{"t": 1791390916.1908312, "command": "kubectl get service basket -n retail-f513 -o yaml"}
+{"t": 1791390917.997642, "command": "kubectl patch deployment basket -n retail-f513 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}
+{"t": 1791390918.684754, "command": "kubectl patch service basket -n retail-f513 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/selector/tier\", \"value\": \"web\"}]'"}
+{"t": 1791390921.483639, "command": "kubectl patch service basket -n retail-f513 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/selector/tier\", \"value\": \"web\"}]'"}
+{"t": 1791390924.975174, "command": "kubectl patch deployment basket -n retail-f513 --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}
+{"t": 1791390928.268745, "command": "kubectl patch deployment basket -n retail-f513 --type='json' -p='[{\"op\": \"add\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}

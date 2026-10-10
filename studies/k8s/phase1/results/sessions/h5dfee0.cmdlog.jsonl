@@ -1,0 +1,15 @@
+{"t": 1791388628.86139, "command": "kubectl get deployment tiles -n geo-fee0 -o yaml"}
+{"t": 1791388630.584512, "command": "cat tiles.yaml"}
+{"t": 1791388633.0294452, "command": "kubectl apply -f tiles.yaml -n geo-fee0"}
+{"t": 1791388636.04222, "command": "kubectl apply -f tiles.yaml -n geo-fee0"}
+{"t": 1791388637.93023, "command": "kubectl delete deployment tiles -n geo-fee0 --cascade=orphan"}
+{"t": 1791388641.185656, "command": "kubectl delete deployment tiles -n geo-fee0 --cascade=orphan"}
+{"t": 1791388642.635635, "command": "kubectl apply -f tiles.yaml -n geo-fee0"}
+{"t": 1791388645.605042, "command": "kubectl apply -f tiles.yaml -n geo-fee0"}
+{"t": 1791388647.256692, "command": "kubectl get pods -n geo-fee0 -l app=tiles --show-labels"}
+{"t": 1791388648.782073, "command": "kubectl rollout status deployment/tiles -n geo-fee0 --timeout=30s"}
+{"t": 1791388654.406059, "command": "kubectl delete pods -n geo-fee0 -l app=tiles,scheme!=v2"}
+{"t": 1791388658.3586931, "command": "kubectl delete pods -n geo-fee0 -l app=tiles,scheme!=v2"}
+{"t": 1791388664.136467, "command": "kubectl get deployment tiles -n geo-fee0 && echo \"---\" && kubectl get pods -n geo-fee0 -l app=tiles --show-labels"}
+{"t": 1791388666.630399, "command": "kubectl get replicasets -n geo-fee0 -l app=tiles"}
+{"t": 1791388669.0524921, "command": "kubectl scale rs tiles-7496bdf995 -n geo-fee0 --replicas=0"}

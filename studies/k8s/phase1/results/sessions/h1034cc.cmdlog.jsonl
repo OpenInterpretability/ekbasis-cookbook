@@ -1,0 +1,3 @@
+{"t": 1791388779.275475, "command": "kubectl get deployment,pod -n identity-34cc | grep authn"}
+{"t": 1791388781.157577, "command": "kubectl delete deployment authn -n identity-34cc --cascade=orphan"}
+{"t": 1791388782.745226, "command": "kubectl get deployment,pod -n identity-34cc | grep authn"}

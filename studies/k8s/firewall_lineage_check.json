@@ -1,0 +1,432 @@
+{
+ "eval_items": 495,
+ "eval_items_by_group": {
+  "p1-task": 24,
+  "p1-request": 24,
+  "p1-question": 199,
+  "p0-scenario": 40,
+  "p0-prompt": 200,
+  "p0-pilot": 8
+ },
+ "training_rows_by_source": {
+  "ekbasis-data/raw/ftrain_mixG3.jsonl": 190853,
+  "ekbasis-data/raw/fval_git.jsonl": 1390,
+  "ekbasis-data/raw/fval_git2.jsonl": 1514,
+  "ekbasis-data/raw/fval_git3.jsonl": 1524,
+  "ekbasis-data/raw/m3val.jsonl": 300,
+  "ekbasis-data/raw/mined_chain.jsonl": 555,
+  "ekbasis-data/raw/mined_wide.jsonl": 7458,
+  "eikos-decisions/data/core/heldout.jsonl": 1191,
+  "eikos-decisions/data/core/train.jsonl": 19239,
+  "eikos-decisions/data/core/validation.jsonl": 1138,
+  "eikos-decisions/data/long_context/train.jsonl": 1517,
+  "eikos-decisions/data/long_context/validation.jsonl": 59,
+  "eikos-decisions/data/views_pt_en/train.jsonl": 1619,
+  "eikos-decisions/eval/suite_rules.jsonl": 1400,
+  "eikos-decisions/eval/suite_trade.jsonl": 868
+ },
+ "training_rows_total": 230625,
+ "exact_item_hits": [],
+ "p1_request_substring_hits": [],
+ "items_with_any_13gram_hit": [],
+ "max_containment8_all_rows_by_group": {
+  "p1-task": 0,
+  "p1-request": 0,
+  "p1-question": 0,
+  "p0-scenario": 0,
+  "p0-prompt": 0.0134,
+  "p0-pilot": 0
+ },
+ "max_containment8_best_row_by_group": {
+  "p1-task": 0,
+  "p1-request": 0,
+  "p1-question": 0,
+  "p0-scenario": 0,
+  "p0-prompt": 0.0134,
+  "p0-pilot": 0
+ },
+ "items_best_row_containment8_ge_0.5": [],
+ "kubernetes_mentions_by_source": {
+  "ekbasis-data/raw/ftrain_mixG3.jsonl": 4,
+  "eikos-decisions/data/core/heldout.jsonl": 7,
+  "eikos-decisions/data/core/train.jsonl": 27,
+  "eikos-decisions/data/core/validation.jsonl": 1,
+  "eikos-decisions/data/long_context/train.jsonl": 142,
+  "eikos-decisions/data/long_context/validation.jsonl": 6,
+  "eikos-decisions/data/views_pt_en/train.jsonl": 9
+ },
+ "kubernetes_mention_examples": [
+  {
+   "source": "ekbasis-data/raw/ftrain_mixG3.jsonl",
+   "line": 14907,
+   "match": "Kubernetes",
+   "context": "oral_numeric\nSVC-2023-8941\nHelios Energy Systems GmbH\nByteForge Solutions Inc.\n2023-01-15\nRefactoring of legacy grid-monitoring APIs and migration to Kubernetes cluster.\nLiquidated damages for delay in final acceptance.\nFinal acceptance is not achieved by the 'Extended Deadline'.\n1.5% of Total Contract Value "
+  },
+  {
+   "source": "ekbasis-data/raw/ftrain_mixG3.jsonl",
+   "line": 39144,
+   "match": "Kubernetes",
+   "context": "tandard ES-402: Production Deployment Protocol. Rule 1: Code must pass 100% of unit tests in the CI pipeline. Rule 2: The deployment target must be a Kubernetes cluster with a minimum of 3 replicas for the service. Rule 3: A change advisory board (CAB) sign-off is required for any deployment to the 'prod-eu' "
+  },
+  {
+   "source": "ekbasis-data/raw/ftrain_mixG3.jsonl",
+   "line": 56130,
+   "match": "Kubernetes",
+   "context": "ipeline is blocked. Additionally, I pulled the latest container image tag (v1.4.2-hotfix-candidate) from the registry, but the deployment manifest in Kubernetes is still pointing to v1.4.1. Therefore, the production cluster is running the old code. The 'interim fix' is not active.\nqa_lead_emma\nqa\n2023-10-24T1"
+  },
+  {
+   "source": "ekbasis-data/raw/ftrain_mixG3.jsonl",
+   "line": 67533,
+   "match": "Kubernetes",
+   "context": "art_date\": \"2021-03-15\", \"end_date\": null, \"notice_period_days\": 30, \"last_review_date\": \"2023-11-01\", \"performance_rating\": 4.2, \"skills\": [\"Java\", \"Kubernetes\", \"AWS\"], \"certifications\": [{\"name\": \"AWS Solutions Architect\", \"expiry\": \"2024-01-10\"}, {\"name\": \"CKA\", \"expiry\": \"2025-06-20\"}], \"active_projects\""
+  },
+  {
+   "source": "eikos-decisions/data/core/heldout.jsonl",
+   "line": 161,
+   "match": "Kubernetes",
+   "context": " A: ESTADO ACTUAL DEL M\u00d3DULO \"PAYMENT-ENGINE\"\n\n**Descripci\u00f3n del M\u00f3dulo:**\nEl m\u00f3dulo `payment-engine` es un microservicio independiente desplegado en Kubernetes. Su funci\u00f3n es procesar transacciones de pago con tarjetas de cr\u00e9dito.\n\n**Componentes Clave:\n1. `nova-core-lib` (Versi\u00f3n 2.1.0): Biblioteca interna d"
+  },
+  {
+   "source": "eikos-decisions/data/core/heldout.jsonl",
+   "line": 309,
+   "match": "Kubernetes",
+   "context": "r a complexidade de infraestrutura.\n- **P4 (Peso 10%):** Performance bruta de CPU.\n\n**Op\u00e7\u00f5es Avaliadas (Tabela Comparativa):**\n\n| Crit\u00e9rio | Op\u00e7\u00e3o A: Kubernetes Self-Managed (EKS) + Java | Op\u00e7\u00e3o B: Serverless (Lambda) + Python | Op\u00e7\u00e3o C: PaaS (Heroku-like) + Node.js | Op\u00e7\u00e3o D: Microsservi\u00e7os em Go + Docker Co"
+  },
+  {
+   "source": "eikos-decisions/data/core/heldout.jsonl",
+   "line": 315,
+   "match": "Kubernetes",
+   "context": "ence with Event-Driven Architecture using Kafka (Non-negotiable).\n2. Proficiency in Go or Rust (Higher priority than Python/Java).\n3. Experience with Kubernetes at scale (Good to have, but secondary to core backend skills).\n4. Salary expectation within budget (Max \u20ac120k base).\n5. Visa sponsorship availability"
+  },
+  {
+   "source": "eikos-decisions/data/core/heldout.jsonl",
+   "line": 547,
+   "match": "K8s",
+   "context": "gocio aplicada es incorrecta para el caso de uso definido.\ninfrastructure_failure\nEl error se debe a fallos de hardware, contenedores, orquestadores (K8s) o proveedor de nube, no al c\u00f3digo de la aplicaci\u00f3n.\ntype_conversion_error\nThe stack trace explicitly shows 'TypeError: Cannot divide by zero' and th"
+  },
+  {
+   "source": "eikos-decisions/data/core/heldout.jsonl",
+   "line": 598,
+   "match": "Kubernetes",
+   "context": ").mov\"); customer support must not regress for any of these.\nR3. The fix must ship within the current two-week sprint, with no new infrastructure, no Kubernetes or node-pool changes, and no sign-off beyond a normal service deploy.\n\nAn option that fails a higher-priority requirement cannot be chosen over an op"
+  },
+  {
+   "source": "eikos-decisions/data/core/heldout.jsonl",
+   "line": 672,
+   "match": "kubectl",
+   "context": "structura. El nodo de Consul en `prod-us-east-1` est\u00e1 operativo. Sin embargo, notan algo an\u00f3malo en la configuraci\u00f3n de red.\n\nAqu\u00ed est\u00e1 la salida de `kubectl get pods -n infra`:\n```\nNAME                              READY   STATUS    RESTARTS   AGE\nconsul-server-0                   1/1     Running   0     "
+  },
+  {
+   "source": "eikos-decisions/data/core/heldout.jsonl",
+   "line": 946,
+   "match": "Kubernetes",
+   "context": "rrent WebSocket connections without dropping packets.\", \"Memory footprint must remain under 512MB per instance.\", \"Must be deployable on the existing Kubernetes cluster (k8s v1.28) without new infrastructure costs.\", \"Latency p99 for message ack must be < 50ms.\"], \"priority_weights\": {\"stability\": 0.4, \"laten"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 153,
+   "match": "k8s",
+   "context": "OR] Service: payment-service | Pod: pay-svc-7d9f | Message: 'Connection timeout to redis-cache:6379 after 5000ms'\n2023-10-05 14:20:08 [INFO] Service: k8s-monitor | Message: 'Pod redis-cache-0 is Running but CPU usage is 98%'\n2023-10-05 14:20:09 [INFO] Service: k8s-monitor | Message: 'Memory usage for r"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 452,
+   "match": "KUBERNETES",
+   "context": "d2a0764a\ntrain\nlong_policy\nsafety & security\nEnglish\nhard\na code snippet with context\ngenerated\nQwen3.8-27B\nteacher\n// SECURITY POLICY FOR PRODUCTION KUBERNETES CLUSTERS - V2.4\n// LAST UPDATED: 2023-11-15\n// SCOPE: All production namespaces and service accounts.\n\n# SECTION 1: PRINCIPLES OF LEAST PRIVILEGE\n1.1"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 1045,
+   "match": "k8s",
+   "context": "log lines\ngenerated\nGLM-5.3-Flash\nteacher\n2024-11-04T02:10:22Z INFO deploy: api-pagamentos v2.14.3 -> prod (can\u00e1rio 25%, namespace pag-prod, executor k8s)\n2024-11-04T02:38:47Z WARN heap: 91% do limite de 2Gi no pod api-pagamentos-7f4c9\n2024-11-04T02:51:03Z ERROR java.lang.OutOfMemoryError: Java heap sp"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 1053,
+   "match": "Kubernetes",
+   "context": "in prose\ngenerated\nQwen3.8-27B\nteacher\nThe DevOps team is reviewing the deployment policy for the 'Payment Gateway' microservice. The service runs on Kubernetes with 3 replicas. The current policy, version 2.1, states: 'Rolling updates are allowed if the deployment has been stable for at least 4 hours. A roll"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 1544,
+   "match": "k8s",
+   "context": "; proceeding to canary\n2025-08-19T08:14:12Z [deploy] target=prod-eu-west-1 namespace=checkout strategy=rolling maxUnavailable=0\n2025-08-19T08:14:30Z [k8s] pulling image registry.internal/stellarpay/checkout-service:9f3ad21\n2025-08-19T08:14:33Z [k8s] WARN: node pool running containerd 1.6.x (deprecated "
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 1713,
+   "match": "Kubernetes",
+   "context": "3613a866aef7fcd2\ntrain\nmulti_hop\ncoding & software\nEnglish\nhard\nplain prose\ngenerated\nQwen3.8-27B\nteacher\nThe `api-gateway` service runs on Kubernetes with a horizontal pod autoscaler (HPA) configured to scale based on CPU utilization. The HPA manifest specifies `minReplicas: 2` and `maxReplicas: 10"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 1886,
+   "match": "Kubernetes",
+   "context": "Acme Corp, current employer):** \n   - Manager: David Chen\n   - Rating: 'Exceeds Expectations' (Top 10% of cohort)\n   - Projects: Led the migration to Kubernetes, reduced latency by 40%.\n\n2. **Reference Check (from TechSoft Inc, previous employer, 2 years ago):**\n   - Referee: Linda Moore, Senior Engineer Mana"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 2593,
+   "match": "k8s",
+   "context": "23-10-14 09:12:13 [INFO] [deploy-bot] Proceeding with deployment as per configuration flag `allow_digest_mismatch: true`.\n2023-10-14 09:12:30 [INFO] [k8s] Pod `pgw-v2-7d9b8c6f5d-x2k9f` created.\n2023-10-14 09:13:01 [INFO] [k8s] Pod `pgw-v2-7d9b8c6f5d-x2k9f` running.\n2023-10-14 09:13:05 [INFO] [health-ch"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 2698,
+   "match": "ConfigMap",
+   "context": " service handles PII. Any rollback of config must go through the Change Advisory Board (CAB) if it affects data integrity. A simple config toggle via ConfigMap is considered a 'Low Risk' change if no data migration is involved.\n\n[2024-05-12 09:28:15] User_B (SRE):\nI have paused the VACUUM task temporarily. L"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 2717,
+   "match": "Kubernetes",
+   "context": "quests. The error logs indicate 'Upstream connection timeout' when routing to the `payment-service` microservice. The `payment-service` is running on Kubernetes cluster `prod-k8s-01`. The CPU usage of the `payment-service` pods is at 95%. The database connection pool for `payment-service` is exhausted. The `a"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 2832,
+   "match": "K8s",
+   "context": "dowSeconds` 180. The last scale-up was 08:15. The window for stabilization ends 180 seconds after the last scale-up event? Or is it a sliding window? K8s HPA docs say: 'The stabilization window... is the time to consider the metrics before scaling.' If the last scale-up was 08:15, and the window is 180"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 3022,
+   "match": "Kubernetes",
+   "context": "429 with a Retry-After header whose value is the number of seconds until the client may retry.\n2. Requests to /healthz must never be throttled, since Kubernetes probes depend on it.\n3. The limiter must count requests over a sliding 60-second window (i.e., any trailing 60-second span), not a fixed per-minute b"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 3163,
+   "match": "k8s",
+   "context": "nge; the team of the service that surfaced the error is added as watcher only |\n| R-C | The error is purely infrastructure-level (node loss, network, k8s control plane) with no code or schema cause | infrastructure-sre |\n| R-D | A change was deployed outside its owner's declared deploy window | in addi"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 3786,
+   "match": "Kubernetes",
+   "context": "ime has increased from 200ms to over 3s since yesterday at 02:00 UTC.\n\nHere are the details:\n- Affected Service: `order-service` (Java 11, running on Kubernetes v1.24)\n- Affected Region: us-east-1\n- Traffic Spike: None. Our traffic remains constant at approx 500 RPS.\n- Recent Changes: We deployed version 2.4."
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 3803,
+   "match": "Kubernetes",
+   "context": "tems GmbH\", \"provider\": \"ByteForge Solutions Inc.\", \"start_date\": \"2023-01-15\", \"scope\": \"Refactoring of legacy grid-monitoring APIs and migration to Kubernetes cluster.\", \"acceptance_criteria\": {\"functional_tests_passed\": true, \"security_audit_passed\": true, \"performance_benchmark_meets_sla\": true}, \"penalty"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 3918,
+   "match": "Kubernetes",
+   "context": "English\nstandard\nplain prose\ngenerated\nQwen3.8-27B\nteacher\nUpdate from the DevOps team: The migration of the legacy authentication service to the new Kubernetes cluster is 85% complete. We successfully handled the database schema changes and updated the API endpoints. However, we are currently blocked on a th"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 3969,
+   "match": "Kubernetes",
+   "context": "-01, review meeting scheduled 2025-06-30); RELOCATION_SUPPORT (expired 2022)\n\nSection B \u2014 Course details (filled by employee)\nCourse title: Certified Kubernetes Administrator (CKA)\nProvider: Linux Foundation Training\nCourse format: live online, evening sessions\nStart date: 2025-02-10\nEnd date: 2025-04-18\nTota"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 4837,
+   "match": "Kubernetes",
+   "context": "ize 20.\n10:15:40 [WARN] Suspect Redis pool exhaustion causing timeouts.\n10:15:45 [ACTION] Rolling back to v3.2.0.\n10:15:50 [INFO] Rollback initiated. Kubernetes rolling update in progress.\n10:16:05 [INFO] Pod payment-gateway-7d9f8c6b5c-x2k4l replaced by payment-gateway-665f7d9d5f-m3n2p (v3.2.0).\n10:16:30 [INF"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 4944,
+   "match": "Kubernetes",
+   "context": "ipeline is blocked. Additionally, I pulled the latest container image tag (v1.4.2-hotfix-candidate) from the registry, but the deployment manifest in Kubernetes is still pointing to v1.4.1. Therefore, the production cluster is running the old code. The 'interim fix' is not active.\"}, {\"author\": \"qa_lead_emma\""
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 4999,
+   "match": "Kubernetes",
+   "context": "and using SQL Server 2014.\n2.2 \u201cModernized Service\u201d: Any microservice refactored to .NET 6 or later, containerized using Docker, and orchestrated via Kubernetes.\n2.3 \u201cCutover Date\u201d: The scheduled date when traffic is shifted from on-premise to cloud.\n2.4 \u201cHard Dependency\u201d: A direct call from Service A to Serv"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 5859,
+   "match": "Kubernetes",
+   "context": "ite.\n\nResumo:\n- O deploy foi realizado \u00e0s 23:45 BRT.\n- O processo de inicializa\u00e7\u00e3o do servi\u00e7o 'report-generator' falhou ap\u00f3s 3 tentativas.\n- O log do Kubernetes mostrou: 'OOMKilled: Container exceeded memory limit (512Mi)'.\n- O servi\u00e7o n\u00e3o est\u00e1 ativo. Os clientes n\u00e3o conseguem gerar relat\u00f3rios mensais.\n- A eq"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 5910,
+   "match": "Kubernetes",
+   "context": "art_date\": \"2021-03-15\", \"end_date\": null, \"notice_period_days\": 30, \"last_review_date\": \"2023-11-01\", \"performance_rating\": 4.2, \"skills\": [\"Java\", \"Kubernetes\", \"AWS\"], \"certifications\": [{\"name\": \"AWS Solutions Architect\", \"expiry\": \"2024-01-10\"}, {\"name\": \"CKA\", \"expiry\": \"2025-06-20\"}], \"active_projects\""
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 6572,
+   "match": "k8s",
+   "context": "=checkout-service java.lang.NullPointerException at com.acme.checkout.totals.DiscountEngine.apply(DiscountEngine.java:214)\n2025-03-04T09:12:06Z WARN  k8s pod=checkout-7f9c4d-xr2lm restart_count=3 reason=OOMKilled? (probe says no)\n2025-03-04T09:12:07Z DEBUG svc=checkout-service pricing_cache hit_ratio=0"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 6638,
+   "match": "k8s",
+   "context": " \"hikari-cp\"}, {\"time\": \"2023-11-14T08:40:00Z\", \"level\": \"INFO\", \"message\": \"Deployment v2.4.1 completed. Rolling restart of 12 pods.\", \"component\": \"k8s\"}, {\"time\": \"2023-11-14T08:35:00Z\", \"level\": \"INFO\", \"message\": \"Scheduled batch job 'nightly-reconciliation' started. Expected duration: 45 min.\", \""
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 7137,
+   "match": "Kubernetes",
+   "context": "tandard ES-402: Production Deployment Protocol. Rule 1: Code must pass 100% of unit tests in the CI pipeline. Rule 2: The deployment target must be a Kubernetes cluster with a minimum of 3 replicas for the service. Rule 3: A change advisory board (CAB) sign-off is required for any deployment to the 'prod-eu' "
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 7620,
+   "match": "Kubernetes",
+   "context": ".br>\nData: 12/05/2024 14:22\n\nFala time,\n\nO deploy da vers\u00e3o 2.4.1 do servi\u00e7o de pagamentos foi realizado com sucesso \u00e0s 14:00. No entanto, os logs do Kubernetes mostram que o Pod 'pay-api-7d9f8b6c5' entrou em estado CrashLoopBackOff ap\u00f3s 5 tentativas de reinicializa\u00e7\u00e3o. O erro espec\u00edfico registrado \u00e9 'OOMKill"
+  },
+  {
+   "source": "eikos-decisions/data/core/train.jsonl",
+   "line": 7859,
+   "match": "k8s",
+   "context": "initiated: d-881 staged to 50% of pods\n2025-03-14T14:22:47Z INFO  [deploy] rollback to d-881 complete (all pods on d-881)\n2025-03-14T14:23:10Z INFO  [k8s] 26 pods healthy on build d-881\n2025-03-14T14:25:00Z INFO  [metrics] win=14:25 req=3050 http_5xx=12 auth_err=32 p99_ms=1120\n2025-03-14T14:26:10Z INFO"
+  },
+  {
+   "source": "eikos-decisions/data/core/validation.jsonl",
+   "line": 632,
+   "match": "Kubernetes",
+   "context": "concurrent users.\", \"deployment_pipeline_status\": \"Frozen due to Sev-1 policy.\", \"available_tools\": {\"kubectl_scale\": \"Adjusts the replica count of a Kubernetes deployment.\", \"db_connection_pool_config\": \"Updates the maximum connection pool size in the application configuration file.\", \"feature_flag_toggler\":"
+  },
+  {
+   "source": "eikos-decisions/data/long_context/train.jsonl",
+   "line": 9,
+   "match": "Kubernetes",
+   "context": " ter que rejeitar o pedido por falta de cobertura validada. Desculpe.\"\n\n--- Document 31 (vendor portal message) ---\nThe `api-gateway` service runs on Kubernetes with a horizontal pod autoscaler (HPA) configured to scale based on CPU utilization. The HPA manifest specifies `minReplicas: 2` and `maxReplicas: 10"
+  }
+ ],
+ "top10_items_by_best_row_containment8": [
+  [
+   "p0-prompt F7_quota_scale.2.harm E0",
+   {
+    "grams8": 299,
+    "containment8_all_rows": 0.0134,
+    "containment8_best_row": 0.0134,
+    "best_row": [
+     "ekbasis-data/raw/ftrain_mixG3.jsonl",
+     157
+    ],
+    "rows_with_shared_13gram": 0
+   }
+  ],
+  [
+   "p0-prompt F7_quota_scale.2.safe E0",
+   {
+    "grams8": 299,
+    "containment8_all_rows": 0.0134,
+    "containment8_best_row": 0.0134,
+    "best_row": [
+     "ekbasis-data/raw/ftrain_mixG3.jsonl",
+     157
+    ],
+    "rows_with_shared_13gram": 0
+   }
+  ],
+  [
+   "p0-prompt F7_quota_scale.1.harm E0",
+   {
+    "grams8": 354,
+    "containment8_all_rows": 0.0113,
+    "containment8_best_row": 0.0113,
+    "best_row": [
+     "ekbasis-data/raw/ftrain_mixG3.jsonl",
+     40
+    ],
+    "rows_with_shared_13gram": 0
+   }
+  ],
+  [
+   "p0-prompt F7_quota_scale.1.safe E0",
+   {
+    "grams8": 354,
+    "containment8_all_rows": 0.0113,
+    "containment8_best_row": 0.0113,
+    "best_row": [
+     "ekbasis-data/raw/ftrain_mixG3.jsonl",
+     40
+    ],
+    "rows_with_shared_13gram": 0
+   }
+  ],
+  [
+   "p0-prompt F9_cascade.2.harm E0",
+   {
+    "grams8": 268,
+    "containment8_all_rows": 0.0112,
+    "containment8_best_row": 0.0112,
+    "best_row": [
+     "ekbasis-data/raw/ftrain_mixG3.jsonl",
+     1
+    ],
+    "rows_with_shared_13gram": 0
+   }
+  ],
+  [
+   "p0-prompt F9_cascade.2.safe E0",
+   {
+    "grams8": 270,
+    "containment8_all_rows": 0.0111,
+    "containment8_best_row": 0.0111,
+    "best_row": [
+     "ekbasis-data/raw/ftrain_mixG3.jsonl",
+     1
+    ],
+    "rows_with_shared_13gram": 0
+   }
+  ],
+  [
+   "p0-prompt F6_noexecute_taint.2.harm E0",
+   {
+    "grams8": 287,
+    "containment8_all_rows": 0.0105,
+    "containment8_best_row": 0.0105,
+    "best_row": [
+     "ekbasis-data/raw/ftrain_mixG3.jsonl",
+     1
+    ],
+    "rows_with_shared_13gram": 0
+   }
+  ],
+  [
+   "p0-prompt F6_noexecute_taint.2.safe E0",
+   {
+    "grams8": 287,
+    "containment8_all_rows": 0.0105,
+    "containment8_best_row": 0.0105,
+    "best_row": [
+     "ekbasis-data/raw/ftrain_mixG3.jsonl",
+     1
+    ],
+    "rows_with_shared_13gram": 0
+   }
+  ],
+  [
+   "p0-prompt F9_cascade.1.harm E0",
+   {
+    "grams8": 286,
+    "containment8_all_rows": 0.0105,
+    "containment8_best_row": 0.0105,
+    "best_row": [
+     "ekbasis-data/raw/ftrain_mixG3.jsonl",
+     1
+    ],
+    "rows_with_shared_13gram": 0
+   }
+  ],
+  [
+   "p0-prompt F9_cascade.1.safe E0",
+   {
+    "grams8": 288,
+    "containment8_all_rows": 0.0104,
+    "containment8_best_row": 0.0104,
+    "best_row": [
+     "ekbasis-data/raw/ftrain_mixG3.jsonl",
+     1
+    ],
+    "rows_with_shared_13gram": 0
+   }
+  ]
+ ]
+}

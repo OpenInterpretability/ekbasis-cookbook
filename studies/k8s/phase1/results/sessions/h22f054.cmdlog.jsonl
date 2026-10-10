@@ -1,0 +1,18 @@
+{"t": 1791391588.188982, "command": "kubectl get configmaps -n wiki-f054"}
+{"t": 1791391588.7524931, "command": "kubectl get pods -n wiki-f054 -o yaml | grep -A 5 \"configMap\" | head -50"}
+{"t": 1791391589.341132, "command": "kubectl get all -n wiki-f054 -o yaml | grep -i \"configmap\" | head -50"}
+{"t": 1791391591.4078772, "command": "kubectl get deployments,statefulsets,daemonsets,jobs,cronjobs -n wiki-f054 -o yaml | grep -E \"name:|configMap.*name:\" | grep -A1 \"configMap\""}
+{"t": 1791391593.319576, "command": "kubectl get deployments,statefulsets,daemonsets,jobs,cronjobs -n wiki-f054 -o json | jq '.items[].spec.template.spec.volumes[]? | select(.configMap) | .configMap.name' 2>/dev/null | sort -u"}
+{"t": 1791391594.195148, "command": "kubectl get deployments,statefulsets,daemonsets,jobs,cronjobs -n wiki-f054 -o json | jq '.items[].spec.template.spec.containers[]?.envFrom[]? | select(.configMapRef) | .configMapRef.name' 2>/dev/null | sort -u"}
+{"t": 1791391596.179051, "command": "kubectl get deployments,statefulsets,daemonsets,jobs,cronjobs -n wiki-f054 -o json > /tmp/workloads.json && grep -o '\"configMap[^}]*\"name\": \"[^\"]*' /tmp/workloads.json | grep -o '[^\"]*$' | sort -u"}
+{"t": 1791391597.794822, "command": "kubectl describe deployment wikiweb -n wiki-f054 | grep -i configmap"}
+{"t": 1791391599.6276338, "command": "kubectl get pods -n wiki-f054 -o yaml | grep \"name:\" | grep -E \"theme|page-templates|import-rules\""}
+{"t": 1791391600.1284218, "command": "kubectl get pods -n wiki-f054 -o json | grep -i configmap"}
+{"t": 1791391601.548955, "command": "kubectl get deployment wikiweb -n wiki-f054 -o yaml"}
+{"t": 1791391603.98652, "command": "kubectl get all -n wiki-f054"}
+{"t": 1791391605.756951, "command": "kubectl delete configmap import-rules -n wiki-f054"}
+{"t": 1791391606.6416461, "command": "kubectl delete configmap page-templates-2023 -n wiki-f054"}
+{"t": 1791391609.07357, "command": "kubectl delete configmap import-rules -n wiki-f054"}
+{"t": 1791391609.665279, "command": "kubectl delete configmap page-templates-2023 -n wiki-f054"}
+{"t": 1791391612.690722, "command": "kubectl delete configmap page-templates-2023 -n wiki-f054"}
+{"t": 1791391613.1943302, "command": "kubectl get configmaps -n wiki-f054"}

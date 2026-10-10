@@ -1,0 +1,6 @@
+{"t": 1791387279.4448059, "command": "kubectl get all -n ledgerops-2f56"}
+{"t": 1791387281.86325, "command": "kubectl get configmap,secret,pvc,pv -n ledgerops-2f56 2>/dev/null || true"}
+{"t": 1791387283.972307, "command": "kubectl delete namespace ledgerops-2f56"}
+{"t": 1791387298.8063529, "command": "kubectl patch pv pvc-9675e96a-5d00-4260-9f4e-32a55a87a7b5 -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791387303.9247518, "command": "kubectl delete namespace ledgerops-2f56"}
+{"t": 1791387315.8591099, "command": "kubectl delete namespace ledgerops-2f56"}

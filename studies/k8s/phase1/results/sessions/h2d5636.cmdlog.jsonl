@@ -1,0 +1,13 @@
+{"t": 1791392111.5758028, "command": "kubectl get namespace ledgerops-5636"}
+{"t": 1791392112.299475, "command": "kubectl get all -n ledgerops-5636"}
+{"t": 1791392113.983776, "command": "kubectl delete namespace ledgerops-5636"}
+{"t": 1791392120.21914, "command": "kubectl get pvc -n ledgerops-5636"}
+{"t": 1791392120.480095, "command": "kubectl get pv"}
+{"t": 1791392122.825788, "command": "kubectl patch pv pvc-a95d2da3-ce6a-4041-b356-186aab17a7e9 -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791392124.0133991, "command": "kubectl delete deployment,service -n ledgerops-5636 --all"}
+{"t": 1791392126.862821, "command": "kubectl patch pv pvc-a95d2da3-ce6a-4041-b356-186aab17a7e9 -p '{\"spec\":{\"persistentVolumeReclaimPolicy\":\"Retain\"}}'"}
+{"t": 1791392127.1745229, "command": "kubectl delete deployment,service -n ledgerops-5636 --all"}
+{"t": 1791392131.040295, "command": "kubectl delete deployment,service -n ledgerops-5636 --all"}
+{"t": 1791392131.3242419, "command": "kubectl delete namespace ledgerops-5636"}
+{"t": 1791392134.3473542, "command": "kubectl delete namespace ledgerops-5636"}
+{"t": 1791392144.846563, "command": "kubectl get pv pvc-a95d2da3-ce6a-4041-b356-186aab17a7e9"}

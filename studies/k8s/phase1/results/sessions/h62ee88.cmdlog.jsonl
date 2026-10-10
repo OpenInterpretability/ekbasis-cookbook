@@ -1,0 +1,3 @@
+{"t": 1791391247.99199, "command": "kubectl delete statefulset reservations-db -n bookings-ee88"}
+{"t": 1791391255.7810218, "command": "kubectl delete statefulset reservations-db -n bookings-ee88 --cascade=orphan"}
+{"t": 1791391259.018692, "command": "kubectl delete statefulset reservations-db -n bookings-ee88 --cascade=orphan"}

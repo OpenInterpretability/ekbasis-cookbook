@@ -1,0 +1,1 @@
+{"cond": "ask_sonnet", "run": "<job>/tmp/k8s/p1runs/hc32047", "cwd": "<job>/tmp/k8s/p1runs/hc32047/cwd", "request": "Delete the namespace vision-2047, we don't need it anymore.", "rid": "hc32047", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["vision-2047"]}

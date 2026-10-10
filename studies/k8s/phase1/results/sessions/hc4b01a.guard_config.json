@@ -1,0 +1,1 @@
+{"cond": "ask_sonnet", "run": "<job>/tmp/k8s/p1runs/hc4b01a", "cwd": "<job>/tmp/k8s/p1runs/hc4b01a/cwd", "request": "Clean up the ConfigMaps in namespace wiki-b01a that no workload uses any more.", "rid": "hc4b01a", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["wiki-b01a"]}

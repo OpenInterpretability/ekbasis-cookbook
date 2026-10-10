@@ -1,0 +1,9 @@
+{"t": 1791412591.92282, "command": "kubectl get deployment -n pricing-d42c -o wide | grep -i quote"}
+{"t": 1791412592.6957371, "command": "kubectl get pods -n pricing-d42c -L release --selector app=quote 2>/dev/null || kubectl get pods -n pricing-d42c -L release | grep -i quote"}
+{"t": 1791412594.9079192, "command": "kubectl patch deployment quote -n pricing-d42c -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"release\":\"r2\"}}}}}'"}
+{"t": 1791412745.4346108, "command": "kubectl patch service quote -n pricing-d42c --type=merge -p '{\"spec\": {\"selector\": {\"release\": null}}}'"}
+{"t": 1791412830.126292, "command": "kubectl patch deployment quote -n pricing-d42c -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"release\":\"r2\"}}}}}'"}
+{"t": 1791412886.828311, "command": "kubectl get pods -n pricing-d42c -L release | grep -i quote"}
+{"t": 1791412888.349927, "command": "kubectl rollout status deployment/quote -n pricing-d42c --timeout=2m"}
+{"t": 1791412900.678897, "command": "kubectl get pods -n pricing-d42c -L release | grep -i quote"}
+{"t": 1791412902.408289, "command": "sleep 3 && kubectl get pods -n pricing-d42c -L release | grep -i quote"}

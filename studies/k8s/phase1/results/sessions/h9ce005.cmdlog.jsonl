@@ -1,0 +1,4 @@
+{"t": 1791392348.311077, "command": "kubectl get deployment -n retail-e005 basket -o yaml"}
+{"t": 1791392350.345548, "command": "kubectl patch deployment basket -n retail-e005 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791392363.295006, "command": "kubectl patch service basket -n retail-e005 --type=merge -p '{\"spec\": {\"selector\": {\"tier\": null}}}'"}
+{"t": 1791392368.25738, "command": "kubectl patch deployment basket -n retail-e005 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}

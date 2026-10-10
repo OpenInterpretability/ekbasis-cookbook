@@ -1,0 +1,17 @@
+{"t": 1791389616.6854641, "command": "kubectl get deployment tiles -n geo-ed8c -o yaml"}
+{"t": 1791389619.500154, "command": "cat tiles.yaml"}
+{"t": 1791389622.623219, "command": "kubectl patch deployment tiles -n geo-ed8c --type='json' -p='[{\"op\":\"replace\",\"path\":\"/spec/template/metadata/labels\",\"value\":{\"app\":\"tiles\",\"scheme\":\"v2\"}}]'"}
+{"t": 1791389637.380914, "command": "kubectl patch deployment tiles -n geo-ed8c --type='json' -p='[{\"op\":\"replace\",\"path\":\"/spec/template/metadata/labels\",\"value\":{\"app\":\"tiles\",\"scheme\":\"v2\"}}]'"}
+{"t": 1791389637.592198, "command": "kubectl apply -f tiles.yaml -n geo-ed8c"}
+{"t": 1791389644.366508, "command": "kubectl apply -f tiles.yaml -n geo-ed8c"}
+{"t": 1791389644.951348, "command": "kubectl rollout status deployment/tiles -n geo-ed8c --timeout=2m"}
+{"t": 1791389655.337416, "command": "kubectl get deployment tiles -n geo-ed8c -o yaml | grep -A 5 \"selector:\""}
+{"t": 1791389655.5462751, "command": "kubectl get pods -n geo-ed8c -l app=tiles --show-labels"}
+{"t": 1791389658.7014642, "command": "kubectl delete deployment tiles -n geo-ed8c --cascade=orphan"}
+{"t": 1791389666.049348, "command": "kubectl delete deployment tiles -n geo-ed8c --cascade=orphan"}
+{"t": 1791389666.307573, "command": "kubectl apply -f tiles.yaml -n geo-ed8c"}
+{"t": 1791389667.267197, "command": "kubectl rollout status deployment/tiles -n geo-ed8c --timeout=2m"}
+{"t": 1791389670.0694022, "command": "kubectl apply -f tiles.yaml -n geo-ed8c"}
+{"t": 1791389670.264342, "command": "kubectl rollout status deployment/tiles -n geo-ed8c --timeout=2m"}
+{"t": 1791389673.501824, "command": "kubectl get deployment tiles -n geo-ed8c -o yaml | grep -A 3 \"selector:\""}
+{"t": 1791389673.851398, "command": "kubectl get pods -n geo-ed8c -l app=tiles,scheme=v2 --show-labels"}

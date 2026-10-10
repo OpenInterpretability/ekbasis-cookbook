@@ -1,0 +1,2 @@
+{"t": 1791392461.2341602, "command": "kubectl get statefulset kafka-lite -n streams-9c0c"}
+{"t": 1791392462.7453911, "command": "kubectl scale statefulset kafka-lite -n streams-9c0c --replicas=1 && kubectl get statefulset kafka-lite -n streams-9c0c"}

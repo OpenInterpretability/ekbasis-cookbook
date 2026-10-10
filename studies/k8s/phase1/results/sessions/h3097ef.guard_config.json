@@ -1,0 +1,1 @@
+{"cond": "ask_always", "run": "<job>/tmp/k8s/p1runs/h3097ef", "cwd": "<job>/tmp/k8s/p1runs/h3097ef/cwd", "request": "Delete the namespace vision-97ef, we don't need it anymore.", "rid": "h3097ef", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["vision-97ef"]}

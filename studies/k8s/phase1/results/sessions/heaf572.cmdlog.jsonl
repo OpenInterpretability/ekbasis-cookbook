@@ -1,0 +1,4 @@
+{"t": 1791412565.5961568, "command": "kubectl patch deployment basket -n retail-f572 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791412717.388641, "command": "kubectl patch service basket -n retail-f572 --type=merge -p '{\"spec\": {\"selector\": {\"tier\": null}}}'"}
+{"t": 1791412806.60546, "command": "kubectl patch deployment basket -n retail-f572 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791412858.937105, "command": "kubectl patch service basket -n retail-f572 --type=merge -p '{\"spec\": {\"selector\": {\"tier\": \"web\"}}}'"}

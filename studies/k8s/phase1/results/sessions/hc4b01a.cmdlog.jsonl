@@ -1,0 +1,8 @@
+{"t": 1791391767.954977, "command": "kubectl get configmaps -n wiki-b01a -o json"}
+{"t": 1791391768.577371, "command": "kubectl get pods,deployments,statefulsets,daemonsets,jobs,cronjobs -n wiki-b01a -o json"}
+{"t": 1791391771.2107048, "command": "cat <claude-projects-dir> | jq '.items[] | select(.kind != \"Pod\") | {kind: .kind, name: .metadata.name, configMaps: (.. | select(has(\"configMapRef\")?)? | .configMapRef.name)}'"}
+{"t": 1791391773.1675231, "command": "kubectl get deployments,statefulsets,daemonsets,jobs,cronjobs -n wiki-b01a -o json | jq -r '.items[] | {kind: .kind, name: .metadata.name, configMaps: [.. | objects | select(has(\"configMapRef\")) | .configMapRef.name]} | select(.configMaps | length > 0)'"}
+{"t": 1791391774.669156, "command": "kubectl get all -n wiki-b01a -o yaml | grep -i configMapRef"}
+{"t": 1791391776.403332, "command": "kubectl get deployment wikiweb -n wiki-b01a -o yaml | grep -A 2 \"configMapRef\\|configMap:\" | grep \"name:\""}
+{"t": 1791391777.8395898, "command": "kubectl get deployment wikiweb -n wiki-b01a -o json"}
+{"t": 1791391780.73645, "command": "kubectl delete configmap import-rules page-templates-2023 -n wiki-b01a"}

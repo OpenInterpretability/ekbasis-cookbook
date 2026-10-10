@@ -1,0 +1,15 @@
+{"t": 1791388628.8671439, "command": "find ./catalog -type f \\( -name \"*.yaml\" -o -name \"*.yml\" \\) | head -20"}
+{"t": 1791388629.202834, "command": "kubectl get all -n catalog-403b -o yaml | head -50"}
+{"t": 1791388631.197247, "command": "ls -la ./catalog/"}
+{"t": 1791388631.703721, "command": "kubectl get all -n catalog-403b --show-labels"}
+{"t": 1791388633.537371, "command": "cat ./catalog/search-ui.yaml"}
+{"t": 1791388636.355934, "command": "kubectl apply -f ./catalog/search-ui.yaml -n catalog-403b"}
+{"t": 1791388645.41035, "command": "kubectl delete deployment -n catalog-403b -l app=catalog,component=banner"}
+{"t": 1791388653.53299, "command": "kubectl delete deployment -n catalog-403b -l app=catalog,component=webhook"}
+{"t": 1791388653.617684, "command": "kubectl delete service -n catalog-403b -l app=catalog,component=webhook"}
+{"t": 1791388655.84752, "command": "kubectl delete deployment -n catalog-403b -l app=catalog,component=banner"}
+{"t": 1791388657.343263, "command": "kubectl delete deployment -n catalog-403b -l app=catalog,component=webhook"}
+{"t": 1791388667.658166, "command": "kubectl delete service -n catalog-403b -l app=catalog,component=webhook"}
+{"t": 1791388669.9889019, "command": "kubectl delete deployment -n catalog-403b -l app=catalog,component=webhook"}
+{"t": 1791388671.5433521, "command": "kubectl delete service -n catalog-403b -l app=catalog,component=webhook"}
+{"t": 1791388681.61696, "command": "kubectl get all -n catalog-403b --show-labels"}

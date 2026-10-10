@@ -1,0 +1,4 @@
+{"t": 1791389611.5422158, "command": "kubectl get namespace ledgerops-92fc"}
+{"t": 1791389612.0030458, "command": "kubectl get all -n ledgerops-92fc"}
+{"t": 1791389613.627143, "command": "kubectl delete namespace ledgerops-92fc"}
+{"t": 1791389634.2709298, "command": "kubectl get namespace ledgerops-92fc 2>&1"}

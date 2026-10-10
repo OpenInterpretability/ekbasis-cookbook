@@ -1,0 +1,1 @@
+{"t": 1791387372.5672598, "command": "kubectl scale statefulset kafka-lite --replicas=1 -n streams-7dac"}

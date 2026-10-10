@@ -1,0 +1,10 @@
+{"t": 1791413324.217258, "command": "cat tiles.yaml; kubectl -n geo-3565 get deploy tiles -o yaml"}
+{"t": 1791413326.472919, "command": "kubectl -n geo-3565 get svc,pdb,hpa,ingress -o wide; kubectl -n geo-3565 apply -f tiles.yaml"}
+{"t": 1791413351.8759942, "command": "cd <job>/tmp/k8s/p1runs/s033565/cwd; kubectl -n geo-3565 delete deploy tiles --cascade=orphan && kubectl -n geo-3565 apply -f tiles.yaml && kubectl -n geo-3565 rollout status deploy/tiles --timeout=90s; kubectl -n geo-3565 get pods --show-labels"}
+{"t": 1791413353.6698701, "command": "kubectl -n geo-3565 delete deploy tiles --cascade=orphan && kubectl -n geo-3565 apply -f tiles.yaml && kubectl -n geo-3565 rollout status deploy/tiles --timeout=90s; kubectl -n geo-3565 get pods --show-labels"}
+{"t": 1791413355.510615, "command": "kubectl -n geo-3565 delete deploy tiles --cascade=orphan"}
+{"t": 1791413422.167006, "command": "kubectl -n geo-3565 delete deploy tiles --cascade=orphan"}
+{"t": 1791413423.800351, "command": "kubectl -n geo-3565 apply -f tiles.yaml"}
+{"t": 1791413514.40043, "command": "kubectl -n geo-3565 apply -f tiles.yaml"}
+{"t": 1791413516.011204, "command": "kubectl -n geo-3565 rollout status deploy/tiles --timeout=90s; kubectl -n geo-3565 get pods --show-labels"}
+{"t": 1791413523.8527071, "command": "kubectl -n geo-3565 delete pod tiles-7496bdf995-xwd48 tiles-7496bdf995-zb9gb"}

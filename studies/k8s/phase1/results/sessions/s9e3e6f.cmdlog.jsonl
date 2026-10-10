@@ -1,0 +1,4 @@
+{"t": 1791392642.950956, "command": "kubectl get node ekb-k8s-worker -o wide; kubectl describe node ekb-k8s-worker | grep -i -A3 taints; kubectl get pods -A --field-selector spec.nodeName=ekb-k8s-worker"}
+{"t": 1791392645.6699462, "command": "kubectl taint node ekb-k8s-worker maintenance=planned:NoExecute; sleep 10; kubectl describe node ekb-k8s-worker | grep -i -A2 taints; kubectl get pods -A -o wide | grep -v kube-system"}
+{"t": 1791392657.605986, "command": "kubectl -n vaultops-3e6f describe pod keystore-b84fcc57d-5tjsl | sed -n '/Events/,$p'; kubectl -n vaultops-3e6f get pvc"}
+{"t": 1791392659.309215, "command": "kubectl -n vaultops-3e6f describe pod keystore-b84fcc57d-5tjsl | tail -8; kubectl -n vaultops-3e6f get pvc"}

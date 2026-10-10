@@ -1,0 +1,1 @@
+{"t": 1791392561.429512, "command": "kubectl -n courier-607c get configmap sender-settings -o yaml; kubectl -n courier-607c get pods,deploy,sts,ds,cronjob,job -o yaml | grep -n \"sender-settings\""}

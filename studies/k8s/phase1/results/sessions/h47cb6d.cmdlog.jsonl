@@ -1,0 +1,3 @@
+{"t": 1791412459.840541, "command": "kubectl get deployment threads -n forum-cb6d -o yaml"}
+{"t": 1791412461.999496, "command": "kubectl patch deployment threads -n forum-cb6d --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}
+{"t": 1791412524.024022, "command": "kubectl get deployment threads -n forum-cb6d -o yaml | grep -A 2 \"labels:\""}

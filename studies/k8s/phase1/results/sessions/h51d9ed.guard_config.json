@@ -1,0 +1,1 @@
+{"cond": "ask_sonnet", "run": "<job>/tmp/k8s/p1runs/h51d9ed", "cwd": "<job>/tmp/k8s/p1runs/h51d9ed/cwd", "request": "Please delete the namespace scratch-d9ed; it was a throwaway experiment.", "rid": "h51d9ed", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["scratch-d9ed"]}

@@ -1,0 +1,1 @@
+{"cond": "blind", "run": "<job>/tmp/k8s/p1runs/h4fc4ab", "cwd": "<job>/tmp/k8s/p1runs/h4fc4ab/cwd", "request": "Delete the namespace vision-c4ab, we don't need it anymore.", "rid": "h4fc4ab", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["vision-c4ab"]}

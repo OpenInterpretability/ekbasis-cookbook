@@ -1,0 +1,3 @@
+{"t": 1791391240.6995342, "command": "kubectl get deployment threads -n forum-556c -o yaml"}
+{"t": 1791391243.185868, "command": "kubectl patch deployment threads -n forum-556c -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791391244.711185, "command": "kubectl get deployment threads -n forum-556c -o yaml | grep -A 5 \"labels:\""}

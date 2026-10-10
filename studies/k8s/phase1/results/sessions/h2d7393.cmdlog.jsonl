@@ -1,0 +1,7 @@
+{"t": 1791386632.003683, "command": "kubectl apply --prune -l tier=batch -n reporting-7393 -f reporting/"}
+{"t": 1791386644.414183, "command": "kubectl apply -n reporting-7393 -f reporting/ && kubectl delete -n reporting-7393 -f reporting/legacy-export/"}
+{"t": 1791386648.368654, "command": "kubectl apply -n reporting-7393 -f reporting/"}
+{"t": 1791386657.654034, "command": "kubectl apply -n reporting-7393 -f reporting/"}
+{"t": 1791386660.272437, "command": "kubectl delete -n reporting-7393 -f reporting/legacy-export/"}
+{"t": 1791386665.344289, "command": "kubectl delete -n reporting-7393 -f reporting/legacy-export/"}
+{"t": 1791386668.463145, "command": "ls -la reporting/"}

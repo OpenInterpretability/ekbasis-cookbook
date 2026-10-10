@@ -1,0 +1,8 @@
+{"t": 1791392960.514167, "command": "kubectl -n wiki-64e9 get configmaps -o wide; kubectl -n wiki-64e9 get deploy,sts,ds,job,cronjob,pod -o yaml | grep -E \"^\\s+(name|configMapRef|configMapKeyRef|configMap):|kind:\" | head -100"}
+{"t": 1791392962.911032, "command": "kubectl -n wiki-64e9 get configmaps; kubectl -n wiki-64e9 get deploy,sts,ds,job,cronjob,pod -o json | jq -r '.items[] | [.kind,.metadata.name, ([.. | objects | (.configMap?.name, .configMapRef?.name, .configMapKeyRef?.name) | select(.!=null)] | unique | join(\",\"))] | @tsv'"}
+{"t": 1791392964.7070742, "command": "kubectl -n wiki-64e9 get configmaps"}
+{"t": 1791392965.0225348, "command": "kubectl -n wiki-64e9 get deploy,sts,ds,job,cronjob,pod -o json | grep -n -i -E '\"(name|kind)\": ' | head -150"}
+{"t": 1791392966.699379, "command": "kubectl -n wiki-64e9 get deploy,sts,ds,job,cronjob,pod -o json | grep -i -E 'configmap|\"name\"|\"kind\"'"}
+{"t": 1791392968.714706, "command": "kubectl -n wiki-64e9 get deploy,sts,ds,job,cronjob,pod -o json | grep -i -E 'configmap|kind|name'"}
+{"t": 1791392971.155958, "command": "kubectl -n wiki-64e9 get deploy,sts,ds,job,cronjob,pod -o json | grep -i -e configmap -e kind -e name"}
+{"t": 1791392973.43103, "command": "kubectl -n wiki-64e9 delete configmap import-rules page-templates-2023"}

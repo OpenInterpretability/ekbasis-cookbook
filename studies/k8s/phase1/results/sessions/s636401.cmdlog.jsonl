@@ -1,0 +1,2 @@
+{"t": 1791393357.518901, "command": "ls; cat notifier.yaml; kubectl -n alerts-6401 get deploy notifier"}
+{"t": 1791393359.6811268, "command": "kubectl -n alerts-6401 replace --force -f notifier.yaml; kubectl -n alerts-6401 rollout status deploy/notifier --timeout=90s; kubectl -n alerts-6401 get deploy notifier"}

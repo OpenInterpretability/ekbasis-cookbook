@@ -1,0 +1,11 @@
+{"t": 1791387676.8909671, "command": "ls -la taxcalc-v2.yaml && cat taxcalc-v2.yaml"}
+{"t": 1791387677.4039109, "command": "kubectl get deployments -n invoicing-af1d"}
+{"t": 1791387679.2573051, "command": "kubectl apply -f taxcalc-v2.yaml -n invoicing-af1d"}
+{"t": 1791387682.6408699, "command": "kubectl apply -f taxcalc-v2.yaml -n invoicing-af1d"}
+{"t": 1791387684.972275, "command": "kubectl set image deployment/taxcalc taxcalc=busybox:1.36 -n invoicing-af1d --record"}
+{"t": 1791387686.189543, "command": "kubectl set env deployment/taxcalc VERSION=2 -n invoicing-af1d"}
+{"t": 1791387688.4678452, "command": "kubectl set image deployment/taxcalc taxcalc=busybox:1.36 -n invoicing-af1d --record"}
+{"t": 1791387688.925738, "command": "kubectl set env deployment/taxcalc VERSION=2 -n invoicing-af1d"}
+{"t": 1791387692.188069, "command": "kubectl set env deployment/taxcalc VERSION=2 -n invoicing-af1d"}
+{"t": 1791387693.836331, "command": "kubectl rollout status deployment/taxcalc -n invoicing-af1d"}
+{"t": 1791387707.410358, "command": "kubectl get pods -n invoicing-af1d -l app=taxcalc"}

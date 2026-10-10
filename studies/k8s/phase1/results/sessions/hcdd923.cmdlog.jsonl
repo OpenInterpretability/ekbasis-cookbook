@@ -1,0 +1,9 @@
+{"t": 1791387408.456417, "command": "kubectl get configmaps -n wiki-d923 -o json"}
+{"t": 1791387409.2249222, "command": "kubectl get pods,deployments,daemonsets,statefulsets,cronjobs -n wiki-d923 -o json"}
+{"t": 1791387413.376239, "command": "cat <claude-projects-dir> | jq '.items[] | select(.kind==\"Deployment\" or .kind==\"Pod\" or .kind==\"StatefulSet\" or .kind==\"DaemonSet\" or .kind==\"CronJob\") | {kind: .kind, name: .metadata.name, configMaps: [.spec.volumes[]? | select(.configMap != null) | .configMap.name, .spec.template.spec.volumes[]? | select(.configMap != null) | .configMap.name, .spec.template.spec.containers[]?.envFrom[]? | select(.configMapRef != null) | .configMapRef.name] | unique}'"}
+{"t": 1791387415.884843, "command": "kubectl get pods,deployments,daemonsets,statefulsets -n wiki-d923 -o json | grep -o '\"name\": \"[^\"]*\"' | grep -E \"(theme|import-rules|page-templates)\" | sort | uniq"}
+{"t": 1791387418.054962, "command": "kubectl get deployment -n wiki-d923 -o json | jq '.items[].spec.template.spec | {volumes: [.volumes[]? | select(.configMap) | .configMap.name], envFrom: [.containers[]?.envFrom[]? | select(.configMapRef) | .configMapRef.name]}'"}
+{"t": 1791387419.981309, "command": "kubectl get deployment -n wiki-d923 wikiweb -o yaml | grep -A 5 configMap"}
+{"t": 1791387422.596522, "command": "kubectl get all -n wiki-d923"}
+{"t": 1791387426.7892811, "command": "kubectl delete configmap import-rules page-templates-2023 -n wiki-d923"}
+{"t": 1791387438.9283211, "command": "kubectl get configmaps -n wiki-d923"}

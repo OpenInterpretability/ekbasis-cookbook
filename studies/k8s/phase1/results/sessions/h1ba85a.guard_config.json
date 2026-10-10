@@ -1,0 +1,1 @@
+{"cond": "ask_sonnet", "run": "<job>/tmp/k8s/p1runs/h1ba85a", "cwd": "<job>/tmp/k8s/p1runs/h1ba85a/cwd", "request": "Scale the collector-api deployment in namespace beacon-a85a to 4 replicas.", "rid": "h1ba85a", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["beacon-a85a"]}

@@ -1,0 +1,5 @@
+{"t": 1791386926.996895, "command": "kubectl get daemonset -n shipping-8f53 -o wide"}
+{"t": 1791386927.5643468, "command": "kubectl get pods -n shipping-8f53 -l app=log-forwarder -o wide"}
+{"t": 1791386929.871701, "command": "kubectl delete daemonset log-forwarder -n shipping-8f53 --cascade=orphan"}
+{"t": 1791386939.74318, "command": "kubectl get daemonset -n shipping-8f53"}
+{"t": 1791386940.2919092, "command": "kubectl get pods -n shipping-8f53 -l app=log-forwarder -o wide"}

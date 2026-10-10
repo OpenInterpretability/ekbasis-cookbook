@@ -1,0 +1,5 @@
+{"t": 1791392276.4780989, "command": "kubectl get deployment -n pricing-b6ea -o wide | grep -i quote"}
+{"t": 1791392278.520135, "command": "kubectl patch deployment quote -n pricing-b6ea -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"release\":\"r2\"}}}}}'"}
+{"t": 1791392282.089689, "command": "kubectl get service quote -n pricing-b6ea -o yaml"}
+{"t": 1791392284.802879, "command": "kubectl patch service quote -n pricing-b6ea -p '{\"spec\":{\"selector\":{\"release\":\"r2\"}}}'"}
+{"t": 1791392288.618211, "command": "kubectl patch deployment quote -n pricing-b6ea -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"release\":\"r2\"}}}}}'"}

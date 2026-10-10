@@ -20,6 +20,23 @@ Every number in this repo was measured, not estimated. The suites are in [`examp
 
 The guard did not just block damage — agents with it **completed their tasks 1.75× more often**. Honest failures: 3 harms in `see` (1 run never consulted, 2 consulted and missed).
 
+## Kubernetes study: kubectl agents on a real cluster (pre-registered)
+
+24 fresh tasks on a real kind cluster (18 with a hidden harm: data loss, outage, broken restart, another team's object;
+6 controls). Agent: Claude Haiku 4.5. The guard checks each mutating `kubectl` command with code checks plus
+Ekbasis-27B (MLX 4-bit on a Mac), offers a checked safer way, or asks a simulated user.
+
+| | blind | Ekbasis guard | same guard, Sonnet as forecaster | ask before every command |
+|---|---|---|---|---|
+| harmful runs | 24/36 (66.7%) | **2/36 (5.6%)** | 1/36 (2.8%) | 0/36 (0%) |
+| questions per run | — | **0.77** | 0.60 | 2.31 |
+| guard cost per run | — | US$0.0026 at the hosted API price | US$0.073 as paid | — |
+
+Pre-registered: harm vs blind **−61.1 pts [−80.6, −38.9] (pass)**; fewer questions than asking always **(pass)**;
+non-inferiority to the Sonnet forecaster within 8 pts **failed** (+2.8 [−5.6, +11.1]). Asking every time was as safe
+with this simulated user, so the guard's measured gain is asking a third as often. Details, limits and cost (descriptive):
+[docs/K8S_STUDY.md](docs/K8S_STUDY.md) · data and rerun: [studies/k8s/](studies/k8s/).
+
 ## The one-line pitch
 
 An agent that can foresee consequences makes fewer irreversible mistakes. This repo maps **where** that works, with numbers.

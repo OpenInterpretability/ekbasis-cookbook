@@ -1,0 +1,3 @@
+{"t": 1791393329.22776, "command": "ls -R ./catalog; kubectl config current-context; kubectl get all,cm,secret,ingress,pvc,sa -n catalog-06dc -l app=catalog"}
+{"t": 1791393332.334667, "command": "cat ./catalog/search-ui.yaml; kubectl apply -n catalog-06dc -f ./catalog --dry-run=server"}
+{"t": 1791393336.539371, "command": "kubectl apply -n catalog-06dc -f ./catalog && kubectl delete -n catalog-06dc deploy/old-banner deploy/payments-webhook svc/payments-webhook; kubectl get all -n catalog-06dc -l app=catalog"}

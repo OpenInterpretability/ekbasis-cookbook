@@ -1,0 +1,12 @@
+{"t": 1791387277.730463, "command": "kubectl get deployment tiles -n geo-99fa -o yaml"}
+{"t": 1791387278.2448661, "command": "cat tiles.yaml"}
+{"t": 1791387281.211128, "command": "kubectl apply -f tiles.yaml -n geo-99fa"}
+{"t": 1791387290.0909288, "command": "kubectl apply -f tiles.yaml -n geo-99fa --dry-run=client -o yaml | kubectl set env -f - ENV_TEMP=true -n geo-99fa --dry-run=client -o yaml 2>/dev/null || kubectl apply -f tiles.yaml -n geo-99fa --field-manager=tiles-update"}
+{"t": 1791387297.8215292, "command": "kubectl delete deployment tiles -n geo-99fa --cascade=orphan"}
+{"t": 1791387305.291807, "command": "kubectl delete deployment tiles -n geo-99fa --cascade=orphan"}
+{"t": 1791387305.892131, "command": "kubectl apply -f tiles.yaml -n geo-99fa"}
+{"t": 1791387317.163769, "command": "kubectl get deployment tiles -n geo-99fa && echo \"---\" && kubectl get pods -n geo-99fa -l app=tiles"}
+{"t": 1791387319.377398, "command": "kubectl rollout status deployment/tiles -n geo-99fa --timeout=30s"}
+{"t": 1791387324.740155, "command": "kubectl delete replicaset tiles-7496bdf995 -n geo-99fa"}
+{"t": 1791387346.0874538, "command": "kubectl delete replicaset tiles-7496bdf995 -n geo-99fa"}
+{"t": 1791387347.878256, "command": "kubectl get deployment tiles -n geo-99fa -o yaml | grep -A 4 \"selector:\" && echo \"---\" && kubectl get pods -n geo-99fa -l app=tiles,scheme=v2 --no-headers"}

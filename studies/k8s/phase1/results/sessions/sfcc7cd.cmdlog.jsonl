@@ -1,0 +1,3 @@
+{"t": 1791415462.145355, "command": "kubectl get all,pvc,configmap,secret -n scratch-c7cd 2>&1 | head -50"}
+{"t": 1791415463.880588, "command": "kubectl delete namespace scratch-c7cd 2>&1"}
+{"t": 1791415511.956234, "command": "kubectl delete namespace scratch-c7cd 2>&1"}

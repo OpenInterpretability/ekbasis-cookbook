@@ -1,0 +1,3 @@
+{"t": 1791409273.22348, "command": "kubectl get deployment threads -n forum-532e -o yaml"}
+{"t": 1791409275.307544, "command": "kubectl patch deployment threads -n forum-532e --type='json' -p='[{\"op\": \"replace\", \"path\": \"/spec/template/metadata/labels/tier\", \"value\": \"web\"}]'"}
+{"t": 1791409324.0343108, "command": "kubectl get deployment threads -n forum-532e -o yaml | grep -A 3 \"labels:\""}

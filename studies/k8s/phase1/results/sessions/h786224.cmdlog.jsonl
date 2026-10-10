@@ -1,0 +1,7 @@
+{"t": 1791412329.561934, "command": "kubectl delete statefulset reservations-db -n bookings-6224"}
+{"t": 1791412564.881172, "command": "kubectl patch statefulset reservations-db -n bookings-6224 --type merge -p '{\"spec\":{\"volumeClaimTemplates\":[{\"spec\":{\"resources\":{\"requests\":{\"storage\":\"10Gi\"}},\"persistentVolumeReclaimPolicy\":\"Retain\"}}]}}'"}
+{"t": 1791412602.1067781, "command": "kubectl get statefulset reservations-db -n bookings-6224 -o yaml | grep -A 20 \"persistentVolumeClaimRetentionPolicy\\|volumeClaimTemplates\""}
+{"t": 1791412603.650249, "command": "kubectl get statefulset reservations-db -n bookings-6224 -o yaml | grep -A 5 \"persistentVolumeClaimRetentionPolicy\""}
+{"t": 1791412605.85379, "command": "kubectl patch statefulset reservations-db -n bookings-6224 --type merge -p '{\"spec\":{\"persistentVolumeClaimRetentionPolicy\":{\"whenDeleted\":\"Retain\"}}}'"}
+{"t": 1791412687.634088, "command": "kubectl delete statefulset reservations-db -n bookings-6224"}
+{"t": 1791412779.5570638, "command": "kubectl delete statefulset reservations-db -n bookings-6224"}

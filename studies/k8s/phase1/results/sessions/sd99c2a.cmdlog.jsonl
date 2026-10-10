@@ -1,0 +1,1 @@
+{"t": 1791392887.1169019, "command": "kubectl -n beacon-9c2a scale deployment/collector-api --replicas=4 && kubectl -n beacon-9c2a get deployment collector-api"}

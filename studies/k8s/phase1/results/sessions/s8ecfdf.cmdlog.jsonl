@@ -1,0 +1,8 @@
+{"t": 1791415021.773758, "command": "kubectl -n retail-cfdf get deploy basket -o jsonpath='{.spec.selector}{\"\\n\"}{.spec.template.metadata.labels}{\"\\n\"}'; kubectl -n retail-cfdf get svc -o wide"}
+{"t": 1791415025.419203, "command": "kubectl -n retail-cfdf patch deploy basket --type=merge -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}' && kubectl -n retail-cfdf rollout status deploy basket --timeout=120s"}
+{"t": 1791415135.8621068, "command": "kubectl patch service basket -n retail-cfdf --type=merge -p '{\"spec\": {\"selector\": {\"tier\": null}}}' && kubectl -n retail-cfdf patch deploy basket --type=merge -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}' && kubectl -n retail-cfdf rollout status deploy basket --timeout=120s && kubectl -n retail-cfdf patch service basket --type=merge -p '{\"spec\":{\"selector\":{\"tier\":\"web\"}}}' && kubectl -n retail-cfdf get pods,endpoints -L tier"}
+{"t": 1791415137.08264, "command": "kubectl patch service basket -n retail-cfdf --type=merge -p '{\"spec\": {\"selector\": {\"tier\": null}}}'"}
+{"t": 1791415181.2945778, "command": "kubectl -n retail-cfdf patch deploy basket --type=merge -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"tier\":\"web\"}}}}}'"}
+{"t": 1791415267.854669, "command": "kubectl -n retail-cfdf rollout status deploy basket --timeout=120s"}
+{"t": 1791415286.4141219, "command": "kubectl -n retail-cfdf patch service basket --type=merge -p '{\"spec\":{\"selector\":{\"tier\":\"web\"}}}'"}
+{"t": 1791415413.518337, "command": "kubectl -n retail-cfdf get pods,endpoints -L tier"}

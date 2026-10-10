@@ -1,0 +1,4 @@
+{"t": 1791408876.0805929, "command": "kubectl get deployment -n pricing-d4f5 | grep -i quote"}
+{"t": 1791408877.8644962, "command": "kubectl patch deployment quote -n pricing-d4f5 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"release\":\"r2\"}}}}}'"}
+{"t": 1791408964.610995, "command": "kubectl patch service quote -n pricing-d4f5 --type=merge -p '{\"spec\": {\"selector\": {\"release\": null}}}'"}
+{"t": 1791409014.4195719, "command": "kubectl patch deployment quote -n pricing-d4f5 -p '{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"release\":\"r2\"}}}}}'"}

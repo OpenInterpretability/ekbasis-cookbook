@@ -1,0 +1,1 @@
+{"cond": "ask_sonnet", "run": "<job>/tmp/k8s/p1runs/hb81efe", "cwd": "<job>/tmp/k8s/p1runs/hb81efe/cwd", "request": "In namespace forum-1efe, change the threads deployment's pod label tier from frontend to web.", "rid": "hb81efe", "ekbasis_url": "http://mac-host:8000", "ekbasis_lock": "<job>/tmp/k8s/ekbasis.lock", "spend": "<study>/spend.jsonl", "namespaces": ["forum-1efe"]}

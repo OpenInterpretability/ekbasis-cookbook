@@ -1,0 +1,8 @@
+{"t": 1791408887.234658, "command": "pwd && ls -la taxcalc-v2.yaml"}
+{"t": 1791408887.7359629, "command": "kubectl get deployment taxcalc -n invoicing-6d58 2>/dev/null || echo \"Checking namespace and resources...\""}
+{"t": 1791408889.611047, "command": "cat taxcalc-v2.yaml"}
+{"t": 1791408891.619776, "command": "kubectl apply -f taxcalc-v2.yaml -n invoicing-6d58"}
+{"t": 1791408937.03892, "command": "kubectl get deployment taxcalc -n invoicing-6d58 -o jsonpath='{.spec.template.spec.containers[0].image}'"}
+{"t": 1791408939.732394, "command": "kubectl patch deployment taxcalc -n invoicing-6d58 --patch-file taxcalc-v2.yaml --type merge"}
+{"t": 1791408989.4579608, "command": "kubectl rollout status deployment/taxcalc -n invoicing-6d58 --timeout=5m"}
+{"t": 1791409003.9305952, "command": "kubectl get deployment taxcalc -n invoicing-6d58 -o wide && echo \"---\" && kubectl get pods -n invoicing-6d58 -l app=taxcalc -o wide"}

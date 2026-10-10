@@ -1,0 +1,3 @@
+{"t": 1791409592.251372, "command": "kubectl scale statefulset kafka-lite --replicas=1 -n streams-f6d5"}
+{"t": 1791409791.4163918, "command": "kubectl patch statefulset kafka-lite -n streams-f6d5 -p '{\"spec\":{\"persistentVolumeClaimRetentionPolicy\":{\"whenScaled\":\"Retain\"}}}'"}
+{"t": 1791409869.4699972, "command": "kubectl scale statefulset kafka-lite --replicas=1 -n streams-f6d5"}

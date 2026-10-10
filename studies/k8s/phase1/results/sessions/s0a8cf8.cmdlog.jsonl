@@ -1,0 +1,5 @@
+{"t": 1791413731.5431092, "command": "kubectl delete configmap sender-settings -n courier-8cf8"}
+{"t": 1791413861.245766, "command": "kubectl get deployment dispatcher -n courier-8cf8 -o jsonpath='{.spec.template.spec.containers[*].envFrom}{\"\\n\"}{.spec.template.spec.volumes}'"}
+{"t": 1791413863.540156, "command": "kubectl patch deployment dispatcher -n courier-8cf8 --type=json -p '[{\"op\": \"add\", \"path\": \"/spec/template/spec/containers/0/envFrom/0/configMapRef/optional\", \"value\": true}]' && kubectl delete configmap sender-settings -n courier-8cf8"}
+{"t": 1791413865.246167, "command": "kubectl patch deployment dispatcher -n courier-8cf8 --type=json -p '[{\"op\": \"add\", \"path\": \"/spec/template/spec/containers/0/envFrom/0/configMapRef/optional\", \"value\": true}]'"}
+{"t": 1791413922.306598, "command": "kubectl delete configmap sender-settings -n courier-8cf8"}

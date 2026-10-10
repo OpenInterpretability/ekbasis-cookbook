@@ -1,0 +1,2 @@
+{"t": 1791387752.736623, "command": "kubectl scale deployment collector-api -n beacon-d975 --replicas=4"}
+{"t": 1791387754.999161, "command": "kubectl get deployment collector-api -n beacon-d975 -o wide"}
