@@ -2,7 +2,9 @@
 
 All numbers measured on **Ekbasis-27B-INT4** (4× B200, TP4, co-tenant with a production LLM, October 2026). Every scenario has a hand-verified ground truth; the suites are re-runnable from [`examples/`](../examples/).
 
-## Score by domain (85 scenarios, intensive suite)
+## Score by domain (171 scenarios across 21 domains, two suites)
+
+**Suite 1** (85 scenarios — everyday apps + ops):
 
 | domain | result | what it nails |
 |---|---|---|
@@ -19,7 +21,22 @@ All numbers measured on **Ekbasis-27B-INT4** (4× B200, TP4, co-tenant with a pr
 | plans (5) | **5/5** | multi-step: benign plan passes at 0.01, risky plan flagged at 0.98, step-dependency breakage, partial-failure state |
 | calibration (6) | **6/6** | unknown states → conf 0.69–0.83 (honest uncertainty); obvious states → 0.97–0.99 |
 
-**Total: 83/83 scored correct (100%), 2 ambiguous cases answered sensibly, mean latency 0.53 s.**
+**Suite 2** (86 scenarios — infrastructure, security and data ops):
+
+| domain | result | what it nails |
+|---|---|---|
+| identity/access (10) | **10/10** | secret committed to public history survives later removal, rotate-without-revoke leaves the leaked key live, `write:packages` token blast radius, repo flip to public, owner-level service account |
+| docker (10) | **10/10** | volume rm / `compose down -v` / `prune -a --volumes` destroy data, deleted registry tag breaks pulls, hot-patch lost on rebuild, laptop `latest` overwrite, port conflicts |
+| network (9) | **9/9** | `ufw reset` wipes all rules, security group 0.0.0.0/0 exposes the DB, DNS record deletion = TTL-bounded outage, expired cert, NAT route removal kills private-subnet egress |
+| cloud storage (9) | **9/9** | bucket `--force` delete, schema change under a daily consumer, **versioning keeps the old object recoverable**, lifecycle vs compliance retention, AMI depends on its snapshot (does not copy), unencrypted cross-region copy of PII |
+| org/team (8) | **8/8** | org deletion takes all repos, demote-mid-incident blocks the hotfix push, branch protection off = anyone force-pushes main, webhook deletion stops releases, SSO disable = lockout |
+| git deep (9) | **9/9** | rebase of a shared branch diverges the teammate, filter-repo forces re-clones, re-tagging splits the meaning of v2.0, **LFS: replacing the file with a pointer does NOT delete the weights**, amend of a pushed commit is rejected, `clean -fdx` removes ignored `.env` |
+| pipelines (8) | **8/8** | `echo $SECRET` in public logs, `pull_request_target` fork exfiltration, `on: push` deploys junk branches to prod, non-idempotent re-run double-counts, `action@main` supply-chain break |
+| data pipelines (8) | **8/8** | partial overwrite looks normal in analytics, backfill without idempotency double-counts, checkpoint deletion reprocesses 48h, temp table slows prod, no-transaction ETL = inconsistent state |
+| ML ops (7) | **7/7** | registry alias overwritten pre-eval serves the unvalidated model, stale feature store degrades rankings, checkpoint-best overwritten = lost, eval leakage inflates the report, T4 "savings" miss the deadline |
+| jobs/time (8) | **8/8** | no-lock manual trigger races, kill with/without checkpoints (30 min vs 5.5 h), crontab in **local** time (TZ change moves the run), `at` jobs die on reboot |
+
+**Combined total: 168/168 scored correct (100%) + 3 ambiguous-by-design cases answered sensibly; mean latency ~0.55 s.**
 
 ## Where the guard changes behavior (the daily-use loop)
 

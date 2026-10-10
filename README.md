@@ -20,7 +20,7 @@ An agent that can foresee consequences makes fewer irreversible mistakes. This r
 | Guard, safe commands (9, clean repo) | **0 false alarms** | guard battery |
 | Guard, real stash semantics (drop/clear = RISKY 99%, pop = ok) | **3/3** | guard battery |
 | Claude Code hook, committed-work rule (`branch -D` with unique commits) | **caught** ("ask" + explanation) | guard battery |
-| Intensive use-case suite, 11 domains, 85 scenarios | **83/83 scored = 100%** + 2 ambiguous cases answered sensibly | [intensive suite](examples/results.md#intensive) |
+| Intensive use-case suites: 21 domains, 171 scenarios | **168/168 scored = 100%** + 3 ambiguous answered sensibly | [results](examples/results.md) |
 | Calibration honesty: ambiguous states | confidence drops to **0.59–0.84** (never fake 0.99) | intensive suite, `calib` rows |
 | Numeric edge cases (units MB↔GB, rounding+tax, exact deadlines, running totals) | **8/8** | intensive suite, `numeric` |
 | API parity INT4 ↔ MLX-27B on the same question | **0.2pp difference** (97.8 vs 98.0) | [API tests](docs/API.md) |
