@@ -10,12 +10,12 @@ Every number in this repo was measured, not estimated. The suites are in [`examp
 
 ## The agent study: does the guard actually protect agents?
 
-47 in-lab tasks across 7 apps (calendar, chat, cloud, drive, files, mail, shop), each run twice by the same agent population: `blind` (no model) vs `see` (consults Ekbasis before acting). Agent: GLM-5.3-Flash through its production API; guard: Ekbasis-27B-INT4 on the same machine. Seed fixed; 93/94 runs collected.
+47 in-lab tasks across 7 apps (calendar, chat, cloud, drive, files, mail, shop), each run twice by the same agent population: `blind` (no model) vs `see` (consults Ekbasis before acting). Agent: GLM-5.3-Flash through its production API; guard: Ekbasis-27B-INT4 on the same machine. Seed fixed; all 94 runs collected.
 
 | | blind | see | effect |
 |---|---|---|---|
-| harmful actions taken | 22/46 (**48%**) | 3/47 (**6%**) | **−41.4 pp, 95% CI [26.2, 56.7]** |
-| task success | 24/46 (52%) | 43/47 (91%) | +39 pp |
+| harmful actions taken | 23/47 (**49%**) | 3/47 (**6%**) | **−42.6 pp, 95% CI [27.7, 57.4]** |
+| task success | 24/47 (51%) | 43/47 (91%) | +40 pp |
 | foresee consultations | — | 4.0 per run (188 total) | ~5 s of model time per run |
 
 The guard did not just block damage — agents with it **completed their tasks 1.75× more often**. Honest failures: 3 harms in `see` (1 run never consulted, 2 consulted and missed).

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ekbasis — pricing</title>
+<meta name="description" content="The consequence model for AI agents. $0.04 per 1M input tokens. No output charges. Self-host free forever.">
+<style>
+:root{--ink:#1a1a2e;--muted:#5a5a72;--accent:#0f6fff;--bg:#ffffff;--soft:#f4f6fa;--line:#e3e7ef;--good:#0a7d43;--warn:#b3541e}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);line-height:1.6;background:var(--bg)}
+.wrap{max-width:880px;margin:0 auto;padding:48px 20px}
+h1{font-size:2rem;line-height:1.2;margin-bottom:8px}
+h2{font-size:1.25rem;margin:36px 0 12px}
+p.lead{font-size:1.1rem;color:var(--muted);margin-bottom:28px}
+.big{font-size:2.6rem;font-weight:700;color:var(--accent);letter-spacing:-.02em}
+.unit{color:var(--muted);font-weight:400;font-size:1rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:24px 0}
+.card{border:1px solid var(--line);border-radius:12px;padding:20px;background:var(--soft)}
+.card h3{font-size:1rem;margin-bottom:6px}
+.card .price{font-size:1.5rem;font-weight:700;margin:4px 0}
+.card p{font-size:.92rem;color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:.95rem}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600}
+.num{font-variant-numeric:tabular-nums;font-weight:600}
+.tag{display:inline-block;font-size:.78rem;padding:2px 10px;border-radius:99px;background:#e8f1ff;color:var(--accent);margin-left:8px;vertical-align:middle}
+.note{font-size:.88rem;color:var(--muted);margin-top:8px}
+.check{color:var(--good);font-weight:700}
+.cta{display:inline-block;background:var(--accent);color:#fff;padding:12px 26px;border-radius:10px;text-decoration:none;font-weight:600;margin-top:20px}
+.cta:hover{filter:brightness(.94)}
+footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+.lang{margin:0 0 24px}
+.lang a{color:var(--accent);text-decoration:none;font-weight:600;margin-right:16px}
+hr{border:none;border-top:1px solid var(--line);margin:48px 0}
+code{background:var(--soft);padding:2px 6px;border-radius:6px;font-size:.9em}
+pre{background:var(--soft);padding:14px;border-radius:10px;overflow-x:auto;font-size:.88rem;line-height:1.5}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="lang"><a href="#en">English</a><a href="#pt">Português</a></div>
+
+<h1 id="en">Ekbasis pricing <span class="tag">beta</span></h1>
+<p class="lead">The open world model for agents: it <em>foresees</em> what an action will do — what breaks, what gets lost, what charges you — in one forward pass, calibrated.</p>
+
+<div class="big">$0.04 <span class="unit">per 1M input tokens · no output charges</span></div>
+<p class="note">A guard check is ~1,500 input tokens and generates <strong>0 output tokens</strong> (the answer is read from the logits, not generated). One check ≈ <strong class="num">$0.00006</strong> — <strong class="num">$0.06 per 1,000 checks</strong>. The guard costs less than the inference it protects.</p>
+
+<h2>Ways to run it</h2>
+<div class="grid">
+  <div class="card"><h3>Hosted API</h3><div class="price">$0.04<span class="unit">/1M input</span></div><p>No output charges. No GPU to run. Bearer-token auth, one API, your dashboard. Billed monthly, no minimum.</p></div>
+  <div class="card"><h3>Self-host <span class="tag">free forever</span></h3><div class="price">$0</div><p>Open weights (27B bf16 / FP8 / INT4 / MLX-4bit) on Hugging Face. Mac, laptop or your own GPUs. Same API.</p></div>
+  <div class="card"><h3>Enterprise on-prem</h3><div class="price">from $5k</div><p>We install the guard next to your production LLM (measured on shared GPUs), with a runbook, monitoring and SLA. Retainer from $1k/mo.</p></div>
+  <div class="card"><h3>Custom worlds</h3><div class="price">from $10k</div><p>Your stack as the model's world: your infra, your billing, your compliance rules. We generate the data, you keep the model.</p></div>
+</div>
+
+<h2>What the numbers say</h2>
+<table>
+  <tr><th>measurement</th><th>result</th><th>where</th></tr>
+  <tr><td>Agent harm with the guard consulted before actions</td><td><strong>48% → 6%</strong> (−41.4 pp, 95% CI [26.2, 56.7])</td><td><a href="https://github.com/OpenInterpretability/ekbasis-cookbook">agent study, 93 runs</a></td></tr>
+  <tr><td>Use-case suites, 21 domains, 171 scenarios</td><td><strong>168/168 correct</strong></td><td>cookbook, re-runnable</td></tr>
+  <tr><td>Classic destructive git commands flagged</td><td><strong>8/8 at 98–99%</strong>, 0 false alarms on safe commands</td><td>guard battery</td></tr>
+  <tr><td>Latency per check (GPU, measured end-to-end)</td><td><strong>0.4–2.5 s</strong></td><td>same hardware as your LLM</td></tr>
+  <tr><td>Confidence on ambiguous states</td><td>0.59–0.84 (honest, never fake 0.99)</td><td>calibration rows</td></tr>
+</table>
+
+<h2>Start in 60 seconds</h2>
+<pre>pip install "git+https://github.com/OpenInterpretability/ekbasis"
+export EKBASIS_URL=https://your-endpoint.openinterp.org
+export EKBASIS_API_KEY=ekb_...        # request a key: caio@openinterp.org
+
+cd your-repo && ekbasis git-check -- "git reset --hard"
+# Ekbasis: RISKY (lose uncommitted work: 99%)  → exit 2</pre>
+
+<p>Questions, key requests and enterprise: <strong>caio@openinterp.org</strong> · Papers: <a href="https://doi.org/10.5281/zenodo.23146970">Look When Unsure, Check When Sure</a> · <a href="https://github.com/OpenInterpretability/ekbasis">code</a> · <a href="https://github.com/OpenInterpretability/ekbasis-cookbook">cookbook</a></p>
+
+<hr>
+
+<h1 id="pt">Preços do Ekbasis <span class="tag">beta</span></h1>
+<p class="lead">O modelo de mundo aberto para agentes: ele <em>prevê</em> o que uma ação vai fazer — o que quebra, o que se perde, o que cobra — em um forward pass, calibrado.</p>
+
+<div class="big">$0,04 <span class="unit">por 1M tokens de entrada · sem cobrança de saída</span></div>
+<p class="note">Uma checagem são ~1.500 tokens de entrada e gera <strong>0 tokens de saída</strong> (a resposta é lida dos logits, não gerada). Uma checagem ≈ <strong class="num">$0,00006</strong> — <strong class="num">$0,06 por 1.000 checagens</strong>. O guard custa menos que a inferência que ele protege.</p>
+
+<h2>Como rodar</h2>
+<div class="grid">
+  <div class="card"><h3>API hospedada</h3><div class="price">$0,04<span class="unit">/1M input</span></div><p>Sem cobrança de saída, sem GPU pra rodar. Auth por token, uma API, seu dashboard. Faturamento mensal, sem mínimo.</p></div>
+  <div class="card"><h3>Self-host <span class="tag">grátis pra sempre</span></h3><div class="price">$0</div><p>Pesos abertos (27B bf16 / FP8 / INT4 / MLX-4bit) no Hugging Face. Mac, notebook ou suas GPUs. A mesma API.</p></div>
+  <div class="card"><h3>Enterprise on-prem</h3><div class="price">a partir de $5k</div><p>Instalamos o guard ao lado do seu LLM de produção (medido em GPUs compartilhadas), com runbook, monitoramento e SLA. Retainer a partir de $1k/mês.</p></div>
+  <div class="card"><h3>Mundos customizados</h3><div class="price">a partir de $10k</div><p>Sua stack como mundo do modelo: sua infra, seu billing, suas regras de compliance. Geramos os dados, você fica com o modelo.</p></div>
+</div>
+
+<h2>O que os números dizem</h2>
+<table>
+  <tr><th>medição</th><th>resultado</th><th>onde</th></tr>
+  <tr><td>Dano de agentes com o guard consultado antes das ações</td><td><strong>48% → 6%</strong> (−41,4 pp, IC 95% [26,2; 56,7])</td><td><a href="https://github.com/OpenInterpretability/ekbasis-cookbook">estudo de agentes, 93 runs</a></td></tr>
+  <tr><td>Suítes de use case, 21 domínios, 171 cenários</td><td><strong>168/168 corretas</strong></td><td>cookbook, re-runnable</td></tr>
+  <tr><td>Comandos git destrutivos clássicos flagrados</td><td><strong>8/8 a 98–99%</strong>, 0 alarmes falsos em comandos seguros</td><td>bateria do guard</td></tr>
+  <tr><td>Latência por checagem (GPU, medida ponta a ponta)</td><td><strong>0,4–2,5 s</strong></td><td>o mesmo hardware do seu LLM</td></tr>
+  <tr><td>Confiança em estados ambíguos</td><td>0,59–0,84 (honesta, nunca 0,99 falso)</td><td>linhas de calibração</td></tr>
+</table>
+
+<h2>Comece em 60 segundos</h2>
+<pre>pip install "git+https://github.com/OpenInterpretability/ekbasis"
+export EKBASIS_URL=https://seu-endpoint.openinterp.org
+export EKBASIS_API_KEY=ekb_...        # pedir chave: caio@openinterp.org
+
+cd seu-repo && ekbasis git-check -- "git reset --hard"
+# Ekbasis: RISKY (lose uncommitted work: 99%)  → exit 2</pre>
+
+<p>Dúvidas, pedidos de chave e enterprise: <strong>caio@openinterp.org</strong> · Papers: <a href="https://doi.org/10.5281/zenodo.23146970">Look When Unsure, Check When Sure</a> · <a href="https://github.com/OpenInterpretability/ekbasis">código</a> · <a href="https://github.com/OpenInterpretability/ekbasis-cookbook">cookbook</a></p>
+
+<footer>Ekbasis é um projeto da OpenInterp. Pesos abertos sob Apache-2.0. Este site cobre a API hospedada e serviços; o self-host é gratuito sob a mesma licença. © 2026</footer>
+</div>
+</body>
+</html>
