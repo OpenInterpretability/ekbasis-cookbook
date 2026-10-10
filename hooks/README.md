@@ -5,7 +5,7 @@ The `ekbasis-claude-hook` binary (installed with the [client](https://github.com
 ## Install (per machine)
 
 ```bash
-pip install "git+https://github.com/OpenInterpretability/ekbasis"
+pip install ekbasis
 export EKBASIS_URL=http://your-server:8010    # put in ~/.zshrc for persistence
 ```
 

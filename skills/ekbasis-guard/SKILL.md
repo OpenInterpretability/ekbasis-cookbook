@@ -29,7 +29,7 @@ everything trains the human to click through warnings.
 
 ## How to consult
 
-Setup: `pip install "git+https://github.com/OpenInterpretability/ekbasis"`, then
+Setup: `pip install ekbasis`, then
 `EKBASIS_URL=https://openinterp.org/api/v1` and `EKBASIS_API_KEY=ekb_…` (key at https://openinterp.org/console), or
 `EKBASIS_URL` pointing at your own server (open weights).
 

@@ -62,7 +62,7 @@ All numbers measured on **Ekbasis-27B-INT4** (4× B200, TP4, co-tenant with a pr
 ## Reproduce
 
 ```bash
-pip install "git+https://github.com/OpenInterpretability/ekbasis"
+pip install ekbasis
 export EKBASIS_URL=http://your-server:8010
 python examples/run_suite.py examples/scenarios_intensive.jsonl
 ```

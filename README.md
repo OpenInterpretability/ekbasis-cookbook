@@ -72,7 +72,7 @@ An agent that can foresee consequences makes fewer irreversible mistakes. This r
 ## Quick start
 
 ```bash
-pip install "git+https://github.com/OpenInterpretability/ekbasis"
+pip install ekbasis
 EKBASIS_URL=http://your-server:8010 ekbasis health
 cd some-repo && ekbasis git-check -- "git reset --hard"   # RISKY if uncommitted work
 ```
