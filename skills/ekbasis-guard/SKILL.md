@@ -47,7 +47,6 @@ Exit codes: `0` no risk found · `2` RISKY · `3` CANNOT FORESEE (**treat it lik
 
 ```json
 {"state": "Checking account available balance: $180.20. About to: transfer $250.00 to savings.",
- "read_once": true,
  "questions": {
    "outcome": {"type": "choice", "instructions": "What happens with the transfer?",
                "options": ["transfer succeeds", "transfer fails: insufficient funds"]},
@@ -56,8 +55,9 @@ Exit codes: `0` no risk found · `2` RISKY · `3` CANNOT FORESEE (**treat it lik
 ```
 
 Types: `choice` (list the outcomes, including the bad one), `noul` (yes/no with written criteria; `probability` is
-P(true)), `score` (a count or level with each value described). Put several questions about one state in one request
-with `"read_once": true`: the state is paid for once (3 questions: 261 input tokens instead of 420).
+P(true)), `score` (a count or level with each value described). Put several questions about one state in one request.
+`"read_once": true` pays for the state once (3 questions: 261 input tokens instead of 420) but costs 0.9–3.1 points of
+accuracy: use it to screen cheaply, and send the question that decides an irreversible action without it.
 
 ## The state you send
 
