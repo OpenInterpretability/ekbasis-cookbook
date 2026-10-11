@@ -1,0 +1,29 @@
+{
+ "id": 41,
+ "p": {
+  "lost": 0.9740425944328308,
+  "down": 0.9688562154769897,
+  "fails": 0.020332353189587593
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "lost",
+   "down"
+  ],
+  "reason": "may permanently lose stored data (97%); may interrupt a resource clients use by name (97%)"
+ },
+ "rule": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_sqs_queue.q: queue vaws-s41-jobs; 30 messages waiting\n\nActions, in order:\n1. Replace aws_sqs_queue.q (destroy the old one, then create the new one, forced by the change to name): name: \"vaws-s41-jobs\" -> \"vaws-s41-jobs2\"\n\nHow these resources behave: Destroying an SQS queue deletes the messages waiting in it; a queue created by a replacement or under a new name starts empty.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_7d310db91dff2deb5640b311",
+ "usage": {
+  "input_tokens": 1215,
+  "output_tokens": 0
+ },
+ "s": 0.75
+}

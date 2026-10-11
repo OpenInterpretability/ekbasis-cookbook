@@ -1,0 +1,29 @@
+{
+ "id": 55,
+ "p": {
+  "lost": 0.004331502132117748,
+  "down": 0.9284088015556335,
+  "exposed": 0.0012448432389646769,
+  "fails": 0.0023231625091284513
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "down"
+  ],
+  "reason": "may interrupt a running service for 2 s or more (93%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "A change is about to be made to a live Kubernetes cluster (one node; volumes come from the local-path provisioner, which keeps each PersistentVolume as a directory on the node). Applications in other namespaces use the Services below by name, port and credentials. The commands run in order; if one fails, the rest do not run and what was already done stays done. kubectl apply, kubectl delete --wait=false and helm upgrade return as soon as the API server accepts the change; the controllers then carry it out.\n\nCurrent state:\nNamespace s55\nStatefulSet redis: replicas 1 (1 ready); updateStrategy RollingUpdate; podManagementPolicy OrderedReady; persistentVolumeClaimRetentionPolicy whenDeleted Retain, whenScaled Retain; volumeClaimTemplate data: 1Gi, storageClass standard; pod template: pod labels {\"app\": \"redis\"}; container redis: image redis:7-alpine; args [\"--requirepass\", \"$(REDIS_PASSWORD)\", \"--save\", \"\", \"--appendonly\", \"yes\"]; declares ports 6379; readiness probe: command sh -c redis-cli -a \"$REDIS_PASSWORD\" --no-auth-warning ping | grep -q PONG, every 1 s; env REDIS_PASSWORD from secret rd-secret; mounts its volumeClaimTemplate data at /data; terminationGracePeriodSeconds 20\npod redis-0: Running, ready; /data on PVC data-redis-0; redis holds 1 key(s); save \"\"; appendonly yes; dir /data is on PVC data-redis-0; password required\nService redis: type ClusterIP, ports 6379 -> targetPort 6379, selector {\"app\": \"redis\"}; ready endpoints now: redis-0\nPVC data-redis-0: Bound, storageClass standard, PV pvc-cb961a69-c00c-4264-93d3-c033fa7cac7d with reclaimPolicy Delete, 20 KB used; mounted by redis-0\nSecret rd-secret: keys password (values not shown)\nRight now the namespace's default ServiceAccount can: none of get/list secrets, create pods, exec into pods\nRight now the default ServiceAccount of another namespace can: none of get/list secrets, create pods, exec into pods\nRight now any authenticated user can: none of get/list secrets, create pods, exec into pods\nAfter the change, Service redis selector {\"app\": \"redis\"} matches the pod template of: StatefulSet redis; targetPort 6379 (the matched containers declare ports [6379])\n\nActions, in order:\n1. kubectl apply -n s55 -f change.yaml: Update StatefulSet redis: spec.template.spec.containers[redis].env[TZ]: (not set) -> {\"name\": \"TZ\", \"value\": \"UTC\"} \u2014 the pod template changes, so the pods are replaced; after the change: replicas 1 (1 ready); updateStrategy RollingUpdate; podManagementPolicy OrderedReady; persistentVolumeClaimRetentionPolicy whenDeleted Retain, whenScaled Retain; volumeClaimTemplate data: 1Gi, storageClass standard\n\nHow Kubernetes, helm and these images behave: A StatefulSet with updateStrategy RollingUpdate replaces its pods one at a time from the highest ordinal, deleting each old pod before it creates its replacement (there is no surge); with partition N, pods with an ordinal below N keep the old version; with OnDelete no pod is replaced until someone deletes it. A replacement pod mounts the same PVCs from volumeClaimTemplates. A pod's emptyDir volumes and its container filesystem are deleted together with the pod; only data on a PersistentVolume outlives it. When a PVC is deleted, its PersistentVolume and the data on it are deleted if the reclaimPolicy is Delete; with Retain the volume and its directory stay on the node (Released). Deleting a StatefulSet or scaling it down keeps the PVCs created from its volumeClaimTemplates, unless its persistentVolumeClaimRetentionPolicy says Delete for that case (whenDeleted or whenScaled). A StatefulSet pod that is deleted is recreated with the same name and the same PVC name; if that PVC is gone, a new empty one is created. redis keeps its keys in memory. When the pod is deleted, redis gets SIGTERM and writes an RDB snapshot to its dir only if save points are configured (save not empty); with appendonly yes it has also been logging every write to its dir. A new redis process loads its keys from that dir. A Service sends connections only to ready pods whose labels match every key of its selector, on its targetPort (a number, or the name of a container port of those pods); with no such pod, or nothing listening there, connections fail.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_fea0b4877097eb521f39e866",
+ "usage": {
+  "input_tokens": 4788,
+  "output_tokens": 0
+ },
+ "s": 2.74
+}

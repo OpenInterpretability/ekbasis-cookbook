@@ -1,0 +1,37 @@
+dev clients: ['mig:formbricks', 'mig:hoppscotch', 'mig:langfuse', 'mig:vaultwarden', 'ts:agentdojo/banking', 'ts:agentharm']
+dev   none    k=5   A       n=10  dacc +0.0097 [+0.0000, +0.0222] dbrier +0.0000 [+0.0000, +0.0000]  recall 0.536 (G 0.463) FAR 0.125 (G 0.102)
+dev   none    k=5   AR      n=10  dacc +0.0054 [+0.0000, +0.0202] dbrier +0.0000 [+0.0000, +0.0000]  recall 0.556 (G 0.463) FAR 0.136 (G 0.102)
+dev   none    k=5   B0_2.0  n=10  dacc +0.0146 [+0.0035, +0.0268] dbrier -0.0080 [-0.0152, -0.0020]  recall 0.537 (G 0.463) FAR 0.127 (G 0.102)
+dev   none    k=5   B_2.0   n=10  dacc +0.0017 [-0.0002, +0.0067] dbrier +0.0025 [-0.0027, +0.0094]  recall 0.499 (G 0.463) FAR 0.119 (G 0.102)
+dev   none    k=5   C10     n=10  dacc +0.0048 [+0.0000, +0.0120] dbrier +0.0000 [+0.0000, +0.0000]  recall 0.477 (G 0.463) FAR 0.100 (G 0.102)
+dev   none    k=10  A       n=10  dacc +0.0176 [-0.0019, +0.0475] dbrier +0.0000 [+0.0000, +0.0000]  recall 0.640 (G 0.457) FAR 0.172 (G 0.107)
+dev   none    k=10  AR      n=10  dacc +0.0191 [-0.0019, +0.0528] dbrier +0.0000 [+0.0000, +0.0000]  recall 0.665 (G 0.457) FAR 0.181 (G 0.107)
+dev   none    k=10  B0_2.0  n=10  dacc +0.0222 [+0.0034, +0.0538] dbrier -0.0184 [-0.0463, -0.0026]  recall 0.686 (G 0.457) FAR 0.192 (G 0.107)
+dev   none    k=10  B_2.0   n=10  dacc +0.0191 [+0.0052, +0.0383] dbrier -0.0105 [-0.0232, -0.0010]  recall 0.612 (G 0.457) FAR 0.180 (G 0.107)
+dev   none    k=10  C10     n=10  dacc +0.0111 [-0.0001, +0.0262] dbrier +0.0000 [+0.0000, +0.0000]  recall 0.529 (G 0.457) FAR 0.115 (G 0.107)
+dev   none    k=20  A       n=6   dacc +0.0428 [-0.0010, +0.1243] dbrier +0.0000 [+0.0000, +0.0000]  recall 0.811 (G 0.445) FAR 0.316 (G 0.115)
+dev   none    k=20  AR      n=6   dacc +0.0428 [-0.0010, +0.1243] dbrier +0.0000 [+0.0000, +0.0000]  recall 0.811 (G 0.445) FAR 0.316 (G 0.115)
+dev   none    k=20  B0_2.0  n=6   dacc +0.0359 [+0.0063, +0.0970] dbrier -0.0325 [-0.0818, -0.0077]  recall 0.740 (G 0.445) FAR 0.279 (G 0.115)
+dev   none    k=20  B_2.0   n=6   dacc +0.0266 [+0.0078, +0.0372] dbrier -0.0080 [-0.0194, +0.0147]  recall 0.514 (G 0.445) FAR 0.136 (G 0.115)
+dev   none    k=20  C10     n=6   dacc +0.0322 [+0.0000, +0.0950] dbrier +0.0000 [+0.0000, +0.0000]  recall 0.673 (G 0.445) FAR 0.185 (G 0.115)
+dev   none    k=50  A       n=4   dacc +0.0925 [-0.0055, +0.1756] dbrier +0.0000 [+0.0000, +0.0000]  recall 0.800 (G 0.408) FAR 0.461 (G 0.134)
+dev   none    k=50  AR      n=4   dacc +0.0925 [-0.0055, +0.1756] dbrier +0.0000 [+0.0000, +0.0000]  recall 0.800 (G 0.408) FAR 0.461 (G 0.134)
+dev   none    k=50  B0_2.0  n=4   dacc +0.0603 [-0.0027, +0.1440] dbrier -0.0415 [-0.1168, +0.0004]  recall 0.715 (G 0.408) FAR 0.374 (G 0.134)
+dev   none    k=50  B_2.0   n=4   dacc +0.0609 [-0.0027, +0.1000] dbrier -0.0120 [-0.0344, +0.0175]  recall 0.484 (G 0.408) FAR 0.155 (G 0.134)
+dev   none    k=50  C10     n=4   dacc +0.0927 [+0.0014, +0.1695] dbrier +0.0000 [+0.0000, +0.0000]  recall 0.738 (G 0.408) FAR 0.343 (G 0.134)
+{
+ "k0": 10,
+ "s_B0": 2.0,
+ "s_B": 2.0,
+ "families": {
+  "A": "A",
+  "AR": "AR",
+  "C": "C10",
+  "B0": "B0_2.0",
+  "B": "B_2.0"
+ },
+ "primary_decision": "A",
+ "s_B0_brier": 2.0,
+ "s_B_brier": 1.0,
+ "primary_calibration": "B0_2.0"
+}

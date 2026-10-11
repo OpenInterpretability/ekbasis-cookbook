@@ -1,0 +1,28 @@
+{
+ "id": 14,
+ "p": {
+  "lost": 0.027585284784436226,
+  "down": 0.8991213440895081,
+  "fails": 0.01912403665482998
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "down"
+  ],
+  "reason": "may interrupt a resource clients use by name (90%)"
+ },
+ "rule": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_s3_bucket.b: bucket vaws-s14-data; holds 21 objects; versioning never enabled; force_destroy = false in the state\naws_s3_object.o: object config/app.json in bucket vaws-s14-data, written by OpenTofu from the configuration; same content as OpenTofu wrote\n\nActions, in order:\n1. Replace aws_s3_object.o (destroy the old one, then create the new one, forced by the change to key): key: \"config/app.json\" -> \"config/app-v2.json\"\n\nHow these resources behave: An aws_s3_object whose configured content changes is written again over the object at that key; in a bucket with versioning enabled the content it replaces stays as a noncurrent version, otherwise it is gone.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_e920f1495ee7f0521ec2d84d",
+ "usage": {
+  "input_tokens": 1389,
+  "output_tokens": 0
+ },
+ "s": 1.1
+}

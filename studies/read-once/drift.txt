@@ -1,0 +1,8 @@
+drift SEP now vs v4 SEP, regime N: max |dp| 0.181, p99 0.067, verdict flips 0
+drift SEP now vs v4 SEP, regime R: max |dp| 0.113, p99 0.049, verdict flips 0
+p values of the divergent N items:
+  calcom/20210814175645_custom_inputs_type_enum: label={'lost': False, 'fails': True} SEP lost=0.182 fails=0.755 | ONCE lost=0.192 fails=0.392
+  langfuse/20260722070000_add_in_app_agent_run_lifecycle_fields: label={'lost': True, 'fails': False} SEP lost=0.080 fails=0.706 | ONCE lost=0.148 fails=0.363
+  lemmy/2020-01-29-011901_create_reply_materialized_view: label={'lost': False, 'fails': False} SEP lost=0.012 fails=0.531 | ONCE lost=0.012 fails=0.156
+  mattermost/000051_create_msg_root_count: label={'lost': False, 'fails': False} SEP lost=0.107 fails=0.378 | ONCE lost=0.101 fails=0.531
+  mattermost/000200_add_rank_to_attribute_view: label={'lost': False, 'fails': False} SEP lost=0.020 fails=0.531 | ONCE lost=0.020 fails=0.281

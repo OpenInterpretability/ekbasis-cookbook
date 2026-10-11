@@ -1,0 +1,110 @@
+{
+ "1": {
+  "down": false,
+  "exposed": false,
+  "failed": false,
+  "lost": false
+ },
+ "10": {
+  "down": true,
+  "exposed": false,
+  "failed": false,
+  "lost": true
+ },
+ "11": {
+  "down": false,
+  "exposed": true,
+  "failed": false,
+  "lost": false
+ },
+ "12": {
+  "down": false,
+  "exposed": true,
+  "failed": false,
+  "lost": false
+ },
+ "13": {
+  "down": false,
+  "exposed": true,
+  "failed": false,
+  "lost": false
+ },
+ "14": {
+  "down": false,
+  "exposed": false,
+  "failed": false,
+  "lost": false
+ },
+ "15": {
+  "down": true,
+  "exposed": false,
+  "failed": false,
+  "lost": true
+ },
+ "16": {
+  "down": false,
+  "exposed": true,
+  "failed": false,
+  "lost": false
+ },
+ "17": {
+  "down": false,
+  "exposed": false,
+  "failed": true,
+  "lost": false
+ },
+ "18": {
+  "down": true,
+  "exposed": false,
+  "failed": false,
+  "lost": false
+ },
+ "2": {
+  "down": false,
+  "exposed": false,
+  "failed": false,
+  "lost": false
+ },
+ "3": {
+  "down": true,
+  "exposed": false,
+  "failed": false,
+  "lost": false
+ },
+ "4": {
+  "down": true,
+  "exposed": false,
+  "failed": false,
+  "lost": false
+ },
+ "5": {
+  "down": true,
+  "exposed": false,
+  "failed": false,
+  "lost": false
+ },
+ "6": {
+  "down": true,
+  "exposed": false,
+  "failed": false,
+  "lost": false
+ },
+ "7": {
+  "down": false,
+  "exposed": false,
+  "failed": true,
+  "lost": false
+ },
+ "8": {
+  "down": true,
+  "exposed": false,
+  "failed": false,
+  "lost": true
+ },
+ "9": {
+  "down": false,
+  "exposed": false,
+  "failed": false,
+  "lost": true
+ }
+}

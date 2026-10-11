@@ -1,0 +1,26 @@
+{
+ "id": 61,
+ "p": {
+  "lost": 0.02595735527575016,
+  "down": 0.011687259189784527,
+  "fails": 0.031143832951784134
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss or interruption foreseen (lose 3%, interrupt 1%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_secretsmanager_secret.s: secret vaws-s61-db-password; recovery_window_in_days = 30 in the state; has a current value, written by an application (not OpenTofu); 1 version in all\n\nActions, in order:\n1. Update aws_secretsmanager_secret.s in place: recovery_window_in_days: 30 -> 0\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_73b11416aca4d90ce7e07747",
+ "usage": {
+  "input_tokens": 1122,
+  "output_tokens": 0
+ },
+ "s": 0.63
+}

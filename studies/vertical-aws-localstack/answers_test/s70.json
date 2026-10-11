@@ -1,0 +1,29 @@
+{
+ "id": 70,
+ "p": {
+  "lost": 0.9525741338729858,
+  "down": 0.9603611826896667,
+  "fails": 0.9433475732803345
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "lost",
+   "down"
+  ],
+  "reason": "may permanently lose stored data (95%); may interrupt a resource clients use by name (96%); the apply may fail part-way (94%)"
+ },
+ "rule": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_ssm_parameter.p: parameter /vaws/s70/app/endpoint, type String, tier Advanced; at version 2 (2 values in its history); its current value is the one in the state\n\nActions, in order:\n1. Replace aws_ssm_parameter.p (destroy the old one, then create the new one, forced by the change to tier): tier: \"Advanced\" -> \"Standard\"; value: \"tok70x5bdc6ff7\" -> \"https://api.internal/v1\" [the name /vaws/s70/app/endpoint is already taken by an existing resource]\n\nHow these resources behave: Updating an SSM parameter's value keeps its earlier values in its history; destroying a parameter, also when it is replaced under a new name, deletes it together with its history.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_7b7852cb1095c4d9cc99200e",
+ "usage": {
+  "input_tokens": 1404,
+  "output_tokens": 0
+ },
+ "s": 1.81
+}

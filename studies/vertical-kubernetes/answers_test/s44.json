@@ -1,0 +1,29 @@
+{
+ "id": 44,
+ "p": {
+  "lost": 0.004070138093084097,
+  "down": 0.9688562154769897,
+  "exposed": 0.001098731067031622,
+  "fails": 0.0019267345778644085
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "down"
+  ],
+  "reason": "may interrupt a running service for 2 s or more (97%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "A change is about to be made to a live Kubernetes cluster (one node; volumes come from the local-path provisioner, which keeps each PersistentVolume as a directory on the node). Applications in other namespaces use the Services below by name, port and credentials. The commands run in order; if one fails, the rest do not run and what was already done stays done. kubectl apply, kubectl delete --wait=false and helm upgrade return as soon as the API server accepts the change; the controllers then carry it out.\n\nCurrent state:\nNamespace s44\nStatefulSet pg: replicas 1 (1 ready); updateStrategy RollingUpdate; podManagementPolicy OrderedReady; persistentVolumeClaimRetentionPolicy whenDeleted Retain, whenScaled Retain; volumeClaimTemplate data: 1Gi, storageClass standard; pod template: pod labels {\"app\": \"pg\"}; container postgres: image postgres:17-alpine; declares ports 5432; readiness probe: command pg_isready -U app -d appdb, every 1 s; env POSTGRES_USER=app, POSTGRES_DB=appdb, POSTGRES_PASSWORD from secret pg-secret; mounts its volumeClaimTemplate data at /var/lib/postgresql/data; terminationGracePeriodSeconds 20\npod pg-0: Running, ready; /var/lib/postgresql/data on PVC data-pg-0; postgres data directory /var/lib/postgresql/data is on PVC data-pg-0; tables: public.app_t (1,000 rows)\nService pg: type ClusterIP, ports 5432 -> targetPort 5432, selector {\"app\": \"pg\"}; ready endpoints now: pg-0\nPVC data-pg-0: Bound, storageClass standard, PV pvc-c2996452-12e8-4e19-9d72-18c16b00631d with reclaimPolicy Delete, 46 MB used; mounted by pg-0\nSecret pg-secret: keys password (values not shown)\nRight now the namespace's default ServiceAccount can: none of get/list secrets, create pods, exec into pods\nRight now the default ServiceAccount of another namespace can: none of get/list secrets, create pods, exec into pods\nRight now any authenticated user can: none of get/list secrets, create pods, exec into pods\nAfter the change, Service pg selector {\"app\": \"pg\"} matches the pod template of: no pod template; targetPort 5432 (the matched containers declare ports none)\n\nActions, in order:\n1. kubectl delete -n s44 statefulset pg --wait=false: Delete StatefulSet pg\n\nHow Kubernetes, helm and these images behave: A StatefulSet with updateStrategy RollingUpdate replaces its pods one at a time from the highest ordinal, deleting each old pod before it creates its replacement (there is no surge); with partition N, pods with an ordinal below N keep the old version; with OnDelete no pod is replaced until someone deletes it. A replacement pod mounts the same PVCs from volumeClaimTemplates. A pod's emptyDir volumes and its container filesystem are deleted together with the pod; only data on a PersistentVolume outlives it. When a PVC is deleted, its PersistentVolume and the data on it are deleted if the reclaimPolicy is Delete; with Retain the volume and its directory stay on the node (Released). Deleting a StatefulSet or scaling it down keeps the PVCs created from its volumeClaimTemplates, unless its persistentVolumeClaimRetentionPolicy says Delete for that case (whenDeleted or whenScaled). A StatefulSet pod that is deleted is recreated with the same name and the same PVC name; if that PVC is gone, a new empty one is created. The postgres image applies POSTGRES_PASSWORD and POSTGRES_HOST_AUTH_METHOD only when it initializes an empty data directory; a data directory that already holds a database keeps its users, passwords and pg_hba.conf. An empty data directory is initialized as a new, empty database. A Service sends connections only to ready pods whose labels match every key of its selector, on its targetPort (a number, or the name of a container port of those pods); with no such pod, or nothing listening there, connections fail.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_bfb29025cd2c8ff36fff6cef",
+ "usage": {
+  "input_tokens": 4324,
+  "output_tokens": 0
+ },
+ "s": 1.6
+}

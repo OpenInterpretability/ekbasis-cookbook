@@ -1,0 +1,3 @@
+{
+ "28": "LocalStack never reports the new GSI, so the provider times out; AWS adds a GSI to an on-demand table in place (emulation gap)"
+}

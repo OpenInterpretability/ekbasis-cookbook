@@ -1,0 +1,26 @@
+{
+ "id": 80,
+ "p": {
+  "lost": 0.0031726828310638666,
+  "down": 0.016914913430809975,
+  "fails": 0.03514484688639641
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss or interruption foreseen (lose 0%, interrupt 2%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": true,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_iam_role.r: IAM role vaws-s80-fn-role, trust policy {\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}\n\nActions, in order:\n1. Update aws_iam_role.r in place: assume_role_policy: {\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"}}],\"Version\":\"2012-10-17\"} -> {\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"AWS\":\"*\"}}],\"Version\":\"2012-10-17\"}\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_612953400563269bcab26aa0",
+ "usage": {
+  "input_tokens": 1392,
+  "output_tokens": 0
+ },
+ "s": 0.67
+}

@@ -1,0 +1,7 @@
+# SHA-256, UTC (2026-10-11), antes de qualquer rótulo e de qualquer chamada ao Ekbasis
+12:47:11  PREREG.md        90ffb46efde66406544478b063a28c90c885316aede5c78e1907ba5e6e78f0c9
+12:47:11  MANIFEST.sha256  3227dad8ee1f0cda22a9534541c94bf5eb82b02edcb7505c1e7a94875454cfaf
+4a837049270686c214db6643a626130e59f9f4ac64bf2d34ec256a55e426fa19  data/test_answers.jsonl
+efc886be86f53d23a0f2132ce9d32ac940b7f941cf6ce7fa2ee9a7d411152d37  data/test_labels.jsonl
+715813ee812e37185ec37314105a22154c4fd384552d0052496acb1dc161682c  data/test_analysis.json
+eb7569c175009ec9bea65441026717dfb0ecae67ba033cc075813260704d51d9  README.md

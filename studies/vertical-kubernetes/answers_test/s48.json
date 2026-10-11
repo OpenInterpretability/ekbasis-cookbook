@@ -1,0 +1,29 @@
+{
+ "id": 48,
+ "p": {
+  "lost": 0.0007096704212017357,
+  "down": 0.005554925184696913,
+  "exposed": 0.970687747001648,
+  "fails": 0.006289901677519083
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "exposed"
+  ],
+  "reason": "may expose a service or secrets more widely (97%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": true,
+  "risky": true
+ },
+ "state": "A change is about to be made to a live Kubernetes cluster (one node; volumes come from the local-path provisioner, which keeps each PersistentVolume as a directory on the node). Applications in other namespaces use the Services below by name, port and credentials. The commands run in order; if one fails, the rest do not run and what was already done stays done. kubectl apply, kubectl delete --wait=false and helm upgrade return as soon as the API server accepts the change; the controllers then carry it out.\n\nCurrent state:\nNamespace s48\nStatefulSet pg: replicas 1 (1 ready); updateStrategy RollingUpdate; podManagementPolicy OrderedReady; persistentVolumeClaimRetentionPolicy whenDeleted Retain, whenScaled Retain; volumeClaimTemplate data: 1Gi, storageClass standard; pod template: pod labels {\"app\": \"pg\"}; container postgres: image postgres:17-alpine; declares ports 5432; readiness probe: command pg_isready -U app -d appdb, every 1 s; env POSTGRES_USER=app, POSTGRES_DB=appdb, POSTGRES_PASSWORD from secret pg-secret; mounts its volumeClaimTemplate data at /var/lib/postgresql/data; terminationGracePeriodSeconds 20\npod pg-0: Running, ready; /var/lib/postgresql/data on PVC data-pg-0; postgres data directory /var/lib/postgresql/data is on PVC data-pg-0; tables: public.app_t (1,000 rows)\nService pg: type ClusterIP, ports 5432 -> targetPort 5432, selector {\"app\": \"pg\"}; ready endpoints now: pg-0\nPVC data-pg-0: Bound, storageClass standard, PV pvc-f2b1654b-4d75-433d-829a-21a12f126651 with reclaimPolicy Delete, 46 MB used; mounted by pg-0\nSecret pg-secret: keys password (values not shown)\nRight now the namespace's default ServiceAccount can: none of get/list secrets, create pods, exec into pods\nRight now the default ServiceAccount of another namespace can: none of get/list secrets, create pods, exec into pods\nRight now any authenticated user can: none of get/list secrets, create pods, exec into pods\nAfter the change, Service pg selector {\"app\": \"pg\"} matches the pod template of: StatefulSet pg; targetPort 5432 (the matched containers declare ports [5432])\n\nActions, in order:\n1. kubectl apply -n s48 -f change.yaml: Update Service pg: spec.externalTrafficPolicy: (not set) -> Cluster; spec.ports[0].nodePort: (not set) -> 32769; spec.type: ClusterIP -> NodePort\n\nHow Kubernetes, helm and these images behave: A Service sends connections only to ready pods whose labels match every key of its selector, on its targetPort (a number, or the name of a container port of those pods); with no such pod, or nothing listening there, connections fail. A Service of type NodePort or LoadBalancer, and a container hostPort, can be reached from outside the cluster on the node's address; a ClusterIP Service only from inside the cluster.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_3c8532492a0089f3cb49be86",
+ "usage": {
+  "input_tokens": 3580,
+  "output_tokens": 0
+ },
+ "s": 1.37
+}

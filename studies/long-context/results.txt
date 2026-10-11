@@ -1,0 +1,85 @@
+items 184; risky 56; answered: L0 184, L0h 184, 16k 184, 32k 184, 64k 184, 120k 65
+  L0    input tokens per sequence (usage / 2): median 2,040, min 335, max 7,143
+  L0h   input tokens per sequence (usage / 2): median 2,046, min 341, max 7,149
+  16k   input tokens per sequence (usage / 2): median 15,746, min 14,860, max 16,118
+  32k   input tokens per sequence (usage / 2): median 32,021, min 30,399, max 32,671
+  64k   input tokens per sequence (usage / 2): median 64,690, min 62,718, max 65,516
+  120k  input tokens per sequence (usage / 2): median 121,725, min 120,376, max 122,728
+total input tokens used: 61,179,980
+
+== L0h (long header, no distractors; control) vs L0 (n=184, unanswered at length 0, counted as cannot foresee = risky)
+accuracy L0 0.880 -> 0.880; drop +0.0 pp [95% CI +0.0, +0.0]; worse 0, better 0, McNemar p=1.000
+recall 54/56 -> 54/56; false alarms 20/128 -> 20/128
+  Q_LOST  AUROC 0.940 -> 0.932 (drop +0.009 [+0.003,+0.017]); Brier 0.148 -> 0.151; ECE 0.151 -> 0.153; |dp| median 0.000 p90 0.004 max 0.350, >0.10 in 1/184; crosses 0.5 in 0; mean p 0.339 -> 0.340
+  Q_FAILS AUROC 0.962 -> 0.961 (drop +0.001 [-0.005,+0.006]); Brier 0.050 -> 0.053; ECE 0.034 -> 0.043; |dp| median 0.001 p90 0.013 max 0.119, >0.10 in 2/184; crosses 0.5 in 1; mean p 0.147 -> 0.151
+
+== 16k vs L0 (n=184, unanswered at length 0, counted as cannot foresee = risky)
+accuracy L0 0.880 -> 0.875; drop +0.5 pp [95% CI -1.1, +2.2]; worse 2, better 1, McNemar p=1.000
+recall 54/56 -> 53/56; false alarms 20/128 -> 20/128
+  Q_LOST  AUROC 0.940 -> 0.926 (drop +0.014 [+0.002,+0.028]); Brier 0.148 -> 0.148; ECE 0.151 -> 0.150; |dp| median 0.001 p90 0.021 max 0.634, >0.10 in 6/184; crosses 0.5 in 1; mean p 0.339 -> 0.334
+  Q_FAILS AUROC 0.962 -> 0.956 (drop +0.005 [-0.009,+0.020]); Brier 0.050 -> 0.057; ECE 0.034 -> 0.045; |dp| median 0.004 p90 0.044 max 0.697, >0.10 in 11/184; crosses 0.5 in 6; mean p 0.147 -> 0.150
+  C1 accuracy drop <= 2 pp and CI upper <= 4 pp: PASS
+  C2 AUROC drop <= 0.02 (Q_LOST and Q_FAILS): PASS
+  C3 recall >= L0 - 2 items: PASS
+  C4 false alarms <= L0 + 3 items: PASS
+  -> 16k: NON-INFERIOR
+
+== 32k vs L0 (n=184, unanswered at length 0, counted as cannot foresee = risky)
+accuracy L0 0.880 -> 0.875; drop +0.5 pp [95% CI +0.0, +1.6]; worse 1, better 0, McNemar p=1.000
+recall 54/56 -> 54/56; false alarms 20/128 -> 21/128
+  Q_LOST  AUROC 0.940 -> 0.932 (drop +0.008 [-0.005,+0.023]); Brier 0.148 -> 0.148; ECE 0.151 -> 0.152; |dp| median 0.001 p90 0.019 max 0.504, >0.10 in 6/184; crosses 0.5 in 1; mean p 0.339 -> 0.338
+  Q_FAILS AUROC 0.962 -> 0.957 (drop +0.005 [-0.013,+0.026]); Brier 0.050 -> 0.060; ECE 0.034 -> 0.049; |dp| median 0.006 p90 0.068 max 0.787, >0.10 in 14/184; crosses 0.5 in 4; mean p 0.147 -> 0.163
+  C1 accuracy drop <= 2 pp and CI upper <= 4 pp: PASS
+  C2 AUROC drop <= 0.02 (Q_LOST and Q_FAILS): PASS
+  C3 recall >= L0 - 2 items: PASS
+  C4 false alarms <= L0 + 3 items: PASS
+  -> 32k: NON-INFERIOR
+
+== 64k vs L0 (n=184, unanswered at length 0, counted as cannot foresee = risky)
+accuracy L0 0.880 -> 0.880; drop +0.0 pp [95% CI -2.2, +2.2]; worse 2, better 2, McNemar p=1.000
+recall 54/56 -> 54/56; false alarms 20/128 -> 20/128
+  Q_LOST  AUROC 0.940 -> 0.940 (drop +0.001 [-0.013,+0.015]); Brier 0.148 -> 0.156; ECE 0.151 -> 0.167; |dp| median 0.001 p90 0.019 max 0.687, >0.10 in 6/184; crosses 0.5 in 3; mean p 0.339 -> 0.350
+  Q_FAILS AUROC 0.962 -> 0.962 (drop -0.001 [-0.016,+0.013]); Brier 0.050 -> 0.064; ECE 0.034 -> 0.063; |dp| median 0.008 p90 0.058 max 0.822, >0.10 in 14/184; crosses 0.5 in 8; mean p 0.147 -> 0.160
+  depth start  n=62: accuracy 0.903 -> 0.887 (worse 1, better 0); recall 17/19 (L0 17); false alarms 5 (L0 4)
+  depth middle n=62: accuracy 0.887 -> 0.903 (worse 0, better 1); recall 19/19 (L0 19); false alarms 6 (L0 7)
+  depth end    n=60: accuracy 0.850 -> 0.850 (worse 1, better 1); recall 18/18 (L0 18); false alarms 9 (L0 9)
+  C1 accuracy drop <= 2 pp and CI upper <= 4 pp: PASS
+  C2 AUROC drop <= 0.02 (Q_LOST and Q_FAILS): PASS
+  C3 recall >= L0 - 2 items: PASS
+  C4 false alarms <= L0 + 3 items: PASS
+  -> 64k: NON-INFERIOR
+
+== 120k vs L0 (n=65, unanswered at length 0, counted as cannot foresee = risky)
+accuracy L0 0.892 -> 0.892; drop +0.0 pp [95% CI +0.0, +0.0]; worse 0, better 0, McNemar p=1.000
+recall 20/20 -> 20/20; false alarms 7/45 -> 7/45
+  Q_LOST  AUROC 0.927 -> 0.926 (drop +0.001 [-0.041,+0.049]); Brier 0.196 -> 0.208; ECE 0.209 -> 0.217; |dp| median 0.001 p90 0.017 max 0.434, >0.10 in 2/65; crosses 0.5 in 0; mean p 0.363 -> 0.371
+  Q_FAILS AUROC 0.998 -> 0.995 (drop +0.004 [+0.000,+0.014]); Brier 0.017 -> 0.023; ECE 0.052 -> 0.050; |dp| median 0.010 p90 0.053 max 0.412, >0.10 in 3/65; crosses 0.5 in 1; mean p 0.183 -> 0.180
+  depth start  n=20: accuracy 0.950 -> 0.950 (worse 0, better 0); recall 4/4 (L0 4); false alarms 1 (L0 1)
+  depth middle n=19: accuracy 0.842 -> 0.842 (worse 0, better 0); recall 7/7 (L0 7); false alarms 3 (L0 3)
+  depth end    n=26: accuracy 0.885 -> 0.885 (worse 0, better 0); recall 9/9 (L0 9); false alarms 3 (L0 3)
+  C1 accuracy drop <= 2 pp and CI upper <= 4 pp: PASS
+  C2 AUROC drop <= 0.02 (Q_LOST and Q_FAILS): PASS
+  C3 recall >= L0 - 2 items: PASS
+  C4 false alarms <= L0 + 3 items: PASS
+  -> 120k: NON-INFERIOR (EXPLORATORY: subsample n=65, cannot be the ceiling)
+
+== 64k on the same 65 items (context for 120k) vs L0 (n=65, unanswered at length 0, counted as cannot foresee = risky)
+accuracy L0 0.892 -> 0.892; drop +0.0 pp [95% CI +0.0, +0.0]; worse 0, better 0, McNemar p=1.000
+recall 20/20 -> 20/20; false alarms 7/45 -> 7/45
+  Q_LOST  AUROC 0.927 -> 0.931 (drop -0.004 [-0.039,+0.035]); Brier 0.196 -> 0.202; ECE 0.209 -> 0.214; |dp| median 0.001 p90 0.014 max 0.427, >0.10 in 2/65; crosses 0.5 in 0; mean p 0.363 -> 0.368
+  Q_FAILS AUROC 0.998 -> 0.993 (drop +0.005 [+0.000,+0.022]); Brier 0.017 -> 0.034; ECE 0.052 -> 0.068; |dp| median 0.008 p90 0.041 max 0.506, >0.10 in 4/65; crosses 0.5 in 3; mean p 0.183 -> 0.181
+
+== Registered decision: ceiling = 64k (largest length that passes, with every shorter one passing)
+tokens per character in the 184 L0 states: median 0.244, q99 0.310, max 0.381
+  MAX_CHARS for 16k: q99 rule 50,073; median rule 63,415
+  MAX_CHARS for 32k: q99 rule 101,761; median rule 128,877
+  MAX_CHARS for 64k: q99 rule 205,138; median rule 259,800
+  MAX_CHARS for 120k: q99 rule 386,048; median rule 488,916
+  the current MAX_CHARS 60,000 is 18,573 tokens at q99, 14,665 at the median
+
+== Cold latency (unique distractors, no prefix shared with any other request; 2 questions per request)
+L0    n=5 input tokens (both sequences) median 8,044; wall s median 1.7 (min 1.1, max 2.3); model s median 1.1; queue s max 0.0
+16k   n=5 input tokens (both sequences) median 31,650; wall s median 4.6 (min 4.0, max 5.3); model s median 3.8; queue s max 0.0
+32k   n=5 input tokens (both sequences) median 63,596; wall s median 10.6 (min 9.3, max 12.1); model s median 9.6; queue s max 0.0
+64k   n=5 input tokens (both sequences) median 129,484; wall s median 24.5 (min 11.9, max 29.6); model s median 17.4; queue s max 6.1
+120k  n=5 input tokens (both sequences) median 242,868; wall s median 43.9 (min 31.5, max 60.5); model s median 24.2; queue s max 19.4

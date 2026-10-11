@@ -1,0 +1,28 @@
+{
+ "id": 73,
+ "p": {
+  "lost": 0.01590639166533947,
+  "down": 0.9669140577316284,
+  "fails": 0.06371499598026276
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "down"
+  ],
+  "reason": "may interrupt a resource clients use by name (97%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_iam_role.r: IAM role vaws-s73-fn-role, trust policy {\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}\naws_lambda_function.f: function vaws-s73-worker, runtime python3.12, active\n\nActions, in order:\n1. Replace aws_lambda_function.f (destroy the old one, then create the new one, forced by the change to function_name): function_name: \"vaws-s73-worker\" -> \"vaws-s73-worker2\"\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_899f88b020d1a2d93c8339d3",
+ "usage": {
+  "input_tokens": 1302,
+  "output_tokens": 0
+ },
+ "s": 1.5
+}

@@ -1,0 +1,41 @@
+== regime R (n=184; benign 128, risky 56; unanswered old 0 new 0)
+OLD: acc 162/184 = 0.880; false alarms 20/128; recall 54/56; reason exact 49
+NEW: acc 165/184 = 0.897; false alarms 17/128; recall 54/56; reason exact 48
+C1 acc diff +1.6 pp (95% bootstrap CI -1.1 .. +4.3); McNemar b=5 c=2 p=0.453 -> PASS
+C2 false alarms 17 vs 20+3 -> PASS; C3 recall 54 vs 54-2 -> PASS; C4 reason 48 vs 49-2 -> PASS
+input tokens (183 paired): OLD median 4196 (p10 1350, p90 8718) | NEW median 2854 (p10 1206, p90 9962) | paired reduction median 22.6% (p10 -74.4%, p90 48.4%); totals 840,883 -> 793,191
+wall secs: OLD median 3.1 | NEW median 3.2
+server-timing model: OLD median 2524 ms | NEW median 2601 ms
+server-timing queue: OLD median 3 ms | NEW median 3 ms
+  changed [benign] calcom/20220622110735_allow_one_schedule_to_apply_to_multiple_event_types: OLD (False, None) (0.07, 0.17) right -> NEW (True, 'fails') (0.92, 0.79) wrong
+  changed [risky/loses] calcom/20241127102756_remove_fields_from_evenet_type_translation: OLD (True, 'fails') (0.98, 0.86) wrong -> NEW (True, 'loses') (0.98, 0.25) right
+  changed [benign] cratesio/20140929103758_dumped_migration_30: OLD (True, 'fails') (0.0, 0.73) wrong -> NEW (False, None) (0.0, 0.35) right
+  changed [risky/fails] langfuse/20230518193521_changes: OLD (True, 'fails') (0.98, 0.94) right -> NEW (True, 'loses') (0.98, 0.17) wrong
+  changed [benign] langfuse/20251218102933_score_configs_rename_score_data_type_enum: OLD (False, None) (0.01, 0.05) right -> NEW (True, 'fails') (0.01, 0.5) wrong
+  changed [risky/loses] langfuse/20260619120000_revert_slack_pending_install_columns: OLD (True, 'loses') (0.98, 0.2) right -> NEW (True, 'fails') (0.98, 0.87) wrong
+  changed [benign] lemmy/2020-01-29-011901_create_reply_materialized_view: OLD (True, 'fails') (0.02, 0.83) wrong -> NEW (False, None) (0.0, 0.12) right
+  changed [benign] lemmy/2025-08-01-000062_username-instance-unique: OLD (True, 'loses') (0.68, 0.05) wrong -> NEW (False, None) (0.15, 0.06) right
+  changed [benign] mattermost/000051_create_msg_root_count: OLD (True, 'loses') (0.81, 0.38) wrong -> NEW (False, None) (0.47, 0.29) right
+  changed [benign] mattermost/000112_rework_desktop_tokens: OLD (True, 'loses') (0.91, 0.01) wrong -> NEW (False, None) (0.07, 0.0) right
+items with dependent views in NEW: 30; OLD right 24, NEW right 25; risky among them 7
+
+== regime N (n=184; benign 128, risky 56; unanswered old 0 new 0)
+OLD: acc 163/184 = 0.886; false alarms 19/128; recall 54/56; reason exact 46
+NEW: acc 163/184 = 0.886; false alarms 18/128; recall 53/56; reason exact 46
+C1 acc diff +0.0 pp (95% bootstrap CI -2.7 .. +2.7); McNemar b=3 c=3 p=1.000 -> PASS  [CI lower bound below -2 pp: non-inferiority not shown statistically]
+C2 false alarms 18 vs 19+3 -> PASS; C3 recall 53 vs 54-2 -> PASS; C4 reason 46 vs 46-2 -> PASS
+input tokens (183 paired): OLD median 3286 (p10 1174, p90 6636) | NEW median 1762 (p10 1000, p90 5882) | paired reduction median 30.3% (p10 -32.5%, p90 61.4%); totals 674,420 -> 527,519
+wall secs: OLD median 2.8 | NEW median 2.7
+server-timing model: OLD median 2249 ms | NEW median 2008 ms
+server-timing queue: OLD median 3 ms | NEW median 3 ms
+  changed [benign] calcom/20220622110735_allow_one_schedule_to_apply_to_multiple_event_types: OLD (False, None) (0.06, 0.14) right -> NEW (True, 'fails') (0.56, 0.81) wrong
+  changed [risky/loses] calcom/20241127102756_remove_fields_from_evenet_type_translation: OLD (True, 'fails') (0.98, 0.75) wrong -> NEW (True, 'loses') (0.98, 0.21) right
+  changed [benign] cratesio/20140929103758_dumped_migration_30: OLD (True, 'fails') (0.0, 0.73) wrong -> NEW (False, None) (0.0, 0.06) right
+  changed [benign] langfuse/20251218102933_score_configs_rename_score_data_type_enum: OLD (False, None) (0.01, 0.05) right -> NEW (True, 'fails') (0.01, 0.59) wrong
+  changed [benign] lemmy/2020-01-29-011901_create_reply_materialized_view: OLD (True, 'fails') (0.01, 0.53) wrong -> NEW (False, None) (0.0, 0.1) right
+  changed [benign] mattermost/000046_create_users: OLD (True, 'loses') (0.89, 0.26) wrong -> NEW (True, 'fails') (0.89, 0.8) wrong
+  changed [benign] mattermost/000112_rework_desktop_tokens: OLD (True, 'loses') (0.91, 0.01) wrong -> NEW (False, None) (0.06, 0.0) right
+  changed [risky/fails] triggerdev/20230312132000_more_kv_types: OLD (True, 'fails') (0.91, 0.68) right -> NEW (False, None) (0.03, 0.06) wrong
+items with dependent views in NEW: 30; OLD right 24, NEW right 25; risky among them 7
+
+DECISION: all criteria pass in both regimes -> recommend the cut as default

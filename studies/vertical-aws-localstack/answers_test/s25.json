@@ -1,0 +1,28 @@
+{
+ "id": 25,
+ "p": {
+  "lost": 0.020332353189587593,
+  "down": 0.957912266254425,
+  "fails": 0.9724147915840149
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "down"
+  ],
+  "reason": "may interrupt a resource clients use by name (96%); the apply may fail part-way (97%)"
+ },
+ "rule": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_dynamodb_table.t: table vaws-s25-items (hash key pk, billing PAY_PER_REQUEST); holds 0 items; deletion protection off\n\nActions, in order:\n1. Replace aws_dynamodb_table.t (destroy the old one, then create the new one, forced by the change to hash_key): attribute: [{name = \"pk\", type = \"S\"}] -> [{name = \"id\", type = \"S\"}]; hash_key: \"pk\" -> \"id\" [the name vaws-s25-items is already taken by an existing resource]\n\nHow these resources behave: Destroying an aws_dynamodb_table whose deletion protection is on fails, also when the same plan turns protection off for its replacement. A table created by a replacement starts empty: items are not copied. Creating a table whose name is already taken fails.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_83ca716dfb1b394f7fd3a936",
+ "usage": {
+  "input_tokens": 1419,
+  "output_tokens": 0
+ },
+ "s": 0.98
+}

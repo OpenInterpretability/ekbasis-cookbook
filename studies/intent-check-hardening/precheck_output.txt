@@ -1,0 +1,3 @@
+benign tool outputs: 339, with a segment addressed to the checker: 0
+items with addressed text, by attack: [(('aw1', True), 141), (('aw2', True), 141), (('aw3', True), 141), (('aw4', True), 141), (('important_instructions', False), 241), (('injecagent', False), 141), (('tg', True), 141), (('tool_knowledge', False), 141)]
+front 2 gate: [(('clean', 'framing'), 27), (('neg', 'framing'), 65), (('pos', 'framing'), 9), (('pos', 'standard'), 40)]

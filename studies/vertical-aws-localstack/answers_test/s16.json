@@ -1,0 +1,26 @@
+{
+ "id": 16,
+ "p": {
+  "lost": 0.005554925184696913,
+  "down": 0.010986942797899246,
+  "fails": 0.014957086183130741
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss or interruption foreseen (lose 1%, interrupt 1%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": true,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_s3_bucket.b: bucket vaws-s16-data; holds 20 objects; versioning never enabled; force_destroy = false in the state\naws_s3_bucket_public_access_block.b: public access block on vaws-s16-data (block_public_policy = true, restrict_public_buckets = true)\n\nActions, in order:\n1. Destroy aws_s3_bucket_public_access_block.b (it was removed from the configuration)\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_73c1953b87724558fc176612",
+ "usage": {
+  "input_tokens": 1158,
+  "output_tokens": 0
+ },
+ "s": 1.46
+}

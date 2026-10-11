@@ -1,0 +1,26 @@
+{
+ "id": 62,
+ "p": {
+  "lost": 0.06371499598026276,
+  "down": 0.07159119844436646,
+  "fails": 0.04208773002028465
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss or interruption foreseen (lose 6%, interrupt 7%)"
+ },
+ "rule": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_secretsmanager_secret.s: secret vaws-s62-db-password; recovery_window_in_days = 30 in the state; has a current value, written by an application (not OpenTofu); 2 versions in all\naws_secretsmanager_secret_version.v: the secret value OpenTofu wrote to vaws-s62-db-password (now labelled AWSPREVIOUS)\n\nActions, in order:\n1. Replace aws_secretsmanager_secret_version.v (destroy the old one, then create the new one, forced by the change to secret_string): secret_string: \"initial\" -> \"from-config-2\"\n\nHow these resources behave: Writing a secret version makes it AWSCURRENT and labels the version that was current AWSPREVIOUS, which can still be read.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_733c76e28d93f8fa4599d12a",
+ "usage": {
+  "input_tokens": 1383,
+  "output_tokens": 0
+ },
+ "s": 1.67
+}

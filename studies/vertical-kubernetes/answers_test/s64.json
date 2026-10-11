@@ -1,0 +1,27 @@
+{
+ "id": 64,
+ "p": {
+  "lost": 0.0005193048273213208,
+  "down": 0.0015011822106316686,
+  "exposed": 0.022977370768785477,
+  "fails": 0.014063626527786255
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss, exposure or interruption foreseen (lose 0%, expose 2%, interrupt 0%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "A change is about to be made to a live Kubernetes cluster (one node; volumes come from the local-path provisioner, which keeps each PersistentVolume as a directory on the node). Applications in other namespaces use the Services below by name, port and credentials. The commands run in order; if one fails, the rest do not run and what was already done stays done. kubectl apply, kubectl delete --wait=false and helm upgrade return as soon as the API server accepts the change; the controllers then carry it out.\n\nCurrent state:\nNamespace s64\nDeployment web: replicas 1 (1 ready); strategy RollingUpdate maxSurge 25%, maxUnavailable 25% (for 1 replicas: at most 2 pods in total and at least 1 ready during a rollout); pod template: pod labels {\"app\": \"web\"}; container nginx: image nginx:1.26-alpine; declares ports 80; readiness probe: HTTP GET / on port 80, every 1 s; terminationGracePeriodSeconds 10\npod web-585fb47cd4-xpf9k: Running, ready\nService web: type ClusterIP, ports 80 -> targetPort 80, selector {\"app\": \"web\"}; ready endpoints now: web-585fb47cd4-xpf9k\nRight now the namespace's default ServiceAccount can: none of get/list secrets, create pods, exec into pods\nRight now the default ServiceAccount of another namespace can: none of get/list secrets, create pods, exec into pods\nRight now any authenticated user can: none of get/list secrets, create pods, exec into pods\n\nActions, in order:\n1. kubectl apply -n s64 -f change.yaml: Create ClusterRoleBinding s64-view: ClusterRole view -> ServiceAccount s64/default\n\nHow Kubernetes, helm and these images behave: A RoleBinding grants its Role's rules to its subjects in that namespace; the group system:serviceaccounts:<namespace> holds every ServiceAccount of that namespace and system:authenticated every user. Verbs ['*'] on a resource allow every verb on that resource only. The built-in view ClusterRole does not include secrets.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_e100017f3fae20b27ba252cd",
+ "usage": {
+  "input_tokens": 2592,
+  "output_tokens": 0
+ },
+ "s": 0.85
+}

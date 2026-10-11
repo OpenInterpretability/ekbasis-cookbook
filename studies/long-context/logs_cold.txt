@@ -1,0 +1,27 @@
+25 to ask, 0 done; used so far 0 of 50,000,000
+cold:L0:calcom/20260129090913_enable_pbac_globally {'p_lost': 0.835, 'p_fails': 0.017} 1.67 2300
+cold:L0:calcom/20240607082125_removal_of_logo_and_avatar {'p_lost': 0.98, 'p_fails': 0.035} 1.61 8044
+cold:L0:cratesio/20141020175651_dumped_migration_77 {'p_lost': 0.001, 'p_fails': 0.004} 1.08 3438
+cold:L0:triggerdev/20250131120251_add_batch_trigger_v3_columns {'p_lost': 0.002, 'p_fails': 0.011} 1.91 12458
+cold:L0:calcom/20230601141825_add_locale_timezone_timeformat_in_team {'p_lost': 0.002, 'p_fails': 0.008} 2.28 8504
+cold:16k:calcom/20260129090913_enable_pbac_globally {'p_lost': 0.867, 'p_fails': 0.016} 4.03 32004
+cold:16k:calcom/20240607082125_removal_of_logo_and_avatar {'p_lost': 0.98, 'p_fails': 0.035} 4.67 31650
+cold:16k:cratesio/20141020175651_dumped_migration_77 {'p_lost': 0.001, 'p_fails': 0.005} 5.34 31592
+cold:16k:triggerdev/20250131120251_add_batch_trigger_v3_columns {'p_lost': 0.002, 'p_fails': 0.012} 4.59 31898
+cold:16k:calcom/20230601141825_add_locale_timezone_timeformat_in_team {'p_lost': 0.002, 'p_fails': 0.009} 3.97 31358
+cold:32k:calcom/20260129090913_enable_pbac_globally {'p_lost': 0.867, 'p_fails': 0.016} 12.06 63948
+cold:32k:calcom/20240607082125_removal_of_logo_and_avatar {'p_lost': 0.98, 'p_fails': 0.042} 9.26 63364
+cold:32k:cratesio/20141020175651_dumped_migration_77 {'p_lost': 0.001, 'p_fails': 0.005} 10.55 64326
+cold:32k:triggerdev/20250131120251_add_batch_trigger_v3_columns {'p_lost': 0.002, 'p_fails': 0.016} 11.55 63596
+cold:32k:calcom/20230601141825_add_locale_timezone_timeformat_in_team {'p_lost': 0.002, 'p_fails': 0.012} 10.01 63584
+cold:64k:calcom/20260129090913_enable_pbac_globally {'p_lost': 0.874, 'p_fails': 0.015} 11.92 129040
+cold:64k:calcom/20240607082125_removal_of_logo_and_avatar {'p_lost': 0.982, 'p_fails': 0.042} 24.47 129484
+cold:64k:cratesio/20141020175651_dumped_migration_77 {'p_lost': 0.001, 'p_fails': 0.006} 19.15 129646
+cold:64k:triggerdev/20250131120251_add_batch_trigger_v3_columns {'p_lost': 0.002, 'p_fails': 0.022} 29.55 130286
+cold:64k:calcom/20230601141825_add_locale_timezone_timeformat_in_team {'p_lost': 0.003, 'p_fails': 0.013} 25.99 129444
+cold:120k:calcom/20260129090913_enable_pbac_globally {'p_lost': 0.86, 'p_fails': 0.019} 31.47 242868
+cold:120k:calcom/20240607082125_removal_of_logo_and_avatar {'p_lost': 0.977, 'p_fails': 0.047} 43.91 242764
+cold:120k:cratesio/20141020175651_dumped_migration_77 {'p_lost': 0.001, 'p_fails': 0.006} 43.01 244314
+cold:120k:triggerdev/20250131120251_add_batch_trigger_v3_columns {'p_lost': 0.002, 'p_fails': 0.031} 48.36 243514
+cold:120k:calcom/20230601141825_add_locale_timezone_timeformat_in_team {'p_lost': 0.003, 'p_fails': 0.02} 60.49 242798
+used 2,376,222 of 50,000,000

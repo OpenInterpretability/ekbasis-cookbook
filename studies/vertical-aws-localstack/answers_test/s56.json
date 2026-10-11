@@ -1,0 +1,29 @@
+{
+ "id": 56,
+ "p": {
+  "lost": 0.977022647857666,
+  "down": 0.970687747001648,
+  "fails": 0.01798621006309986
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "lost",
+   "down"
+  ],
+  "reason": "may permanently lose stored data (98%); may interrupt a resource clients use by name (97%)"
+ },
+ "rule": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_secretsmanager_secret.s: secret vaws-s56-db-password; recovery_window_in_days = 0 in the state; has a current value, written by an application (not OpenTofu); 1 version in all\n\nActions, in order:\n1. Destroy aws_secretsmanager_secret.s (it was removed from the configuration)\n\nHow these resources behave: Destroying an aws_secretsmanager_secret schedules it for deletion after the recovery_window_in_days in the current state (30 when unset): until then its value cannot be read, the secret can be restored, and no new secret with the same name can be created. With 0 it is deleted at once, for good.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_e1f688c02cb31e0541c91d76",
+ "usage": {
+  "input_tokens": 1320,
+  "output_tokens": 0
+ },
+ "s": 0.64
+}

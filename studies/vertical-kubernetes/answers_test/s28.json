@@ -1,0 +1,27 @@
+{
+ "id": 28,
+ "p": {
+  "lost": 0.0010322310263291001,
+  "down": 0.004609571769833565,
+  "exposed": 0.001098731067031622,
+  "fails": 0.9933071732521057
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss, exposure or interruption foreseen (lose 0%, expose 0%, interrupt 0%); a command may be rejected or fail (99%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "A change is about to be made to a live Kubernetes cluster (one node; volumes come from the local-path provisioner, which keeps each PersistentVolume as a directory on the node). Applications in other namespaces use the Services below by name, port and credentials. The commands run in order; if one fails, the rest do not run and what was already done stays done. kubectl apply, kubectl delete --wait=false and helm upgrade return as soon as the API server accepts the change; the controllers then carry it out.\n\nCurrent state:\nNamespace s28\nDeployment web: replicas 2 (2 ready); strategy RollingUpdate maxSurge 25%, maxUnavailable 25% (for 2 replicas: at most 3 pods in total and at least 2 ready during a rollout); pod template: pod labels {\"app\": \"web\"}; container nginx: image nginx:1.26-alpine; declares ports 80; readiness probe: HTTP GET / on port 80, every 1 s; terminationGracePeriodSeconds 10\npod web-585fb47cd4-6xz4f: Running, ready\npod web-585fb47cd4-zd9cb: Running, ready\nService web: type ClusterIP, ports 80 -> targetPort 80, selector {\"app\": \"web\"}; ready endpoints now: web-585fb47cd4-zd9cb, web-585fb47cd4-6xz4f\nRight now the namespace's default ServiceAccount can: none of get/list secrets, create pods, exec into pods\nRight now the default ServiceAccount of another namespace can: none of get/list secrets, create pods, exec into pods\nRight now any authenticated user can: none of get/list secrets, create pods, exec into pods\nAfter the change, Service web selector {\"app\": \"web\"} matches the pod template of: Deployment web; targetPort 80 (the matched containers declare ports [80])\n\nActions, in order:\n1. kubectl apply -n s28 -f change.yaml: Update Deployment web \u2014 the server dry run REJECTS it: The Deployment \"web\" is invalid: spec.selector: Invalid value: (object): field is immutable\n\nHow Kubernetes, helm and these images behave: The API server rejects an update to an immutable field (the spec.selector of a Deployment or StatefulSet; a StatefulSet's volumeClaimTemplates, serviceName or podManagementPolicy) and that object is not changed; the server dry run listed above shows such a rejection. A Deployment replaces its pods only when spec.template changes; a change elsewhere (replicas, strategy, the Deployment's own metadata) starts no rollout. A RollingUpdate keeps at least replicas - maxUnavailable pods ready and at most replicas + maxSurge pods in total; a pod counts as ready when its readiness probe passes, or as soon as its container has started if it has no readiness probe. New pods that never become ready leave the old ones serving. Recreate stops all old pods before it creates any new one. A pod's emptyDir volumes and its container filesystem are deleted together with the pod; only data on a PersistentVolume outlives it. When a PVC is deleted, its PersistentVolume and the data on it are deleted if the reclaimPolicy is Delete; with Retain the volume and its directory stay on the node (Released). A Service sends connections only to ready pods whose labels match every key of its selector, on its targetPort (a number, or the name of a container port of those pods); with no such pod, or nothing listening there, connections fail.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_1d66099596d2deb9638653c4",
+ "usage": {
+  "input_tokens": 3800,
+  "output_tokens": 0
+ },
+ "s": 1.34
+}

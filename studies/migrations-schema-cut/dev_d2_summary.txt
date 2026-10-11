@@ -1,0 +1,13 @@
+items with a state: 530; same tables/enums as v4: 0
+fallback (not cut): 5 (0.9%)
+      1  schema not cut (the cut schema is too long, 67,838 characters)
+      1  schema not cut (dynamic SQL (EXECUTE))
+      1  schema not cut (the cut schema is too long, 66,780 characters)
+      1  schema not cut (DROP FUNCTION ... CASCADE)
+      1  schema not cut (DROP SCHEMA ... CASCADE)
+cut: 525
+chars OLD median 6235 NEW median 4238; NEW/OLD on cut items: median 0.75, p10 0.52, p90 1.63; NEW shorter 402, same 0, longer 123
+> MAX_CHARS: OLD 0, NEW 0; max OLD 30581 NEW 55566
+touched table missing from OLD (cap of 8 / regex): 59
+OLD shows a table NEW does not (regex false match or beyond 1 FK step): 18
+NEW has views 56, triggers 47, FK-line neighbors 393

@@ -1,0 +1,28 @@
+{
+ "id": 53,
+ "p": {
+  "lost": 0.020332353189587593,
+  "down": 0.9648551344871521,
+  "fails": 0.031143832951784134
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "down"
+  ],
+  "reason": "may interrupt a resource clients use by name (96%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_sns_topic.tp: topic vaws-s53-events; 1 subscription\naws_sns_topic_subscription.sub: subscription of arn:aws:sqs:us-east-1:000000000000:vaws-s53-jobs (sqs) to arn:aws:sns:us-east-1:000000000000:vaws-s53-events\naws_sqs_queue.q: queue vaws-s53-jobs; 30 messages waiting\n\nActions, in order:\n1. Destroy aws_sns_topic.tp (it was removed from the configuration)\n2. Destroy aws_sns_topic_subscription.sub (it was removed from the configuration)\n\nHow these resources behave: Destroying an SNS topic deletes its subscriptions; the subscribed queue and its messages are kept.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_a6bac978081749106bdf1459",
+ "usage": {
+  "input_tokens": 1425,
+  "output_tokens": 0
+ },
+ "s": 1.1
+}

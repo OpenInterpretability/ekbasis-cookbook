@@ -1,0 +1,26 @@
+{
+ "id": 77,
+ "p": {
+  "lost": 0.0026316740550100803,
+  "down": 0.008577484637498856,
+  "fails": 0.031143832951784134
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss or interruption foreseen (lose 0%, interrupt 1%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_iam_role.r: IAM role vaws-s77-fn-role, trust policy {\"Statement\":[{\"Action\":\"sts:AssumeRole\",\"Effect\":\"Allow\",\"Principal\":{\"Service\":\"lambda.amazonaws.com\"}}],\"Version\":\"2012-10-17\"}\naws_lambda_function.f: function vaws-s77-worker, runtime python3.12, active\n\nActions, in order:\n1. Update aws_lambda_function.f in place: runtime: \"python3.12\" -> \"python3.13\"\n\nHow these resources behave: Updating a Lambda function in place keeps it invokable by its name throughout.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_b0904c8a3f5af602d561aa3b",
+ "usage": {
+  "input_tokens": 1305,
+  "output_tokens": 0
+ },
+ "s": 1.51
+}

@@ -1,0 +1,26 @@
+{
+ "id": 71,
+ "p": {
+  "lost": 0.005911069456487894,
+  "down": 0.005911069456487894,
+  "fails": 0.004331502132117748
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss or interruption foreseen (lose 1%, interrupt 1%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_ssm_parameter.p: parameter /vaws/s71/app/endpoint, type String, tier Standard; at version 2 (2 values in its history); its current value is the one in the state\n\nActions, in order:\n1. Stop managing aws_ssm_parameter.p: it is removed from the OpenTofu state and left as it is (not destroyed)\n\nHow these resources behave: Updating an SSM parameter's value keeps its earlier values in its history; destroying a parameter, also when it is replaced under a new name, deletes it together with its history.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_20e259ff772a162492bcd9df",
+ "usage": {
+  "input_tokens": 1251,
+  "output_tokens": 0
+ },
+ "s": 1.28
+}

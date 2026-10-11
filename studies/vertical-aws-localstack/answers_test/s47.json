@@ -1,0 +1,26 @@
+{
+ "id": 47,
+ "p": {
+  "lost": 0.006289901677519083,
+  "down": 0.008061991073191166,
+  "fails": 0.020332353189587593
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss or interruption foreseen (lose 1%, interrupt 1%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_sqs_queue.q: queue vaws-s47-jobs; 30 messages waiting\n\nActions, in order:\n1. Update aws_sqs_queue.q in place: delay_seconds: 0 -> 30\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_f2907acd6e521d7b167593c5",
+ "usage": {
+  "input_tokens": 1026,
+  "output_tokens": 0
+ },
+ "s": 0.81
+}

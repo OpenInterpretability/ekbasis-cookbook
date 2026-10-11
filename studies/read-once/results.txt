@@ -1,0 +1,66 @@
+===== regime N: 184 paired items, 0 missing []
+SEP   accuracy 163/184 = 0.886; false alarms 19/128; recall 54/56; reason exact 46/54
+ONCE  accuracy 162/184 = 0.880; false alarms 18/128; recall 52/56; reason exact 48/52
+accuracy ONCE - SEP = -0.54 pp, 95% paired bootstrap [-2.72, +1.63]; discordant: ONCE right only 2, SEP right only 3
+  verdict differs: calcom/20210814175645_custom_inputs_type_enum truth=risky:fails sep=(True, 'fails') once=(False, None)
+  verdict differs: calcom/20211105200545_availability_start_and_end_time_as_time truth=risky:fails sep=(True, 'loses') once=(True, 'fails')
+  verdict differs: calcom/20240329084749_platform_snake_case_to_pascal_case truth=risky:fails sep=(True, 'loses') once=(True, 'fails')
+  verdict differs: langfuse/20260722070000_add_in_app_agent_run_lifecycle_fields truth=risky:loses sep=(True, 'fails') once=(False, None)
+  verdict differs: lemmy/2020-01-29-011901_create_reply_materialized_view truth=benign sep=(True, 'fails') once=(False, None)
+  verdict differs: mattermost/000051_create_msg_root_count truth=benign sep=(False, None) once=(True, 'fails')
+  verdict differs: mattermost/000062_upgrade_sessions_v6.0 truth=risky:fails sep=(True, 'loses') once=(True, 'fails')
+  verdict differs: mattermost/000200_add_rank_to_attribute_view truth=benign sep=(True, 'fails') once=(False, None)
+  lost  sep  n=184 pos=35 AUROC=0.911 Brier=0.1605 ECE=0.1559
+  lost  once n=184 pos=35 AUROC=0.908 Brier=0.1599 ECE=0.1607
+  lost  |dp| median 0.0000 p90 0.0024 max 0.0677
+  fails sep  n=184 pos=21 AUROC=0.971 Brier=0.0476 ECE=0.0506
+  fails once n=184 pos=21 AUROC=0.98 Brier=0.0366 ECE=0.0409
+  fails |dp| median 0.0086 p90 0.0580 max 0.8025
+  half  sep  n=10 pos=1 AUROC=1.0 Brier=0.1137 ECE=0.2032
+  half  once n=10 pos=1 AUROC=1.0 Brier=0.0396 ECE=0.1078
+  half  |dp| median 0.0557 p90 0.7603 max 0.7603
+|dp| all answers: n=378 median 0.0034 p75 0.0093 p90 0.0334 p99 0.4120 max 0.8025; >0.1: 18, >0.3: 8
+input tokens median SEP 3282.0 ONCE 1736.0 -> drop 47.1%; per-item ratio median 0.531 (min 0.346, max 0.654); totals SEP 676718 ONCE 346821
+  latency client s sep: median 5.11 p90 21.86
+  latency client s once: median 3.00 p90 17.40
+  latency model ms sep: median 3837.00 p90 17426.00
+  latency model ms once: median 1838.50 p90 14636.00
+  C1 accuracy CI lower >= -2pp: FAIL
+  C2 false alarms ONCE <= SEP+3: PASS
+  C3 recall ONCE >= SEP-2: PASS
+  C4 reason ONCE >= SEP-2: PASS
+  C5 median |dp| <= 0.05: PASS
+  G1 median usage drop >= 35%: PASS
+  complete (<= 5 missing): PASS
+===== regime R: 184 paired items, 0 missing []
+SEP   accuracy 162/184 = 0.880; false alarms 20/128; recall 54/56; reason exact 49/54
+ONCE  accuracy 162/184 = 0.880; false alarms 20/128; recall 54/56; reason exact 50/54
+accuracy ONCE - SEP = +0.00 pp, 95% paired bootstrap [+0.00, +0.00]; discordant: ONCE right only 0, SEP right only 0
+  verdict differs: calcom/20211105200545_availability_start_and_end_time_as_time truth=risky:fails sep=(True, 'loses') once=(True, 'fails')
+  verdict differs: calcom/20240329084749_platform_snake_case_to_pascal_case truth=risky:fails sep=(True, 'loses') once=(True, 'fails')
+  verdict differs: langfuse/20260619120000_revert_slack_pending_install_columns truth=risky:loses sep=(True, 'loses') once=(True, 'fails')
+  verdict differs: mattermost/000046_create_users truth=benign sep=(True, 'fails') once=(True, 'loses')
+  verdict differs: mattermost/000199_rename_classification_linked_fields truth=benign sep=(True, 'loses') once=(True, 'fails')
+  lost  sep  n=184 pos=35 AUROC=0.938 Brier=0.1502 ECE=0.1527
+  lost  once n=184 pos=35 AUROC=0.939 Brier=0.1482 ECE=0.1524
+  lost  |dp| median 0.0000 p90 0.0025 max 0.1023
+  fails sep  n=184 pos=21 AUROC=0.965 Brier=0.0487 ECE=0.0345
+  fails once n=184 pos=21 AUROC=0.976 Brier=0.0426 ECE=0.0388
+  fails |dp| median 0.0067 p90 0.0475 max 0.7706
+  half  sep  n=10 pos=1 AUROC=1.0 Brier=0.2274 ECE=0.2856
+  half  once n=10 pos=1 AUROC=1.0 Brier=0.0292 ECE=0.1112
+  half  |dp| median 0.0235 p90 0.7075 max 0.7075
+|dp| all answers: n=378 median 0.0031 p75 0.0085 p90 0.0291 p99 0.5097 max 0.7706; >0.1: 16, >0.3: 7
+input tokens median SEP 4172.0 ONCE 2143.0 -> drop 48.6%; per-item ratio median 0.525 (min 0.342, max 0.654); totals SEP 843467 ONCE 426951
+  latency client s sep: median 4.99 p90 19.43
+  latency client s once: median 3.42 p90 14.29
+  latency model ms sep: median 3345.00 p90 16575.00
+  latency model ms once: median 1890.00 p90 13125.00
+  C1 accuracy CI lower >= -2pp: PASS
+  C2 false alarms ONCE <= SEP+3: PASS
+  C3 recall ONCE >= SEP-2: PASS
+  C4 reason ONCE >= SEP-2: PASS
+  C5 median |dp| <= 0.05: PASS
+  G1 median usage drop >= 35%: PASS
+  complete (<= 5 missing): PASS
+DECISION: FAIL {'N': False, 'R': True}

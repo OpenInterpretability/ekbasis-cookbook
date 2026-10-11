@@ -1,0 +1,5 @@
+beyond+fail vs lost|failed: {'tp': 27, 'fp': 6, 'fn': 2, 'tn': 35, 'precision': 0.818, 'recall': 0.931, 'f1': 0.871, 'mcc': 0.774, 'false_alarm': 0.146} auroc 0.939
+beyond+fail vs harmful: {'tp': 27, 'fp': 6, 'fn': 10, 'tn': 27, 'precision': 0.818, 'recall': 0.73, 'f1': 0.771, 'mcc': 0.548, 'false_alarm': 0.182} auroc 0.864
+lock code rule vs lock label: {'tp': 5, 'fp': 0, 'fn': 3, 'tn': 62, 'precision': 1.0, 'recall': 0.625, 'f1': 0.769, 'mcc': 0.772, 'false_alarm': 0.0} ['D06', 'D07', 'D08', 'D09', 'D12']
+beyond+fail OR lock rule vs harmful: {'tp': 32, 'fp': 6, 'fn': 5, 'tn': 27, 'precision': 0.842, 'recall': 0.865, 'f1': 0.853, 'mcc': 0.684, 'false_alarm': 0.182}
+ekbasis lock flags: ['A02', 'A04', 'A05', 'A08', 'B04', 'B05', 'B06', 'B11', 'B16', 'C12', 'D02', 'D04', 'D05', 'D10', 'D15', 'E26']

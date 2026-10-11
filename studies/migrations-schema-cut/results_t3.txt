@@ -1,0 +1,17 @@
+repo          mig state tab max OLD>60k NEW>60k gain  fb med OLD med NEW ratio  decided
+AFFiNE        122   122      70       0       0    0   3    4916    2809  0.71  {}
+ghostfolio    129   129      21       0       0    0   0    3084    2248  0.68  {}
+typebot.io     84    84      31       0       0    0   0    5936    2996  0.57  {}
+webstudio     121   119      18       0       0    0   3    2718    2034  0.84  {'schema': 1, 'cannot_foresee_base': 1}
+harbor         39    37      48       0       0    0   0    4212    3198  0.86  {'schema': 1, 'cannot_foresee_base': 1}
+concourse     151   150      45       0       0    0  29   10026    5200  0.54  {'ok_empty': 1}
+chirpstack      1     1       0       0       0    0   0    4830    4856  1.01  {}
+fider          49     2       1       0       0    0   0     728     794  1.10  {'schema': 1, 'cannot_foresee_base': 46}
+total {'mig': 696, 'state': 644, 'old': 0, 'new': 0, 'gain': 0, 'fb': 35} | ratio NEW/OLD median 0.69 p10 0.42 p90 1.13
+max OLD 43338 max NEW 47042
+   31 schema not cut (dynamic SQL (EXECUTE))
+    2 unresolved names
+    1 schema not cut (the cut schema is too long, 68,109 characters)
+    1 schema not cut (DROP FUNCTION ... CASCADE)
+    AFFiNE /20260906090000_payment_auth_runtime/migration.sql schema not cut (names it cannot resolve: payment_financial_facts_provider_namespace_external_invoice_id_, payment_financial_facts_provider_namespace_o
+    webstudio 349_add-approved-marketplace-product/migration.sql schema not cut (names it cannot resolve: Build_projectId_createdAt_idx, Project_isDeleted_marketplaceApprovalStatus_idx): the state shows the tables t

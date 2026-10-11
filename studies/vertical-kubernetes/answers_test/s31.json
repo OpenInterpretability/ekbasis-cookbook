@@ -1,0 +1,29 @@
+{
+ "id": 31,
+ "p": {
+  "lost": 0.000552778597921133,
+  "down": 0.9553191661834717,
+  "exposed": 0.0011695101857185364,
+  "fails": 0.0031726828310638666
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "down"
+  ],
+  "reason": "may interrupt a running service for 2 s or more (96%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "A change is about to be made to a live Kubernetes cluster (one node; volumes come from the local-path provisioner, which keeps each PersistentVolume as a directory on the node). Applications in other namespaces use the Services below by name, port and credentials. The commands run in order; if one fails, the rest do not run and what was already done stays done. kubectl apply, kubectl delete --wait=false and helm upgrade return as soon as the API server accepts the change; the controllers then carry it out.\n\nCurrent state:\nNamespace s31\nDeployment web: replicas 2 (2 ready); strategy RollingUpdate maxSurge 25%, maxUnavailable 25% (for 2 replicas: at most 3 pods in total and at least 2 ready during a rollout); pod template: pod labels {\"app\": \"web\"}; container nginx: image nginx:1.26-alpine; declares ports 80; readiness probe: HTTP GET / on port 80, every 1 s; terminationGracePeriodSeconds 10\npod web-585fb47cd4-4qvvz: Running, ready\npod web-585fb47cd4-hvnjd: Running, ready\nService web: type ClusterIP, ports 80 -> targetPort 80, selector {\"app\": \"web\"}; ready endpoints now: web-585fb47cd4-hvnjd, web-585fb47cd4-4qvvz\nRight now the namespace's default ServiceAccount can: none of get/list secrets, create pods, exec into pods\nRight now the default ServiceAccount of another namespace can: none of get/list secrets, create pods, exec into pods\nRight now any authenticated user can: none of get/list secrets, create pods, exec into pods\nAfter the change, Service web selector {\"app\": \"web\"} matches the pod template of: Deployment web; targetPort 8080 (the matched containers declare ports [80])\n\nActions, in order:\n1. kubectl apply -n s31 -f change.yaml: Update Service web: spec.ports[0].targetPort: 80 -> 8080\n\nHow Kubernetes, helm and these images behave: A Service sends connections only to ready pods whose labels match every key of its selector, on its targetPort (a number, or the name of a container port of those pods); with no such pod, or nothing listening there, connections fail. A Service of type NodePort or LoadBalancer, and a container hostPort, can be reached from outside the cluster on the node's address; a ClusterIP Service only from inside the cluster.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_637af5512db0e6aca4fd381a",
+ "usage": {
+  "input_tokens": 3008,
+  "output_tokens": 0
+ },
+ "s": 1.3
+}

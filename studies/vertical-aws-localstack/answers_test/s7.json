@@ -1,0 +1,28 @@
+{
+ "id": 7,
+ "p": {
+  "lost": 0.2018132209777832,
+  "down": 0.9362850189208984,
+  "fails": 0.9820137619972229
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "down"
+  ],
+  "reason": "may interrupt a resource clients use by name (94%); the apply may fail part-way (98%)"
+ },
+ "rule": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_s3_bucket.b: bucket vaws-s7-data; holds 20 objects; versioning never enabled; force_destroy = false in the state\n\nActions, in order:\n1. Replace aws_s3_bucket.b (destroy the old one, then create the new one, forced by the change to bucket): bucket: \"vaws-s7-data\" -> \"vaws-s7-data2\"; force_destroy: false -> true\n\nHow these resources behave: Destroying an aws_s3_bucket that still holds objects or object versions fails unless force_destroy is true in the current state; a force_destroy = true set in the same plan does not apply to that destroy. With force_destroy = true in the state, every object and every version is deleted first.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_a4fc707997e1b9645fdc5f8a",
+ "usage": {
+  "input_tokens": 1356,
+  "output_tokens": 0
+ },
+ "s": 0.73
+}

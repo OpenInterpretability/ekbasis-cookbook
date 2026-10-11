@@ -1,0 +1,29 @@
+{
+ "id": 53,
+ "p": {
+  "lost": 0.8080672025680542,
+  "down": 0.07585818320512772,
+  "exposed": 0.0015011822106316686,
+  "fails": 0.003376612439751625
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "lost"
+  ],
+  "reason": "may permanently lose stored data (81%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "A change is about to be made to a live Kubernetes cluster (one node; volumes come from the local-path provisioner, which keeps each PersistentVolume as a directory on the node). Applications in other namespaces use the Services below by name, port and credentials. The commands run in order; if one fails, the rest do not run and what was already done stays done. kubectl apply, kubectl delete --wait=false and helm upgrade return as soon as the API server accepts the change; the controllers then carry it out.\n\nCurrent state:\nNamespace s53\nDeployment redis: replicas 1 (1 ready); strategy RollingUpdate maxSurge 25%, maxUnavailable 25% (for 1 replicas: at most 2 pods in total and at least 1 ready during a rollout); pod template: pod labels {\"app\": \"redis\"}; container redis: image redis:7-alpine; args [\"--requirepass\", \"$(REDIS_PASSWORD)\"]; declares ports 6379; readiness probe: command sh -c redis-cli -a \"$REDIS_PASSWORD\" --no-auth-warning ping | grep -q PONG, every 1 s; env REDIS_PASSWORD from secret rd-secret; terminationGracePeriodSeconds 20\npod redis-6f9df8888f-5ndxj: Running, ready; redis holds 1 key(s); save \"3600 1 300 100 60 10000\"; appendonly no; dir /data is in the container filesystem (on no volume); password required\nService redis: type ClusterIP, ports 6379 -> targetPort 6379, selector {\"app\": \"redis\"}; ready endpoints now: redis-6f9df8888f-5ndxj\nSecret rd-secret: keys password (values not shown)\nRight now the namespace's default ServiceAccount can: none of get/list secrets, create pods, exec into pods\nRight now the default ServiceAccount of another namespace can: none of get/list secrets, create pods, exec into pods\nRight now any authenticated user can: none of get/list secrets, create pods, exec into pods\nAfter the change, Service redis selector {\"app\": \"redis\"} matches the pod template of: Deployment redis; targetPort 6379 (the matched containers declare ports [6379])\n\nActions, in order:\n1. kubectl apply -n s53 -f change.yaml: Update Deployment redis: spec.template.spec.containers[redis].args: [\"--requirepass\", \"$(REDIS_PASSWORD)\"] -> [\"--requirepass\", \"$(REDIS_PASSWORD)\", \"--maxmemory\", \"64mb\"] \u2014 the pod template changes, so the pods are replaced; after the change: replicas 1 (1 ready); strategy RollingUpdate maxSurge 25%, maxUnavailable 25% (for 1 replicas: at most 2 pods in total and at least 1 ready during a rollout)\n\nHow Kubernetes, helm and these images behave: A Deployment replaces its pods only when spec.template changes; a change elsewhere (replicas, strategy, the Deployment's own metadata) starts no rollout. A RollingUpdate keeps at least replicas - maxUnavailable pods ready and at most replicas + maxSurge pods in total; a pod counts as ready when its readiness probe passes, or as soon as its container has started if it has no readiness probe. New pods that never become ready leave the old ones serving. Recreate stops all old pods before it creates any new one. A pod's emptyDir volumes and its container filesystem are deleted together with the pod; only data on a PersistentVolume outlives it. When a PVC is deleted, its PersistentVolume and the data on it are deleted if the reclaimPolicy is Delete; with Retain the volume and its directory stay on the node (Released). redis keeps its keys in memory. When the pod is deleted, redis gets SIGTERM and writes an RDB snapshot to its dir only if save points are configured (save not empty); with appendonly yes it has also been logging every write to its dir. A new redis process loads its keys from that dir. A Service sends connections only to ready pods whose labels match every key of its selector, on its targetPort (a number, or the name of a container port of those pods); with no such pod, or nothing listening there, connections fail.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_6badf9c99b3ae46381bab6c6",
+ "usage": {
+  "input_tokens": 4444,
+  "output_tokens": 0
+ },
+ "s": 1.83
+}

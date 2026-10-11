@@ -1,0 +1,176 @@
+{
+ "n": 55,
+ "lost": {
+  "pos": 14,
+  "ekbasis": {
+   "tp": 13,
+   "fp": 1,
+   "fn": 1,
+   "tn": 40,
+   "precision": 0.9285714285714286,
+   "recall": 0.9285714285714286,
+   "f1": 0.9285714285714286,
+   "acc": 0.9636363636363636
+  },
+  "rule": {
+   "tp": 14,
+   "fp": 14,
+   "fn": 0,
+   "tn": 27,
+   "precision": 0.5,
+   "recall": 1.0,
+   "f1": 0.6666666666666666,
+   "acc": 0.7454545454545455
+  },
+  "auroc": 0.985191637630662,
+  "mcnemar": {
+   "ek_only_right": 14,
+   "rule_only_right": 2,
+   "p": 0.004180908203125
+  }
+ },
+ "down": {
+  "pos": 20,
+  "ekbasis": {
+   "tp": 18,
+   "fp": 6,
+   "fn": 2,
+   "tn": 29,
+   "precision": 0.75,
+   "recall": 0.9,
+   "f1": 0.8181818181818182,
+   "acc": 0.8545454545454545
+  },
+  "rule": {
+   "tp": 19,
+   "fp": 9,
+   "fn": 1,
+   "tn": 26,
+   "precision": 0.6785714285714286,
+   "recall": 0.95,
+   "f1": 0.7916666666666667,
+   "acc": 0.8181818181818182
+  },
+  "auroc": 0.9564285714285714,
+  "mcnemar": {
+   "ek_only_right": 5,
+   "rule_only_right": 3,
+   "p": 0.7265625
+  }
+ },
+ "risky": {
+  "pos": 21,
+  "ekbasis": {
+   "tp": 20,
+   "fp": 6,
+   "fn": 1,
+   "tn": 28,
+   "precision": 0.7692307692307693,
+   "recall": 0.9523809523809523,
+   "f1": 0.8510638297872339,
+   "acc": 0.8727272727272727
+  },
+  "rule": {
+   "tp": 21,
+   "fp": 9,
+   "fn": 0,
+   "tn": 25,
+   "precision": 0.7,
+   "recall": 1.0,
+   "f1": 0.8235294117647058,
+   "acc": 0.8363636363636363
+  },
+  "auroc": 0.9754901960784313,
+  "mcnemar": {
+   "ek_only_right": 4,
+   "rule_only_right": 2,
+   "p": 0.6875
+  }
+ },
+ "fails_auroc": 0.998792270531401,
+ "controls": {
+  "n": 34,
+  "false_alarms": [
+   4,
+   7,
+   14,
+   19,
+   32,
+   44
+  ],
+  "rate": 0.17647058823529413
+ },
+ "complement": {
+  "rule_errors": 24,
+  "ekbasis_right_on_them": 19,
+  "items": [
+   "s1:lost",
+   "s1:down",
+   "s4:lost",
+   "s4:down",
+   "s7:lost",
+   "s7:down",
+   "s14:lost",
+   "s14:down",
+   "s19:lost",
+   "s19:down",
+   "s23:lost",
+   "s23:down",
+   "s25:lost",
+   "s26:lost",
+   "s26:down",
+   "s32:lost",
+   "s37:lost",
+   "s50:down",
+   "s55:lost",
+   "s59:lost",
+   "s62:lost",
+   "s62:down",
+   "s64:lost",
+   "s64:down"
+  ],
+  "fixed": [
+   "s1:lost",
+   "s1:down",
+   "s4:lost",
+   "s7:lost",
+   "s14:lost",
+   "s19:lost",
+   "s23:lost",
+   "s23:down",
+   "s25:lost",
+   "s26:lost",
+   "s26:down",
+   "s32:lost",
+   "s37:lost",
+   "s55:lost",
+   "s59:lost",
+   "s62:lost",
+   "s62:down",
+   "s64:lost",
+   "s64:down"
+  ]
+ },
+ "combined": {
+  "rule_and_ekbasis": {
+   "tp": 20,
+   "fp": 5,
+   "fn": 1,
+   "tn": 29,
+   "precision": 0.8,
+   "recall": 0.9523809523809523,
+   "f1": 0.8695652173913043,
+   "acc": 0.8909090909090909
+  },
+  "rule_or_ekbasis": {
+   "tp": 21,
+   "fp": 10,
+   "fn": 0,
+   "tn": 24,
+   "precision": 0.6774193548387096,
+   "recall": 1.0,
+   "f1": 0.8076923076923077,
+   "acc": 0.8181818181818182
+  }
+ }
+}

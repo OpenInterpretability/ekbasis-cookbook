@@ -1,0 +1,26 @@
+{
+ "id": 29,
+ "p": {
+  "lost": 0.004609571769833565,
+  "down": 0.012431650422513485,
+  "fails": 0.02931223064661026
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss or interruption foreseen (lose 0%, interrupt 1%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_dynamodb_table.t: table vaws-s29-items (hash key pk, billing PROVISIONED); holds 200 items; deletion protection off\n\nActions, in order:\n1. Update aws_dynamodb_table.t in place: billing_mode: \"PROVISIONED\" -> \"PAY_PER_REQUEST\"\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_f8a12d707f66836712a01ba1",
+ "usage": {
+  "input_tokens": 1080,
+  "output_tokens": 0
+ },
+ "s": 1.57
+}

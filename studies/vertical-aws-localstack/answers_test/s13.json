@@ -1,0 +1,26 @@
+{
+ "id": 13,
+ "p": {
+  "lost": 0.01590639166533947,
+  "down": 0.005554925184696913,
+  "fails": 0.008577484637498856
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss or interruption foreseen (lose 2%, interrupt 1%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to an AWS account (one region). Running applications use these resources by name: they read and write objects, table items, queue messages, secrets and parameters, and invoke functions. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\naws_s3_bucket.b: bucket vaws-s13-data; holds 1 object and 1 noncurrent version; versioning Enabled; force_destroy = false in the state\naws_s3_bucket_versioning.b: versioning Enabled on bucket vaws-s13-data\naws_s3_object.o: object config/app.json in bucket vaws-s13-data, written by OpenTofu from the configuration; the object in the bucket was overwritten after OpenTofu wrote it (its content differs)\n\nActions, in order:\n1. Update aws_s3_object.o in place: content: {\"mode\":\"a\"} -> {\"mode\":\"b\"}\n\nHow these resources behave: An aws_s3_object whose configured content changes is written again over the object at that key; in a bucket with versioning enabled the content it replaces stays as a noncurrent version, otherwise it is gone.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_251cc7373cabbacbacdedfdd",
+ "usage": {
+  "input_tokens": 1452,
+  "output_tokens": 0
+ },
+ "s": 0.69
+}
