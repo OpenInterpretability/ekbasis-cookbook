@@ -1,0 +1,90 @@
+unconvertible (out of both arms): 0 []
+
+== ALL (primary): n = 523, risky 88
+  a EKB            acc 0.945 (494/523)  recall 81/88 = 0.920  FA 22/435 = 0.051  reason exact 74/81
+  b R_RICH         acc 0.969 (507/523)  recall 80/88 = 0.909  FA 8/435 = 0.018  reason exact 78/80
+  c R_NOSEED       acc 0.960 (502/523)  recall 80/88 = 0.909  FA 13/435 = 0.030  reason exact 78/80
+  d POLICY         acc 0.960 (502/523)  recall 80/88 = 0.909  FA 13/435 = 0.030  reason exact 78/80  | recall with warnings 81/88 = 0.920  warnings on benign 13/435
+  e NOSEED OR EKB  acc 0.937 (490/523)  recall 81/88 = 0.920  FA 26/435 = 0.060  reason exact 79/81
+  EKB - R_NOSEED: -1.5 pp [-3.1, +0.0]; McNemar EKB only 5, R_NOSEED only 13, p = 0.096 -> TIE
+  EKB - R_RICH: -2.5 pp [-4.2, -0.8]; McNemar EKB only 4, R_RICH only 17, p = 0.007 -> the rule is better
+
+== django: n = 242, risky 34
+  a EKB            acc 0.955 (231/242)  recall 28/34 = 0.824  FA 5/208 = 0.024  reason exact 28/28
+  b R_RICH         acc 0.959 (232/242)  recall 27/34 = 0.794  FA 3/208 = 0.014  reason exact 27/27
+  c R_NOSEED       acc 0.955 (231/242)  recall 27/34 = 0.794  FA 4/208 = 0.019  reason exact 27/27
+  d POLICY         acc 0.955 (231/242)  recall 27/34 = 0.794  FA 4/208 = 0.019  reason exact 27/27  | recall with warnings 28/34 = 0.824  warnings on benign 3/208
+  e NOSEED OR EKB  acc 0.946 (229/242)  recall 28/34 = 0.824  FA 7/208 = 0.034  reason exact 28/28
+  EKB - R_NOSEED: +0.0 pp [-2.1, +2.1]; McNemar EKB only 3, R_NOSEED only 3, p = 1.000 -> TIE
+  EKB - R_RICH: -0.4 pp [-2.1, +1.2]; McNemar EKB only 2, R_RICH only 3, p = 1.000 -> TIE
+
+== alembic: n = 141, risky 13
+  a EKB            acc 0.986 (139/141)  recall 13/13 = 1.000  FA 2/128 = 0.016  reason exact 13/13
+  b R_RICH         acc 0.993 (140/141)  recall 13/13 = 1.000  FA 1/128 = 0.008  reason exact 13/13
+  c R_NOSEED       acc 0.986 (139/141)  recall 13/13 = 1.000  FA 2/128 = 0.016  reason exact 13/13
+  d POLICY         acc 0.986 (139/141)  recall 13/13 = 1.000  FA 2/128 = 0.016  reason exact 13/13  | recall with warnings 13/13 = 1.000  warnings on benign 1/128
+  e NOSEED OR EKB  acc 0.979 (138/141)  recall 13/13 = 1.000  FA 3/128 = 0.023  reason exact 13/13
+  EKB - R_NOSEED: +0.0 pp [-2.1, +2.1]; McNemar EKB only 1, R_NOSEED only 1, p = 1.000 -> TIE
+  EKB - R_RICH: -0.7 pp [-3.5, +1.4]; McNemar EKB only 1, R_RICH only 2, p = 1.000 -> TIE
+
+== rails: n = 140, risky 41
+  a EKB            acc 0.886 (124/140)  recall 40/41 = 0.976  FA 15/99 = 0.152  reason exact 33/40
+  b R_RICH         acc 0.964 (135/140)  recall 40/41 = 0.976  FA 4/99 = 0.040  reason exact 38/40
+  c R_NOSEED       acc 0.943 (132/140)  recall 40/41 = 0.976  FA 7/99 = 0.071  reason exact 38/40
+  d POLICY         acc 0.943 (132/140)  recall 40/41 = 0.976  FA 7/99 = 0.071  reason exact 38/40  | recall with warnings 40/41 = 0.976  warnings on benign 9/99
+  e NOSEED OR EKB  acc 0.879 (123/140)  recall 40/41 = 0.976  FA 16/99 = 0.162  reason exact 38/40
+  EKB - R_NOSEED: -5.7 pp [-10.0, -1.4]; McNemar EKB only 1, R_NOSEED only 9, p = 0.021 -> the rule is better
+  EKB - R_RICH: -7.9 pp [-12.9, -3.6]; McNemar EKB only 1, R_RICH only 12, p = 0.003 -> the rule is better
+
+== ALL, sent to the model (exploratory): n = 416, risky 86
+  a EKB            acc 0.933 (388/416)  recall 79/86 = 0.919  FA 21/330 = 0.064  reason exact 74/79
+  b R_RICH         acc 0.964 (401/416)  recall 78/86 = 0.907  FA 7/330 = 0.021  reason exact 78/78
+  c R_NOSEED       acc 0.952 (396/416)  recall 78/86 = 0.907  FA 12/330 = 0.036  reason exact 78/78
+  d POLICY         acc 0.952 (396/416)  recall 78/86 = 0.907  FA 12/330 = 0.036  reason exact 78/78  | recall with warnings 79/86 = 0.919  warnings on benign 13/330
+  e NOSEED OR EKB  acc 0.923 (384/416)  recall 79/86 = 0.919  FA 25/330 = 0.076  reason exact 79/79
+  EKB - R_NOSEED: -1.9 pp [-3.8, +0.0]; McNemar EKB only 5, R_NOSEED only 13, p = 0.096 -> TIE
+  EKB - R_RICH: -3.1 pp [-5.3, -1.0]; McNemar EKB only 4, R_RICH only 17, p = 0.007 -> the rule is better
+
+== product policy (PREREG_fw §6), aggregate
+  a EKB            acc 0.945  FA 0.051  recall with warnings 0.920 (EKB 0.920)  ELIGIBLE
+  b R_RICH         acc 0.969  FA 0.018  recall with warnings 0.909 (EKB 0.920)  not a candidate
+  c R_NOSEED       acc 0.960  FA 0.030  recall with warnings 0.909 (EKB 0.920)  not eligible
+  d POLICY         acc 0.960  FA 0.030  recall with warnings 0.920 (EKB 0.920)  ELIGIBLE
+  e NOSEED OR EKB  acc 0.937  FA 0.060  recall with warnings 0.920 (EKB 0.920)  ELIGIBLE
+  chosen: d POLICY
+
+== errors, aggregate (truth | EKB | R_NOSEED | warn)
+  mastodon/db/migrate/20191212003415_increase_backup_size.rb | ok | loses | loses | 
+  mastodon/db/migrate/20220115125341_fix_account_warning_actions.rb | ok | loses | loses | 
+  mastodon/db/migrate/20230524192812_fix_account_domain_casing.rb | ok | loses | loses | 
+  mastodon/db/migrate/20241213170053_validate_not_null_to_account_conversation_conversation_column.rb | ok | loses | ok | W
+  mastodon/db/migrate/20241216223452_validate_not_null_to_account_note_target_account_column.rb | ok | loses | ok | W
+  mastodon/db/migrate/20241216223859_validate_not_null_to_marker_user_column.rb | ok | loses | ok | W
+  mastodon/db/migrate/20241216224218_validate_not_null_to_poll_vote_account_column.rb | ok | loses | ok | W
+  mastodon/db/migrate/20241216224825_validate_not_null_to_tombstone_account_column.rb | ok | loses | ok | W
+  mastodon/db/migrate/20250422084214_validate_add_not_null_to_web_push_subscription_user.rb | ok | loses | ok | W
+  mastodon/db/migrate/20260701161457_add_new_index_account_id_local_fragment_to_keypair.rb | ok | fails | ok | W
+  maybe/db/migrate/20240325064211_add_uniq_index_to_users_email.rb | ok | fails | ok | W
+  maybe/db/migrate/20240921170426_change_import_owner.rb | ok | ok | fails | 
+  maybe/db/migrate/20241029184115_remove_prices_missing_issue.rb | ok | loses | loses | 
+  maybe/db/migrate/20241122183828_change_loan_interest_rate_precision.rb.rb | fails | ok | ok | 
+  maybe/db/migrate/20250124224316_create_rejected_transfers.rb | ok | loses | loses | 
+  maybe/db/migrate/20250616183654_add_kind_to_transactions.rb | ok | fails | ok | W
+  maybe/db/migrate/20250620204550_update_excluded_transactions_to_one_time.rb | ok | loses | loses | 
+  mlflow/mlflow/store/db_migrations/versions/181f10493468_allow_nulls_for_metric_values.py | ok | ok | loses | 
+  paperless/src/documents/migrations/0010_optimize_integer_field_sizes.py | fails | ok | ok | 
+  paperless/src/documents/migrations/0020_drop_celery_results.py | ok | loses | loses | 
+  saleor/saleor/account/migrations/0063_save_customerevent_order_token.py | fails | ok | ok | 
+  saleor/saleor/discount/migrations/0013_auto_20190618_0733.py | loses | ok | ok | 
+  saleor/saleor/discount/migrations/0036_save_discocunt_order_token.py | fails | ok | ok | 
+  saleor/saleor/order/migrations/0037_auto_20180228_0450.py | ok | loses | ok | W
+  saleor/saleor/order/migrations/0044_auto_20180326_1055.py | ok | loses | ok | W
+  saleor/saleor/order/migrations/0095_auto_20201229_1014.py | fails | ok | ok | 
+  saleor/saleor/payment/migrations/0032_save_payment_order_token.py | fails | fails | ok | W
+  saleor/saleor/permission/migrations/0002_alter_permission_content_type.py | ok | cannot_foresee | cannot_foresee | 
+  saleor/saleor/plugins/migrations/0011_alter_pluginconfiguration_configuration.py | ok | loses | ok | W
+  saleor/saleor/product/migrations/0073_auto_20181010_0729.py | ok | ok | fails | 
+  saleor/saleor/warehouse/migrations/0023_alter_orderline_relations.py | fails | ok | ok | 
+  saleor/saleor/webhook/migrations/0003_unmount_service_account.py | ok | ok | fails | 
+  superset/superset/migrations/versions/2018-03-20_19-47_f231d82b9b26_.py | ok | loses | fails | 
+  superset/superset/migrations/versions/2020-11-04_11-06_49b5a32daba5_add_report_schedules.py | ok | fails | ok | W

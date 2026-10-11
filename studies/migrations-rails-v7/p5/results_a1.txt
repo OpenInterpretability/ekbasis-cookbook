@@ -1,0 +1,6 @@
+A1: items whose OLD and NEW states differ (out of the analysis, counted apart): 0 []
+items 184, answered 182
+OLD: accuracy 0.897, false alarms 17/128, recall 54/56, reason exact 48/54
+NEW: accuracy 0.902, false alarms 16/128, recall 54/56, reason exact 48/54
+changed by the decision: 1 [('000186_create_channel_guards_plugin_id_i', 'ok', 'fails', '->', 'ok')]
+P5 accuracy 0.902 >= 0.877; false alarms 16 <= 20; recall 54 >= 52; reason 48 >= 46 -> PASS

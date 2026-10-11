@@ -1,0 +1,16 @@
+items 347, excluded 4, analysed 343; sent to the model 300, answered 300
+exclusions: {'named_table_not_seeded': 4}
+answered 307 (risky 119), code not foreseen 36
+
+== rails v7: registered P1-P4, on the migrations the product answers
+  product   n=307 accuracy 0.896  recall 1.000 (119/119)  reason exact 0.992 (n=119)  false alarms on benign 0.170 (32/188)
+  rules     n=307 accuracy 0.730  recall 1.000 (119/119)  reason exact 0.966 (n=119)  false alarms on benign 0.441 (83/188)
+  P1 accuracy 0.896 [0.860,0.928]; minus rules +0.166 [+0.127,+0.208] -> PASS
+  P2 reason exact 118/119 [0.954,0.999] -> PASS
+  P3 false alarms 32/188 [0.123,0.230]; rules 0.441; McNemar p=0.0000 -> PASS
+  P4 recall 1.000 [0.969,1.000] -> PASS
+  C1 cannot foresee: 0/307 = 0.000 (reported, no target)
+  reported: code not foreseen 36/343 = 0.105; truth among them {'loses': 10, 'ok': 23, 'fails': 3}
+  reported: total recall 119/132
+  reported: reason matrix (truth, said): {('loses', 'loses'): 114, ('loses', 'fails'): 1, ('fails', 'fails'): 4}
+  reported: cannot foresee for lack of an external service: 0; all cannot foresee 0

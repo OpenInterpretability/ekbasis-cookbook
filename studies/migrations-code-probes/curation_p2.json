@@ -1,0 +1,89 @@
+{
+ "out_of_scope_or_unknown": {
+  "hyperswitch#11 d4c03b55d": [
+   "unknown",
+   "unique index made non-unique before a backfill; no failure stated"
+  ],
+  "hyperswitch#12 c7339b290": [
+   "unknown",
+   "index name truncated to 63 chars; no failure stated"
+  ],
+  "hyperswitch#14,31,32,34": [
+   "unknown",
+   "reverts without a reason"
+  ],
+  "hyperswitch#16 ebfaba872": [
+   "unknown",
+   "missing DROP NOT NULL in v2-compatible migrations; no failure stated"
+  ],
+  "hyperswitch#17 986de77b4": [
+   "unknown",
+   "entity_id backfill completed; no failure stated"
+  ],
+  "lobe-chat#41": [
+   "unknown",
+   "revert"
+  ],
+  "lobe-chat#44": [
+   "not_migration",
+   "snapshot alignment"
+  ],
+  "midday#46": [
+   "unknown",
+   "revert of wip"
+  ],
+  "plunk#48 df7afd8d0": [
+   "duration",
+   "lock_timeout removed: crash-loop on lock wait (operational)"
+  ],
+  "quickwit#50": [
+   "not_migration",
+   "file name: migration not run"
+  ],
+  "quickwit#51": [
+   "unknown",
+   "trigger/function fixes; failure not stated"
+  ],
+  "svix#52": [
+   "unknown",
+   "revert"
+  ],
+  "posthog#53": [
+   "not_migration",
+   "FK missing from built databases (drift)"
+  ],
+  "posthog#55": [
+   "unknown",
+   "revert"
+  ],
+  "graphql-engine#60 6fe5daa70": [
+   "unknown",
+   "long trigger names / DROP FUNCTION syntax for PG<10; the bad version's origin could not be pinned (file reordered by d3f724634)"
+  ],
+  "hydra#64": [
+   "not_migration",
+   "IF EXISTS for re-runs"
+  ],
+  "hydra#65,69": [
+   "fails_env",
+   "CockroachDB"
+  ],
+  "hydra#66": [
+   "fails_env",
+   "autocommit for CockroachDB"
+  ],
+  "hydra#67": [
+   "not_migration",
+   "file name"
+  ],
+  "hydra#71": [
+   "not_migration",
+   "unique constraint wrong for the product (app errors)"
+  ],
+  "keto#72": [
+   "not_migration",
+   "check constraint removed for the API's empty strings"
+  ]
+ },
+ "rule": "every other commit read (0-73) was a feature, a renumbering, an index or column addition, or a product change: no incident"
+}

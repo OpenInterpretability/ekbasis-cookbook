@@ -1,0 +1,96 @@
+== regime R
+  EKB 0.1.20       acc 0.880 (162/184)  recall 0.964 (54/56)  FA 0.156 (20/128)  reason exact 50/54
+  R_RICH           acc 0.913 (168/184)  recall 0.929 (52/56)  FA 0.094 (12/128)  reason exact 51/52
+  R_RICH AND EKB   acc 0.908 (167/184)  recall 0.893 (50/56)  FA 0.086 (11/128)  reason exact 47/50
+  R_RICH OR EKB    acc 0.886 (163/184)  recall 1.000 (56/56)  FA 0.164 (21/128)  reason exact 52/56
+  delta acc EKB - R_RICH = -3.3 pp, 95% CI [-7.6, +1.1] pp; McNemar: EKB right only 5, R_RICH right only 11, p = 0.210
+  pre-registered outcome: the rule is better
+  discordant items (truth | EKB | R_RICH | rule's why):
+    EKB calcom/20210814175645_custom_inputs_type_enum | fails | fails | ok | 
+    EKB calcom/20211105200545_availability_start_and_end_time_as_time | fails | loses | ok | 
+    EKB calcom/20220622110735_allow_one_schedule_to_apply_to_multiple_event_types | None | ok | loses | action 5: drops Schedule.eventTypeId, which holds values not copied elsewhere
+    why  calcom/20240329084749_platform_snake_case_to_pascal_case | fails | loses | fails | action 27: foreign key on _PlatformOAuthClientToUser references PlatformOAuthClient, which is empty
+    RULE cratesio/20140929103758_dumped_migration_30 | None | fails | ok | 
+    RULE langfuse/20240126184148_new_models copy | loses | ok | loses | action 1: deletes rows of models (WHERE)
+    why  langfuse/20260722070000_add_in_app_agent_run_lifecycle_fields | loses | fails | loses | action 2: overwrites in_app_agent_runs.error_code; action 2: overwrites in_app_agent_runs.error_message
+    RULE lemmy/2020-01-29-011901_create_reply_materialized_view | None | fails | ok | 
+    RULE lemmy/2022-11-21-204256_user-following | None | loses | ok | 
+    EKB lemmy/2024-06-17-160323_fix_post_aggregates_featured_local | loses | loses | ok | 
+    RULE mattermost/000046_create_users | None | fails | ok | 
+    RULE mattermost/000051_create_msg_root_count | None | loses | ok | 
+    why  mattermost/000090_create_enums | fails | fails | loses | action 2: casting channels.type from character varying(1) to channel_type changes values; action 4: casting teams.type from character varying(255) to team_type 
+    EKB mattermost/000105_remove_tokens | loses | loses | ok | 
+    RULE mattermost/000112_rework_desktop_tokens | None | loses | ok | 
+    RULE mattermost/000137_update_attribute_view | None | fails | ok | 
+    RULE mattermost/000186_create_channel_guards_plugin_id_index | None | fails | ok | 
+    RULE mattermost/000200_add_rank_to_attribute_view | None | fails | ok | 
+    RULE triggerdev/20230312132000_more_kv_types | fails | ok | fails | action 3: enum labels ['KEY_VALUE'] not in workflowrunsteptype_new
+    why  triggerdev/20240208124114_changes_to_the_task_event_schema | fails | loses | fails | action 1: adds TaskEvent.properties NOT NULL without a DEFAULT, and TaskEvent holds rows
+  both wrong (11):
+    calcom/20240111075727_remove_brand_colours_default | None | loses | loses
+    calcom/20250506000000_remove_around_from_event_types | None | loses | loses
+    calcom/20250506000001_remove_around_credentials | None | loses | loses
+    calcom/20260129090913_enable_pbac_globally | None | loses | loses
+    cratesio/20170728002039_fix_keywords | None | loses | fails
+    formbricks/20260420000000_migrate_legacy_styling_fields | None | loses | loses
+    langfuse/20240307185725_backfill_score_source | None | loses | loses
+    langfuse/20251013134801_drop_atla_llm_keys | None | loses | loses
+    lemmy/2025-08-01-000062_username-instance-unique | None | loses | loses
+    mattermost/000107_threadmemberships_cleanup | None | loses | loses
+    mattermost/000199_rename_classification_linked_fields | None | loses | loses
+== regime N
+  EKB 0.1.20       acc 0.886 (163/184)  recall 0.964 (54/56)  FA 0.148 (19/128)  reason exact 46/54
+  R_RICH           acc 0.913 (168/184)  recall 0.929 (52/56)  FA 0.094 (12/128)  reason exact 51/52
+  R_RICH AND EKB   acc 0.908 (167/184)  recall 0.893 (50/56)  FA 0.086 (11/128)  reason exact 43/50
+  R_RICH OR EKB    acc 0.891 (164/184)  recall 1.000 (56/56)  FA 0.156 (20/128)  reason exact 47/56
+  delta acc EKB - R_RICH = -2.7 pp, 95% CI [-7.1, +1.6] pp; McNemar: EKB right only 5, R_RICH right only 10, p = 0.302
+  pre-registered outcome: the rule is better
+  discordant items (truth | EKB | R_RICH | rule's why):
+    EKB calcom/20210814175645_custom_inputs_type_enum | fails | fails | ok | 
+    EKB calcom/20211105200545_availability_start_and_end_time_as_time | fails | loses | ok | 
+    EKB calcom/20220622110735_allow_one_schedule_to_apply_to_multiple_event_types | None | ok | loses | action 5: drops Schedule.eventTypeId, which holds values not copied elsewhere
+    why  calcom/20240329084749_platform_snake_case_to_pascal_case | fails | loses | fails | action 27: foreign key on _PlatformOAuthClientToUser references PlatformOAuthClient, which is empty
+    why  calcom/20241127102756_remove_fields_from_evenet_type_translation | loses | fails | loses | action 1: overwrites EventTypeTranslation.uid; action 4: drops EventTypeTranslation.sourceLang, which holds values not copied elsewhere; action 4: drops EventTy
+    RULE cratesio/20140929103758_dumped_migration_30 | None | fails | ok | 
+    why  cratesio/20170322130523_version_downloads_needs_no_id | loses | fails | loses | action 1: casting version_downloads.date from timestamp without time zone to date changes values
+    RULE langfuse/20240126184148_new_models copy | loses | ok | loses | action 1: deletes rows of models (WHERE)
+    why  langfuse/20260619120000_revert_slack_pending_install_columns | loses | fails | loses | action 1: deletes rows of slack_integrations (WHERE); action 3: drops slack_integrations.expires_at, which holds values not copied elsewhere; action 4: drops sl
+    why  langfuse/20260722070000_add_in_app_agent_run_lifecycle_fields | loses | fails | loses | action 2: overwrites in_app_agent_runs.error_code; action 2: overwrites in_app_agent_runs.error_message
+    RULE lemmy/2020-01-29-011901_create_reply_materialized_view | None | fails | ok | 
+    EKB lemmy/2024-06-17-160323_fix_post_aggregates_featured_local | loses | loses | ok | 
+    RULE mattermost/000046_create_users | None | loses | ok | 
+    why  mattermost/000062_upgrade_sessions_v6.0 | fails | loses | fails | action 1: text values of props need not parse as jsonb
+    RULE mattermost/000083_threads_threaddeleteat | None | loses | ok | 
+    RULE mattermost/000090_create_enums | fails | ok | loses | action 2: casting channels.type from character varying(1) to channel_type changes values; action 4: casting teams.type from character varying(255) to team_type 
+    RULE mattermost/000096_threads_threadteamid | None | loses | ok | 
+    EKB mattermost/000105_remove_tokens | loses | loses | ok | 
+    RULE mattermost/000112_rework_desktop_tokens | None | loses | ok | 
+    RULE mattermost/000186_create_channel_guards_plugin_id_index | None | fails | ok | 
+    RULE mattermost/000200_add_rank_to_attribute_view | None | fails | ok | 
+    why  triggerdev/20240208124114_changes_to_the_task_event_schema | fails | loses | fails | action 1: adds TaskEvent.properties NOT NULL without a DEFAULT, and TaskEvent holds rows
+  both wrong (11):
+    calcom/20240111075727_remove_brand_colours_default | None | loses | loses
+    calcom/20250506000000_remove_around_from_event_types | None | loses | loses
+    calcom/20250506000001_remove_around_credentials | None | loses | loses
+    calcom/20260129090913_enable_pbac_globally | None | loses | loses
+    cratesio/20170728002039_fix_keywords | None | loses | fails
+    formbricks/20260420000000_migrate_legacy_styling_fields | None | loses | loses
+    langfuse/20240307185725_backfill_score_source | None | loses | loses
+    langfuse/20251013134801_drop_atla_llm_keys | None | loses | loses
+    lemmy/2025-08-01-000062_username-instance-unique | None | loses | loses
+    mattermost/000107_threadmemberships_cleanup | None | loses | loses
+    mattermost/000199_rename_classification_linked_fields | None | loses | loses
+== regime R (sensitivity: ans_t2 + p2 changed)
+  EKB 0.1.20       acc 0.902 (166/184)  recall 0.964 (54/56)  FA 0.125 (16/128)  reason exact 48/54  unanswered 1
+  R_RICH           acc 0.913 (168/184)  recall 0.929 (52/56)  FA 0.094 (12/128)  reason exact 51/52
+  R_RICH AND EKB   acc 0.908 (167/184)  recall 0.893 (50/56)  FA 0.086 (11/128)  reason exact 45/50
+  R_RICH OR EKB    acc 0.908 (167/184)  recall 1.000 (56/56)  FA 0.133 (17/128)  reason exact 50/56
+  delta acc EKB - R_RICH = -1.1 pp, 95% CI [-4.9, +2.7] pp; McNemar: EKB right only 5, R_RICH right only 7, p = 0.774
+  pre-registered outcome: TIE: the value is in the facts
+== regime N (sensitivity: ans_t2 + p2 changed)
+  EKB 0.1.20       acc 0.886 (163/184)  recall 0.946 (53/56)  FA 0.141 (18/128)  reason exact 46/53  unanswered 1
+  R_RICH           acc 0.913 (168/184)  recall 0.929 (52/56)  FA 0.094 (12/128)  reason exact 51/52
+  R_RICH AND EKB   acc 0.897 (165/184)  recall 0.875 (49/56)  FA 0.094 (12/128)  reason exact 43/49
+  R_RICH OR EKB    acc 0.902 (166/184)  recall 1.000 (56/56)  FA 0.141 (18/128)  reason exact 48/56
+  delta acc EKB - R_RICH = -2.7 pp, 95% CI [-6.5, +1.1] pp; McNemar: EKB right only 4, R_RICH right only 9, p = 0.267
+  pre-registered outcome: the rule is better

@@ -1,0 +1,41 @@
+without the rule  all              n=307 acc=0.896 recall=119/119 reason=114/119 FA=32/188
+without the rule  consuldemocracy  n=177 acc=0.983 recall=108/108 reason=103/108 FA=3/69
+without the rule  openproject      n= 72 acc=0.611 recall=7/7 reason=7/7 FA=28/65
+without the rule  redmine          n= 58 acc=0.983 recall=4/4 reason=4/4 FA=1/54
+v7                all              n=307 acc=0.896 recall=119/119 reason=118/119 FA=32/188
+v7                consuldemocracy  n=177 acc=0.983 recall=108/108 reason=107/108 FA=3/69
+v7                openproject      n= 72 acc=0.611 recall=7/7 reason=7/7 FA=28/65
+v7                redmine          n= 58 acc=0.983 recall=4/4 reason=4/4 FA=1/54
+false alarms by said kind Counter({'loses': 30, 'schema': 2}) by project Counter({'openproject': 28, 'consuldemocracy': 3, 'redmine': 1})
+  nsuldemocracy/db/migrate/20150909142534_set_organization_name_limit.rb loses    lost=0.87 fails=0.02 detail=[]
+  consuldemocracy/db/migrate/20150909153455_set_tag_name_limit.rb        loses    lost=0.92 fails=0.04 detail=[]
+  /migrate/20151103175139_make_comments_confidence_score_default_to_0.rb loses    lost=0.97 fails=0.02 detail=[]
+  /db/migrate/20250624155721_rename_create_minutes_to_manage_outcomes.rb loses    lost=0.95 fails=0.01 detail=[]
+  /meeting/db/migrate/20250808062421_fix_missing_meetings_attachments.rb loses    lost=0.83 fails=0.02 detail=[]
+  odules/overviews/db/migrate/20250923120330_remove_news_beta_widgets.rb loses    lost=0.88 fails=0.01 detail=[]
+  ect/db/migrate/20251029134217_avoid_global_role_on_placeholder_user.rb loses    lost=0.89 fails=0.03 detail=[]
+  openproject/db/migrate/20251103123548_rename_item_score_to_weight.rb   loses    lost=0.95 fails=0.02 detail=[]
+  project/db/migrate/20251211160744_set_is_for_all_and_unset_required.rb schema   lost=0.00 fails=0.00 detail=[]
+  enproject/db/migrate/20251218100700_add_uniqueness_for_status_names.rb loses    lost=0.90 fails=0.12 detail=[]
+  openproject/db/migrate/20251218100721_add_uniqueness_for_role_names.rb loses    lost=0.94 fails=0.12 detail=[]
+  openproject/db/migrate/20251218100741_add_uniqueness_for_type_names.rb loses    lost=0.73 fails=0.11 detail=[]
+  ect/db/migrate/20260105090537_add_uniqueness_for_custom_field_names.rb loses    lost=0.87 fails=0.18 detail=[]
+  webhooks/db/migrate/20260105092419_add_uniqueness_for_webhook_names.rb loses    lost=0.94 fails=0.32 detail=[]
+  ject/db/migrate/20260105093056_add_uniqueness_for_enumeration_names.rb loses    lost=0.95 fails=0.12 detail=[]
+  /costs/db/migrate/20260105093729_add_uniqueness_for_cost_type_names.rb loses    lost=0.88 fails=0.10 detail=[]
+  project/db/migrate/20260105095152_add_uniqueness_for_category_names.rb loses    lost=0.93 fails=0.18 detail=[]
+  nproject/db/migrate/20260105100429_add_uniqueness_for_version_names.rb loses    lost=0.94 fails=0.09 detail=[]
+  ules/overviews/db/migrate/20260129120330_remove_status_beta_widgets.rb loses    lost=0.87 fails=0.01 detail=[]
+  es/costs/db/migrate/20260303172517_suffix_or_prefix_currency_format.rb loses    lost=0.95 fails=0.01 detail=[]
+  rate/20260304164536_fix_empty_display_representation_on_cf_sections.rb loses    lost=0.89 fails=0.01 detail=[]
+  60319120000_add_case_insensitive_uniqueness_for_project_identifiers.rb loses    lost=0.92 fails=0.05 detail=[]
+  b/migrate/20260422084824_cleanup_backlogs_task_color_from_user_pref.rb loses    lost=0.95 fails=0.01 detail=[]
+  ect/modules/wikis/db/migrate/20260422131715_update_wiki_permissions.rb loses    lost=0.93 fails=0.01 detail=[]
+  8000000_cleanup_backlogs_versions_default_fold_state_from_user_pref.rb loses    lost=0.96 fails=0.01 detail=[]
+  /db/migrate/20260624120000_add_unique_index_to_meeting_participants.rb loses    lost=0.97 fails=0.14 detail=[]
+  project/db/migrate/20260708100831_add_enabled_column_to_wikis_table.rb loses    lost=0.97 fails=0.01 detail=[]
+  roject/db/migrate/20260720142222_rename_patterns_aspect_to_defaults.rb loses    lost=0.94 fails=0.08 detail=[]
+  openproject/db/migrate/20260804123419_create_project_types.rb          loses    lost=0.84 fails=0.08 detail=[]
+  roject/db/migrate/20260916130000_name_workflows_after_their_variant.rb loses    lost=0.94 fails=0.04 detail=[]
+  b/migrate/20260918125750_repair_entity_scoped_inherited_memberships.rb loses    lost=0.97 fails=0.16 detail=[]
+  ne/db/migrate/20151020182731_fix_comma_in_user_format_setting_value.rb schema   lost=0.00 fails=0.00 detail=[]

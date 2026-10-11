@@ -1,0 +1,184 @@
+{"id": "calcom/20210813142905_event_payment", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20210814175645_custom_inputs_type_enum", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20211105200545_availability_start_and_end_time_as_time", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20220121210720_add_cancellation_reason", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20220404132522_redirect_url", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20220420230105_rename_verification_token_unique_id", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20220526151550_cascades_impersonations_on_user_delete", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20220622110735_allow_one_schedule_to_apply_to_multiple_event_types", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 5: drops Schedule.eventTypeId, which holds values not copied elsewhere"]}
+{"id": "calcom/20230601141825_add_locale_timezone_timeformat_in_team", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20231201233433_add_new_user_field_app_theme", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20231202181233_adding_show_first_available_timeslot", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20240111075727_remove_brand_colours_default", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 3: overwrites Team.brandColor", "action 4: overwrites Team.darkBrandColor", "action 5: overwrites users.brandColor", "action 6: overwrites users.darkBrandColor"]}
+{"id": "calcom/20240221051147_link_secondary_email_with_token", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20240307203026_rename_team_group_mapping_org_id_to_organization_id", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 1: adds DSyncTeamGroupMapping.organizationId NOT NULL without a DEFAULT, and DSyncTeamGroupMapping holds rows"]}
+{"id": "calcom/20240329084749_platform_snake_case_to_pascal_case", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 27: foreign key on _PlatformOAuthClientToUser references PlatformOAuthClient, which is empty"]}
+{"id": "calcom/20240607082125_removal_of_logo_and_avatar", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops Team.logo, which holds values not copied elsewhere", "action 2: drops users.avatar, which holds values not copied elsewhere", "action 2: drops users.away, which holds values not copied elsewhere"]}
+{"id": "calcom/20240722105401_add_is_admin_api_enabled_organization_setting", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20240918202101_adds_per_user_and_team_feature_flags", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20241127102756_remove_fields_from_evenet_type_translation", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: overwrites EventTypeTranslation.uid", "action 4: drops EventTypeTranslation.sourceLang, which holds values not copied elsewhere", "action 4: drops EventTypeTranslation.targetLang, which holds values not copied elsewhere"]}
+{"id": "calcom/20250113170733_add_routingforms_incompletebooking_action_table", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20250506000000_remove_around_from_event_types", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: overwrites EventType.locations"]}
+{"id": "calcom/20250506000001_remove_around_credentials", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: deletes rows of Credential (WHERE)"]}
+{"id": "calcom/20251003103832_upsert_watchlist_audit", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 7: drops Watchlist.id, which holds values not copied elsewhere", "action 12: drops Watchlist.createdAt, which holds values not copied elsewhere", "action 12: drops Watchlist.createdById, which holds values not copied elsewhere", "action 12: drops Watchlist.severity, which holds values not copied elsewhere", "action 12: drops Watchlist.updatedAt, which holds values not copied elsewhere", "action 12: drops Watchlist.updatedById, which holds values not copied elsewhere", "action 14: drops BlockedBookingLog, which holds rows not copied elsewhere"]}
+{"id": "calcom/20251115054502_insert_system_actor", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20251218173119_add_global_watchlist", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "calcom/20260129090913_enable_pbac_globally", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: overwrites Feature.enabled"]}
+{"id": "calcom/20260319000000_drop_workflow_tables", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops WorkflowStepTranslation, which holds rows not copied elsewhere", "action 2: drops WorkflowReminder, which holds rows not copied elsewhere", "action 3: drops WorkflowsOnEventTypes, which holds rows not copied elsewhere", "action 4: drops WorkflowsOnTeams, which holds rows not copied elsewhere", "action 5: drops WorkflowOptOutContact, which holds rows not copied elsewhere", "action 6: drops AIPhoneCallConfiguration, which holds rows not copied elsewhere", "action 7: drops WorkflowStep, which holds rows not copied elsewhere", "action 8: drops Workflow, which holds rows not copied elsewhere", "action 9: drops users.whitelistWorkflows, which holds values not copied elsewhere"]}
+{"id": "calcom/20260430000000_drop_instant_meeting_webhook_trigger", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 2: overwrites Webhook.eventTriggers"]}
+{"id": "cratesio/20140925132251_dumped_migration_9", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "cratesio/20140925132252_dumped_migration_10", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "cratesio/20140929103758_dumped_migration_30", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "cratesio/20141020175651_dumped_migration_77", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "cratesio/20150715170350_dumped_migration_96", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "cratesio/20160219125609_dumped_migration_105", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops crates.keywords, which holds values not copied elsewhere"]}
+{"id": "cratesio/20160812094502_dumped_migration_112", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "cratesio/20170305095748_create_reserved_crate_names", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "cratesio/20170322130523_version_downloads_needs_no_id", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: casting version_downloads.date from timestamp without time zone to date changes values"]}
+{"id": "cratesio/20170728002039_fix_keywords", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 3: deletes rows of keywords that crates_keywords still references (ON DELETE NO ACTION)"]}
+{"id": "cratesio/2018-11-01-223239_add_published_by_to_versions", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "cratesio/2019-05-14-165316_index_crate_name_for_like", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "cratesio/2020-02-14-183929_remove_version_authors_user_id", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops version_authors.user_id, which holds values not copied elsewhere"]}
+{"id": "cratesio/2026-05-05-180007-0000_add_last_sync_to_oauth_github", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "cratesio/2026-05-27-120000-0000_semver_ord_v2_not_null", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 1: versions.semver_ord_v2 holds NULLs and is made NOT NULL"]}
+{"id": "cratesio/2026-07-15-182934-0000_drop_users_gh_encrypted_token", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops users.gh_encrypted_token, which holds values not copied elsewhere"]}
+{"id": "documenso/20240131004516_add_user_security_audit_logs", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "documenso/20240205120648_create_delete_account", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "documenso/20240206051948_add_teams_templates", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "documenso/20240220115435_add_public_profile_url_bio", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "documenso/20240227023747_add_team_webhooks", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "documenso/20240306060259_add_passkeys", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "documenso/20240530120101_add_missing_fields_to_account_model_for_oidc", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "documenso/20240730094430_add_document_visibility_scope_per_role", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "documenso/20241126014353_add_typed_signature_setting_to_templates", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "documenso/20251101000330_add_new_webhook_events", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "documenso/20251126053402_add_insights_indexes", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "documenso/20260504000000_add_allow_personal_organisations_to_auth_portal", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "formbricks/20230405105937_add_api_keys_to_environments", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 2: adds ApiKey.environmentId NOT NULL without a DEFAULT, and ApiKey holds rows"]}
+{"id": "formbricks/20230517145313_change_brand_color_default", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "formbricks/20230529092700_add_formbricks_signature_to_product", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "formbricks/20230712183558_add_expires_at_to_session", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "formbricks/20231003122730_survey_styling_overwrites", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "formbricks/20231015165646_add_hidden_fields", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "formbricks/20240421093432_adds_website_survey_type", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 4: enum labels ['email', 'mobile'] not in surveytype_new"]}
+{"id": "formbricks/20240530073540_made_name_property_on_user_model_optional", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 1: User.name holds NULLs and is made NOT NULL"]}
+{"id": "formbricks/20240801071532_add_endings_to_survey", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "formbricks/20240904091113_removed_actions_table", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 3: drops Action, which holds rows not copied elsewhere"]}
+{"id": "formbricks/20250402063013_add_is_active_to_user", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "formbricks/20260325090000_add_auth_sessions", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "formbricks/20260330120000_add_password_reset_tokens", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "formbricks/20260420000000_migrate_legacy_styling_fields", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: overwrites Workspace.styling", "action 2: overwrites Survey.styling"]}
+{"id": "formbricks/20260820000000_add_response_ingest_flags", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "formbricks/20260928120001_eng_2404_drop_survey_legacy_embedded_data_columns", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 3: drops Survey.variables, which holds values not copied elsewhere", "action 3: drops Survey.hiddenFields, which holds values not copied elsewhere"]}
+{"id": "formbricks/20261005120000_add_survey_auto_select_language", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "hoppscotch/20260209063744_published_doc_environment", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20230518193521_changes", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 2: adds observations.type NOT NULL without a DEFAULT, and observations holds rows"]}
+{"id": "langfuse/20230720172051_tokens_non_null", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20230731162154_score_value_float", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20230907225604_api_keys_publishable_to_public", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20230910164603_cron_add_state", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20231104004529_scores_add_index", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20240106195340_drop_dataset_status", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops datasets.status, which holds values not copied elsewhere"]}
+{"id": "langfuse/20240118235424_add_index_to_models", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20240119140941_add_tokenizer_id", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20240126184148_new_models copy", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: deletes rows of models (WHERE)"]}
+{"id": "langfuse/20240213124148_update_openai_pricing", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: deletes rows of models (WHERE)"]}
+{"id": "langfuse/20240227112101_index_prompt_id_in_observations", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20240307185725_backfill_score_source", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: overwrites scores.source"]}
+{"id": "langfuse/20240508132736_scores_backfill_project_id", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20240705154048_observation_view_add_created_at_updated_at", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20241206115829_remove_trace_score_observation_constraints", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20250211123300_drop_events_table", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops events, which holds rows not copied elsewhere"]}
+{"id": "langfuse/20250324110557_add_blobstorage_integration_table", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20251006173445_add_cloud_spend_alerts", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20251013134801_drop_atla_llm_keys", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: deletes rows of llm_api_keys (WHERE)"]}
+{"id": "langfuse/20251029000042_add_comment_reactions", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20251127105316_add_pricing_tiers", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20251211204006_dataset_items_switch_pk", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20251218102933_score_configs_rename_score_data_type_enum", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20260612000000_add_dataset_item_media", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "langfuse/20260619120000_revert_slack_pending_install_columns", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: deletes rows of slack_integrations (WHERE)", "action 3: drops slack_integrations.expires_at, which holds values not copied elsewhere", "action 4: drops slack_integrations.claim_token_hash, which holds values not copied elsewhere"]}
+{"id": "langfuse/20260722070000_add_in_app_agent_run_lifecycle_fields", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 2: overwrites in_app_agent_runs.error_code", "action 2: overwrites in_app_agent_runs.error_message"]}
+{"id": "langfuse/20260723124010_drop_dataset_run_items_table", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops dataset_run_items, which holds rows not copied elsewhere", "action 2: deletes rows of background_migrations (WHERE)"]}
+{"id": "lemmy/2020-01-29-011901_create_reply_materialized_view", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "lemmy/2020-04-21-123957_remove_unique_user_constraints", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "lemmy/2020-05-05-210233_add_activitypub_for_private_messages", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "lemmy/2020-12-03-035643_create_user_aggregates", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "lemmy/2021-04-24-174047_add_show_read_post_setting", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "lemmy/2022-05-20-135341_embed-url", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops post.embed_html, which holds values not copied elsewhere"]}
+{"id": "lemmy/2022-09-07-114618_pm-reports", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "lemmy/2022-11-21-204256_user-following", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "lemmy/2023-02-05-102549_drop-site-federation-debug", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops local_site.federation_debug, which holds values not copied elsewhere"]}
+{"id": "lemmy/2023-06-19-055530_add_retry_worker_setting", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops local_site.federation_worker_count, which holds values not copied elsewhere"]}
+{"id": "lemmy/2024-04-05-153647_alter_vote_display_mode_defaults", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops local_user_vote_display_mode.score, which holds values not copied elsewhere", "action 1: drops local_user_vote_display_mode.upvotes, which holds values not copied elsewhere", "action 1: drops local_user_vote_display_mode.downvotes, which holds values not copied elsewhere", "action 1: drops local_user_vote_display_mode.upvote_percentage, which holds values not copied elsewhere"]}
+{"id": "lemmy/2024-05-05-162540_add_image_detail_table", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops remote_image.id, which holds values not copied elsewhere"]}
+{"id": "lemmy/2024-06-17-160323_fix_post_aggregates_featured_local", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "lemmy/2025-08-01-000005_drop-enable-nsfw", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: overwrites site.content_warning", "action 2: drops local_site.enable_nsfw, which holds values not copied elsewhere"]}
+{"id": "lemmy/2025-08-01-000008_create_oauth_provider", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "lemmy/2025-08-01-000020_oauth_pkce", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "lemmy/2025-08-01-000038_ap_id", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "lemmy/2025-08-01-000053_remove_hide_modlog_names", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops local_site.hide_modlog_mod_names, which holds values not copied elsewhere"]}
+{"id": "lemmy/2025-08-01-000062_username-instance-unique", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: deletes rows of person (WHERE)"]}
+{"id": "lemmy/2025-11-05-181519-0000_add_registration_application_updated_at", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "lemmy/2026-07-08-184840-0000_add_report_resolve_reason", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000006_create_emojis", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000014_create_outgoing_webhooks", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000023_create_terms_of_service", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000027_create_status", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000036_create_sharedchannelusers", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000039_create_channel_member_history", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000046_create_users", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000051_create_msg_root_count", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000062_upgrade_sessions_v6.0", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 1: text values of props need not parse as jsonb"]}
+{"id": "mattermost/000068_upgrade_teammembers_v6.1", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000083_threads_threaddeleteat", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000090_create_enums", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 2: casting channels.type from character varying(1) to channel_type changes values", "action 4: casting teams.type from character varying(255) to team_type changes values", "action 6: casting uploadsessions.type from character varying(32) to upload_session_type changes values"]}
+{"id": "mattermost/000095_remove_posts_parentid", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000096_threads_threadteamid", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000105_remove_tokens", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000107_threadmemberships_cleanup", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: deletes rows of threadmemberships (WHERE)"]}
+{"id": "mattermost/000112_rework_desktop_tokens", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000121_remove_true_up_review_history", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops trueupreviewhistory, which holds rows not copied elsewhere"]}
+{"id": "mattermost/000133_add_channel_banner_fields", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000137_update_attribute_view", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000138_add_default_category_name_to_channel", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000151_add_autotranslationdisabled_to_channelmembers", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000165_add_protected_and_permissions_to_property_fields", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000186_create_channel_guards_plugin_id_index", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000199_rename_classification_linked_fields", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: overwrites propertyfields.name"]}
+{"id": "mattermost/000200_add_rank_to_attribute_view", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "mattermost/000230_add_creator_to_permission_level", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "triggerdev/20230102095903_connection_added_authentication_method", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "triggerdev/20230114171501_add_cancelled_external_source_status", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "triggerdev/20230119175445_add_enabled_to_event_rule", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "triggerdev/20230209171921_split_an_auth_attempt_with_auth_table", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops GitHubAppAuthorization.status, which holds values not copied elsewhere"]}
+{"id": "triggerdev/20230213154802_simplify_org_template_status", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 4: enum labels ['READY_TO_TEST', 'READY_TO_RUN'] not in organizationtemplatestatus_new"]}
+{"id": "triggerdev/20230312132000_more_kv_types", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 3: enum labels ['KEY_VALUE'] not in workflowrunsteptype_new"]}
+{"id": "triggerdev/20230329123037_simplified_job_models", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 6: adds JobInstance.environmentId NOT NULL without a DEFAULT, and JobInstance holds rows", "action 6: adds JobInstance.organizationId NOT NULL without a DEFAULT, and JobInstance holds rows", "action 6: adds JobInstance.trigger NOT NULL without a DEFAULT, and JobInstance holds rows", "action 6: adds JobInstance.version NOT NULL without a DEFAULT, and JobInstance holds rows"]}
+{"id": "triggerdev/20230419141305_add_http_sources", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "triggerdev/20230504152611_rename_shadow_to_internal", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops Job.shadow, which holds values not copied elsewhere"]}
+{"id": "triggerdev/20230517105823_rename_connection_metadata", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 1: adds JobIntegration.metadata NOT NULL without a DEFAULT, and JobIntegration holds rows"]}
+{"id": "triggerdev/20230525123241_add_external_account_to_schedule_sources", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "triggerdev/20230606122534_improve_run_execution_model", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 4: enum labels ['INITIAL', 'RETRY', 'RESUME'] not in jobrunexecutionreason_new", "also loses: action 11: drops JobRunExecution.number, which holds values not copied elsewhere"]}
+{"id": "triggerdev/20230614110359_rename_deploy_to_index", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops Endpoint.deployHookIdentifier, which holds values not copied elsewhere"]}
+{"id": "triggerdev/20230616083056_add_integration_auth_method", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops Integration.authenticationDefinition, which holds values not copied elsewhere"]}
+{"id": "triggerdev/20230616104748_add_integration_definition", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 1: adds Integration.definitionId NOT NULL without a DEFAULT, and Integration holds rows"]}
+{"id": "triggerdev/20231024122736_runtime_environment_shortcodes", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "triggerdev/20231121155237_change_kv_value_to_bytes", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 1: adds KeyValueItem.value NOT NULL without a DEFAULT, and KeyValueItem holds rows"]}
+{"id": "triggerdev/20240208124114_changes_to_the_task_event_schema", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 1: adds TaskEvent.properties NOT NULL without a DEFAULT, and TaskEvent holds rows"]}
+{"id": "triggerdev/20240209121123_add_task_run_trace_columns", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 1: adds TaskRun.spanId NOT NULL without a DEFAULT, and TaskRun holds rows", "action 1: adds TaskRun.traceId NOT NULL without a DEFAULT, and TaskRun holds rows"]}
+{"id": "triggerdev/20240214180324_remove_task_queue_relationship_from_task_runs", "p_fails": 1.0, "p_lost": 0.0, "kind": "fails", "why": ["action 2: adds TaskRun.queue NOT NULL without a DEFAULT, and TaskRun holds rows"]}
+{"id": "triggerdev/20240223115106_batch_trigger_models", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 3: drops TaskRun.parentAttemptId, which holds values not copied elsewhere"]}
+{"id": "triggerdev/20240430110419_task_run_indexes_projectid_task_identifier_and_status", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "triggerdev/20241129141824_add_one_time_use_tokens", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "triggerdev/20250131120251_add_batch_trigger_v3_columns", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "triggerdev/20250526095040_remove_v2_round_5", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 1: drops IntegrationConnection, which holds rows not copied elsewhere"]}
+{"id": "triggerdev/20250623141255_bulk_action_group_counts_completed_at", "p_fails": 0.0, "p_lost": 1.0, "kind": "loses", "why": ["action 2: drops BulkActionGroup.processedCount, which holds values not copied elsewhere", "action 2: drops BulkActionGroup.reason, which holds values not copied elsewhere"]}
+{"id": "triggerdev/20250708130212_task_run_add_bulk_action_group_ids", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "triggerdev/20260120115732_add_time_filter_to_customer_query", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "umami/03_metric_performance_index", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "umami/07_add_tag", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "vaultwarden/2020-12-09-173101_add_stamp_exception", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "vaultwarden/2021-03-11-190243_add_sends", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "vaultwarden/2022-01-17-234911_add_api_key", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}
+{"id": "vaultwarden/2023-06-02-200424_create_organization_api_key", "p_fails": 0.0, "p_lost": 0.0, "kind": "ok", "why": []}

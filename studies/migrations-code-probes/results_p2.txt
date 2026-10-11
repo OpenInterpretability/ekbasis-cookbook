@@ -1,0 +1,41 @@
+== T1 pre-rebase (bbcf44c vs 071c7c7)
+ regime N: caught OLD 0/4, NEW 0/4, net +0 [P1, primary: underpowered n=4]
+   lobechat-email-unique        OLD ('missed', 'ok', 0.4073334336280823)  NEW ('missed', 'ok', 0.4073334336280823)
+   lobechat-agent-index-size    OLD ('missed', 'ok', 0.014063626527786255)  NEW ('missed', 'ok', 0.014063626527786255)
+   plunk-contacts-json          OLD ('caught_wrong_why', 'loses', 0.18242551386356354)  NEW ('caught_wrong_why', 'loses', 0.18242551386356354)
+   hydra-nid-drop-constraint    OLD ('missed', None, None)  NEW ('cannot_foresee', 'cannot_foresee', None)
+ regime R: caught OLD 0/4, NEW 0/4, net +0
+   lobechat-email-unique        OLD ('missed', 'ok', 0.06371499598026276)  NEW ('missed', 'ok', 0.07159119844436646)
+   lobechat-agent-index-size    OLD ('missed', 'ok', 0.008577484637498856)  NEW ('missed', 'ok', 0.008577484637498856)
+   plunk-contacts-json          OLD ('caught_wrong_why', 'loses', 0.11279541254043579)  NEW ('caught_wrong_why', 'loses', 0.11279541254043579)
+   hydra-nid-drop-constraint    OLD ('missed', None, None)  NEW ('cannot_foresee', 'cannot_foresee', None)
+== T1 final (9caf2b2 vs 9b8ab1c)
+ regime N: caught OLD 0/4, NEW 0/4, net +0 [P1, primary: underpowered n=4]
+   lobechat-email-unique        OLD ('missed', 'ok', 0.4073334336280823)  NEW ('missed', 'ok', 0.4073334336280823)
+   lobechat-agent-index-size    OLD ('missed', 'ok', 0.012431650422513485)  NEW ('missed', 'ok', 0.012431650422513485)
+   plunk-contacts-json          OLD ('caught_wrong_why', 'loses', 0.2018132209777832)  NEW ('caught_wrong_why', 'loses', 0.2018132209777832)
+   hydra-nid-drop-constraint    OLD ('missed', None, None)  NEW ('cannot_foresee', 'cannot_foresee', None)
+ regime R: caught OLD 0/4, NEW 0/4, net +0
+   lobechat-email-unique        OLD ('missed', 'ok', 0.06008664891123772)  NEW ('missed', 'ok', 0.06008664891123772)
+   lobechat-agent-index-size    OLD ('missed', 'ok', 0.007121428847312927)  NEW ('missed', 'ok', 0.007121428847312927)
+   plunk-contacts-json          OLD ('caught_wrong_why', 'loses', 0.13296422362327576)  NEW ('caught_wrong_why', 'loses', 0.13296422362327576)
+   hydra-nid-drop-constraint    OLD ('missed', None, None)  NEW ('cannot_foresee', 'cannot_foresee', None)
+== T2 regime R
+OLD: false alarms 20/128 = 0.156; recall 54/56 = 0.964; reason exact 50/54; accuracy 162/184
+NEW: false alarms 20/128 = 0.156; recall 54/56 = 0.964; reason exact 50/54; accuracy 162/184
+unanswered 0 [] | changed items 5
+benign: new alarms 0, alarms removed 0 | risky: newly flagged 0, no longer flagged 0
+== T2 regime N
+OLD: false alarms 19/128 = 0.148; recall 54/56 = 0.964; reason exact 46/54; accuracy 163/184
+NEW: false alarms 19/128 = 0.148; recall 54/56 = 0.964; reason exact 46/54; accuracy 163/184
+unanswered 0 [] | changed items 3
+benign: new alarms 0, alarms removed 0 | risky: newly flagged 0, no longer flagged 0
+
+== Registered criteria (PREREG_p2 section 5) and the leader's rule (addendum 3)
+P1 T1 regime N: NEW - OLD = 0 of 4 -> FAIL, underpowered (n = 4 < 10; leader: not expanded)
+P2 T2 regime R: NEW false alarms 20/128 = 15.6% (<= 23/128)       -> PASS
+P3 T2 regime N: NEW - OLD false alarms = 0 (<= +3)               -> PASS
+P4 T2 regime R: recall NEW 54/56 = OLD 54/56 (>= OLD - 2)        -> PASS
+Leader's rule: PR to main if P2-P4 pass and the tests and end-to-end are green -> met (274 tests; e2e supabase/auth).
+Exploratory: T2 changed states R 5 (2 decided in code, both truly failing), N 3; no verdict changed.
+T2 calls 19:28:42-19:38:32 UTC (374), no errors, outside the restart windows.

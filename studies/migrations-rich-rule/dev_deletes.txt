@@ -1,0 +1,137 @@
+### WANT calcom/20230125175109_remove_type_from_payment_and_add_app_relationship {'lost': False, 'fails': True} True [['Payment', 'type', 20, 'value gone (aligned)']] [[4, '23503: insert or update on table "Payment" violates foreign key constraint "Payment_appId_fkey"']]
+    1 ALTER TABLE "Payment" DROP COLUMN "type", ADD COLUMN "appId" TEXT
+    2 DROP TYPE "PaymentType"
+    3 ALTER TABLE "Payment" ADD CONSTRAINT "Payment_appId_fkey" FOREIGN KEY ("appId") REFERENCES "App"("slug") ON DELETE CASCADE ON UPDATE CASCADE
+    4 UPDATE "Payment" SET "appId" = 'stripe'
+### DEL calcom/20230222152136_assign_event_type_ownership {'lost': False, 'fails': True} []
+    DELETE FROM "EventType" WHERE id IN ( SELECT id FROM "EventType" INNER JOIN _user_eventtype ON "A" = id WHERE "B" IN ( SELECT "B" FROM "EventType" INNER JOIN _user_eventtype ON "A" = id WHERE "userId" IS NULL AND "teamId" IS NULL GROUP BY slug, "B" H
+### DEL calcom/20230428142539_event_type_workflow_uniqueness {'lost': False, 'fails': False} []
+    DELETE FROM "WorkflowsOnEventTypes" WHERE id not in (SELECT MIN(id) FROM "WorkflowsOnEventTypes" GROUP BY "workflowId", "eventTypeId")
+### DEL calcom/20240105110500_removed_newbooker_feature_flag {'lost': True, 'fails': False} [['Feature', 'slug', 1, 'value gone (aligned)'], ['Feature', 'description', 1, 'value gone (aligned)'], ['Feature', 'stale', 1, 'value gone (aligned)'], ['Feature', 'createdAt', 1, 'value gone (aligned)'], ['Feature', 'updatedAt', 1, 'value gone (aligned)']]
+    DELETE FROM "Feature" WHERE slug = 'booker-layouts'
+### WANT calcom/20240130134919_add_profile_table_and_add_event_type_relation {'lost': False, 'fails': True} True [] [[13, '23502: null value in column "username" of relation "Profile" violates not-null constraint']]
+    1 ALTER TABLE "EventType" ADD COLUMN "profileId" INTEGER
+    2 ALTER TABLE "users" ADD COLUMN "movedToProfileId" INTEGER
+    3 CREATE TABLE "Profile" ( "id" SERIAL NOT NULL, "uid" TEXT NOT NULL, "userId" INTEGER NOT NULL, "organizationId" INTEGER NOT NULL, "username" TEXT NOT NULL, "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP, "up
+    4 CREATE INDEX "Profile_uid_idx" ON "Profile"("uid")
+    5 CREATE INDEX "Profile_userId_idx" ON "Profile"("userId")
+    6 CREATE INDEX "Profile_organizationId_idx" ON "Profile"("organizationId")
+    7 CREATE UNIQUE INDEX "Profile_userId_organizationId_key" ON "Profile"("userId", "organizationId")
+    8 CREATE UNIQUE INDEX "users_movedToProfileId_key" ON "users"("movedToProfileId")
+    9 ALTER TABLE "EventType" ADD CONSTRAINT "EventType_profileId_fkey" FOREIGN KEY ("profileId") REFERENCES "Profile"("id") ON DELETE CASCADE ON UPDATE CASCADE
+    10 ALTER TABLE "users" ADD CONSTRAINT "users_movedToProfileId_fkey" FOREIGN KEY ("movedToProfileId") REFERENCES "Profile"("id") ON DELETE SET NULL ON UPDATE CASCADE
+    11 ALTER TABLE "Profile" ADD CONSTRAINT "Profile_userId_fkey" FOREIGN KEY ("userId") REFERENCES "users"("id") ON DELETE CASCADE ON UPDATE CASCADE
+    12 ALTER TABLE "Profile" ADD CONSTRAINT "Profile_organizationId_fkey" FOREIGN KEY ("organizationId") REFERENCES "Team"("id") ON DELETE CASCADE ON UPDATE CASCADE
+    13 WITH new_profile AS ( INSERT INTO "Profile" ("uid", "organizationId", "userId", "username", "updatedAt") SELECT "id" as "uid", "organizationId", "id" AS "userId", "username", NOW() FROM "users" WHERE "organizationId" IS 
+### WANT cratesio/2019-09-15-194259_add_badges_crate_id_foreign_key {'lost': True, 'fails': False} True [['badges', None, 20, 'rows gone']] []
+    1 DELETE FROM badges WHERE crate_id NOT IN (SELECT id FROM crates)
+    2 ALTER TABLE badges ADD CONSTRAINT fk_badges_crate_id FOREIGN KEY (crate_id) REFERENCES crates(id) ON DELETE CASCADE
+### WANT cratesio/2020-07-14-113112_change_api_token_to_bytea {'lost': True, 'fails': False} True [['api_tokens', 'token', 20, 'value gone']] []
+    1 CREATE EXTENSION IF NOT EXISTS pgcrypto SCHEMA public
+    2 ALTER TABLE api_tokens ALTER COLUMN token TYPE bytea USING decode(token, 'escape')
+    3 CREATE UNIQUE INDEX ON api_tokens (token)
+### WANT cratesio/2025-02-13-084853_not-null-org-id {'lost': True, 'fails': False} True [['teams', None, 5, 'rows gone']] []
+    1 with broken_crate_owners as ( select crate_id, owner_id, owner_kind from crate_owners left join teams on teams.id = crate_owners.owner_id where owner_kind = 1 and teams.org_id is null ) delete from crate_owners using bro
+    2 delete from teams where org_id is null
+    3 alter table teams alter column org_id set not null
+### DEL documenso/20230918111438_update_subscription_constraints_and_columns {'lost': False, 'fails': True} [['Subscription', None, 5, 'rows gone']]
+    DELETE FROM "Subscription" WHERE "customerId" IS NULL
+### WANT documenso/20230922121421_fix_document_meta_schema {'lost': True, 'fails': False} True [['DocumentMeta', None, 7, 'rows gone']] []
+    1 ALTER TABLE "Document" DROP CONSTRAINT "Document_documentMetaId_fkey"
+    2 DROP INDEX "Document_documentMetaId_key"
+    3 ALTER TABLE "DocumentMeta" ADD COLUMN "documentId" INTEGER, ADD COLUMN "message" TEXT, ADD COLUMN "subject" TEXT
+    4 UPDATE "DocumentMeta" SET "documentId" = ( SELECT "id" FROM "Document" WHERE "Document"."documentMetaId" = "DocumentMeta"."id" )
+    5 UPDATE "DocumentMeta" SET "message" = "customEmailBody"
+    6 UPDATE "DocumentMeta" SET "subject" = "customEmailSubject"
+    7 DELETE FROM "DocumentMeta" WHERE "documentId" IS NULL
+    8 ALTER TABLE "Document" DROP COLUMN "documentMetaId"
+    9 ALTER TABLE "DocumentMeta" DROP COLUMN "customEmailBody", DROP COLUMN "customEmailSubject"
+    10 ALTER TABLE "DocumentMeta" ALTER COLUMN "documentId" SET NOT NULL
+    11 CREATE UNIQUE INDEX "DocumentMeta_documentId_key" ON "DocumentMeta"("documentId")
+    12 ALTER TABLE "DocumentMeta" ADD CONSTRAINT "DocumentMeta_documentId_fkey" FOREIGN KEY ("documentId") REFERENCES "Document"("id") ON DELETE CASCADE ON UPDATE CASCADE
+### WANT documenso/20231206073509_add_multple_subscriptions {'lost': True, 'fails': False} True [['Subscription', None, 9, 'rows gone'], ['Subscription', 'customerId', 9, 'value gone']] []
+    1 DELETE FROM "Subscription" WHERE "planId" IS NULL OR "priceId" IS NULL
+    2 DROP INDEX "Subscription_customerId_key"
+    3 DROP INDEX "Subscription_userId_key"
+    4 ALTER TABLE "Subscription" ALTER COLUMN "planId" SET NOT NULL, ALTER COLUMN "priceId" SET NOT NULL
+    5 ALTER TABLE "User" ADD COLUMN "customerId" TEXT
+    6 ALTER TABLE "Subscription" DROP COLUMN "customerId"
+    7 CREATE UNIQUE INDEX "Subscription_planId_key" ON "Subscription"("planId")
+    8 CREATE UNIQUE INDEX "User_customerId_key" ON "User"("customerId")
+### DEL documenso/20240408142543_add_recipient_document_delete {'lost': False, 'fails': True} []
+    DELETE FROM "Document" WHERE "deletedAt" IS NOT NULL AND "status" = 'PENDING'
+### DEL documenso/20240418140819_remove_impossible_field_optional_states {'lost': False, 'fails': True} []
+    DELETE FROM "Field" WHERE "recipientId" IS NULL
+### DEL documenso/20240606060033_add_public_profiles {'lost': True, 'fails': False} [['UserProfile', None, 11, 'rows gone']]
+    DELETE FROM "UserProfile"
+### WANT documenso/20250918070643_remove_template_metadata {'lost': False, 'fails': True} True [['TemplateMeta', None, 16, 'rows gone']] [[3, '23502: null value in column "signingOrder" of relation "DocumentMeta" violates not-null constraint']]
+    1 ALTER TABLE "TemplateMeta" DROP CONSTRAINT "TemplateMeta_templateId_fkey"
+    2 ALTER TABLE "DocumentMeta" ADD COLUMN "templateId" INTEGER, ALTER COLUMN "documentId" DROP NOT NULL
+    3 INSERT INTO "DocumentMeta" ( "id", "subject", "message", "timezone", "password", "dateFormat", "redirectUrl", "signingOrder", "allowDictateNextSigner", "typedSignatureEnabled", "uploadSignatureEnabled", "drawSignatureEna
+    4 DROP TABLE "TemplateMeta"
+    5 CREATE UNIQUE INDEX "DocumentMeta_templateId_key" ON "DocumentMeta"("templateId")
+    6 ALTER TABLE "DocumentMeta" ADD CONSTRAINT "DocumentMeta_templateId_fkey" FOREIGN KEY ("templateId") REFERENCES "Template"("id") ON DELETE CASCADE ON UPDATE CASCADE
+### WANT formbricks/20260305102749_move_billing_json_to_organization_billing_table {'lost': True, 'fails': False} True [['Organization', 'billing', 20, 'value gone']] []
+    1 CREATE TABLE "OrganizationBilling" ( "organization_id" TEXT NOT NULL, "stripe_customer_id" TEXT, "limits" JSONB NOT NULL, "usage_cycle_anchor" TIMESTAMP(3), "stripe" JSONB, "created_at" TIMESTAMP(3) NOT NULL DEFAULT CURR
+    2 CREATE UNIQUE INDEX "OrganizationBilling_stripe_customer_id_key" ON "OrganizationBilling"("stripe_customer_id")
+    3 ALTER TABLE "OrganizationBilling" ADD CONSTRAINT "OrganizationBilling_organization_id_fkey" FOREIGN KEY ("organization_id") REFERENCES "Organization"("id") ON DELETE CASCADE ON UPDATE CASCADE
+    4 INSERT INTO "OrganizationBilling" ( "organization_id", "stripe_customer_id", "limits", "usage_cycle_anchor", "stripe", "created_at", "updated_at" ) SELECT "id", "billing"->>'stripeCustomerId', '{}'::jsonb, NULL, jsonb_bu
+    5 ALTER TABLE "Organization" DROP COLUMN "billing"
+### WANT formbricks/20260826120000_eng_2612_merge_line_chart_type_into_area {'lost': True, 'fails': False} False [['Chart', 'type', 1, 'value gone (aligned)']] []
+    1 BEGIN
+    2 DO $$ BEGIN IF NOT EXISTS ( SELECT 1 FROM pg_enum e JOIN pg_type t ON t.oid = e.enumtypid JOIN pg_namespace n ON n.oid = t.typnamespace WHERE n.nspname = 'public' AND t.typname = 'ChartType' AND e.enumlabel = 'line' ) TH
+    3 COMMIT
+### DEL hoppscotch/20251207122817_add_slug_to_published_docs {'lost': False, 'fails': False} []
+    WITH ranked_docs AS ( SELECT id, "collectionID", version, "createdOn", ROW_NUMBER() OVER (PARTITION BY "collectionID", version ORDER BY "createdOn" DESC) as rn FROM "PublishedDocs" ) DELETE FROM "PublishedDocs" WHERE id IN ( SELECT id FROM ranked_doc
+### DEL langfuse/20240124164148_correct_models {'lost': True, 'fails': False} [['models', 'created_at', 7, 'value gone (aligned)'], ['models', 'updated_at', 7, 'value gone (aligned)'], ['models', 'model_name', 1, 'value gone (aligned)'], ['models', 'match_pattern', 1, 'value gone (aligned)']]
+    DELETE FROM models WHERE id in ('clrntjt89000908jwhvkz5crm', 'clrntjt89000908jwhvkz5crg', 'clrntjt89000108jwcou1af71', 'clrntjt89000208jwawjr894q', 'clrntjt89000308jw0jtfa4rs', 'clrntjt89000408jwc2c93h6i', 'clrntjt89000508jw192m64qi', 'clrntjt8900060
+### DEL langfuse/20240131184148_add_finetuned_and_vertex_models {'lost': True, 'fails': False} [['models', 'match_pattern', 2, 'value gone (aligned)']]
+    DELETE FROM models WHERE id in ('clrp1wopz000808l09nwy32xh', 'clrp1wopz000408l05xcycki1')
+### DEL langfuse/20240203184148_update_pricing {'lost': True, 'fails': False} [['models', 'id', 1, 'value gone (aligned)'], ['models', 'model_name', 1, 'value gone (aligned)'], ['models', 'match_pattern', 1, 'value gone (aligned)'], ['models', 'output_price', 2, 'value gone'], ['models', 'tokenizer_config', 1, 'value gone (aligned)']]
+    DELETE FROM models WHERE id in ('clrkwk4cb000308l5go4b6otm', 'clrntjt89000a08jw0gcdbd5a')
+### DEL langfuse/20240423174013_update_models {'lost': True, 'fails': False} [['models', 'created_at', 1, 'value gone (aligned)'], ['models', 'updated_at', 1, 'value gone (aligned)']]
+    DELETE FROM models WHERE id = 'cluv2t5k3000508ih5kve9zag'
+    DELETE FROM models WHERE id = 'clrkvq6iq000008ju6c16gynt'
+### DEL langfuse/20240607090858_pricings_add_latest_gemini_models {'lost': False, 'fails': False} []
+    DELETE FROM models WHERE id in ('clx30djsn0000w9mzebiv41we', 'clx30hkrx0000w9mz7lqi0ial')
+### DEL langfuse/20250403153555_membership_invitations_no_duplicates {'lost': False, 'fails': False} []
+    WITH ranked_invitations AS ( SELECT id, email, org_id, ROW_NUMBER() OVER (PARTITION BY email, org_id ORDER BY updated_at DESC) as rn FROM membership_invitations ) DELETE FROM membership_invitations WHERE id IN ( SELECT id FROM ranked_invitations WHER
+### DEL langfuse/20250814090100_remove_dataset_run_items_pg_to_ch_background_migration {'lost': True, 'fails': False} [['background_migrations', None, 1, 'rows gone']]
+    DELETE FROM background_migrations WHERE id = '8d47f91b-3e5c-4a26-9f85-c12d6e4b9a3d'
+### DEL lemmy/2019-06-01-222649_remove_admin {'lost': True, 'fails': False} None
+    DELETE FROM user_ WHERE name LIKE 'admin'
+### DEL lemmy/2020-02-02-004806_add_case_insensitive_usernames {'lost': False, 'fails': False} []
+    DELETE FROM user_ WHERE id NOT IN ( SELECT min(id) FROM user_ GROUP BY lower(name), lower(fedi_name))
+### DEL lemmy/2020-07-18-234519_add_unique_community_user_actor_ids {'lost': False, 'fails': False} []
+    DELETE FROM community a USING ( SELECT min(id) AS id, actor_id FROM community GROUP BY actor_id HAVING count(*) > 1) b WHERE a.actor_id = b.actor_id AND a.id <> b.id
+    DELETE FROM user_ a USING ( SELECT min(id) AS id, actor_id FROM user_ GROUP BY actor_id HAVING count(*) > 1) b WHERE a.actor_id = b.actor_id AND a.id <> b.id
+### DEL lemmy/2020-08-25-132005_add_unique_ap_ids {'lost': False, 'fails': False} []
+    DELETE FROM private_message a USING ( SELECT min(id) AS id, ap_id FROM private_message GROUP BY ap_id HAVING count(*) > 1) b WHERE a.ap_id = b.ap_id AND a.id <> b.id
+    DELETE FROM post a USING ( SELECT min(id) AS id, ap_id FROM post GROUP BY ap_id HAVING count(*) > 1) b WHERE a.ap_id = b.ap_id AND a.id <> b.id
+    DELETE FROM comment a USING ( SELECT min(id) AS id, ap_id FROM comment GROUP BY ap_id HAVING count(*) > 1) b WHERE a.ap_id = b.ap_id AND a.id <> b.id
+### WANT lemmy/2021-11-22-135324_add_activity_ap_id_index {'lost': True, 'fails': False} True [['activity', None, 4, 'rows gone']] []
+    1 DELETE FROM activity WHERE ap_id IS NULL
+    2 ALTER TABLE activity ALTER COLUMN ap_id SET NOT NULL
+    3 DELETE FROM activity a USING ( SELECT min(id) AS id, ap_id FROM activity GROUP BY ap_id HAVING count(*) > 1) b WHERE a.ap_id = b.ap_id AND a.id <> b.id
+    4 CREATE UNIQUE INDEX idx_activity_ap_id ON activity (ap_id)
+    5 DROP INDEX idx_activity_unique_apid
+### DEL lemmy/2023-07-26-222023_site-aggregates-one {'lost': True, 'fails': False} None
+    DELETE FROM site_aggregates a WHERE NOT EXISTS ( SELECT id FROM local_site s WHERE s.site_id = a.site_id)
+### WANT lemmy/2025-08-01-000050_show_downvotes_for_others_only {'lost': True, 'fails': False} True [['local_user', 'show_downvotes', 7, 'value gone (aligned)']] []
+    1 CREATE TYPE vote_show_enum AS ENUM ( 'Show', 'ShowForOthers', 'Hide' )
+    2 ALTER TABLE local_user ALTER COLUMN show_downvotes DROP DEFAULT
+    3 ALTER TABLE local_user ALTER COLUMN show_downvotes TYPE vote_show_enum USING CASE show_downvotes WHEN FALSE THEN 'Hide' ELSE 'Show' END::vote_show_enum
+    4 ALTER TABLE local_user ALTER COLUMN show_downvotes SET DEFAULT 'Show'
+### WANT mattermost/000066_upgrade_posts_v6.0 {'lost': False, 'fails': True} True [] [[1, '22P02: invalid input syntax for type json']]
+    1 DO $$ <<migrate_root_id>> DECLARE parentid_exist boolean := false; alter_fileids boolean := false; alter_props boolean := false; BEGIN SELECT count(*) != 0 INTO parentid_exist FROM information_schema.columns WHERE table_
+    2 CREATE INDEX IF NOT EXISTS idx_posts_root_id_delete_at ON posts(rootid, deleteat)
+    3 DROP INDEX IF EXISTS idx_posts_root_id
+### DEL mattermost/000195_threadmemberships_cleanup_v2 {'lost': False, 'fails': False} []
+    DELETE FROM threadmemberships WHERE (postid, userid) IN ( SELECT threadmemberships.postid, threadmemberships.userid FROM threadmemberships JOIN threads ON threads.postid = threadmemberships.postid LEFT JOIN channelmembers ON channelmembers.userid = t
+### WANT triggerdev/20221223145049_add_unique_constract_to_event_rule {'lost': False, 'fails': True} True [] [[1, '23505: could not create unique index "EventRule_workflowId_environmentId_key"']]
+    1 CREATE UNIQUE INDEX "EventRule_workflowId_environmentId_key" ON "EventRule"("workflowId", "environmentId")
+### DEL umami/14_add_link_and_pixel {'lost': False, 'fails': True} []
+    DELETE FROM "report" WHERE type = 'funnel' and jsonb_array_length(parameters->'steps') = 1
+    DELETE FROM "report" WHERE type = 'goal' and parameters ? 'goals'
+### DEL umami/23_update_session_data {'lost': False, 'fails': False} []
+    WITH ranked_session_data AS ( SELECT "session_data_id", ROW_NUMBER() OVER ( PARTITION BY "session_id", "data_key" ORDER BY "created_at" DESC NULLS LAST, "session_data_id" DESC ) AS row_num FROM "session_data" ) DELETE FROM "session_data" USING ranked

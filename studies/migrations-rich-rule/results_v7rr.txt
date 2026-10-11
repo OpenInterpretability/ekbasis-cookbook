@@ -1,0 +1,144 @@
+Rails v7: unconvertible (out of all arms) 0
+
+== Rails v7 A1, 0.1.21 (held-out, PRIMARY): n = 307, risky 119
+  a EKB            acc 0.896 (275/307)  recall 119/119 = 1.000  FA 32/188 = 0.170  reason exact 118/119
+  b R_RICH         acc 0.964 (296/307)  recall 119/119 = 1.000  FA 11/188 = 0.059  reason exact 119/119
+  c R_NOSEED       acc 0.889 (273/307)  recall 119/119 = 1.000  FA 34/188 = 0.181  reason exact 119/119
+  d POLICY         acc 0.889 (273/307)  recall 119/119 = 1.000  FA 34/188 = 0.181  reason exact 119/119  | recall with warnings 119/119 = 1.000  warnings on benign 4/188
+  e NOSEED OR EKB  acc 0.876 (269/307)  recall 119/119 = 1.000  FA 38/188 = 0.202  reason exact 119/119
+  EKB - R_NOSEED: +0.7 pp [-1.3, +2.6]; McNemar EKB only 6, R_NOSEED only 4, p = 0.754 -> TIE
+  EKB - R_RICH: -6.8 pp [-9.8, -3.9]; McNemar EKB only 1, R_RICH only 22, p = 0.000 -> the rule is better
+  product policy (PREREG_v7rr §6):
+    a EKB            acc 0.896 FA 0.170 recall w/ warnings 1.000 (EKB 1.000) not eligible
+    b R_RICH         acc 0.964 FA 0.059 recall w/ warnings 1.000 (EKB 1.000) not a candidate
+    c R_NOSEED       acc 0.889 FA 0.181 recall w/ warnings 1.000 (EKB 1.000) not eligible
+    d POLICY         acc 0.889 FA 0.181 recall w/ warnings 1.000 (EKB 1.000) not eligible
+    e NOSEED OR EKB  acc 0.876 FA 0.202 recall w/ warnings 1.000 (EKB 1.000) not eligible
+    chosen: none eligible
+  errors (truth | EKB | R_NOSEED | warn):
+    consuldemocracy/db/migrate/20150806111435_change_debates_title_length.rb | ok | ok | fails | 
+    consuldemocracy/db/migrate/20150909142534_set_organization_name_limit.rb | ok | loses | ok | W
+    consuldemocracy/db/migrate/20150909153455_set_tag_name_limit.rb | ok | loses | ok | W
+    consuldemocracy/db/migrate/20151103175139_make_comments_confidence_score_default_to_0.rb | ok | loses | ok | W
+    openproject/db/migrate/20251017111720_set_anonymous_user_theme_to_sync_with_os.rb | ok | ok | loses | 
+    openproject/db/migrate/20251029134217_avoid_global_role_on_placeholder_user.rb | ok | loses | loses | 
+    openproject/db/migrate/20251103123548_rename_item_score_to_weight.rb | ok | loses | loses | 
+    openproject/db/migrate/20251105082400_add_unique_index_to_user_preferences_on_user_id.rb | ok | ok | loses | 
+    openproject/db/migrate/20251211160744_set_is_for_all_and_unset_required.rb | ok | schema | schema | 
+    openproject/db/migrate/20251218100700_add_uniqueness_for_status_names.rb | ok | loses | loses | 
+    openproject/db/migrate/20251218100721_add_uniqueness_for_role_names.rb | ok | loses | loses | 
+    openproject/db/migrate/20251218100741_add_uniqueness_for_type_names.rb | ok | loses | loses | 
+    openproject/db/migrate/20260105090537_add_uniqueness_for_custom_field_names.rb | ok | loses | loses | 
+    openproject/db/migrate/20260105093056_add_uniqueness_for_enumeration_names.rb | ok | loses | loses | 
+    openproject/db/migrate/20260105095152_add_uniqueness_for_category_names.rb | ok | loses | loses | 
+    openproject/db/migrate/20260105100429_add_uniqueness_for_version_names.rb | ok | loses | loses | 
+    openproject/db/migrate/20260122130916_fix_uniqueness_on_enumerations.rb | ok | ok | loses | 
+    openproject/db/migrate/20260130105057_add_uniqueness_for_watchers_table.rb | ok | ok | loses | 
+    openproject/db/migrate/20260218095806_apply_work_package_attachment_settings_to_existing_projects.rb | ok | ok | loses | 
+    openproject/db/migrate/20260304164536_fix_empty_display_representation_on_cf_sections.rb | ok | loses | loses | 
+    openproject/db/migrate/20260319120000_add_case_insensitive_uniqueness_for_project_identifiers.rb | ok | loses | loses | 
+    openproject/db/migrate/20260624120000_add_unique_index_to_meeting_participants.rb | ok | loses | loses | 
+    openproject/db/migrate/20260708100831_add_enabled_column_to_wikis_table.rb | ok | loses | loses | 
+    openproject/db/migrate/20260720142222_rename_patterns_aspect_to_defaults.rb | ok | loses | loses | 
+    openproject/db/migrate/20260804123419_create_project_types.rb | ok | loses | ok | W
+    openproject/db/migrate/20260916130000_name_workflows_after_their_variant.rb | ok | loses | loses | 
+    openproject/db/migrate/20260918125750_repair_entity_scoped_inherited_memberships.rb | ok | loses | loses | 
+    openproject/modules/backlogs/db/migrate/20260422084824_cleanup_backlogs_task_color_from_user_pref.rb | ok | loses | loses | 
+    openproject/modules/backlogs/db/migrate/20260518000000_cleanup_backlogs_versions_default_fold_state_from_user_pref.rb | ok | loses | loses | 
+    openproject/modules/costs/db/migrate/20260105093729_add_uniqueness_for_cost_type_names.rb | ok | loses | loses | 
+    openproject/modules/costs/db/migrate/20260303172517_suffix_or_prefix_currency_format.rb | ok | loses | loses | 
+    openproject/modules/meeting/db/migrate/20250624155721_rename_create_minutes_to_manage_outcomes.rb | ok | loses | loses | 
+    openproject/modules/meeting/db/migrate/20250808062421_fix_missing_meetings_attachments.rb | ok | loses | loses | 
+    openproject/modules/overviews/db/migrate/20250923120330_remove_news_beta_widgets.rb | ok | loses | loses | 
+    openproject/modules/overviews/db/migrate/20260129120330_remove_status_beta_widgets.rb | ok | loses | loses | 
+    openproject/modules/webhooks/db/migrate/20260105092419_add_uniqueness_for_webhook_names.rb | ok | loses | loses | 
+    openproject/modules/wikis/db/migrate/20260422131715_update_wiki_permissions.rb | ok | loses | loses | 
+    redmine/db/migrate/20151020182731_fix_comma_in_user_format_setting_value.rb | ok | schema | schema | 
+
+== Rails v7, sent to the model (exploratory): n = 300, risky 117
+  a EKB            acc 0.900 (270/300)  recall 117/117 = 1.000  FA 30/183 = 0.164  reason exact 116/117
+  b R_RICH         acc 0.970 (291/300)  recall 117/117 = 1.000  FA 9/183 = 0.049  reason exact 117/117
+  c R_NOSEED       acc 0.893 (268/300)  recall 117/117 = 1.000  FA 32/183 = 0.175  reason exact 117/117
+  d POLICY         acc 0.893 (268/300)  recall 117/117 = 1.000  FA 32/183 = 0.175  reason exact 117/117  | recall with warnings 117/117 = 1.000  warnings on benign 4/183
+  e NOSEED OR EKB  acc 0.880 (264/300)  recall 117/117 = 1.000  FA 36/183 = 0.197  reason exact 117/117
+  EKB - R_NOSEED: +0.7 pp [-1.3, +3.0]; McNemar EKB only 6, R_NOSEED only 4, p = 0.754 -> TIE
+  EKB - R_RICH: -7.0 pp [-10.0, -4.0]; McNemar EKB only 1, R_RICH only 22, p = 0.000 -> the rule is better
+  errors (truth | EKB | R_NOSEED | warn):
+    consuldemocracy/db/migrate/20150806111435_change_debates_title_length.rb | ok | ok | fails | 
+    consuldemocracy/db/migrate/20150909142534_set_organization_name_limit.rb | ok | loses | ok | W
+    consuldemocracy/db/migrate/20150909153455_set_tag_name_limit.rb | ok | loses | ok | W
+    consuldemocracy/db/migrate/20151103175139_make_comments_confidence_score_default_to_0.rb | ok | loses | ok | W
+    openproject/db/migrate/20251017111720_set_anonymous_user_theme_to_sync_with_os.rb | ok | ok | loses | 
+    openproject/db/migrate/20251029134217_avoid_global_role_on_placeholder_user.rb | ok | loses | loses | 
+    openproject/db/migrate/20251103123548_rename_item_score_to_weight.rb | ok | loses | loses | 
+    openproject/db/migrate/20251105082400_add_unique_index_to_user_preferences_on_user_id.rb | ok | ok | loses | 
+    openproject/db/migrate/20251218100700_add_uniqueness_for_status_names.rb | ok | loses | loses | 
+    openproject/db/migrate/20251218100721_add_uniqueness_for_role_names.rb | ok | loses | loses | 
+    openproject/db/migrate/20251218100741_add_uniqueness_for_type_names.rb | ok | loses | loses | 
+    openproject/db/migrate/20260105090537_add_uniqueness_for_custom_field_names.rb | ok | loses | loses | 
+    openproject/db/migrate/20260105093056_add_uniqueness_for_enumeration_names.rb | ok | loses | loses | 
+    openproject/db/migrate/20260105095152_add_uniqueness_for_category_names.rb | ok | loses | loses | 
+    openproject/db/migrate/20260105100429_add_uniqueness_for_version_names.rb | ok | loses | loses | 
+    openproject/db/migrate/20260122130916_fix_uniqueness_on_enumerations.rb | ok | ok | loses | 
+    openproject/db/migrate/20260130105057_add_uniqueness_for_watchers_table.rb | ok | ok | loses | 
+    openproject/db/migrate/20260218095806_apply_work_package_attachment_settings_to_existing_projects.rb | ok | ok | loses | 
+    openproject/db/migrate/20260304164536_fix_empty_display_representation_on_cf_sections.rb | ok | loses | loses | 
+    openproject/db/migrate/20260319120000_add_case_insensitive_uniqueness_for_project_identifiers.rb | ok | loses | loses | 
+    openproject/db/migrate/20260624120000_add_unique_index_to_meeting_participants.rb | ok | loses | loses | 
+    openproject/db/migrate/20260708100831_add_enabled_column_to_wikis_table.rb | ok | loses | loses | 
+    openproject/db/migrate/20260720142222_rename_patterns_aspect_to_defaults.rb | ok | loses | loses | 
+    openproject/db/migrate/20260804123419_create_project_types.rb | ok | loses | ok | W
+    openproject/db/migrate/20260916130000_name_workflows_after_their_variant.rb | ok | loses | loses | 
+    openproject/db/migrate/20260918125750_repair_entity_scoped_inherited_memberships.rb | ok | loses | loses | 
+    openproject/modules/backlogs/db/migrate/20260422084824_cleanup_backlogs_task_color_from_user_pref.rb | ok | loses | loses | 
+    openproject/modules/backlogs/db/migrate/20260518000000_cleanup_backlogs_versions_default_fold_state_from_user_pref.rb | ok | loses | loses | 
+    openproject/modules/costs/db/migrate/20260105093729_add_uniqueness_for_cost_type_names.rb | ok | loses | loses | 
+    openproject/modules/costs/db/migrate/20260303172517_suffix_or_prefix_currency_format.rb | ok | loses | loses | 
+    openproject/modules/meeting/db/migrate/20250624155721_rename_create_minutes_to_manage_outcomes.rb | ok | loses | loses | 
+    openproject/modules/meeting/db/migrate/20250808062421_fix_missing_meetings_attachments.rb | ok | loses | loses | 
+    openproject/modules/overviews/db/migrate/20250923120330_remove_news_beta_widgets.rb | ok | loses | loses | 
+    openproject/modules/overviews/db/migrate/20260129120330_remove_status_beta_widgets.rb | ok | loses | loses | 
+    openproject/modules/webhooks/db/migrate/20260105092419_add_uniqueness_for_webhook_names.rb | ok | loses | loses | 
+    openproject/modules/wikis/db/migrate/20260422131715_update_wiki_permissions.rb | ok | loses | loses | 
+
+P5: unconvertible 0
+
+== P5: v3 184 under 0.1.21 (DEV, sensitivity only): n = 184, risky 56
+  a EKB            acc 0.902 (166/184)  recall 54/56 = 0.964  FA 16/128 = 0.125  reason exact 48/54
+  b R_RICH         acc 0.946 (174/184)  recall 51/56 = 0.911  FA 5/128 = 0.039  reason exact 50/51
+  c R_NOSEED       acc 0.913 (168/184)  recall 52/56 = 0.929  FA 12/128 = 0.094  reason exact 51/52
+  d POLICY         acc 0.913 (168/184)  recall 52/56 = 0.929  FA 12/128 = 0.094  reason exact 51/52  | recall with warnings 56/56 = 1.000  warnings on benign 5/128
+  e NOSEED OR EKB  acc 0.908 (167/184)  recall 56/56 = 1.000  FA 17/128 = 0.133  reason exact 54/56
+  EKB - R_NOSEED: -1.1 pp [-4.9, +2.7]; McNemar EKB only 5, R_NOSEED only 7, p = 0.774 -> TIE
+  EKB - R_RICH: -4.3 pp [-8.7, +0.0]; McNemar EKB only 5, R_RICH only 13, p = 0.096 -> the rule is better
+  product policy (PREREG_v7rr §6):
+    a EKB            acc 0.902 FA 0.125 recall w/ warnings 0.964 (EKB 0.964) ELIGIBLE
+    b R_RICH         acc 0.946 FA 0.039 recall w/ warnings 0.911 (EKB 0.964) not a candidate
+    c R_NOSEED       acc 0.913 FA 0.094 recall w/ warnings 0.929 (EKB 0.964) not eligible
+    d POLICY         acc 0.913 FA 0.094 recall w/ warnings 1.000 (EKB 0.964) ELIGIBLE
+    e NOSEED OR EKB  acc 0.908 FA 0.133 recall w/ warnings 1.000 (EKB 0.964) ELIGIBLE
+    chosen: d POLICY
+  errors (truth | EKB | R_NOSEED | warn):
+    calcom/20210814175645_custom_inputs_type_enum | fails | fails | ok | W
+    calcom/20211105200545_availability_start_and_end_time_as_time | fails | loses | ok | W
+    calcom/20220622110735_allow_one_schedule_to_apply_to_multiple_event_types | ok | fails | loses | 
+    calcom/20240111075727_remove_brand_colours_default | ok | loses | loses | 
+    calcom/20250506000000_remove_around_from_event_types | ok | loses | loses | 
+    calcom/20250506000001_remove_around_credentials | ok | loses | loses | 
+    calcom/20260129090913_enable_pbac_globally | ok | loses | loses | 
+    cratesio/20170728002039_fix_keywords | ok | loses | fails | 
+    formbricks/20260420000000_migrate_legacy_styling_fields | ok | loses | loses | 
+    langfuse/20240126184148_new_models copy | loses | ok | loses | 
+    langfuse/20240307185725_backfill_score_source | ok | loses | loses | 
+    langfuse/20251013134801_drop_atla_llm_keys | ok | loses | loses | 
+    langfuse/20251218102933_score_configs_rename_score_data_type_enum | ok | fails | ok | W
+    lemmy/2022-11-21-204256_user-following | ok | loses | ok | W
+    lemmy/2024-06-17-160323_fix_post_aggregates_featured_local | loses | loses | ok | W
+    lemmy/2025-08-01-000062_username-instance-unique | ok | ok | loses | 
+    mattermost/000046_create_users | ok | fails | ok | W
+    mattermost/000105_remove_tokens | loses | loses | ok | W
+    mattermost/000107_threadmemberships_cleanup | ok | loses | loses | 
+    mattermost/000137_update_attribute_view | ok | fails | ok | W
+    mattermost/000199_rename_classification_linked_fields | ok | loses | loses | 
+    mattermost/000200_add_rank_to_attribute_view | ok | fails | ok | W
+    triggerdev/20230312132000_more_kv_types | fails | ok | fails | 

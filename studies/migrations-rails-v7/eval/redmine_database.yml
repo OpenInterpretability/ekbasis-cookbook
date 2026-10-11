@@ -1,0 +1,7 @@
+# Eval harness: Redmine on PostgreSQL (the scratch database comes from DATABASE_URL)
+development:
+  adapter: postgresql
+  encoding: utf8
+production:
+  adapter: postgresql
+  encoding: utf8

@@ -1,0 +1,191 @@
+{"id": "calcom/20210813142905_event_payment", "p_lost": 0.0, "p_fails": 0.0, "secs": 13.01, "in": 1650, "out": 287, "attempt": 0}
+{"id": "calcom/20210814175645_custom_inputs_type_enum", "p_lost": 0.0, "p_fails": 1.0, "secs": 38.7, "in": 771, "out": 1568, "attempt": 0}
+{"id": "calcom/20220404132522_redirect_url", "p_lost": 0.0, "p_fails": 0.0, "secs": 3.92, "in": 1642, "out": 86, "attempt": 0}
+{"id": "calcom/20220121210720_add_cancellation_reason", "p_lost": 0.0, "p_fails": 0.0, "secs": 3.92, "in": 1587, "out": 96, "attempt": 0}
+{"id": "calcom/20220526151550_cascades_impersonations_on_user_delete", "p_lost": 0.0, "p_fails": 0.0, "secs": 9.04, "in": 2459, "out": 399, "attempt": 0}
+{"id": "calcom/20230601141825_add_locale_timezone_timeformat_in_team", "p_lost": 0.0, "p_fails": 0.0, "secs": 5.86, "in": 1925, "out": 307, "attempt": 0}
+{"id": "calcom/20231201233433_add_new_user_field_app_theme", "p_lost": 0.0, "p_fails": 0.0, "secs": 3.94, "in": 3728, "out": 164, "attempt": 0}
+{"id": "calcom/20220420230105_rename_verification_token_unique_id", "p_lost": 0.0, "p_fails": 0.0, "secs": 25.66, "in": 546, "out": 1233, "attempt": 0}
+{"id": "calcom/20231202181233_adding_show_first_available_timeslot", "p_lost": 0.0, "p_fails": 0.0, "secs": 3.23, "in": 2912, "out": 209, "attempt": 0}
+{"id": "calcom/20240221051147_link_secondary_email_with_token", "p_lost": 0.0, "p_fails": 0.0, "secs": 5.61, "in": 1519, "out": 358, "attempt": 0}
+{"id": "calcom/20240307203026_rename_team_group_mapping_org_id_to_organization_id", "p_lost": 0.0, "p_fails": 1.0, "secs": 18.58, "in": 782, "out": 878, "attempt": 0}
+{"id": "calcom/20240329084749_platform_snake_case_to_pascal_case", "p_lost": 0.0, "p_fails": 1.0, "secs": 54.82, "in": 7192, "out": 2153, "attempt": 0}
+{"id": "calcom/20240607082125_removal_of_logo_and_avatar", "p_lost": 1.0, "p_fails": 0.0, "secs": 31.23, "in": 6068, "out": 585, "attempt": 0}
+{"id": "calcom/20240722105401_add_is_admin_api_enabled_organization_setting", "p_lost": 0.0, "p_fails": 0.0, "secs": 5.48, "in": 897, "out": 271, "attempt": 0}
+{"id": "calcom/20220622110735_allow_one_schedule_to_apply_to_multiple_event_types", "error": "HTTPError: HTTP Error 524: <none>"}
+{"id": "calcom/20211105200545_availability_start_and_end_time_as_time", "error": "HTTPError: HTTP Error 524: <none>"}
+{"id": "calcom/20240111075727_remove_brand_colours_default", "error": "HTTPError: HTTP Error 524: <none>"}
+{"id": "calcom/20240918202101_adds_per_user_and_team_feature_flags", "p_lost": 0.0, "p_fails": 0.0, "secs": 13.62, "in": 7027, "out": 333, "attempt": 1}
+{"id": "calcom/20250113170733_add_routingforms_incompletebooking_action_table", "p_lost": 0.0, "p_fails": 0.0, "secs": 78.01, "in": 1716, "out": 654, "attempt": 0}
+{"id": "calcom/20241127102756_remove_fields_from_evenet_type_translation", "error": "HTTPError: HTTP Error 524: <none>"}
+{"id": "calcom/20250506000000_remove_around_from_event_types", "error": "HTTPError: HTTP Error 524: <none>"}
+{"id": "calcom/20250506000001_remove_around_credentials", "error": "HTTPError: HTTP Error 524: <none>"}
+{"id": "calcom/20251003103832_upsert_watchlist_audit", "error": "HTTPError: HTTP Error 524: <none>"}
+{"id": "calcom/20251218173119_add_global_watchlist", "p_lost": 0.0, "p_fails": 0.0, "secs": 57.93, "in": 2656, "out": 393, "attempt": 0}
+{"id": "calcom/20251115054502_insert_system_actor", "p_lost": 0.0, "p_fails": 0.0, "secs": 131.63, "in": 825, "out": 637, "attempt": 0}
+{"id": "calcom/20260319000000_drop_workflow_tables", "p_lost": 1.0, "p_fails": 0.0, "secs": 408.78, "in": 11410, "out": 2679, "attempt": 0}
+{"id": "cratesio/20140925132251_dumped_migration_9", "p_lost": 0.01, "p_fails": 0.01, "secs": 39.23, "in": 420, "out": 526, "attempt": 0}
+{"id": "cratesio/20140925132252_dumped_migration_10", "p_lost": 0.0, "p_fails": 0.0, "secs": 30.5, "in": 439, "out": 300, "attempt": 0}
+{"id": "cratesio/20140929103758_dumped_migration_30", "p_lost": 0.0, "p_fails": 0.0, "secs": 74.32, "in": 461, "out": 1123, "attempt": 0}
+{"id": "cratesio/20141020175651_dumped_migration_77", "p_lost": 0.0, "p_fails": 0.0, "secs": 14.01, "in": 1198, "out": 274, "attempt": 0}
+{"id": "cratesio/20150715170350_dumped_migration_96", "p_lost": 0.0, "p_fails": 0.0, "secs": 30.63, "in": 794, "out": 252, "attempt": 0}
+{"id": "calcom/20250506000000_remove_around_from_event_types", "p_lost": 0.9, "p_fails": 0.0, "secs": 208.6, "in": 12313, "out": 2019, "attempt": 1}
+{"id": "cratesio/20160812094502_dumped_migration_112", "p_lost": 0.0, "p_fails": 0.0, "secs": 18.68, "in": 694, "out": 249, "attempt": 0}
+{"id": "calcom/20220622110735_allow_one_schedule_to_apply_to_multiple_event_types", "p_lost": 0.0, "p_fails": 0.0, "secs": 285.15, "in": 2386, "out": 2755, "attempt": 1}
+{"id": "calcom/20241127102756_remove_fields_from_evenet_type_translation", "error": "unparsable: "}
+{"id": "calcom/20240111075727_remove_brand_colours_default", "error": "unparsable: "}
+{"id": "calcom/20211105200545_availability_start_and_end_time_as_time", "error": "unparsable: "}
+{"id": "calcom/20251003103832_upsert_watchlist_audit", "error": "unparsable: "}
+{"id": "calcom/20260129090913_enable_pbac_globally", "error": "unparsable: "}
+{"id": "calcom/20250506000001_remove_around_credentials", "error": "unparsable: "}
+{"id": "cratesio/2018-11-01-223239_add_published_by_to_versions", "p_lost": 0.0, "p_fails": 0.0, "secs": 54.62, "in": 3090, "out": 468, "attempt": 0}
+{"id": "cratesio/2026-05-05-180007-0000_add_last_sync_to_oauth_github", "p_lost": 0.0, "p_fails": 0.0, "secs": 26.07, "in": 618, "out": 221, "attempt": 0}
+{"id": "cratesio/2026-05-27-120000-0000_semver_ord_v2_not_null", "p_lost": 0.0, "p_fails": 1.0, "secs": 37.77, "in": 4144, "out": 312, "attempt": 0}
+{"id": "cratesio/2026-07-15-182934-0000_drop_users_gh_encrypted_token", "p_lost": 1.0, "p_fails": 0.0, "secs": 36.18, "in": 1393, "out": 252, "attempt": 0}
+{"id": "calcom/20260430000000_drop_instant_meeting_webhook_trigger", "error": "unparsable: "}
+{"id": "documenso/20240131004516_add_user_security_audit_logs", "p_lost": 0.0, "p_fails": 0.0, "secs": 36.43, "in": 1567, "out": 300, "attempt": 0}
+{"id": "cratesio/2020-02-14-183929_remove_version_authors_user_id", "p_lost": 1.0, "p_fails": 0.0, "secs": 76.71, "in": 662, "out": 727, "attempt": 0}
+{"id": "documenso/20240206051948_add_teams_templates", "p_lost": 0.0, "p_fails": 0.0, "secs": 21.61, "in": 1867, "out": 266, "attempt": 0}
+{"id": "documenso/20240227023747_add_team_webhooks", "p_lost": 0.0, "p_fails": 0.0, "secs": 21.23, "in": 1815, "out": 316, "attempt": 0}
+{"id": "documenso/20240530120101_add_missing_fields_to_account_model_for_oidc", "p_lost": 0.0, "p_fails": 0.0, "secs": 15.73, "in": 738, "out": 229, "attempt": 0}
+{"id": "documenso/20240730094430_add_document_visibility_scope_per_role", "p_lost": 0.0, "p_fails": 0.0, "secs": 4.2, "in": 1781, "out": 82, "attempt": 0}
+{"id": "documenso/20240220115435_add_public_profile_url_bio", "p_lost": 0.0, "p_fails": 0.0, "secs": 26.75, "in": 1915, "out": 438, "attempt": 0}
+{"id": "documenso/20241126014353_add_typed_signature_setting_to_templates", "p_lost": 0.0, "p_fails": 0.0, "secs": 16.78, "in": 794, "out": 230, "attempt": 0}
+{"id": "cratesio/20170305095748_create_reserved_crate_names", "p_lost": 0.0, "p_fails": 0.0, "secs": 360.17, "in": 2282, "out": 3273, "attempt": 0}
+{"id": "documenso/20260504000000_add_allow_personal_organisations_to_auth_portal", "p_lost": 0.0, "p_fails": 0.0, "secs": 24.42, "in": 674, "out": 301, "attempt": 0}
+{"id": "documenso/20251126053402_add_insights_indexes", "p_lost": 0.0, "p_fails": 0.0, "secs": 45.08, "in": 5141, "out": 619, "attempt": 0}
+{"id": "formbricks/20230517145313_change_brand_color_default", "p_lost": 0.0, "p_fails": 0.0, "secs": 5.0, "in": 642, "out": 85, "attempt": 0}
+{"id": "formbricks/20230529092700_add_formbricks_signature_to_product", "p_lost": 0.0, "p_fails": 0.0, "secs": 11.15, "in": 644, "out": 160, "attempt": 0}
+{"id": "cratesio/2019-05-14-165316_index_crate_name_for_like", "p_lost": 0.0, "p_fails": 0.0, "secs": 155.59, "in": 2164, "out": 1910, "attempt": 0}
+{"id": "formbricks/20231003122730_survey_styling_overwrites", "p_lost": 0.0, "p_fails": 0.0, "secs": 8.88, "in": 1170, "out": 106, "attempt": 0}
+{"id": "formbricks/20230712183558_add_expires_at_to_session", "p_lost": 0.0, "p_fails": 0.0, "secs": 20.44, "in": 566, "out": 289, "attempt": 0}
+{"id": "formbricks/20231015165646_add_hidden_fields", "p_lost": 0.0, "p_fails": 0.0, "secs": 11.24, "in": 1207, "out": 156, "attempt": 0}
+{"id": "formbricks/20240530073540_made_name_property_on_user_model_optional", "p_lost": 0.0, "p_fails": 1.0, "secs": 14.69, "in": 1462, "out": 235, "attempt": 0}
+{"id": "cratesio/20160219125609_dumped_migration_105", "p_lost": 1.0, "p_fails": 0.0, "secs": 92.12, "in": 2147, "out": 1401, "attempt": 1}
+{"id": "formbricks/20240801071532_add_endings_to_survey", "p_lost": 0.0, "p_fails": 0.0, "secs": 22.38, "in": 1901, "out": 367, "attempt": 0}
+{"id": "formbricks/20260325090000_add_auth_sessions", "p_lost": 0.0, "p_fails": 0.0, "secs": 15.92, "in": 1656, "out": 177, "attempt": 0}
+{"id": "formbricks/20230405105937_add_api_keys_to_environments", "p_lost": 0.0, "p_fails": 1.0, "secs": 80.87, "in": 1231, "out": 1168, "attempt": 0}
+{"id": "formbricks/20250402063013_add_is_active_to_user", "p_lost": 0.0, "p_fails": 0.0, "secs": 24.47, "in": 1618, "out": 221, "attempt": 0}
+{"id": "documenso/20240306060259_add_passkeys", "p_lost": 0.0, "p_fails": 0.0, "secs": 137.59, "in": 2477, "out": 2009, "attempt": 0}
+{"id": "documenso/20251101000330_add_new_webhook_events", "p_lost": 0.0, "p_fails": 0.0, "secs": 130.01, "in": 1122, "out": 1728, "attempt": 0}
+{"id": "formbricks/20260330120000_add_password_reset_tokens", "p_lost": 0.0, "p_fails": 0.0, "secs": 28.29, "in": 1706, "out": 234, "attempt": 0}
+{"id": "formbricks/20240904091113_removed_actions_table", "p_lost": 1.0, "p_fails": 0.0, "secs": 58.42, "in": 718, "out": 707, "attempt": 0}
+{"id": "hoppscotch/20260209063744_published_doc_environment", "p_lost": 0.0, "p_fails": 0.0, "secs": 6.58, "in": 628, "out": 142, "attempt": 0}
+{"id": "formbricks/20260820000000_add_response_ingest_flags", "p_lost": 0.0, "p_fails": 0.0, "secs": 48.27, "in": 1630, "out": 496, "attempt": 0}
+{"id": "langfuse/20230720172051_tokens_non_null", "p_lost": 0.0, "p_fails": 0.0, "secs": 56.1, "in": 1020, "out": 371, "attempt": 0}
+{"id": "formbricks/20260928120001_eng_2404_drop_survey_legacy_embedded_data_columns", "p_lost": 1.0, "p_fails": 0.0, "secs": 87.95, "in": 2854, "out": 766, "attempt": 0}
+{"id": "langfuse/20230910164603_cron_add_state", "p_lost": 0.0, "p_fails": 0.0, "secs": 44.93, "in": 386, "out": 223, "attempt": 0}
+{"id": "langfuse/20230907225604_api_keys_publishable_to_public", "p_lost": 0.0, "p_fails": 0.0, "secs": 52.71, "in": 677, "out": 304, "attempt": 0}
+{"id": "langfuse/20230731162154_score_value_float", "p_lost": 0.0, "p_fails": 0.0, "secs": 93.6, "in": 745, "out": 593, "attempt": 0}
+{"id": "langfuse/20240106195340_drop_dataset_status", "p_lost": 1.0, "p_fails": 0.0, "secs": 17.54, "in": 737, "out": 169, "attempt": 0}
+{"id": "langfuse/20231104004529_scores_add_index", "p_lost": 0.0, "p_fails": 0.0, "secs": 18.74, "in": 811, "out": 246, "attempt": 0}
+{"id": "langfuse/20240119140941_add_tokenizer_id", "p_lost": 0.0, "p_fails": 0.0, "secs": 52.05, "in": 810, "out": 202, "attempt": 0}
+{"id": "langfuse/20240118235424_add_index_to_models", "p_lost": 0.0, "p_fails": 0.0, "secs": 89.65, "in": 808, "out": 573, "attempt": 0}
+{"id": "langfuse/20240227112101_index_prompt_id_in_observations", "p_lost": 0.0, "p_fails": 0.0, "secs": 18.93, "in": 1615, "out": 580, "attempt": 0}
+{"id": "cratesio/20170322130523_version_downloads_needs_no_id", "error": "unparsable: "}
+{"id": "langfuse/20230518193521_changes", "p_lost": 0.0, "p_fails": 1.0, "secs": 17.93, "in": 662, "out": 822, "attempt": 1}
+{"id": "cratesio/20170728002039_fix_keywords", "error": "unparsable: "}
+{"id": "langfuse/20240508132736_scores_backfill_project_id", "p_lost": 0.0, "p_fails": 0.0, "secs": 13.87, "in": 1926, "out": 564, "attempt": 0}
+{"id": "documenso/20240205120648_create_delete_account", "p_lost": 0.0, "p_fails": 0.0, "secs": 76.13, "in": 1845, "out": 3363, "attempt": 1}
+{"id": "langfuse/20241206115829_remove_trace_score_observation_constraints", "p_lost": 0.0, "p_fails": 0.0, "secs": 7.75, "in": 1763, "out": 360, "attempt": 0}
+{"id": "langfuse/20251006173445_add_cloud_spend_alerts", "p_lost": 0.0, "p_fails": 0.0, "secs": 8.04, "in": 1214, "out": 474, "attempt": 0}
+{"id": "langfuse/20250324110557_add_blobstorage_integration_table", "p_lost": 0.0, "p_fails": 0.0, "secs": 8.3, "in": 3580, "out": 492, "attempt": 0}
+{"id": "langfuse/20250211123300_drop_events_table", "p_lost": 1.0, "p_fails": 0.0, "secs": 15.23, "in": 576, "out": 823, "attempt": 0}
+{"id": "langfuse/20251029000042_add_comment_reactions", "p_lost": 0.0, "p_fails": 0.0, "secs": 5.95, "in": 6305, "out": 311, "attempt": 0}
+{"id": "langfuse/20240705154048_observation_view_add_created_at_updated_at", "p_lost": 0.0, "p_fails": 0.0, "secs": 28.57, "in": 2580, "out": 1580, "attempt": 0}
+{"id": "langfuse/20251218102933_score_configs_rename_score_data_type_enum", "p_lost": 0.0, "p_fails": 0.0, "secs": 4.4, "in": 1302, "out": 191, "attempt": 0}
+{"id": "formbricks/20240421093432_adds_website_survey_type", "error": "unparsable: "}
+{"id": "langfuse/20260612000000_add_dataset_item_media", "p_lost": 0.0, "p_fails": 0.0, "secs": 12.7, "in": 597, "out": 559, "attempt": 0}
+{"id": "formbricks/20261005120000_add_survey_auto_select_language", "p_lost": 0.0, "p_fails": 0.05, "secs": 69.59, "in": 4271, "out": 3190, "attempt": 1}
+{"id": "langfuse/20260619120000_revert_slack_pending_install_columns", "p_lost": 1.0, "p_fails": 0.0, "secs": 12.0, "in": 792, "out": 791, "attempt": 0}
+{"id": "formbricks/20260420000000_migrate_legacy_styling_fields", "error": "unparsable: "}
+{"id": "lemmy/2020-04-21-123957_remove_unique_user_constraints", "p_lost": 0.0, "p_fails": 0.0, "secs": 13.7, "in": 5442, "out": 815, "attempt": 0}
+{"id": "langfuse/20260723124010_drop_dataset_run_items_table", "p_lost": 1.0, "p_fails": 0.0, "secs": 19.93, "in": 987, "out": 1235, "attempt": 0}
+{"id": "langfuse/20240126184148_new_models copy", "error": "unparsable: "}
+{"id": "langfuse/20240213124148_update_openai_pricing", "error": "unparsable: "}
+{"id": "lemmy/2021-04-24-174047_add_show_read_post_setting", "p_lost": 0.0, "p_fails": 0.0, "secs": 4.21, "in": 940, "out": 107, "attempt": 0}
+{"id": "lemmy/2022-09-07-114618_pm-reports", "p_lost": 0.0, "p_fails": 0.0, "secs": 9.11, "in": 5485, "out": 466, "attempt": 0}
+{"id": "lemmy/2022-05-20-135341_embed-url", "p_lost": 1.0, "p_fails": 0.0, "secs": 14.15, "in": 12460, "out": 667, "attempt": 0}
+{"id": "langfuse/20251013134801_drop_atla_llm_keys", "p_lost": 0.9, "p_fails": 0.0, "secs": 73.86, "in": 840, "out": 3522, "attempt": 0}
+{"id": "lemmy/2023-02-05-102549_drop-site-federation-debug", "p_lost": 1.0, "p_fails": 0.0, "secs": 6.99, "in": 1269, "out": 145, "attempt": 0}
+{"id": "lemmy/2023-06-19-055530_add_retry_worker_setting", "p_lost": 1.0, "p_fails": 0.0, "secs": 6.81, "in": 1376, "out": 298, "attempt": 0}
+{"id": "lemmy/2022-11-21-204256_user-following", "p_lost": 0.0, "p_fails": 0.0, "secs": 17.8, "in": 6298, "out": 729, "attempt": 0}
+{"id": "langfuse/20240307185725_backfill_score_source", "error": "unparsable: "}
+{"id": "lemmy/2020-01-29-011901_create_reply_materialized_view", "p_lost": 0.0, "p_fails": 0.0, "secs": 52.14, "in": 3695, "out": 2821, "attempt": 0}
+{"id": "lemmy/2025-08-01-000008_create_oauth_provider", "p_lost": 0.0, "p_fails": 0.0, "secs": 7.74, "in": 3056, "out": 327, "attempt": 0}
+{"id": "lemmy/2025-08-01-000020_oauth_pkce", "p_lost": 0.0, "p_fails": 0.0, "secs": 3.69, "in": 692, "out": 145, "attempt": 0}
+{"id": "lemmy/2025-08-01-000038_ap_id", "p_lost": 0.0, "p_fails": 0.0, "secs": 7.23, "in": 6590, "out": 420, "attempt": 0}
+{"id": "lemmy/2020-05-05-210233_add_activitypub_for_private_messages", "p_lost": 0.0, "p_fails": 0.0, "secs": 59.14, "in": 5838, "out": 2990, "attempt": 0}
+{"id": "langfuse/20251211204006_dataset_items_switch_pk", "p_lost": 0.01, "p_fails": 0.01, "secs": 22.81, "in": 909, "out": 1252, "attempt": 1}
+{"id": "lemmy/2025-08-01-000053_remove_hide_modlog_names", "p_lost": 1.0, "p_fails": 0.0, "secs": 5.84, "in": 1731, "out": 206, "attempt": 0}
+{"id": "lemmy/2025-11-05-181519-0000_add_registration_application_updated_at", "p_lost": 0.0, "p_fails": 0.0, "secs": 5.5, "in": 1158, "out": 144, "attempt": 0}
+{"id": "lemmy/2026-07-08-184840-0000_add_report_resolve_reason", "p_lost": 0.0, "p_fails": 0.0, "secs": 9.78, "in": 3153, "out": 191, "attempt": 0}
+{"id": "lemmy/2025-08-01-000062_username-instance-unique", "p_lost": 0.0, "p_fails": 0.0, "secs": 14.53, "in": 5604, "out": 452, "attempt": 0}
+{"id": "mattermost/000006_create_emojis", "p_lost": 0.0, "p_fails": 0.0, "secs": 12.99, "in": 450, "out": 328, "attempt": 0}
+{"id": "mattermost/000023_create_terms_of_service", "p_lost": 0.0, "p_fails": 0.0, "secs": 6.5, "in": 362, "out": 256, "attempt": 0}
+{"id": "mattermost/000027_create_status", "p_lost": 0.0, "p_fails": 0.0, "secs": 6.46, "in": 424, "out": 318, "attempt": 0}
+{"id": "mattermost/000036_create_sharedchannelusers", "p_lost": 0.0, "p_fails": 0.0, "secs": 4.34, "in": 500, "out": 203, "attempt": 0}
+{"id": "mattermost/000039_create_channel_member_history", "p_lost": 0.0, "p_fails": 0.0, "secs": 4.44, "in": 403, "out": 185, "attempt": 0}
+{"id": "mattermost/000014_create_outgoing_webhooks", "p_lost": 0.0, "p_fails": 0.0, "secs": 22.62, "in": 926, "out": 1108, "attempt": 0}
+{"id": "langfuse/20251127105316_add_pricing_tiers", "p_lost": 0.0, "p_fails": 0.0, "secs": 69.71, "in": 1313, "out": 3451, "attempt": 1}
+{"id": "mattermost/000068_upgrade_teammembers_v6.1", "p_lost": 0.0, "p_fails": 0.0, "secs": 8.66, "in": 414, "out": 577, "attempt": 0}
+{"id": "mattermost/000083_threads_threaddeleteat", "p_lost": 0.0, "p_fails": 0.0, "secs": 17.36, "in": 1031, "out": 939, "attempt": 0}
+{"id": "langfuse/20260722070000_add_in_app_agent_run_lifecycle_fields", "error": "unparsable: "}
+{"id": "mattermost/000095_remove_posts_parentid", "p_lost": 0.0, "p_fails": 0.0, "secs": 7.49, "in": 866, "out": 241, "attempt": 0}
+{"id": "lemmy/2024-05-05-162540_add_image_detail_table", "p_lost": 1.0, "p_fails": 0.0, "secs": 34.36, "in": 472, "out": 1609, "attempt": 1}
+{"id": "mattermost/000096_threads_threadteamid", "p_lost": 0.0, "p_fails": 0.0, "secs": 11.28, "in": 1079, "out": 555, "attempt": 0}
+{"id": "lemmy/2020-12-03-035643_create_user_aggregates", "error": "unparsable: "}
+{"id": "lemmy/2025-08-01-000005_drop-enable-nsfw", "p_lost": 1.0, "p_fails": 0.0, "secs": 46.51, "in": 1868, "out": 2430, "attempt": 1}
+{"id": "mattermost/000112_rework_desktop_tokens", "p_lost": 0.0, "p_fails": 0.0, "secs": 8.15, "in": 419, "out": 347, "attempt": 0}
+{"id": "mattermost/000133_add_channel_banner_fields", "p_lost": 0.0, "p_fails": 0.0, "secs": 4.61, "in": 947, "out": 279, "attempt": 0}
+{"id": "mattermost/000121_remove_true_up_review_history", "p_lost": 1.0, "p_fails": 0.0, "secs": 9.66, "in": 390, "out": 442, "attempt": 0}
+{"id": "mattermost/000105_remove_tokens", "p_lost": 0.99, "p_fails": 0.01, "secs": 30.31, "in": 990, "out": 1436, "attempt": 0}
+{"id": "mattermost/000138_add_default_category_name_to_channel", "p_lost": 0.0, "p_fails": 0.0, "secs": 14.15, "in": 968, "out": 265, "attempt": 0}
+{"id": "mattermost/000151_add_autotranslationdisabled_to_channelmembers", "p_lost": 0.0, "p_fails": 0.0, "secs": 8.08, "in": 712, "out": 357, "attempt": 0}
+{"id": "lemmy/2024-06-17-160323_fix_post_aggregates_featured_local", "error": "unparsable: "}
+{"id": "lemmy/2024-04-05-153647_alter_vote_display_mode_defaults", "error": "unparsable: "}
+{"id": "mattermost/000165_add_protected_and_permissions_to_property_fields", "p_lost": 0.0, "p_fails": 0.0, "secs": 13.84, "in": 873, "out": 806, "attempt": 0}
+{"id": "mattermost/000186_create_channel_guards_plugin_id_index", "p_lost": 0.0, "p_fails": 0.0, "secs": 14.22, "in": 419, "out": 824, "attempt": 0}
+{"id": "triggerdev/20230102095903_connection_added_authentication_method", "p_lost": 0.0, "p_fails": 0.01, "secs": 8.56, "in": 878, "out": 459, "attempt": 0}
+{"id": "mattermost/000051_create_msg_root_count", "error": "unparsable: "}
+{"id": "triggerdev/20230119175445_add_enabled_to_event_rule", "p_lost": 0.0, "p_fails": 0.01, "secs": 25.92, "in": 957, "out": 272, "attempt": 0}
+{"id": "mattermost/000046_create_users", "error": "unparsable: "}
+{"id": "mattermost/000062_upgrade_sessions_v6.0", "error": "unparsable: "}
+{"id": "triggerdev/20230114171501_add_cancelled_external_source_status", "p_lost": 0.0, "p_fails": 0.05, "secs": 140.87, "in": 936, "out": 2326, "attempt": 0}
+{"id": "triggerdev/20230209171921_split_an_auth_attempt_with_auth_table", "p_lost": 1.0, "p_fails": 0.0, "secs": 65.23, "in": 780, "out": 1198, "attempt": 0}
+{"id": "mattermost/000230_add_creator_to_permission_level", "p_lost": 0.0, "p_fails": 0.02, "secs": 209.86, "in": 1012, "out": 3687, "attempt": 0}
+{"id": "triggerdev/20230419141305_add_http_sources", "p_lost": 0.0, "p_fails": 0.0, "secs": 65.45, "in": 3207, "out": 849, "attempt": 0}
+{"id": "mattermost/000090_create_enums", "error": "unparsable: "}
+{"id": "triggerdev/20230525123241_add_external_account_to_schedule_sources", "p_lost": 0.0, "p_fails": 0.0, "secs": 24.92, "in": 1429, "out": 343, "attempt": 0}
+{"id": "triggerdev/20230504152611_rename_shadow_to_internal", "p_lost": 1.0, "p_fails": 0.0, "secs": 84.24, "in": 1075, "out": 1091, "attempt": 0}
+{"id": "triggerdev/20230614110359_rename_deploy_to_index", "p_lost": 1.0, "p_fails": 0.0, "secs": 24.38, "in": 1314, "out": 395, "attempt": 0}
+{"id": "mattermost/000107_threadmemberships_cleanup", "error": "unparsable: "}
+{"id": "triggerdev/20230616083056_add_integration_auth_method", "p_lost": 1.0, "p_fails": 0.0, "secs": 29.94, "in": 1416, "out": 604, "attempt": 0}
+{"id": "mattermost/000137_update_attribute_view", "error": "unparsable: "}
+{"id": "mattermost/000199_rename_classification_linked_fields", "error": "unparsable: "}
+{"id": "mattermost/000200_add_rank_to_attribute_view", "error": "unparsable: "}
+{"id": "triggerdev/20231121155237_change_kv_value_to_bytes", "p_lost": 0.0, "p_fails": 1.0, "secs": 114.31, "in": 629, "out": 1377, "attempt": 0}
+{"id": "triggerdev/20240209121123_add_task_run_trace_columns", "p_lost": 0.0, "p_fails": 1.0, "secs": 17.0, "in": 1309, "out": 265, "attempt": 0}
+{"id": "triggerdev/20230616104748_add_integration_definition", "p_lost": 0.0, "p_fails": 1.0, "secs": 184.12, "in": 1731, "out": 2336, "attempt": 0}
+{"id": "triggerdev/20240430110419_task_run_indexes_projectid_task_identifier_and_status", "p_lost": 0.0, "p_fails": 0.0, "secs": 39.22, "in": 2228, "out": 344, "attempt": 0}
+{"id": "triggerdev/20231024122736_runtime_environment_shortcodes", "p_lost": 0.0, "p_fails": 1e-08, "secs": 235.41, "in": 2832, "out": 2562, "attempt": 0}
+{"id": "triggerdev/20240214180324_remove_task_queue_relationship_from_task_runs", "p_lost": 0.0, "p_fails": 1.0, "secs": 93.82, "in": 1518, "out": 921, "attempt": 0}
+{"id": "triggerdev/20241129141824_add_one_time_use_tokens", "p_lost": 0.0, "p_fails": 0.0, "secs": 44.24, "in": 4215, "out": 380, "attempt": 0}
+{"id": "triggerdev/20250131120251_add_batch_trigger_v3_columns", "p_lost": 0.0, "p_fails": 0.0, "secs": 35.9, "in": 2829, "out": 353, "attempt": 0}
+{"id": "triggerdev/20250526095040_remove_v2_round_5", "p_lost": 1.0, "p_fails": 0.0, "secs": 56.83, "in": 1095, "out": 588, "attempt": 0}
+{"id": "triggerdev/20260120115732_add_time_filter_to_customer_query", "p_lost": 0.0, "p_fails": 0.0, "secs": 11.11, "in": 1549, "out": 58, "attempt": 0}
+{"id": "triggerdev/20250708130212_task_run_add_bulk_action_group_ids", "p_lost": 0.0, "p_fails": 0.0, "secs": 62.65, "in": 4525, "out": 445, "attempt": 0}
+{"id": "umami/07_add_tag", "p_lost": 0.0, "p_fails": 0.0, "secs": 47.23, "in": 902, "out": 304, "attempt": 0}
+{"id": "triggerdev/20230213154802_simplify_org_template_status", "error": "unparsable: "}
+{"id": "umami/03_metric_performance_index", "p_lost": 0.0, "p_fails": 0.0, "secs": 83.23, "in": 1676, "out": 590, "attempt": 0}
+{"id": "vaultwarden/2020-12-09-173101_add_stamp_exception", "p_lost": 0.0, "p_fails": 0.0, "secs": 15.62, "in": 1272, "out": 216, "attempt": 0}
+{"id": "triggerdev/20240223115106_batch_trigger_models", "p_lost": 1.0, "p_fails": 0.0, "secs": 239.78, "in": 5212, "out": 2082, "attempt": 0}
+{"id": "vaultwarden/2022-01-17-234911_add_api_key", "p_lost": 0.0, "p_fails": 0.0, "secs": 14.19, "in": 1658, "out": 150, "attempt": 0}
+{"id": "vaultwarden/2021-03-11-190243_add_sends", "p_lost": 0.0, "p_fails": 0.0, "secs": 29.33, "in": 1592, "out": 352, "attempt": 0}
+{"id": "triggerdev/20230312132000_more_kv_types", "error": "unparsable: "}
+{"id": "triggerdev/20230329123037_simplified_job_models", "error": "unparsable: "}
+{"id": "triggerdev/20240208124114_changes_to_the_task_event_schema", "p_lost": 1.0, "p_fails": 0.0, "secs": 25.82, "in": 1070, "out": 316, "attempt": 1}
+{"id": "triggerdev/20230517105823_rename_connection_metadata", "error": "unparsable: "}
+{"id": "triggerdev/20230606122534_improve_run_execution_model", "error": "unparsable: "}
+{"id": "vaultwarden/2023-06-02-200424_create_organization_api_key", "p_lost": 0.0, "p_fails": 0.01, "secs": 110.87, "in": 2109, "out": 1499, "attempt": 1}
+{"id": "triggerdev/20250623141255_bulk_action_group_counts_completed_at", "error": "unparsable: "}

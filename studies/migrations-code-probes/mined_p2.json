@@ -1,0 +1,1310 @@
+[
+{
+"repo": "hyperswitch",
+"sha": "6482aa5fe53e9028c6796bebd191c500bce56add",
+"date": "2026-09-24",
+"subj": "chore(blocklist): delete blocklist entries with NULL profile_id (#14397)",
+"added": [
+"migrations/2026-09-23-100000_delete_null_profile_blocklist_entries/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "afd92843521ced2c6856b98ae4ea332e75102d88",
+"date": "2026-09-17",
+"subj": "feat(blocklist): clone blocklist entries across business profiles (#14283)",
+"added": [
+"migrations/2026-09-14-100000_add_metadata_to_batch_blocklist_jobs/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "2b210c02bc6428d920f0090e69b01edc58228bac",
+"date": "2026-09-11",
+"subj": "feat(blocklist): export a merchant's blocklist data as a CSV (#14078)",
+"added": [
+"migrations/2026-09-04-100000_add_export_columns_to_batch_blocklist_jobs/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "1aa79421a516b7fcd685ca48282943e73b941d1e",
+"date": "2026-09-01",
+"subj": "feat(blocklist): widen card_bin to 6-10 digits and deprecate extended_card_bin (#13861)",
+"added": [
+"migrations/2026-08-28-120000_add_generic_card_bin_to_blocklist_data_kind/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "f140e97df485aecb7637f04436346385ac0f7191",
+"date": "2026-08-24",
+"subj": "feat(blocklist): scope blocklist entries to the business profile (#13774)",
+"added": [
+"migrations/2026-08-17-100000_add_blocklist_profile_id_unique_index/up.sql",
+"migrations/2026-08-17-100100_add_blocklist_null_profile_unique_index/up.sql",
+"migrations/2026-08-17-100150_add_blocklist_merchant_id_fingerprint_id_index/up.sql",
+"migrations/2026-08-17-100200_drop_blocklist_merchant_scoped_pkey/up.sql",
+"migrations/2026-08-17-100300_drop_blocklist_processor_merchant_id_unique_index/up.sql",
+"migrations/2026-08-19-100000_backfill_blocklist_profile_id/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg",
+"name"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "f58fd810a2afafddb98cfad228dec5118b2c9723",
+"date": "2026-08-18",
+"subj": "feat(blocklist): add profile_id column to blocklist tables (#13623)",
+"added": [
+"migrations/2026-08-10-090000_add_profile_id_to_blocklist_tables/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "df55de90a8272f36bfec72fd150adde22401fac4",
+"date": "2026-07-14",
+"subj": "feat(modular): harden compatibility workflows for revert use cases  (#12481)",
+"added": [
+"migrations/2026-05-27-000001_add_auxiliary_fingerprint_id_to_payment_methods/up.sql"
+],
+"modified": [],
+"deleted": [
+"v2_compatible_migrations/2026-05-06-140219-0000_add-auxiliary-fingerprint/up.sql"
+],
+"signals": [
+"msg",
+"delete"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "858c30fe9f0bf67f461ead10264d0f398bd272a7",
+"date": "2026-06-03",
+"subj": "feat(platform): add processor_merchant_id, created_by columns to blocklist table and query update (#11951)",
+"added": [
+"migrations/2026-04-22-073445_add_processor_merchant_id_created_by_to_blocklist/up.sql",
+"migrations/2026-04-23-103109_add_index_processor_merchant_id_fingerprint_id_for_blocklist/up.sql",
+"migrations/2026-05-27-095024_drop_blocklist_unique_fingerprint_id_index/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "de54c8108c0edc14d756c630b1476680bdfdf7fb",
+"date": "2026-05-11",
+"subj": "feat(blocklist): add batch blocklist CSV upload with async processing (#12149)",
+"added": [
+"migrations/2026-05-01-145200_create_batch_blocklist_jobs_table/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "2b8cd2f9bb7e78efb6491effe5dcda293c6d3a2b",
+"date": "2026-04-20",
+"subj": "feat(roles): Remove legacy recon Roles and product_type filter in `get_parent_group_info` (#11833)",
+"added": [
+"migrations/2026-04-16-000001_remove_legacy_recon_permission_groups/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "b908ce364b5daae5bca72c677679c19fd56eb303",
+"date": "2026-04-15",
+"subj": "feat(user_roles): Add `recon roles` and `product_type` filtering (#11775)",
+"added": [
+"migrations/2026-04-13-000001_add_merchant_product_type_to_roles/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "d4c03b55d1e455a0defd5606873b34b67d7cb4dd",
+"date": "2026-04-08",
+"subj": "fix(customer): change `customers_id_index` from unique to non-unique to support V1 customer backfill (#11750)",
+"added": [
+"v2_compatible_migrations/2026-04-07-000001_make_customers_id_index_non_unique/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "c7339b29016e470da63e9a193725218374dc7265",
+"date": "2026-04-08",
+"subj": "fix(migrations): truncate index name to comply with PostgreSQL identifier limit (#11743)",
+"added": [],
+"modified": [
+"migrations/2026-02-03-113754_add_index_processor_merchant_id_authorization_id_for_incremental_authorization/up.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "7833f99045683985f84bd566f2ac3347facc3fde",
+"date": "2026-03-23",
+"subj": "feat(business-profile): add payment_method_blocking configuration (#11526)",
+"added": [
+"migrations/2026-03-15-091519_add_payment_method_blocking_to_business_profile/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "bc9c8fae225e1f7530468df8407b05765d2fc098",
+"date": "2025-11-17",
+"subj": "revert: refactor(payment-methods): add support to avoid duplication while adding card to ext vault and add resource locking for payment methods for concurrent requests (#9963) (#10304)",
+"added": [],
+"modified": [],
+"deleted": [
+"migrations/2025-11-06-090901_add_index_on_payment_methods_locker_id/up.sql"
+],
+"signals": [
+"msg",
+"delete"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "38941d26c3268f51114da2a81e6032573ef30e30",
+"date": "2025-11-10",
+"subj": "refactor(payment-methods): add support to avoid duplication while adding card to ext vault and add resource locking for payment methods for concurrent requests (#9963)",
+"added": [
+"migrations/2025-11-06-090901_add_index_on_payment_methods_locker_id/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "ebfaba872ad77bdfc50755ce830a6a8de5a231ce",
+"date": "2025-08-21",
+"subj": "chore: include missing drop null constraint queries in v2_compatible_migrations (#8940)",
+"added": [],
+"modified": [
+"v2_compatible_migrations/2024-08-28-081757_drop_not_null_constraints_on_v1_columns/up.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "986de77b4868e48d00161c9d30071d809360e9a6",
+"date": "2024-12-16",
+"subj": "fix(user_roles): migrations for backfilling user_roles entity_id (#6837)",
+"added": [
+"migrations/2024-12-13-080558_entity-id-backfill-for-user-roles/up.sql"
+],
+"modified": [
+"migrations/2024-12-02-110129_update-user-role-entity-type/up.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit",
+"name"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "1564ad72b80b184808584f97309620a18246d80c",
+"date": "2024-12-12",
+"subj": "feat(core): Add product authentication ids in business profile (#6811)",
+"added": [
+"migrations/2024-12-11-092649_add-authentication-product-ids-in-business-profile/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "c8f7232a3001be1fc5d8b0fedfd703030df83789",
+"date": "2024-09-20",
+"subj": "fix: do not allow duplicate organization name (#5919)",
+"added": [],
+"modified": [
+"v2_migrations/2024-08-28-081838_update_v2_primary_key_constraints/up.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "93047ae616b6a5240c2be13f8c5267e5fa616eab",
+"date": "2024-07-18",
+"subj": "refactor(blocklist): change primary key of blocklist table (#5356)",
+"added": [
+"migrations/2024-07-17-174449_change_primary_key_for_blocklist_table/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "13f6efc7e8c01b4a377f627b9cfe2319b518204d",
+"date": "2024-05-23",
+"subj": "feat(router): send message_version and directory_server_id in next_action block of three_ds_data for external 3ds flow (#4715)",
+"added": [
+"migrations/2024-05-21-075556_add_directory_server_id_in_authentication/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "385622678f764b2bdb67423be0e5c8f055dd0b7c",
+"date": "2024-02-27",
+"subj": "refactor(payment_methods): introduce `locker_id` column in `payment_methods` table (#3760)",
+"added": [
+"migrations/2024-02-20-142032_add_locker_id_to_payment_methods/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "7b0bce555845c6d1187c97a921342fe129b6acba",
+"date": "2024-02-21",
+"subj": "refactor(core): inclusion of locker to store fingerprints (#3630)",
+"added": [
+"migrations/2024-02-12-135546_add_fingerprint_id_in_payment_attempt/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "073310c1f671ccbb71cc5c8725eca9771e511589",
+"date": "2024-02-20",
+"subj": "refactor(merchant_connector_account): change unique constraint to connector label (#3091)",
+"added": [
+"migrations/2023-12-06-060216_change_primary_key_for_mca/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "2f473dd4e73b53ee2a2ee462e9f4a51874d85a84",
+"date": "2024-02-15",
+"subj": "fix(user): add migration for force password change (#3668)",
+"added": [
+"migrations/2024-02-15-153757_add_dashboard_metadata_enum_is_change_password_required/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "bb096138b5937092badd02741fb869ee35e2e3cc",
+"date": "2024-01-11",
+"subj": "feat(router): payment_method block (#3056)",
+"added": [
+"migrations/2023-12-11-075542_create_pm_fingerprint_table/up.sql",
+"migrations/2023-12-12-112941_create_pm_blocklist_table/up.sql",
+"migrations/2023-12-12-113330_add_fingerprint_id_in_payment_intent/up.sql",
+"migrations/2023-12-18-062613_create_blocklist_lookup_table/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "8db3361d80f674a28a3916830a4b0c1c2b89776a",
+"date": "2023-12-18",
+"subj": "fix: change prodintent name in dashboard metadata (#3161)",
+"added": [],
+"modified": [
+"migrations/2023-12-14-101348_alter_dashboard_metadata_key_type/up.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "fdd95800127bb79fe2a9eeca1b7e0e158b6d2783",
+"date": "2023-10-17",
+"subj": "feat(router): Better UI payment link and order details product image and merchant config support (#2583)",
+"added": [
+"migrations/2023-10-06-101134_add_paymentLink_metadata_in_merchant_account/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "97a495cfa700835fd2dbf4f4be1b404a1e4a264a",
+"date": "2023-08-11",
+"subj": "fix: add diesel migration to update local db (#1812)",
+"added": [
+"migrations/2023-07-28-111829_update_columns_to_fix_db_diff/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg",
+"name"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "0d996b8960c7445289e451744c4bdeeb87d7d567",
+"date": "2023-08-03",
+"subj": "fix(webhooks): do not send duplicate webhooks  (#1850)",
+"added": [
+"migrations/2023-08-01-165717_make_event_id_unique_for_events_table/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "597ec16907a83ce228228b8c00e329495ade117b",
+"date": "2023-05-26",
+"subj": "revert(order_details): revert back `order_details` to be an object, and removing `meta_data` from `PaymentIntent` (#1279)",
+"added": [],
+"modified": [],
+"deleted": [
+"migrations/2023-05-12-103127_payment_intent.sql/up.sql"
+],
+"signals": [
+"msg",
+"delete"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "f481abb8551f3ec5e495cf9916d9d8a5cecd62da",
+"date": "2023-05-10",
+"subj": "revert: refactor(merchant_account): add back `api_key` field for backward compatibility (#761) (#1062)",
+"added": [],
+"modified": [],
+"deleted": [
+"migrations/2023-03-16-132604_merchant_account_temp_add_api_key/up.sql"
+],
+"signals": [
+"msg",
+"delete"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "1304d912e53cf223f8f15760e29b84faafe4f6ea",
+"date": "2023-05-09",
+"subj": "feat(router): add disputes block in payments retrieve response (#1038)",
+"added": [
+"migrations/2023-05-08-141907_rename_dispute_cols/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "41664e66901b92e5daf702325141f394f9f91b08",
+"date": "2023-04-10",
+"subj": "Revert \"added field frm_configs to MerchantConnectorAccount\" (#848)",
+"added": [],
+"modified": [],
+"deleted": [
+"migrations/2023-04-03-082335_update_mca_frm_configs/up.sql"
+],
+"signals": [
+"msg",
+"delete"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "ac30313ff113383653b9d9af8c35432636f38392",
+"date": "2023-02-07",
+"subj": "refactor: use unique id for merchant_conenctor_id instead of int (#514)",
+"added": [
+"migrations/2023-02-07-070512_change_merchant_connector_id_data_type/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "c807713a6f8b933c3a88875a823b3eeed63c5167",
+"date": "2023-01-09",
+"subj": "fix: Add locker_id in merchant account and sbx default locker (#276)",
+"added": [
+"migrations/2023-01-03-122401_update_merchant_account/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "2aef3bccfbf39ad90abd96b41996882a3f24f105",
+"date": "2022-12-09",
+"subj": "feat(single_use): add extra fields in `Mandate` table and `MandateData` [Blocked on #61] (#66)",
+"added": [
+"migrations/2022-12-05-090521_single_use_mandate_fields/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hyperswitch",
+"sha": "473d8f7a1b4cecd4d2900737eb8dbe60c6cf5447",
+"date": "2022-12-01",
+"subj": "fix(migrations): added unique index on merchant_id and connector_name in merchant_connector_account (#49)",
+"added": [
+"migrations/2022-11-30-084736_update-index-in-mca/up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "lobe-chat",
+"sha": "72b97273c7530182dad6d7f503321213cbc91d62",
+"date": "2026-10-11",
+"subj": "\u2728 feat(database): land the agent-account live-unique and goal-subscription schemas (#20544)",
+"added": [
+"packages/database/migrations/0177_agent_accounts_live_unique_and_goal_subscriptions.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "lobe-chat",
+"sha": "f463b19c78a0c95e03526364b89d2749f6825e31",
+"date": "2026-09-25",
+"subj": "\ud83d\uddc3\ufe0f feat(database): product-page source and open metadata on acceptance comments (#19903)",
+"added": [
+"packages/database/migrations/0170_acceptance_comment_source.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "lobe-chat",
+"sha": "c7ca43869bfb6791b2f4e01e975b853d4d55135f",
+"date": "2026-08-02",
+"subj": "\u23ea revert: agent labels schema and migration (#17844) (#17846)",
+"added": [],
+"modified": [],
+"deleted": [
+"packages/database/migrations/0132_add_agent_labels.sql"
+],
+"signals": [
+"msg",
+"delete"
+]
+},
+{
+"repo": "lobe-chat",
+"sha": "86b0b492fe5645bbdc1fca112a6cbfce450ff693",
+"date": "2026-07-26",
+"subj": "\ud83d\uddc3\ufe0f feat(db): unique active workspace owner partial index (#17590)",
+"added": [
+"packages/database/migrations/0129_workspace_members_unique_active_owner.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "lobe-chat",
+"sha": "ca2a1a21f6b3b3566b7e5b3e9724ca43d124afc2",
+"date": "2025-12-02",
+"subj": "\ud83d\udc1b fix: user email unique migration error (#10548)",
+"added": [],
+"modified": [
+"packages/database/migrations/0054_better_auth_two_factor.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "lobe-chat",
+"sha": "760105adb27abe2e02bac24f70bd2ef66417adbf",
+"date": "2025-11-24",
+"subj": "\ud83d\udc1b fix: fix db migration snapshot not align with db schema (#10399)",
+"added": [],
+"modified": [
+"packages/database/migrations/0047_add_slug_document.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "lobe-chat",
+"sha": "96ff5aa461181291167a70586a5885578489100f",
+"date": "2025-09-17",
+"subj": "\ud83d\udc1b fix: improve db migrations sql (#9295)",
+"added": [],
+"modified": [
+"packages/database/migrations/0031_add_agent_index.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "midday",
+"sha": "cedf98ad852953595e6ca424817007075c7fe7bb",
+"date": "2026-02-13",
+"subj": "Revert \"wip\"",
+"added": [],
+"modified": [],
+"deleted": [
+"packages/db/migrations/0024_add_e_invoice_fields.sql"
+],
+"signals": [
+"msg",
+"delete"
+]
+},
+{
+"repo": "Zero",
+"sha": "b048c742bc581de3e0c8c876bdcb74c21e1dc660",
+"date": "2025-06-18",
+"subj": "Hotfix (#1358)",
+"added": [
+"apps/server/src/db/migrations/0029_common_network.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "plunk",
+"sha": "df7afd8d04b78b71193239a7a3356eeda5bd698c",
+"date": "2026-08-22",
+"subj": "fix: Remove lock_timeout from migration",
+"added": [],
+"modified": [
+"packages/db/prisma/migrations/20260821120000_add_campaign_optout_counters/migration.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "plunk",
+"sha": "55a5e4d31b666bcef65c6de118ad7564d624f2cd",
+"date": "2026-06-15",
+"subj": "fix: safeguard JSON data handling in contacts migration to ensure proper object types",
+"added": [],
+"modified": [
+"packages/db/prisma/migrations/20260615120000_normalize_contact_emails/migration.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "quickwit",
+"sha": "b046433ec552d3653a790c2b9b342dccc69728ea",
+"date": "2024-09-19",
+"subj": "fix migration 22 not being run (#5439)",
+"added": [
+"quickwit/quickwit-metastore/migrations/postgresql/22_change-splits-pkey.up.sql"
+],
+"modified": [],
+"deleted": [
+"quickwit/quickwit-metastore/migrations/postgresql/22-change-splits-pkey.up.sql"
+],
+"signals": [
+"msg",
+"delete"
+]
+},
+{
+"repo": "quickwit",
+"sha": "6c3d0b2bf869630c832ae6c23c8f88c54dfef0e2",
+"date": "2022-10-26",
+"subj": "Fix database migrations (#2191)",
+"added": [
+"quickwit/quickwit-metastore/migrations/postgresql/6_delete-update-index-update-timestamp-on-split-update-trigger.up.sql"
+],
+"modified": [
+"quickwit/quickwit-metastore/migrations/postgresql/2_create-splits.up.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "svix-webhooks",
+"sha": "fdfd65bd04ee61ef74fede26da671ae78649d3d0",
+"date": "2026-02-20",
+"subj": "Revert \"Add missing messageattempt index\" (#2196)",
+"added": [],
+"modified": [],
+"deleted": [
+"server/svix-server/migrations/20260217191753_messageattempt_per_endp_no_status_autocommit.up.sql"
+],
+"signals": [
+"msg",
+"delete"
+]
+},
+{
+"repo": "posthog",
+"sha": "9e030d04d6495a5a95112f8d7ed2d8d6b71e330c",
+"date": "2026-09-22",
+"subj": "fix(personhog): add the hash key override FK to the persons migrations (#104071)",
+"added": [
+"rust/persons_migrations/20260921000001_add_hash_key_override_person_fk.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "posthog",
+"sha": "21247fa5f8c12e881ba5645ad75d327abd5ae1d8",
+"date": "2026-09-15",
+"subj": "perf(personhog): add mark_active column for HOT-friendly uniqueness index (#100626)",
+"added": [
+"rust/persons_migrations/20260914000001_add_lifecycle_mark_active.sql",
+"rust/persons_migrations/20260914000002_add_lifecycle_mark_active_index.sql",
+"rust/persons_migrations/20260914000003_add_lifecycle_mark_active_tmp_index.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "posthog",
+"sha": "3921072defe27cc5ea02cdcb531bf5200bf7d567",
+"date": "2026-03-06",
+"subj": "feat(flags): REVERT add group key columns to posthog_person table (#50232)",
+"added": [],
+"modified": [],
+"deleted": [
+"rust/persons_migrations/20260304000001_add_group_keys_to_person.sql"
+],
+"signals": [
+"msg",
+"delete"
+]
+},
+{
+"repo": "posthog",
+"sha": "c1f14e715d6d99c384f40198d6f5294718711c89",
+"date": "2025-11-26",
+"subj": "fix(django): Make local test state equal to production (#41731)",
+"added": [
+"rust/persons_migrations/20251115000001_add_partition_indexes_and_foreign_keys.sql",
+"rust/persons_migrations/20251117000001_rename_person_tables.sql"
+],
+"modified": [
+"rust/persons_migrations/20250923000001_initial_persons_schema.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "graphql-engine",
+"sha": "5aa138564480041798d406cb39e8b62807ba3169",
+"date": "2022-12-19",
+"subj": "Revert catalog version and migrations from #7034",
+"added": [],
+"modified": [],
+"deleted": [
+"server/src-rsr/migrations/47_to_48.sql",
+"server/src-rsr/migrations/48_to_47.sql"
+],
+"signals": [
+"msg",
+"delete"
+]
+},
+{
+"repo": "graphql-engine",
+"sha": "2d9959b1743274ea08ba03ff3d62e44df3e9e5e6",
+"date": "2021-04-15",
+"subj": "server: add unique constraints to the cron events table (#1131)",
+"added": [
+"server/src-rsr/migrations/45_to_46.sql",
+"server/src-rsr/migrations/46_to_45.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "graphql-engine",
+"sha": "59c01786fe612df07f376d11a1d8c94cb84a6d2c",
+"date": "2021-02-19",
+"subj": "Optimistic Metadata Locking",
+"added": [
+"server/src-rsr/migrations/43_to_44.sql",
+"server/src-rsr/migrations/44_to_43.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "graphql-engine",
+"sha": "6fe5daa70296a3cda9f1a20dd91f8fe21d5fb888",
+"date": "2020-11-23",
+"subj": "fix migration to 1) account for long trigger names and 2) correct syntax for dropping function without arguments in pg < 10",
+"added": [],
+"modified": [
+"server/src-rsr/migrations/39_to_40.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "graphql-engine",
+"sha": "e680f2c88f6fc87fe1a00d83f85dd5795093e7b0",
+"date": "2020-09-09",
+"subj": "Merge pull request #5473 from paf31/event-trigger-lock-timeout",
+"added": [
+"server/src-rsr/migrations/37_to_38.sql",
+"server/src-rsr/migrations/38_to_37.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "graphql-engine",
+"sha": "a66fb42ce280ec9f8ababcb3415d468829310827",
+"date": "2019-10-11",
+"subj": "Make catalog metadata migrations work on all schema versions (fix #2826) (#2379)",
+"added": [
+"server/src-rsr/migrations/08_to_1.sql",
+"server/src-rsr/migrations/10_to_11.sql",
+"server/src-rsr/migrations/11_to_12.sql",
+"server/src-rsr/migrations/12_to_13.sql",
+"server/src-rsr/migrations/13_to_14.sql",
+"server/src-rsr/migrations/14_to_15.sql",
+"server/src-rsr/migrations/15_to_16.sql",
+"server/src-rsr/migrations/16_to_17.sql",
+"server/src-rsr/migrations/17_to_18.sql",
+"server/src-rsr/migrations/18_to_19.sql",
+"server/src-rsr/migrations/19_to_20.sql",
+"server/src-rsr/migrations/1_to_2.sql",
+"server/src-rsr/migrations/20_to_21.sql",
+"server/src-rsr/migrations/21_to_22.sql",
+"server/src-rsr/migrations/22_to_23.sql",
+"server/src-rsr/migrations/23_to_24.sql",
+"server/src-rsr/migrations/24_to_25.sql",
+"server/src-rsr/migrations/2_to_3.sql",
+"server/src-rsr/migrations/4_to_5.sql",
+"server/src-rsr/migrations/5_to_6.sql",
+"server/src-rsr/migrations/6_to_7.sql",
+"server/src-rsr/migrations/7_to_8.sql",
+"server/src-rsr/migrations/8_to_9.sql",
+"server/src-rsr/migrations/9_to_10.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hydra",
+"sha": "b7b297e52b35c8ffe2c88ea6bbf7bf7c174f872f",
+"date": "2025-12-08",
+"subj": "chore: remove unnecessary check constraint",
+"added": [
+"persistence/sql/migrations/20251202130532000000_flow_drop_check.postgres.up.sql",
+"persistence/sql/migrations/20251202130532000001_flow_drop_check.up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "hydra",
+"sha": "fe459ea61391aaac097ceedbc8f171a9fdc356f9",
+"date": "2025-09-17",
+"subj": "fix: migration problems",
+"added": [
+"persistence/sql/migrations/20241129111700000000_add_refresh_token_access_token_link.up.sql",
+"persistence/sql/migrations/20250610132310000001_more_expire_columns.up.sql"
+],
+"modified": [],
+"deleted": [
+"persistence/sql/migrations/20241129111700000000_add_refresh_token_access_token_link.autocommit.up.sql",
+"persistence/sql/migrations/20250610132310000001_more_expire_columns.autocommit.up.sql"
+],
+"signals": [
+"msg",
+"delete"
+]
+},
+{
+"repo": "hydra",
+"sha": "38efece55be02d722eafef9d0cec06ec12a29d65",
+"date": "2025-05-20",
+"subj": "fix: migrations on CockroachDB v25+ (#3994)",
+"added": [],
+"modified": [
+"persistence/sql/migrations/20220210000001000000_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000001_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000002_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000003_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000004_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000005_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000006_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000007_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000008_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000009_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000010_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000011_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000012_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000013_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000014_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000015_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000016_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000017_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000018_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000019_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000020_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000021_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000022_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000023_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000024_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000025_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000026_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000027_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000028_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000029_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000030_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000031_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000032_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000033_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000034_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000035_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000036_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000037_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000038_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000039_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000040_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000041_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000042_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000043_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000044_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000045_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000046_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000047_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000048_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000049_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000050_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000051_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000052_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000053_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000054_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000055_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000056_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000057_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000058_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000059_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000060_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000061_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000062_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000063_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000064_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000065_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000066_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000067_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000068_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000069_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000070_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000071_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000072_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000073_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000074_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000075_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000076_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000077_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000078_nid.postgres.up.sql",
+"persistence/sql/migrations/20220210000001000079_nid.postgres.up.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "hydra",
+"sha": "29761f4ac7586478ea6f553cb571ac11b0275e6d",
+"date": "2025-05-16",
+"subj": "fix: force autocommit for device auth code migration (#3991)",
+"added": [
+"persistence/sql/migrations/20241609000001000000_device_flow.autocommit.up.sql",
+"persistence/sql/migrations/20241609000001000000_device_flow.postgres.up.sql"
+],
+"modified": [],
+"deleted": [
+"persistence/sql/migrations/20241609000001000000_device_flow.up.sql"
+],
+"signals": [
+"msg",
+"delete"
+]
+},
+{
+"repo": "hydra",
+"sha": "01f80a850112ca4a30330eeaa8eca35af4a91467",
+"date": "2022-11-10",
+"subj": "fix: correct migration file name",
+"added": [
+"persistence/sql/migrations/20221109000010000000_fix_foreign_key.postgres.up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg",
+"name"
+]
+},
+{
+"repo": "hydra",
+"sha": "d6e7f94f5eb678c43d43af8054b6707ea545c9b1",
+"date": "2022-09-08",
+"subj": "fix: postgres migration script (#3249)",
+"added": [],
+"modified": [
+"persistence/sql/migrations/20220210000001000074_nid.postgres.up.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "hydra",
+"sha": "5552e4df97bb5990e05f19d38aca98b614b4f48a",
+"date": "2022-07-18",
+"subj": "fix: resolve migration regressions",
+"added": [],
+"modified": [
+"persistence/sql/migrations/20211019000001000000_merge_authentication_request_tables.postgres.up.sql",
+"persistence/sql/migrations/20211019000001000001_merge_authentication_request_tables.postgres.up.sql"
+],
+"deleted": [],
+"signals": [
+"msg",
+"edit"
+]
+},
+{
+"repo": "hydra",
+"sha": "cdfc03d800a1968b9a090a03f829c7b7208277d6",
+"date": "2021-03-07",
+"subj": "fix: resolve migrator regression issues",
+"added": [
+"persistence/sql/migrations/20190100000001000000_client.up.sql",
+"persistence/sql/migrations/20190100000002000000_client.up.sql",
+"persistence/sql/migrations/20190100000003000000_client.up.sql",
+"persistence/sql/migrations/20190100000004000000_client.postgres.up.sql",
+"persistence/sql/migrations/20190100000005000000_client.up.sql",
+"persistence/sql/migrations/20190100000006000000_client.up.sql",
+"persistence/sql/migrations/20190100000007000000_client.up.sql",
+"persistence/sql/migrations/20190100000008000000_client.postgres.up.sql",
+"persistence/sql/migrations/20190100000009000000_client.postgres.up.sql",
+"persistence/sql/migrations/20190100000010000000_client.up.sql",
+"persistence/sql/migrations/20190100000011000000_client.postgres.up.sql",
+"persistence/sql/migrations/20190100000012000000_client.up.sql",
+"persistence/sql/migrations/20190100000013000000_client.postgres.up.sql",
+"persistence/sql/migrations/20190100000014000000_client.postgres.up.sql",
+"persistence/sql/migrations/20190200000001000000_jwk.up.sql",
+"persistence/sql/migrations/20190200000002000000_jwk.up.sql",
+"persistence/sql/migrations/20190200000003000000_jwk.up.sql",
+"persistence/sql/migrations/20190200000004000000_jwk.postgres.up.sql",
+"persistence/sql/migrations/20190300000001000000_consent.up.sql",
+"persistence/sql/migrations/20190300000002000000_consent.up.sql",
+"persistence/sql/migrations/20190300000003000000_consent.up.sql",
+"persistence/sql/migrations/20190300000004000000_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000005000000_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000006000000_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000007000000_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000008000000_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000009000000_consent.up.sql",
+"persistence/sql/migrations/20190300000010000000_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000011000000_consent.up.sql",
+"persistence/sql/migrations/20190300000012000000_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000013000000_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000014000000_consent.up.sql",
+"persistence/sql/migrations/20190400000001000000_oauth2.up.sql",
+"persistence/sql/migrations/20190400000002000000_oauth2.up.sql",
+"persistence/sql/migrations/20190400000003000000_oauth2.up.sql",
+"persistence/sql/migrations/20190400000004000000_oauth2.up.sql",
+"persistence/sql/migrations/20190400000005000000_oauth2.postgres.up.sql",
+"persistence/sql/migrations/20190400000006000000_oauth2.postgres.up.sql",
+"persistence/sql/migrations/20190400000007000000_oauth2.postgres.up.sql",
+"persistence/sql/migrations/20190400000008000000_oauth2.up.sql",
+"persistence/sql/migrations/20190400000009000000_oauth2.postgres.up.sql",
+"persistence/sql/migrations/20190400000010000000_oauth2.postgres.up.sql",
+"persistence/sql/migrations/20190400000011000000_oauth2.up.sql",
+"persistence/sql/migrations/20200521071434000000_consent.postgres.up.sql",
+"persistence/sql/migrations/20200527215731000000_client.up.sql",
+"persistence/sql/migrations/20200527215732000000_client.up.sql",
+"persistence/sql/migrations/20200819163013000000_add_client_id_subject_idx_to_access_and_refresh.postgres.up.sql",
+"persistence/sql/migrations/20200913192340000000_initial_sqlite.up.sql",
+"persistence/sql/migrations/20201110104000000000_drop_uq_oauth2.postgres.up.sql",
+"persistence/sql/migrations/20201116133000000000_set_null_time.postgres.up.sql"
+],
+"modified": [],
+"deleted": [
+"persistence/sql/migrations/20190100000001_client.up.sql",
+"persistence/sql/migrations/20190100000002_client.up.sql",
+"persistence/sql/migrations/20190100000003_client.up.sql",
+"persistence/sql/migrations/20190100000004_client.postgres.up.sql",
+"persistence/sql/migrations/20190100000005_client.up.sql",
+"persistence/sql/migrations/20190100000006_client.up.sql",
+"persistence/sql/migrations/20190100000007_client.up.sql",
+"persistence/sql/migrations/20190100000008_client.postgres.up.sql",
+"persistence/sql/migrations/20190100000009_client.postgres.up.sql",
+"persistence/sql/migrations/20190100000010_client.up.sql",
+"persistence/sql/migrations/20190100000011_client.postgres.up.sql",
+"persistence/sql/migrations/20190100000012_client.up.sql",
+"persistence/sql/migrations/20190100000013_client.postgres.up.sql",
+"persistence/sql/migrations/20190100000014_client.postgres.up.sql",
+"persistence/sql/migrations/20190200000001_jwk.up.sql",
+"persistence/sql/migrations/20190200000002_jwk.up.sql",
+"persistence/sql/migrations/20190200000003_jwk.up.sql",
+"persistence/sql/migrations/20190200000004_jwk.postgres.up.sql",
+"persistence/sql/migrations/20190300000001_consent.up.sql",
+"persistence/sql/migrations/20190300000002_consent.up.sql",
+"persistence/sql/migrations/20190300000003_consent.up.sql",
+"persistence/sql/migrations/20190300000004_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000005_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000006_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000007_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000008_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000009_consent.up.sql",
+"persistence/sql/migrations/20190300000010_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000011_consent.up.sql",
+"persistence/sql/migrations/20190300000012_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000013_consent.postgres.up.sql",
+"persistence/sql/migrations/20190300000014_consent.up.sql",
+"persistence/sql/migrations/20190400000001_oauth2.up.sql",
+"persistence/sql/migrations/20190400000002_oauth2.up.sql",
+"persistence/sql/migrations/20190400000003_oauth2.up.sql",
+"persistence/sql/migrations/20190400000004_oauth2.up.sql",
+"persistence/sql/migrations/20190400000005_oauth2.postgres.up.sql",
+"persistence/sql/migrations/20190400000006_oauth2.postgres.up.sql",
+"persistence/sql/migrations/20190400000007_oauth2.postgres.up.sql",
+"persistence/sql/migrations/20190400000008_oauth2.up.sql",
+"persistence/sql/migrations/20190400000009_oauth2.postgres.up.sql",
+"persistence/sql/migrations/20190400000010_oauth2.postgres.up.sql",
+"persistence/sql/migrations/20190400000011_oauth2.up.sql",
+"persistence/sql/migrations/20200521071434_consent.postgres.up.sql",
+"persistence/sql/migrations/20200527215731_client.up.sql",
+"persistence/sql/migrations/20200527215732_client.up.sql",
+"persistence/sql/migrations/20200819163013_add_client_id_subject_idx_to_access_and_refresh.postgres.up.sql",
+"persistence/sql/migrations/20200913192340_initial_sqlite.up.sql",
+"persistence/sql/migrations/20201110104000_drop_uq_oauth2.postgres.up.sql",
+"persistence/sql/migrations/20201116133000_set_null_time.postgres.up.sql"
+],
+"signals": [
+"msg",
+"delete"
+]
+},
+{
+"repo": "hydra",
+"sha": "a8ca333bb65fe591d1795ce5b33760c97ff54d65",
+"date": "2020-11-10",
+"subj": "fix: request_id should not be unique",
+"added": [
+"persistence/sql/migrations/20201110104000_drop_uq_oauth2.postgres.up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "keto",
+"sha": "54c00c38fdd70ea031c72b22b8570004a65ca472",
+"date": "2022-09-08",
+"subj": "fix: remove check constraint",
+"added": [
+"internal/persistence/sql/migrations/sql/20220513200400000001_uuid-mapping-remove-check.postgres.up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+},
+{
+"repo": "keto",
+"sha": "e815cb055ca1dfaff1f7bb9e56329be65563afb2",
+"date": "2022-02-17",
+"subj": "fix: add foreign key constraint for network ID",
+"added": [
+"internal/persistence/sql/migrations/sql/20220217152313000000_nid_fk.up.sql"
+],
+"modified": [],
+"deleted": [],
+"signals": [
+"msg"
+]
+}
+]
