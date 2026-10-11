@@ -1,0 +1,49 @@
+{
+ "containers": {
+  "docker_container.db": {
+   "name": "tfg-s21-db",
+   "exists": true,
+   "running": true,
+   "image": "postgres:17-alpine",
+   "declared_volumes": [
+    "/var/lib/postgresql/data"
+   ],
+   "env": {
+    "POSTGRES_PASSWORD": "(secret)",
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "GOSU_VERSION": "1.19",
+    "LANG": "en_US.utf8",
+    "PG_MAJOR": "17",
+    "PG_VERSION": "17.11",
+    "PG_SHA256": "dd27f2b3c59e73ed14aa3324901242bf69a032a6347805f274e6260322d42979",
+    "DOCKER_PG_LLVM_DEPS": "llvm21-dev \t\tclang21",
+    "PGDATA": "/var/lib/postgresql/data"
+   },
+   "mounts": [
+    {
+     "type": "volume",
+     "name": "78e4c039f2b25546cc2e2a2c0b8364962a419a62b94612aaccc3a65f80e9929f",
+     "source": null,
+     "dest": "/var/lib/postgresql/data",
+     "anonymous": true,
+     "kb": 39628
+    }
+   ],
+   "unmounted_data_dirs": {},
+   "ports": [
+    {
+     "internal": "5432/tcp",
+     "host_ip": "127.0.0.1",
+     "host_port": 47084,
+     "answers": true
+    }
+   ],
+   "size_rw_kb": 20,
+   "restart": "no"
+  }
+ },
+ "volumes": {},
+ "databases": {},
+ "roles": {},
+ "files": {}
+}

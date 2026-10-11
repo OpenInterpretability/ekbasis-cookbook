@@ -1,0 +1,27 @@
+{
+ "id": 67,
+ "p": {
+  "lost": 0.0446808747947216,
+  "down": 0.004905405919998884,
+  "exposed": 0.006692850962281227,
+  "fails": 0.02931223064661026
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss, exposure or interruption foreseen (lose 4%, expose 1%, interrupt 0%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\n(nothing is managed yet)\n\nActions, in order:\n1. Create local_file.ledger: filename = \"$STUDY_DIR/runs/s67/ledger.txt\"; content = \"ledger v2\\n\"; file_permission = \"0777\"\n\nHow these providers behave: Creating a local_file writes the configured content to its path, replacing whatever the file holds; the plan creates it again when the file on disk no longer matches what OpenTofu wrote.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_5cd8b68dc8bc21db4d4643bf",
+ "usage": {
+  "input_tokens": 1784,
+  "output_tokens": 0
+ },
+ "s": 1.44
+}

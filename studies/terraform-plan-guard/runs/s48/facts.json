@@ -1,0 +1,37 @@
+{
+ "containers": {},
+ "volumes": {},
+ "databases": {
+  "s48_app": {
+   "name": "s48_app",
+   "exists": true,
+   "owner": "s48_app",
+   "allow_connections": true,
+   "connection_limit": -1,
+   "acl": null,
+   "tables": [],
+   "extensions": [],
+   "sessions": {
+    "s48_app": 1
+   },
+   "schemas": [
+    {
+     "name": "public",
+     "owner": "pg_database_owner"
+    }
+   ]
+  }
+ },
+ "roles": {
+  "postgresql_role.app": {
+   "name": "s48_app",
+   "exists": true,
+   "login": true,
+   "sessions": {
+    "s48_app": 1
+   },
+   "owns_databases": 1
+  }
+ },
+ "files": {}
+}

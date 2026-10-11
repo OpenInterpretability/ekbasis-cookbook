@@ -1,0 +1,32 @@
+{
+ "id": 18,
+ "title": "healthcheck added",
+ "family": "web",
+ "token": "tok18xd5b75d74",
+ "data_before": [],
+ "plan_text": "docker_container.web: Refreshing state... [id=67d8ca9b52ba3a17de4fa1a83627614e551a6df6758838485f095d706db8a760]\n\nOpenTofu used the selected providers to generate the following execution\nplan. Resource actions are indicated with the following symbols:\n  ~ update in-place (current -> planned)\n\nOpenTofu will perform the following actions:\n\n  # docker_container.web will be updated in-place\n  ~ resource \"docker_container\" \"web\" {\n        id                                          = \"67d8ca9b52ba3a17de4fa1a83627614e551a6df6758838485f095d706db8a760\"\n        name                                        = \"tfg-s18-web\"\n        # (44 unchanged attributes hidden)\n\n      + healthcheck {\n          + interval       = \"5s\"\n          + retries        = 0\n          + start_interval = \"0s\"\n          + start_period   = \"0s\"\n          + test           = [\n              + \"CMD\",\n              + \"wget\",\n              + \"-q\",\n              + \"-O-\",\n              + \"http://127.0.0.1/\",\n            ]\n          + timeout        = \"0s\"\n        }\n\n        # (1 unchanged block hidden)\n    }\n\nPlan: 0 to add, 1 to change, 0 to destroy.\n",
+ "probe_baseline_ok": [
+  true
+ ],
+ "apply_s": 0.1,
+ "apply_rc": 0,
+ "apply_out": "docker_container.web: Modifying... [id=67d8ca9b52ba3a17de4fa1a83627614e551a6df6758838485f095d706db8a760]\ndocker_container.web: Modifications complete after 0s [id=67d8ca9b52ba3a17de4fa1a83627614e551a6df6758838485f095d706db8a760]\n\nApply complete! Resources: 0 added, 1 changed, 0 destroyed.\n",
+ "probe_fail": [
+  0
+ ],
+ "probe_rounds": 16,
+ "data_after": [],
+ "access_before": [],
+ "access_after": [],
+ "wide_before": [],
+ "wide_after": [],
+ "labels": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "log": [
+  "lowing execution\nplan. Resource actions are indicated with the following symbols:\n  + create\n\nOpenTofu will perform the following actions:\n\n  # docker_container.web will be created\n  + resource \"docker_container\" \"web\" {\n      + attach                                      = false\n      + bridge                                      = (known after apply)\n      + command                                     = (known after apply)\n      + container_logs                              = (known after apply)\n      + container_read_refresh_timeout_milliseconds = 15000\n      + entrypoint                                  = (known after apply)\n      + env                                         = (known after apply)\n      + exit_code                                   = (known after apply)\n      + hostname                                    = (known after apply)\n      + id                                          = (known after apply)\n      + image                                       = \"nginx:1.27-alpine\"\n      + init                                        = (known after apply)\n      + ipc_mode                                    = (known after apply)\n      + log_driver                                  = (known after apply)\n      + logs                                        = false\n      + memory_reservation                          = 0\n      + must_run                                    = true\n      + name                                        = \"tfg-s18-web\"\n      + network_data                                = (known after apply)\n      + network_mode                                = \"bridge\"\n      + read_only                                   = false\n      + remove_volumes                              = true\n      + restart                                     = \"no\"\n      + rm                                          = false\n      + runtime                                     = (known after apply)\n      + security_opts                               = (known after apply)\n      + shm_size                                    = (known after apply)\n      + start                                       = true\n      + stdin_open                                  = false\n      + stop_signal                                 = (known after apply)\n      + stop_timeout                                = (known after apply)\n      + tty                                         = false\n      + wait                                        = false\n      + wait_timeout                                = 60\n\n      + healthcheck (known after apply)\n\n      + labels (known after apply)\n\n      + ports {\n          + external = 47072\n          + internal = 80\n          + ip       = \"127.0.0.1\"\n          + protocol = \"tcp\"\n        }\n    }\n\nPlan: 1 to add, 0 to change, 0 to destroy.\ndocker_container.web: Creating...\ndocker_container.web: Creation complete after 1s [id=67d8ca9b52ba3a17de4fa1a83627614e551a6df6758838485f095d706db8a760]\n\nApply complete! Resources: 1 added, 0 changed, 0 destroyed.\n"
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "id": 16,
+ "p": {
+  "lost": 0.7549149990081787,
+  "down": 0.8872045874595642,
+  "exposed": 0.005554925184696913,
+  "fails": 0.027585284784436226
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "lost",
+   "down"
+  ],
+  "reason": "may permanently lose stored data (75%); may interrupt a running service during the apply (89%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\ndocker_container.web: container tfg-s16-web-e697, image nginx:1.27-alpine, running; publishes 127.0.0.1:47064 -> 80/tcp (answering); no volumes or host directories mounted\nrandom_id.sfx: random_id\n\nActions, in order:\n1. Replace docker_container.web (create the new one first, then destroy the old one (create_before_destroy), forced by the change to image, name): image: \"nginx:1.27-alpine\" -> \"nginx:1.26-alpine\"; name: \"tfg-s16-web-e697\" -> (known after apply)\n2. Replace random_id.sfx (create the new one first, then destroy the old one (create_before_destroy), forced by the change to keepers): keepers: {image = \"nginx:1.27-alpine\"} -> {image = \"nginx:1.26-alpine\"}\n\nHow these providers behave: Destroying a Docker container also deletes its anonymous volumes; a named volume or a host directory mounted into it is kept unless that volume is destroyed too. A new container starts from its image: files the old one wrote outside its named volumes and host directories are not in it. Docker refuses to create a container whose name, or published host port, is already in use, and the change fails. A Docker port published with ip 0.0.0.0 (or with no ip) is reachable from every network the server is on; with ip 127.0.0.1 only from the server itself.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_0a8cbaf06985610b340f48d4",
+ "usage": {
+  "input_tokens": 2560,
+  "output_tokens": 0
+ },
+ "s": 1.02
+}

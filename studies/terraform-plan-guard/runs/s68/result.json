@@ -1,0 +1,28 @@
+{
+ "id": 68,
+ "title": "null_resource trigger changed",
+ "family": "local",
+ "token": "tok68xfe87a26e",
+ "data_before": [],
+ "plan_text": "null_resource.hook: Refreshing state... [id=569533493736654422]\n\nOpenTofu used the selected providers to generate the following execution\nplan. Resource actions are indicated with the following symbols:\n-/+ destroy and then create replacement\n\nOpenTofu will perform the following actions:\n\n  # null_resource.hook must be replaced\n-/+ resource \"null_resource\" \"hook\" {\n      ~ id       = \"569533493736654422\" -> (known after apply)\n      ~ triggers = { # forces replacement\n          ~ \"v\" = \"1\" -> \"2\"\n        }\n    }\n\nPlan: 1 to add, 0 to change, 1 to destroy.\n",
+ "probe_baseline_ok": [],
+ "apply_s": 0.1,
+ "apply_rc": 0,
+ "apply_out": "null_resource.hook: Destroying... [id=569533493736654422]\nnull_resource.hook: Destruction complete after 0s\nnull_resource.hook: Creating...\nnull_resource.hook: Creation complete after 0s [id=974033961033735164]\n\nApply complete! Resources: 1 added, 0 changed, 1 destroyed.\n",
+ "probe_fail": [],
+ "probe_rounds": 16,
+ "data_after": [],
+ "access_before": [],
+ "access_after": [],
+ "wide_before": [],
+ "wide_after": [],
+ "labels": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "log": [
+  "\nOpenTofu used the selected providers to generate the following execution\nplan. Resource actions are indicated with the following symbols:\n  + create\n\nOpenTofu will perform the following actions:\n\n  # null_resource.hook will be created\n  + resource \"null_resource\" \"hook\" {\n      + id       = (known after apply)\n      + triggers = {\n          + \"v\" = \"1\"\n        }\n    }\n\nPlan: 1 to add, 0 to change, 0 to destroy.\nnull_resource.hook: Creating...\nnull_resource.hook: Creation complete after 0s [id=569533493736654422]\n\nApply complete! Resources: 1 added, 0 changed, 0 destroyed.\n"
+ ]
+}

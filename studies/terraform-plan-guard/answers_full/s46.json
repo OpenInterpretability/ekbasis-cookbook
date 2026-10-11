@@ -1,0 +1,27 @@
+{
+ "id": 46,
+ "p": {
+  "lost": 0.0031726828310638666,
+  "down": 0.006289901677519083,
+  "exposed": 0.0035936026833951473,
+  "fails": 0.0031726828310638666
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss, exposure or interruption foreseen (lose 0%, expose 0%, interrupt 1%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\npostgresql_database.main: database s46_app owned by s46_app; open sessions: 1 as role s46_app; tables: public.app_t (1,000 rows, owner s46_app)\npostgresql_role.app: role s46_app, can log in, has a password; open sessions: 1 in database s46_app\n\nActions, in order:\n1. Apply the plan: it changes no resource (postgresql_database.app is now postgresql_database.main (moved; no change))\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_93d4cbc4d13d441fa1aef223",
+ "usage": {
+  "input_tokens": 1600,
+  "output_tokens": 0
+ },
+ "s": 0.95
+}

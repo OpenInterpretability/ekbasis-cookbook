@@ -1,0 +1,29 @@
+{
+ "id": 36,
+ "p": {
+  "lost": 0.4378235340118408,
+  "down": 0.9724147915840149,
+  "exposed": 0.005220125894993544,
+  "fails": 0.022977370768785477
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "down"
+  ],
+  "reason": "may interrupt a running service during the apply (97%)"
+ },
+ "rule": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\ndocker_container.cache: container tfg-s36-cache, image redis:7-alpine, running; publishes 127.0.0.1:47144 -> 6379/tcp (answering); named volume tfg-s36-data mounted at /var/lib/redis (4 KB); anonymous volume (created by Docker for the image's VOLUME /data) at /data (4 KB)\ndocker_volume.data: volume tfg-s36-data (4 KB), used by tfg-s36-cache\n\nActions, in order:\n1. Replace docker_container.cache (destroy the old one, then create the new one, forced by the change to image): image: \"redis:7-alpine\" -> \"redis:7.4-alpine\"; volumes: {container_path = \"/var/lib/redis\", read_only = false, volume_name = \"tfg-s36-data\"} -> {container_path = \"/var/lib/redis\", volume_name = \"tfg-s36-data\"}\n\nHow these providers behave: Destroying a Docker container also deletes its anonymous volumes; a named volume or a host directory mounted into it is kept unless that volume is destroyed too. A new container starts from its image: files the old one wrote outside its named volumes and host directories are not in it. Docker refuses to create a container whose name, or published host port, is already in use, and the change fails. A Docker port published with ip 0.0.0.0 (or with no ip) is reachable from every network the server is on; with ip 127.0.0.1 only from the server itself.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_66071b57235eed6580b310a3",
+ "usage": {
+  "input_tokens": 2576,
+  "output_tokens": 0
+ },
+ "s": 1.19
+}

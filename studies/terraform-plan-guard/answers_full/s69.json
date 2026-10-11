@@ -1,0 +1,27 @@
+{
+ "id": 69,
+ "p": {
+  "lost": 0.024423088878393173,
+  "down": 0.01590639166533947,
+  "exposed": 0.004905405919998884,
+  "fails": 0.04208773002028465
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss, exposure or interruption foreseen (lose 2%, expose 0%, interrupt 2%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\nrandom_password.x: random_password\n\nActions, in order:\n1. Replace random_password.x (destroy the old one, then create the new one, forced by the change to length): length: 16 -> 24\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_582e306a6efc1403c9a60fd6",
+ "usage": {
+  "input_tokens": 1344,
+  "output_tokens": 0
+ },
+ "s": 1.49
+}

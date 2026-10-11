@@ -1,0 +1,38 @@
+{
+ "id": 28,
+ "title": "docker_volume resource removed while container still mounts it by literal name",
+ "family": "pgc",
+ "token": "tok28x0375628b",
+ "data_before": [
+  "container 35a365d88fb4",
+  "volume tfg-s28-data"
+ ],
+ "plan_text": "docker_volume.data: Refreshing state... [id=tfg-s28-data]\ndocker_container.db: Refreshing state... [id=35a365d88fb4cd8d920cd3dc46f89290b6a45557a68f4e73af458cae518580a9]\n\nOpenTofu used the selected providers to generate the following execution\nplan. Resource actions are indicated with the following symbols:\n  - destroy\n\nOpenTofu will perform the following actions:\n\n  # docker_volume.data will be destroyed\n  # (because docker_volume.data is not in configuration)\n  - resource \"docker_volume\" \"data\" {\n      - driver      = \"local\" -> null\n      - driver_opts = {} -> null\n      - id          = \"tfg-s28-data\" -> null\n      - mountpoint  = \"/var/lib/docker/volumes/tfg-s28-data/_data\" -> null\n      - name        = \"tfg-s28-data\" -> null\n    }\n\nPlan: 0 to add, 0 to change, 1 to destroy.\n",
+ "probe_baseline_ok": [
+  true
+ ],
+ "apply_s": 30.2,
+ "apply_rc": 1,
+ "apply_out": "docker_volume.data: Destroying... [id=tfg-s28-data]\ndocker_volume.data: Still destroying... [id=tfg-s28-data, 10s elapsed]\ndocker_volume.data: Still destroying... [id=tfg-s28-data, 20s elapsed]\ndocker_volume.data: Still destroying... [id=tfg-s28-data, 30s elapsed]\n\nError: timeout while waiting for state to become 'removed' (last state: 'in_use', timeout: 30s)\n\n",
+ "probe_fail": [
+  0
+ ],
+ "probe_rounds": 154,
+ "data_after": [
+  "container 35a365d88fb4",
+  "volume tfg-s28-data"
+ ],
+ "access_before": [],
+ "access_after": [],
+ "wide_before": [],
+ "wide_after": [],
+ "labels": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": true
+ },
+ "log": [
+  "\n      + container_read_refresh_timeout_milliseconds = 15000\n      + entrypoint                                  = (known after apply)\n      + env                                         = [\n          + \"POSTGRES_PASSWORD=apppass\",\n        ]\n      + exit_code                                   = (known after apply)\n      + hostname                                    = (known after apply)\n      + id                                          = (known after apply)\n      + image                                       = \"postgres:17-alpine\"\n      + init                                        = (known after apply)\n      + ipc_mode                                    = (known after apply)\n      + log_driver                                  = (known after apply)\n      + logs                                        = false\n      + memory_reservation                          = 0\n      + must_run                                    = true\n      + name                                        = \"tfg-s28-db\"\n      + network_data                                = (known after apply)\n      + network_mode                                = \"bridge\"\n      + read_only                                   = false\n      + remove_volumes                              = true\n      + restart                                     = \"no\"\n      + rm                                          = false\n      + runtime                                     = (known after apply)\n      + security_opts                               = (known after apply)\n      + shm_size                                    = (known after apply)\n      + start                                       = true\n      + stdin_open                                  = false\n      + stop_signal                                 = (known after apply)\n      + stop_timeout                                = (known after apply)\n      + tty                                         = false\n      + wait                                        = false\n      + wait_timeout                                = 60\n\n      + healthcheck (known after apply)\n\n      + labels (known after apply)\n\n      + ports {\n          + external = 47112\n          + internal = 5432\n          + ip       = \"127.0.0.1\"\n          + protocol = \"tcp\"\n        }\n\n      + volumes {\n          + container_path = \"/var/lib/postgresql/data\"\n          + volume_name    = \"tfg-s28-data\"\n        }\n    }\n\n  # docker_volume.data will be created\n  + resource \"docker_volume\" \"data\" {\n      + driver     = (known after apply)\n      + id         = (known after apply)\n      + mountpoint = (known after apply)\n      + name       = \"tfg-s28-data\"\n    }\n\nPlan: 2 to add, 0 to change, 0 to destroy.\ndocker_volume.data: Creating...\ndocker_container.db: Creating...\ndocker_volume.data: Creation complete after 0s [id=tfg-s28-data]\ndocker_container.db: Creation complete after 2s [id=35a365d88fb4cd8d920cd3dc46f89290b6a45557a68f4e73af458cae518580a9]\n\nApply complete! Resources: 2 added, 0 changed, 0 destroyed.\n"
+ ]
+}

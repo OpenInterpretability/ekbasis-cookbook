@@ -36,6 +36,19 @@ non-inferiority to the Sonnet forecaster within 8 pts **failed** (+2.8 [−5.6, 
 with this simulated user, so the guard's measured gain is asking a third as often. Details, limits and cost (descriptive):
 [docs/K8S_STUDY.md](docs/K8S_STUDY.md) · data and rerun: [studies/k8s/](studies/k8s/).
 
+## More studies (10–11 October 2026), negative results included
+
+| study | result | where |
+|---|---|---|
+| Migration guard vs real public incidents (34 candidates mined from 16 repos; not pre-registered) | of 25 confirmed in-scope incidents, **9 flagged for the right reason**, 5 for another reason, 1 spurious, 2 declined, **8 missed** | [studies/migrations-real-incidents/](studies/migrations-real-incidents/) |
+| Migration guard for Django and Alembic (pre-registered v4, v5) | v4 **failed** (code migrations counted as risky). v5 (`on-code: warn`): **Alembic passes P1–P4**; Django fails P4 (recall 0.824 < 0.85) and ships as **experimental**. Counting review-by-hand as missed, total recall is 0.48 (Django) and 0.31 (Alembic) | [studies/migrations-frameworks/](studies/migrations-frameworks/) |
+| Constraint facts about existing rows in the migration state (pre-registered) | **negative**: P1 gain on 9 new incidents was **0** (3/9 → 3/9; underpowered); false-alarm cost within limits (P3 at the limit). Not shipped | [studies/migrations-constraint-facts/](studies/migrations-constraint-facts/) |
+| Terraform/OpenTofu plan guard, 69 local scenarios labelled by execution (pre-registered) | **tie** with a simple rule: composite F1 0.871 vs 0.824, **+0.047 against a +0.05 margin** (McNemar p = 0.45). Parked; no cloud providers tested | [studies/terraform-plan-guard/](studies/terraform-plan-guard/) |
+| `intent_check` as a defense on the official AgentDojo (pre-registered, 1,191 runs) | security **inconclusive by floor**: GLM-5.3-Flash with no defense fell for **0/300** attacks. Cost: **−3.1 pp** utility without attack, **−2.3 pp** under attack (within limits). All **6 blocks were false alarms**, 3 of them on explicit delegation ("follow the instructions in the file") | [studies/agentdojo-intent-check/](studies/agentdojo-intent-check/) |
+
+Each folder has its plan (when pre-registered), the per-item answers without third-party code, and a recompute script
+or the analysis that reproduces the numbers above.
+
 ## The one-line pitch
 
 An agent that can foresee consequences makes fewer irreversible mistakes. This repo maps **where** that works, with numbers.

@@ -1,0 +1,177 @@
+{
+ "n": 69,
+ "lost": {
+  "pos": 20,
+  "ekbasis": {
+   "tp": 10,
+   "fp": 1,
+   "fn": 10,
+   "tn": 48,
+   "precision": 0.9090909090909091,
+   "recall": 0.5,
+   "f1": 0.6451612903225806,
+   "acc": 0.8405797101449275
+  },
+  "rule": {
+   "tp": 16,
+   "fp": 10,
+   "fn": 4,
+   "tn": 39,
+   "precision": 0.6153846153846154,
+   "recall": 0.8,
+   "f1": 0.6956521739130435,
+   "acc": 0.7971014492753623
+  },
+  "auroc": 0.8530612244897959,
+  "mcnemar": {
+   "ek_only_right": 11,
+   "rule_only_right": 8,
+   "p": 0.6476058959960938
+  }
+ },
+ "down": {
+  "pos": 38,
+  "ekbasis": {
+   "tp": 33,
+   "fp": 5,
+   "fn": 5,
+   "tn": 26,
+   "precision": 0.868421052631579,
+   "recall": 0.868421052631579,
+   "f1": 0.868421052631579,
+   "acc": 0.855072463768116
+  },
+  "rule": {
+   "tp": 31,
+   "fp": 0,
+   "fn": 7,
+   "tn": 31,
+   "precision": 1.0,
+   "recall": 0.8157894736842105,
+   "f1": 0.898550724637681,
+   "acc": 0.8985507246376812
+  },
+  "auroc": 0.9511884550084889,
+  "mcnemar": {
+   "ek_only_right": 6,
+   "rule_only_right": 9,
+   "p": 0.60723876953125
+  }
+ },
+ "exposed": {
+  "pos": 5,
+  "ekbasis": {
+   "tp": 4,
+   "fp": 0,
+   "fn": 1,
+   "tn": 64,
+   "precision": 1.0,
+   "recall": 0.8,
+   "f1": 0.888888888888889,
+   "acc": 0.9855072463768116
+  },
+  "rule": {
+   "tp": 5,
+   "fp": 1,
+   "fn": 0,
+   "tn": 63,
+   "precision": 0.8333333333333334,
+   "recall": 1.0,
+   "f1": 0.9090909090909091,
+   "acc": 0.9855072463768116
+  },
+  "auroc": 0.996875,
+  "mcnemar": {
+   "ek_only_right": 1,
+   "rule_only_right": 1,
+   "p": 1.0
+  }
+ },
+ "risky": {
+  "pos": 45,
+  "ekbasis": {
+   "tp": 37,
+   "fp": 3,
+   "fn": 8,
+   "tn": 21,
+   "precision": 0.925,
+   "recall": 0.8222222222222222,
+   "f1": 0.8705882352941177,
+   "acc": 0.8405797101449275
+  },
+  "rule": {
+   "tp": 35,
+   "fp": 5,
+   "fn": 10,
+   "tn": 19,
+   "precision": 0.875,
+   "recall": 0.7777777777777778,
+   "f1": 0.823529411764706,
+   "acc": 0.782608695652174
+  },
+  "auroc": 0.9259259259259259,
+  "mcnemar": {
+   "ek_only_right": 10,
+   "rule_only_right": 6,
+   "p": 0.454498291015625
+  }
+ },
+ "fails_auroc": 0.8361111111111111,
+ "controls": {
+  "n": 24,
+  "false_alarms": [
+   2,
+   16,
+   32
+  ],
+  "rate": 0.125
+ },
+ "complement": {
+  "rule_errors": 22,
+  "ekbasis_right_on_them": 18,
+  "items": [
+   "s22:lost",
+   "s26:lost",
+   "s28:lost",
+   "s29:lost",
+   "s29:exposed",
+   "s32:lost",
+   "s37:lost",
+   "s40:lost",
+   "s41:down",
+   "s48:lost",
+   "s50:lost",
+   "s51:down",
+   "s52:down",
+   "s53:lost",
+   "s57:down",
+   "s58:down",
+   "s59:down",
+   "s60:down",
+   "s61:lost",
+   "s66:lost",
+   "s67:lost",
+   "s70:lost"
+  ],
+  "fixed": [
+   "s22:lost",
+   "s26:lost",
+   "s28:lost",
+   "s29:lost",
+   "s29:exposed",
+   "s32:lost",
+   "s37:lost",
+   "s40:lost",
+   "s48:lost",
+   "s50:lost",
+   "s51:down",
+   "s52:down",
+   "s53:lost",
+   "s57:down",
+   "s58:down",
+   "s59:down",
+   "s60:down",
+   "s61:lost"
+  ]
+ }
+}

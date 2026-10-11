@@ -1,0 +1,29 @@
+{
+ "id": 60,
+ "p": {
+  "lost": 0.0020507436711341143,
+  "down": 0.9241418242454529,
+  "exposed": 0.0035936026833951473,
+  "fails": 0.031143832951784134
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "down"
+  ],
+  "reason": "may interrupt a running service during the apply (92%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\npostgresql_database.app: database s60_app owned by s60_app; open sessions: 1 as role s60_app; tables: public.app_t (1,000 rows, owner s60_app)\npostgresql_role.app: role s60_app, can log in, has a password; open sessions: 1 in database s60_app\n\nActions, in order:\n1. Update postgresql_role.app in place: login: true -> false\n\nHow these providers behave: Clients log in with a role's name and password: after a role is renamed, gets a new password, or has login = false, new connections with the old name or password fail; sessions already open stay open.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_bf16a5db946a1c9630e7319b",
+ "usage": {
+  "input_tokens": 1756,
+  "output_tokens": 0
+ },
+ "s": 0.9
+}

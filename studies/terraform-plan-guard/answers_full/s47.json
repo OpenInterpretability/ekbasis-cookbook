@@ -1,0 +1,27 @@
+{
+ "id": 47,
+ "p": {
+  "lost": 0.01590639166533947,
+  "down": 0.01798621006309986,
+  "exposed": 0.0020507436711341143,
+  "fails": 0.9859364032745361
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss, exposure or interruption foreseen (lose 2%, expose 0%, interrupt 2%); the apply may fail part-way (99%)"
+ },
+ "rule": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\npostgresql_database.app: database s47_app owned by s47_app; open sessions: 1 as role s47_app; tables: public.app_t (1,000 rows, owner s47_app)\npostgresql_role.app: role s47_app, can log in, has a password; open sessions: 1 in database s47_app\n\nActions, in order:\n1. Destroy postgresql_database.app (it was removed from the configuration)\n\nHow these providers behave: Destroying a postgresql_database drops the database with everything stored in it; PostgreSQL refuses to drop or rename a database while other sessions are connected to it, and the change fails.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_8b8f157ffe81404386cb34d9",
+ "usage": {
+  "input_tokens": 1724,
+  "output_tokens": 0
+ },
+ "s": 0.9
+}

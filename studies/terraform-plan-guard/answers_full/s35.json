@@ -1,0 +1,29 @@
+{
+ "id": 35,
+ "p": {
+  "lost": 0.08509904891252518,
+  "down": 0.9669140577316284,
+  "exposed": 0.005220125894993544,
+  "fails": 0.03308597952127457
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "down"
+  ],
+  "reason": "may interrupt a running service during the apply (97%)"
+ },
+ "rule": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\ndocker_container.cache: container tfg-s35-cache, image redis:7-alpine, running; publishes 127.0.0.1:47140 -> 6379/tcp (answering); host directory $STUDY_DIR/runs/s35/bind mounted at /data (0 KB)\n\nActions, in order:\n1. Replace docker_container.cache (destroy the old one, then create the new one, forced by the change to env): env: [] -> [\"TZ=UTC\"]; volumes: {container_path = \"/data\", host_path = \"$STUDY_DIR/runs/s35/bind\", read_only = false} -> {container_path = \"/data\", host_path = \"$STUDY_DIR/runs/s35/bind\"}\n\nHow these providers behave: Destroying a Docker container also deletes its anonymous volumes; a named volume or a host directory mounted into it is kept unless that volume is destroyed too. A new container starts from its image: files the old one wrote outside its named volumes and host directories are not in it. Docker refuses to create a container whose name, or published host port, is already in use, and the change fails. A Docker port published with ip 0.0.0.0 (or with no ip) is reachable from every network the server is on; with ip 127.0.0.1 only from the server itself.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_1f12e7e42c51fcc02af79a91",
+ "usage": {
+  "input_tokens": 3024,
+  "output_tokens": 0
+ },
+ "s": 1.08
+}

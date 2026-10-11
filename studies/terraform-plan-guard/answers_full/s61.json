@@ -1,0 +1,30 @@
+{
+ "id": 61,
+ "p": {
+  "lost": 0.9433475732803345,
+  "down": 0.8438951373100281,
+  "exposed": 0.005554925184696913,
+  "fails": 0.022977370768785477
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "lost",
+   "down"
+  ],
+  "reason": "may permanently lose stored data (94%); may interrupt a running service during the apply (84%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\npostgresql_database.app: database s61_app owned by s61_app; open sessions: 1 as role s61_app; tables: public.app_t (1,000 rows, owner s61_app); extension hstore installed; columns of its types: public.app_t.h\npostgresql_extension.hstore: extension hstore in database s61_app, drop_cascade = true\npostgresql_role.app: role s61_app, can log in, has a password; open sessions: 1 in database s61_app\n\nActions, in order:\n1. Destroy postgresql_extension.hstore (it was removed from the configuration)\n\nHow these providers behave: Destroying a postgresql_extension with drop_cascade = true also drops the columns whose type comes from the extension; without it, the change fails while such columns exist.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_6a4eae4843a668c6cd1559ca",
+ "usage": {
+  "input_tokens": 1860,
+  "output_tokens": 0
+ },
+ "s": 1.85
+}

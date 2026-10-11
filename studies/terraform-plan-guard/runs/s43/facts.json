@@ -1,0 +1,45 @@
+{
+ "containers": {},
+ "volumes": {},
+ "databases": {
+  "s43_app": {
+   "name": "s43_app",
+   "exists": true,
+   "owner": "s43_app",
+   "allow_connections": true,
+   "connection_limit": -1,
+   "acl": null,
+   "tables": [
+    {
+     "schema": "public",
+     "table": "app_t",
+     "owner": "s43_app",
+     "rows": 1000,
+     "acl": null
+    }
+   ],
+   "extensions": [],
+   "sessions": {
+    "s43_app": 1
+   },
+   "schemas": [
+    {
+     "name": "public",
+     "owner": "pg_database_owner"
+    }
+   ]
+  }
+ },
+ "roles": {
+  "postgresql_role.app": {
+   "name": "s43_app",
+   "exists": true,
+   "login": true,
+   "sessions": {
+    "s43_app": 1
+   },
+   "owns_databases": 1
+  }
+ },
+ "files": {}
+}

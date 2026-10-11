@@ -1,0 +1,42 @@
+{
+ "containers": {
+  "docker_container.cache": {
+   "name": "tfg-s35-cache",
+   "exists": true,
+   "running": true,
+   "image": "redis:7-alpine",
+   "declared_volumes": [
+    "/data"
+   ],
+   "env": {
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "REDIS_VERSION": "7.4.11"
+   },
+   "mounts": [
+    {
+     "type": "bind",
+     "name": null,
+     "source": "$STUDY_DIR/runs/s35/bind",
+     "dest": "/data",
+     "anonymous": false,
+     "kb": 0
+    }
+   ],
+   "unmounted_data_dirs": {},
+   "ports": [
+    {
+     "internal": "6379/tcp",
+     "host_ip": "127.0.0.1",
+     "host_port": 47140,
+     "answers": true
+    }
+   ],
+   "size_rw_kb": 4,
+   "restart": "no"
+  }
+ },
+ "volumes": {},
+ "databases": {},
+ "roles": {},
+ "files": {}
+}

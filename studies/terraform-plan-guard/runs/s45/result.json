@@ -1,0 +1,34 @@
+{
+ "id": 45,
+ "title": "database resource address renamed without moved",
+ "family": "pgdb",
+ "token": "tok45xdfca12d2",
+ "data_before": [
+  "db s45_app.public.app_t (1000 rows)"
+ ],
+ "plan_text": "postgresql_database.app: Refreshing state... [id=s45_app]\npostgresql_role.app: Refreshing state... [id=s45_app]\n\nOpenTofu used the selected providers to generate the following execution\nplan. Resource actions are indicated with the following symbols:\n  + create\n  - destroy\n\nOpenTofu will perform the following actions:\n\n  # postgresql_database.app will be destroyed\n  # (because postgresql_database.app is not in configuration)\n  - resource \"postgresql_database\" \"app\" {\n      - allow_connections      = true -> null\n      - alter_object_ownership = false -> null\n      - connection_limit       = -1 -> null\n      - encoding               = \"UTF8\" -> null\n      - id                     = \"s45_app\" -> null\n      - is_template            = false -> null\n      - lc_collate             = \"en_US.utf8\" -> null\n      - lc_ctype               = \"en_US.utf8\" -> null\n      - name                   = \"s45_app\" -> null\n      - owner                  = \"s45_app\" -> null\n      - tablespace_name        = \"pg_default\" -> null\n      - template               = \"template0\" -> null\n    }\n\n  # postgresql_database.main will be created\n  + resource \"postgresql_database\" \"main\" {\n      + allow_connections      = true\n      + alter_object_ownership = false\n      + connection_limit       = -1\n      + encoding               = (known after apply)\n      + id                     = (known after apply)\n      + is_template            = (known after apply)\n      + lc_collate             = (known after apply)\n      + lc_ctype               = (known after apply)\n      + name                   = \"s45_app\"\n      + owner                  = \"s45_app\"\n      + tablespace_name        = (known after apply)\n      + template               = (known after apply)\n    }\n\nPlan: 1 to add, 0 to change, 1 to destroy.\n",
+ "probe_baseline_ok": [
+  true
+ ],
+ "apply_s": 0.7,
+ "apply_rc": 0,
+ "apply_out": "postgresql_database.app: Destroying... [id=s45_app]\npostgresql_database.main: Creating...\npostgresql_database.app: Destruction complete after 0s\npostgresql_database.main: Creation complete after 0s [id=s45_app]\n\nApply complete! Resources: 1 added, 0 changed, 1 destroyed.\n",
+ "probe_fail": [
+  16
+ ],
+ "probe_rounds": 18,
+ "data_after": [],
+ "access_before": [],
+ "access_after": [],
+ "wide_before": [],
+ "wide_after": [],
+ "labels": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "log": [
+  "\nOpenTofu used the selected providers to generate the following execution\nplan. Resource actions are indicated with the following symbols:\n  + create\n\nOpenTofu will perform the following actions:\n\n  # postgresql_database.app will be created\n  + resource \"postgresql_database\" \"app\" {\n      + allow_connections      = true\n      + alter_object_ownership = false\n      + connection_limit       = -1\n      + encoding               = (known after apply)\n      + id                     = (known after apply)\n      + is_template            = (known after apply)\n      + lc_collate             = (known after apply)\n      + lc_ctype               = (known after apply)\n      + name                   = \"s45_app\"\n      + owner                  = \"s45_app\"\n      + tablespace_name        = (known after apply)\n      + template               = (known after apply)\n    }\n\n  # postgresql_role.app will be created\n  + resource \"postgresql_role\" \"app\" {\n      + bypass_row_level_security = false\n      + connection_limit          = -1\n      + create_database           = false\n      + create_role               = false\n      + encrypted_password        = true\n      + id                        = (known after apply)\n      + inherit                   = true\n      + login                     = true\n      + name                      = \"s45_app\"\n      + password                  = (sensitive value)\n      + password_wo               = (write-only attribute)\n      + replication               = false\n      + skip_drop_role            = false\n      + skip_reassign_owned       = false\n      + superuser                 = false\n      + valid_until               = \"infinity\"\n    }\n\nPlan: 2 to add, 0 to change, 0 to destroy.\npostgresql_role.app: Creating...\npostgresql_role.app: Creation complete after 0s [id=s45_app]\npostgresql_database.app: Creating...\npostgresql_database.app: Creation complete after 1s [id=s45_app]\n\nApply complete! Resources: 2 added, 0 changed, 0 destroyed.\n"
+ ]
+}

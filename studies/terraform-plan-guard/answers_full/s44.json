@@ -1,0 +1,27 @@
+{
+ "id": 44,
+ "p": {
+  "lost": 0.004331502132117748,
+  "down": 0.031143832951784134,
+  "exposed": 0.006289901677519083,
+  "fails": 0.14033624529838562
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss, exposure or interruption foreseen (lose 0%, expose 1%, interrupt 3%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\npostgresql_database.app: database s44_app owned by s44_app; open sessions: 1 as role s44_app; tables: public.app_t (1,000 rows, owner s44_app)\npostgresql_role.app: role s44_app, can log in, has a password; open sessions: 1 in database s44_app\n\nActions, in order:\n1. Update postgresql_database.app in place: owner: \"s44_app\" -> \"s44_admin\"\n2. Create postgresql_role.admin: name = \"s44_admin\"; login = false\n\nHow these providers behave: Destroying a postgresql_database drops the database with everything stored in it; PostgreSQL refuses to drop or rename a database while other sessions are connected to it, and the change fails. Clients log in with a role's name and password: after a role is renamed, gets a new password, or has login = false, new connections with the old name or password fail; sessions already open stay open.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_1115bcb6049f9012bd10dce4",
+ "usage": {
+  "input_tokens": 2024,
+  "output_tokens": 0
+ },
+ "s": 0.91
+}

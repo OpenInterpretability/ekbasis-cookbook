@@ -1,0 +1,51 @@
+{
+ "containers": {
+  "docker_container.cache": {
+   "name": "tfg-s34-cache",
+   "exists": true,
+   "running": true,
+   "image": "redis:7-alpine",
+   "declared_volumes": [
+    "/data"
+   ],
+   "env": {
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "REDIS_VERSION": "7.4.11"
+   },
+   "mounts": [
+    {
+     "type": "volume",
+     "name": "tfg-s34-data",
+     "source": null,
+     "dest": "/data",
+     "anonymous": false,
+     "kb": 4
+    }
+   ],
+   "unmounted_data_dirs": {},
+   "ports": [
+    {
+     "internal": "6379/tcp",
+     "host_ip": "127.0.0.1",
+     "host_port": 47136,
+     "answers": true
+    }
+   ],
+   "size_rw_kb": 4,
+   "restart": "no"
+  }
+ },
+ "volumes": {
+  "docker_volume.data": {
+   "name": "tfg-s34-data",
+   "exists": true,
+   "kb": 4,
+   "used_by": [
+    "tfg-s34-cache"
+   ]
+  }
+ },
+ "databases": {},
+ "roles": {},
+ "files": {}
+}

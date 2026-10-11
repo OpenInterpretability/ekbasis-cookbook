@@ -1,0 +1,99 @@
+n = 69
+
+[lost] positives 20/69  AUROC(Ekbasis) 0.853
+  Ekbasis  P 0.91 R 0.50 F1 0.65 acc 0.84 (tp 10 fp 1 fn 10 tn 48)
+  rule     P 0.62 R 0.80 F1 0.70 acc 0.80 (tp 16 fp 10 fn 4 tn 39)
+  McNemar: Ekbasis-only right 11, rule-only right 8, p = 0.648
+
+[down] positives 38/69  AUROC(Ekbasis) 0.951
+  Ekbasis  P 0.87 R 0.87 F1 0.87 acc 0.86 (tp 33 fp 5 fn 5 tn 26)
+  rule     P 1.00 R 0.82 F1 0.90 acc 0.90 (tp 31 fp 0 fn 7 tn 31)
+  McNemar: Ekbasis-only right 6, rule-only right 9, p = 0.607
+
+[exposed] positives 5/69  AUROC(Ekbasis) 0.997
+  Ekbasis  P 1.00 R 0.80 F1 0.89 acc 0.99 (tp 4 fp 0 fn 1 tn 64)
+  rule     P 0.83 R 1.00 F1 0.91 acc 0.99 (tp 5 fp 1 fn 0 tn 63)
+  McNemar: Ekbasis-only right 1, rule-only right 1, p = 1.000
+
+[risky] positives 45/69  AUROC(Ekbasis) 0.926
+  Ekbasis  P 0.93 R 0.82 F1 0.87 acc 0.84 (tp 37 fp 3 fn 8 tn 21)
+  rule     P 0.88 R 0.78 F1 0.82 acc 0.78 (tp 35 fp 5 fn 10 tn 19)
+  McNemar: Ekbasis-only right 10, rule-only right 6, p = 0.454
+
+[fails] positives 9  AUROC 0.836
+
+[controls] 24 safe; Ekbasis false alarms 3 [2, 16, 32]; rule false alarms [28, 32, 40, 50, 53]
+
+[complement] rule label-errors 22; Ekbasis right on 18: ['s22:lost', 's26:lost', 's28:lost', 's29:lost', 's29:exposed', 's32:lost', 's37:lost', 's40:lost', 's48:lost', 's50:lost', 's51:down', 's52:down', 's53:lost', 's57:down', 's58:down', 's59:down', 's60:down', 's61:lost']
+rule errors: ['s22:lost', 's26:lost', 's28:lost', 's29:lost', 's29:exposed', 's32:lost', 's37:lost', 's40:lost', 's41:down', 's48:lost', 's50:lost', 's51:down', 's52:down', 's53:lost', 's57:down', 's58:down', 's59:down', 's60:down', 's61:lost', 's66:lost', 's67:lost', 's70:lost']
+
+per item (label: gold / rule / p):
+  s1   lost 0/0/0.14 | down 1/1/0.97 | expo 0/0/0.00 | fail 0/0.02
+  s2   lost 0/0/0.17 | down 0/0/0.88<E> | expo 0/0/0.00 | fail 1/0.79
+  s3   lost 0/0/0.16 | down 1/1/0.97 | expo 1/1/0.97 | fail 0/0.02
+  s4   lost 0/0/0.13 | down 0/0/0.85<E> | expo 1/1/0.96 | fail 0/0.04
+  s5   lost 0/0/0.16 | down 1/1/0.97 | expo 0/0/0.01 | fail 0/0.02
+  s6   lost 0/0/0.00 | down 0/0/0.05 | expo 0/0/0.00 | fail 0/0.03
+  s7   lost 0/0/0.00 | down 0/0/0.02 | expo 0/0/0.00 | fail 0/0.01
+  s8   lost 0/0/0.11 | down 1/1/0.97 | expo 0/0/0.01 | fail 0/0.02
+  s9   lost 0/0/0.16 | down 1/1/0.98 | expo 0/0/0.00 | fail 0/0.02
+  s10  lost 0/0/0.14 | down 1/1/0.96 | expo 0/0/0.00 | fail 0/0.99
+  s11  lost 0/0/0.00 | down 0/0/0.00 | expo 0/0/0.00 | fail 0/0.00
+  s12  lost 0/0/0.10 | down 1/1/0.98 | expo 0/0/0.00 | fail 0/0.01
+  s13  lost 0/0/0.00 | down 0/0/0.01 | expo 0/0/0.00 | fail 0/0.00
+  s14  lost 0/0/0.00 | down 0/0/0.00 | expo 0/0/0.00 | fail 0/0.00
+  s15  lost 0/0/0.20 | down 1/1/0.97 | expo 0/0/0.01 | fail 0/0.04
+  s16  lost 0/0/0.75<E> | down 0/0/0.89<E> | expo 0/0/0.01 | fail 1/0.03
+  s17  lost 0/0/0.12 | down 1/1/0.97 | expo 0/0/0.01 | fail 0/0.02
+  s18  lost 0/0/0.00 | down 0/0/0.02 | expo 0/0/0.00 | fail 0/0.07
+  s19  lost 0/0/0.08 | down 1/1/0.97 | expo 0/0/0.01 | fail 0/0.97
+  s20  lost 0/0/0.09 | down 1/1/0.97 | expo 0/0/0.01 | fail 1/0.02
+  s21  lost 1/1/0.98 | down 1/1/0.98 | expo 0/0/0.01 | fail 0/0.02
+  s22  lost 0/1/0.02<R> | down 1/1/0.98 | expo 0/0/0.01 | fail 0/0.02
+  s23  lost 1/1/0.06<E> | down 1/1/0.98 | expo 0/0/0.01 | fail 0/0.02
+  s24  lost 1/1/0.97 | down 1/1/0.97 | expo 0/0/0.01 | fail 0/0.02
+  s25  lost 1/1/0.95 | down 1/1/0.95 | expo 0/0/0.01 | fail 0/0.89
+  s26  lost 0/1/0.02<R> | down 1/1/0.98 | expo 0/0/0.00 | fail 0/0.01
+  s27  lost 1/1/0.99 | down 1/1/0.98 | expo 0/0/0.00 | fail 0/0.01
+  s28  lost 0/1/0.01<R> | down 0/0/0.01 | expo 0/0/0.00 | fail 1/0.99
+  s29  lost 0/1/0.01<R> | down 1/1/0.98 | expo 0/1/0.05<R> | fail 0/0.02
+  s30  lost 1/1/0.98 | down 1/1/0.98 | expo 1/1/0.06<E> | fail 0/0.02
+  s31  lost 0/0/0.00 | down 0/0/0.08 | expo 0/0/0.00 | fail 0/0.02
+  s32  lost 0/1/0.01<R> | down 0/0/0.93<E> | expo 0/0/0.01 | fail 1/0.71
+  s33  lost 1/1/0.91 | down 1/1/0.97 | expo 0/0/0.00 | fail 0/0.01
+  s34  lost 1/1/0.03<E> | down 1/1/0.97 | expo 0/0/0.01 | fail 0/0.02
+  s35  lost 1/1/0.09<E> | down 1/1/0.97 | expo 0/0/0.01 | fail 0/0.03
+  s36  lost 1/1/0.44<E> | down 1/1/0.97 | expo 0/0/0.01 | fail 0/0.02
+  s37  lost 0/1/0.01<R> | down 1/1/0.97 | expo 0/0/0.01 | fail 0/0.02
+  s38  lost 1/1/0.96 | down 1/1/0.96 | expo 0/0/0.01 | fail 0/0.22
+  s39  lost 1/1/0.98 | down 1/1/0.97 | expo 0/0/0.01 | fail 0/0.02
+  s40  lost 0/1/0.01<R> | down 0/0/0.01 | expo 0/0/0.00 | fail 1/0.98
+  s41  lost 0/0/0.01 | down 1/0/0.03<ER> | expo 0/0/0.00 | fail 1/0.97
+  s42  lost 1/1/0.03<E> | down 1/1/0.03<E> | expo 0/0/0.00 | fail 0/0.98
+  s43  lost 0/0/0.00 | down 0/0/0.01 | expo 0/0/0.00 | fail 0/0.01
+  s44  lost 0/0/0.00 | down 0/0/0.03 | expo 0/0/0.01 | fail 0/0.14
+  s45  lost 1/1/0.04<E> | down 1/1/0.03<E> | expo 0/0/0.00 | fail 0/0.98
+  s46  lost 0/0/0.00 | down 0/0/0.01 | expo 0/0/0.00 | fail 0/0.00
+  s47  lost 1/1/0.02<E> | down 1/1/0.02<E> | expo 0/0/0.00 | fail 0/0.99
+  s48  lost 0/1/0.02<R> | down 1/1/0.02<E> | expo 0/0/0.00 | fail 0/0.99
+  s49  lost 0/0/0.00 | down 0/0/0.01 | expo 0/0/0.00 | fail 0/0.00
+  s50  lost 0/1/0.01<R> | down 0/0/0.02 | expo 0/0/0.00 | fail 1/0.98
+  s51  lost 1/1/0.98 | down 1/0/0.96<R> | expo 0/0/0.00 | fail 0/0.01
+  s52  lost 0/0/0.00 | down 1/0/0.90<R> | expo 0/0/0.00 | fail 0/0.02
+  s53  lost 0/1/0.11<R> | down 0/0/0.22 | expo 0/0/0.01 | fail 0/0.01
+  s54  lost 0/0/0.00 | down 0/0/0.01 | expo 1/1/0.95 | fail 0/0.02
+  s55  lost 0/0/0.00 | down 0/0/0.01 | expo 0/0/0.01 | fail 0/0.97
+  s57  lost 0/0/0.00 | down 1/0/0.93<R> | expo 0/0/0.00 | fail 0/0.01
+  s58  lost 0/0/0.01 | down 1/0/0.92<R> | expo 0/0/0.00 | fail 0/0.11
+  s59  lost 0/0/0.00 | down 1/0/0.95<R> | expo 0/0/0.00 | fail 0/0.02
+  s60  lost 0/0/0.00 | down 1/0/0.92<R> | expo 0/0/0.00 | fail 0/0.03
+  s61  lost 1/0/0.94<R> | down 0/0/0.84<E> | expo 0/0/0.01 | fail 0/0.02
+  s62  lost 0/0/0.04 | down 0/0/0.02 | expo 0/0/0.00 | fail 1/0.97
+  s63  lost 0/0/0.02 | down 0/0/0.02 | expo 0/0/0.00 | fail 0/0.01
+  s64  lost 0/0/0.00 | down 0/0/0.01 | expo 1/1/0.94 | fail 0/0.02
+  s65  lost 0/0/0.00 | down 0/0/0.01 | expo 0/0/0.08 | fail 0/0.04
+  s66  lost 1/0/0.03<ER> | down 0/0/0.00 | expo 0/0/0.01 | fail 0/0.03
+  s67  lost 1/0/0.04<ER> | down 0/0/0.00 | expo 0/0/0.01 | fail 0/0.03
+  s68  lost 0/0/0.01 | down 0/0/0.02 | expo 0/0/0.01 | fail 0/0.05
+  s69  lost 0/0/0.02 | down 0/0/0.02 | expo 0/0/0.00 | fail 0/0.04
+  s70  lost 1/0/0.03<ER> | down 0/0/0.00 | expo 0/0/0.00 | fail 0/0.03

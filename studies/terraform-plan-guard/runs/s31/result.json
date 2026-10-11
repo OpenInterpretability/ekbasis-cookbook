@@ -1,0 +1,38 @@
+{
+ "id": 31,
+ "title": "postgres memory limit changed, no volume",
+ "family": "pgc",
+ "token": "tok31xcb0640d9",
+ "data_before": [
+  "container 95ae881f1b0f",
+  "volume 64e53f9c1826efda142f6e36"
+ ],
+ "plan_text": "docker_container.db: Refreshing state... [id=95ae881f1b0f68b3a5e569182e16c6959b432c9048d7c358b11a9031f63b349b]\n\nOpenTofu used the selected providers to generate the following execution\nplan. Resource actions are indicated with the following symbols:\n  ~ update in-place (current -> planned)\n\nOpenTofu will perform the following actions:\n\n  # docker_container.db will be updated in-place\n  ~ resource \"docker_container\" \"db\" {\n        id                                          = \"95ae881f1b0f68b3a5e569182e16c6959b432c9048d7c358b11a9031f63b349b\"\n      ~ memory                                      = 512 -> 1024\n      - memory_swap                                 = 1024 -> null\n        name                                        = \"tfg-s31-db\"\n        # (42 unchanged attributes hidden)\n\n        # (1 unchanged block hidden)\n    }\n\nPlan: 0 to add, 1 to change, 0 to destroy.\n",
+ "probe_baseline_ok": [
+  true
+ ],
+ "apply_s": 0.2,
+ "apply_rc": 0,
+ "apply_out": "docker_container.db: Modifying... [id=95ae881f1b0f68b3a5e569182e16c6959b432c9048d7c358b11a9031f63b349b]\ndocker_container.db: Modifications complete after 0s [id=95ae881f1b0f68b3a5e569182e16c6959b432c9048d7c358b11a9031f63b349b]\n\nApply complete! Resources: 0 added, 1 changed, 0 destroyed.\n",
+ "probe_fail": [
+  0
+ ],
+ "probe_rounds": 15,
+ "data_after": [
+  "container 95ae881f1b0f",
+  "volume 64e53f9c1826efda142f6e36"
+ ],
+ "access_before": [],
+ "access_after": [],
+ "wide_before": [],
+ "wide_after": [],
+ "labels": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "log": [
+  "ate\n\nOpenTofu will perform the following actions:\n\n  # docker_container.db will be created\n  + resource \"docker_container\" \"db\" {\n      + attach                                      = false\n      + bridge                                      = (known after apply)\n      + command                                     = (known after apply)\n      + container_logs                              = (known after apply)\n      + container_read_refresh_timeout_milliseconds = 15000\n      + entrypoint                                  = (known after apply)\n      + env                                         = [\n          + \"POSTGRES_PASSWORD=apppass\",\n        ]\n      + exit_code                                   = (known after apply)\n      + hostname                                    = (known after apply)\n      + id                                          = (known after apply)\n      + image                                       = \"postgres:17-alpine\"\n      + init                                        = (known after apply)\n      + ipc_mode                                    = (known after apply)\n      + log_driver                                  = (known after apply)\n      + logs                                        = false\n      + memory                                      = 512\n      + memory_reservation                          = 0\n      + must_run                                    = true\n      + name                                        = \"tfg-s31-db\"\n      + network_data                                = (known after apply)\n      + network_mode                                = \"bridge\"\n      + read_only                                   = false\n      + remove_volumes                              = true\n      + restart                                     = \"no\"\n      + rm                                          = false\n      + runtime                                     = (known after apply)\n      + security_opts                               = (known after apply)\n      + shm_size                                    = (known after apply)\n      + start                                       = true\n      + stdin_open                                  = false\n      + stop_signal                                 = (known after apply)\n      + stop_timeout                                = (known after apply)\n      + tty                                         = false\n      + wait                                        = false\n      + wait_timeout                                = 60\n\n      + healthcheck (known after apply)\n\n      + labels (known after apply)\n\n      + ports {\n          + external = 47124\n          + internal = 5432\n          + ip       = \"127.0.0.1\"\n          + protocol = \"tcp\"\n        }\n    }\n\nPlan: 1 to add, 0 to change, 0 to destroy.\ndocker_container.db: Creating...\ndocker_container.db: Creation complete after 2s [id=95ae881f1b0f68b3a5e569182e16c6959b432c9048d7c358b11a9031f63b349b]\n\nApply complete! Resources: 1 added, 0 changed, 0 destroyed.\n"
+ ]
+}

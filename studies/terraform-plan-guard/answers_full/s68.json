@@ -1,0 +1,27 @@
+{
+ "id": 68,
+ "p": {
+  "lost": 0.013222821988165379,
+  "down": 0.024423088878393173,
+  "exposed": 0.006692850962281227,
+  "fails": 0.04742587357759476
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss, exposure or interruption foreseen (lose 1%, expose 1%, interrupt 2%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\nnull_resource.hook: null_resource\n\nActions, in order:\n1. Replace null_resource.hook (destroy the old one, then create the new one, forced by the change to triggers): triggers: {v = \"1\"} -> {v = \"2\"}\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_321b4176ac4302d710618152",
+ "usage": {
+  "input_tokens": 1384,
+  "output_tokens": 0
+ },
+ "s": 0.82
+}

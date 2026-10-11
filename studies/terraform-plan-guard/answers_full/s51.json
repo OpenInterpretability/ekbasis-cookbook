@@ -1,0 +1,30 @@
+{
+ "id": 51,
+ "p": {
+  "lost": 0.977022647857666,
+  "down": 0.957912266254425,
+  "exposed": 0.004331502132117748,
+  "fails": 0.008577484637498856
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "lost",
+   "down"
+  ],
+  "reason": "may permanently lose stored data (98%); may interrupt a running service during the apply (96%)"
+ },
+ "rule": {
+  "lost": true,
+  "down": false,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\npostgresql_database.app: database s51_app owned by s51_app; open sessions: 1 as role s51_app; tables: app.app_t (1,000 rows, owner s51_app)\npostgresql_role.app: role s51_app, can log in, has a password; open sessions: 1 in database s51_app\npostgresql_schema.app: schema app in database s51_app, drop_cascade = true\n\nActions, in order:\n1. Destroy postgresql_schema.app (it was removed from the configuration)\n\nHow these providers behave: A postgresql_schema is destroyed with its tables only when drop_cascade = true; otherwise destroying a schema that still holds tables fails. Renaming a schema keeps its tables under the new name.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_465b6923380c1ed6cdf5a3ea",
+ "usage": {
+  "input_tokens": 1812,
+  "output_tokens": 0
+ },
+ "s": 0.77
+}

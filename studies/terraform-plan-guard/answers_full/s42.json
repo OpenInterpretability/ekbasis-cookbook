@@ -1,0 +1,27 @@
+{
+ "id": 42,
+ "p": {
+  "lost": 0.02931223064661026,
+  "down": 0.02931223064661026,
+  "exposed": 0.0026316740550100803,
+  "fails": 0.9830850958824158
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss, exposure or interruption foreseen (lose 3%, expose 0%, interrupt 3%); the apply may fail part-way (98%)"
+ },
+ "rule": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\npostgresql_database.app: database s42_app owned by s42_app; open sessions: 1 as role s42_app; tables: public.app_t (1,000 rows, owner s42_app)\npostgresql_role.app: role s42_app, can log in, has a password; open sessions: 1 in database s42_app\n\nActions, in order:\n1. Replace postgresql_database.app (destroy the old one, then create the new one, forced by the change to template): template: \"template0\" -> \"template1\"\n\nHow these providers behave: Destroying a postgresql_database drops the database with everything stored in it; PostgreSQL refuses to drop or rename a database while other sessions are connected to it, and the change fails.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_afab0bf788596c3f4d863288",
+ "usage": {
+  "input_tokens": 1812,
+  "output_tokens": 0
+ },
+ "s": 1.48
+}

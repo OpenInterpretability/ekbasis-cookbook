@@ -1,0 +1,35 @@
+{
+ "containers": {
+  "docker_container.web": {
+   "name": "tfg-s1-web",
+   "exists": true,
+   "running": true,
+   "image": "nginx:1.27-alpine",
+   "declared_volumes": [],
+   "env": {
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "NGINX_VERSION": "1.27.5",
+    "PKG_RELEASE": "1",
+    "DYNPKG_RELEASE": "1",
+    "NJS_VERSION": "0.8.10",
+    "NJS_RELEASE": "1"
+   },
+   "mounts": [],
+   "unmounted_data_dirs": {},
+   "ports": [
+    {
+     "internal": "80/tcp",
+     "host_ip": "127.0.0.1",
+     "host_port": 47004,
+     "answers": true
+    }
+   ],
+   "size_rw_kb": 80,
+   "restart": "no"
+  }
+ },
+ "volumes": {},
+ "databases": {},
+ "roles": {},
+ "files": {}
+}

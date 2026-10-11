@@ -1,0 +1,45 @@
+{
+ "containers": {},
+ "volumes": {},
+ "databases": {
+  "s60_app": {
+   "name": "s60_app",
+   "exists": true,
+   "owner": "s60_app",
+   "allow_connections": true,
+   "connection_limit": -1,
+   "acl": null,
+   "tables": [
+    {
+     "schema": "public",
+     "table": "app_t",
+     "owner": "s60_app",
+     "rows": 1000,
+     "acl": null
+    }
+   ],
+   "extensions": [],
+   "sessions": {
+    "s60_app": 1
+   },
+   "schemas": [
+    {
+     "name": "public",
+     "owner": "pg_database_owner"
+    }
+   ]
+  }
+ },
+ "roles": {
+  "postgresql_role.app": {
+   "name": "s60_app",
+   "exists": true,
+   "login": true,
+   "sessions": {
+    "s60_app": 1
+   },
+   "owns_databases": 1
+  }
+ },
+ "files": {}
+}

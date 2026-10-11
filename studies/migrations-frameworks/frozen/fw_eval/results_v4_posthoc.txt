@@ -1,0 +1,4 @@
+POST HOC (code = warning, not blocking):
+  django    n=235 accuracy 0.864  recall 0.481 (25/52)  reason exact 0.960 (n=25)  false alarms on benign 0.027 (5/183)
+POST HOC (code = warning, not blocking):
+  alembic   n=155 accuracy 0.897  recall 0.600 (15/25)  reason exact 0.933 (n=15)  false alarms on benign 0.046 (6/130)

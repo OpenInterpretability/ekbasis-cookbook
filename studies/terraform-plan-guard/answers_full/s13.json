@@ -1,0 +1,27 @@
+{
+ "id": 13,
+ "p": {
+  "lost": 0.0023231625091284513,
+  "down": 0.005911069456487894,
+  "exposed": 0.0029810331761837006,
+  "fails": 0.0031726828310638666
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss, exposure or interruption foreseen (lose 0%, expose 0%, interrupt 1%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\ndocker_container.web: container tfg-s13-web, image nginx:1.27-alpine, running; publishes 127.0.0.1:47052 -> 80/tcp (answering); no volumes or host directories mounted\n\nActions, in order:\n1. Stop managing docker_container.web: it is removed from the OpenTofu state and left running as it is (not destroyed)\n\nHow these providers behave: A Docker port published with ip 0.0.0.0 (or with no ip) is reachable from every network the server is on; with ip 127.0.0.1 only from the server itself.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_5a8e7687dd673dbed6bf77c1",
+ "usage": {
+  "input_tokens": 1744,
+  "output_tokens": 0
+ },
+ "s": 0.77
+}

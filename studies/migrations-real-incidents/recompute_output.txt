@@ -1,0 +1,45 @@
+candidates 34 screened 29
+guard   Counter({'caught': 9, 'missed': 8, 'n/a': 7, 'caught_wrong_why': 5, 'out_of_scope': 2, 'cannot_foresee': 2, 'flagged_spurious': 1})
+nostats Counter({'caught': 9, 'missed': 7, 'n/a': 7, 'caught_wrong_why': 6, 'out_of_scope': 2, 'cannot_foresee': 2, 'flagged_spurious': 1})
+rules   Counter({'caught': 13, 'missed': 9, 'n/a': 7, 'caught_wrong_why': 3, 'out_of_scope': 2})
+calcom-user-password           fails_data   fails           L0.04 F0.97 -> caught           nostats=caught           rules=caught           synth=f1l0 
+calcom-bookingref-fk           fails_data   loses           L0.95 F0.06 -> caught_wrong_why nostats=caught_wrong_why rules=caught           synth=f0l1 
+calcom-routing-updatedat       fails_data   fails           L0.00 F0.99 -> caught           nostats=caught           rules=caught           synth=f1l0 
+calcom-backfill-userid         fails_data   ok              L0.01 F0.16 -> missed           nostats=missed           rules=missed           synth=f0l0 
+calcom-org-metadata            unknown      fails           L0.01 F0.80 -> n/a              nostats=n/a              rules=n/a              synth=f0l0 
+calcom-avatars-move            unknown      ok              L0.01 F0.04 -> n/a              nostats=n/a              rules=n/a              synth=f0l1 
+calcom-dwd-rename              unknown      fails           L0.98 F0.68 -> n/a              nostats=n/a              rules=n/a              synth=f0l1 
+calcom-booker-email-notnull    unknown      ok              L0.00 F0.01 -> n/a              nostats=n/a              rules=n/a              synth=f0l0 
+coder-stats-int-overflow       fails_data   loses           L0.97 F0.16 -> caught_wrong_why nostats=caught_wrong_why rules=missed           synth=f0l1 
+coder-created-by-notnull       fails_data   fails           L0.87 F0.98 -> caught           nostats=caught           rules=caught           synth=f1l0 
+coder-created-by-zero-uuid     fails_data   None            L- F- -> missed           nostats=missed           rules=caught           synth=f0l0 
+coder-deadline-check           fails_data   loses           L0.85 F0.01 -> caught_wrong_why nostats=caught_wrong_why rules=caught           synth=f0l0 
+coder-chat-search-update       duration     ok              L0.00 F0.01 -> out_of_scope     nostats=out_of_scope     rules=out_of_scope     synth=f0l0 
+lemmy-username-unique          fails_data   ok              L0.02 F0.05 -> missed           nostats=caught           rules=caught           synth=f0l0 
+lemmy-local-image-person       fails_data   fails           L0.94 F0.89 -> caught           nostats=caught_wrong_why rules=missed           synth=f1l0 
+lemmy-warn-check               fails_data   ok              L0.00 F0.04 -> missed           nostats=missed           rules=caught           synth=f1l0 
+lemmy-person-content-unique    fails_data   ok              L0.00 F0.11 -> missed           nostats=missed           rules=missed           synth=f1l0 
+lemmy-aggregates-deferred      fails_data   ok              L0.35 F0.07 -> missed           nostats=missed           rules=missed           synth=f1l0 
+lemmy-merge-modlog             unknown      fails           L0.89 F0.94 -> n/a              nostats=n/a              rules=n/a              synth=f1l0 
+formbricks-display-fk          fails_data   ok              L0.00 F0.05 -> missed           nostats=missed           rules=caught           synth=f1l0 
+formbricks-thankyou-dup        fails_schema schema          L0.00 F1.00 -> caught           nostats=caught           rules=missed           synth=f1l0 
+documenso-template-token       unknown      schema          L0.00 F1.00 -> n/a              nostats=n/a              rules=n/a              synth=f1l0 
+documenso-rework-sessions      unknown      fails           L0.98 F0.95 -> n/a              nostats=n/a              rules=n/a              synth=f1l0 
+langfuse-public-schema         fails_env    loses           L0.95 F0.01 -> caught_wrong_why nostats=caught_wrong_why rules=caught_wrong_why synth=f0l0 
+langfuse-dashboard-resize      fails_data   loses           L0.97 F0.16 -> caught_wrong_why nostats=caught_wrong_why rules=caught_wrong_why synth=f0l0 
+langfuse-historic-model-update loss         loses           L0.93 F0.00 -> caught           nostats=caught           rules=caught           synth=f0l0 
+vaultwarden-device-type        fails_data   schema          L0.00 F1.00 -> caught           nostats=caught           rules=caught           synth=f1l0 
+vaultwarden-datetime           fails_schema schema          L0.00 F1.00 -> caught           nostats=caught           rules=missed           synth=f1l0 
+auth-unique-token-idx          fails_data   cannot_foresee  L- F- -> cannot_foresee   nostats=cannot_foresee   rules=caught           synth=f1l0 
+auth-alter-role                fails_env    cannot_foresee  L- F- -> cannot_foresee   nostats=cannot_foresee   rules=missed           synth=f1l0 
+rallly-enum-same-tx            fails_data   ok              L0.01 F0.08 -> missed           nostats=missed           rules=caught           synth=f1l0 
+mattermost-attribute-view      fails_data   fails           L0.01 F0.93 -> caught           nostats=caught           rules=missed           synth=f0l0 
+mattermost-posts-lock          duration     ok              L0.00 F0.01 -> out_of_scope     nostats=out_of_scope     rules=out_of_scope     synth=f0l0 
+hatchet-limits-overflow        fails_data   schema          L0.00 F1.00 -> flagged_spurious nostats=flagged_spurious rules=caught_wrong_why synth=f1l0 
+
+in scope (confirmed failure or loss): 25
+  outcome           flagged 15/25 (right reason 9), cannot foresee 2, missed 8
+  outcome_no_stats  flagged 16/25 (right reason 9), cannot foresee 2, missed 7
+  rules_outcome     flagged 16/25 (right reason 13), cannot foresee 0, missed 9
+
+re-derived outcomes that differ from the stored ones: none

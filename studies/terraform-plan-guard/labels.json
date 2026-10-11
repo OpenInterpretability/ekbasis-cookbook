@@ -1,0 +1,416 @@
+{
+ "1": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "2": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": true
+ },
+ "3": {
+  "lost": false,
+  "down": true,
+  "exposed": true,
+  "failed": false
+ },
+ "4": {
+  "lost": false,
+  "down": false,
+  "exposed": true,
+  "failed": false
+ },
+ "5": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "6": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "7": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "8": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "9": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "10": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "11": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "12": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "13": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "14": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "15": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "16": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": true
+ },
+ "17": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "18": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "19": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "20": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": true
+ },
+ "21": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "22": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "23": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "24": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "25": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "26": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "27": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "28": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": true
+ },
+ "29": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "30": {
+  "lost": true,
+  "down": true,
+  "exposed": true,
+  "failed": false
+ },
+ "31": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "32": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": true
+ },
+ "33": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "34": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "35": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "36": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "37": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "38": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "39": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "40": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": true
+ },
+ "41": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": true
+ },
+ "42": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "43": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "44": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "45": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "46": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "47": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "48": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "49": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "50": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": true
+ },
+ "51": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "52": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "53": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "54": {
+  "lost": false,
+  "down": false,
+  "exposed": true,
+  "failed": false
+ },
+ "55": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "57": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "58": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "59": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "60": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "failed": false
+ },
+ "61": {
+  "lost": true,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "62": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": true
+ },
+ "63": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "64": {
+  "lost": false,
+  "down": false,
+  "exposed": true,
+  "failed": false
+ },
+ "65": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "66": {
+  "lost": true,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "67": {
+  "lost": true,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "68": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "69": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "70": {
+  "lost": true,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ }
+}

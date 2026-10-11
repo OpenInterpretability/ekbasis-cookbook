@@ -1,0 +1,27 @@
+{
+ "id": 18,
+ "p": {
+  "lost": 0.0029810331761837006,
+  "down": 0.01912403665482998,
+  "exposed": 0.0035936026833951473,
+  "fails": 0.06754668802022934
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss, exposure or interruption foreseen (lose 0%, expose 0%, interrupt 2%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\ndocker_container.web: container tfg-s18-web, image nginx:1.27-alpine, running; publishes 127.0.0.1:47072 -> 80/tcp (answering); no volumes or host directories mounted\n\nActions, in order:\n1. Update docker_container.web in place: healthcheck: [] -> {interval = \"5s\", retries = 0, start_interval = \"0s\", start_period = \"0s\", test = [\"CMD\", \"wget\", \"-q\", \"-O-\", \"http://127.0.0.1/\"], timeout = \"0s\"}\n\nHow these providers behave: A Docker port published with ip 0.0.0.0 (or with no ip) is reachable from every network the server is on; with ip 127.0.0.1 only from the server itself.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_895f5b99ee45ce3d8d3784b1",
+ "usage": {
+  "input_tokens": 1952,
+  "output_tokens": 0
+ },
+ "s": 1.79
+}

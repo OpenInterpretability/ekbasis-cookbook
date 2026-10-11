@@ -1,0 +1,27 @@
+{
+ "id": 55,
+ "p": {
+  "lost": 0.0038244836032390594,
+  "down": 0.00970847625285387,
+  "exposed": 0.010986942797899246,
+  "fails": 0.9724147915840149
+ },
+ "verdict": {
+  "risky": false,
+  "flags": [],
+  "reason": "no data loss, exposure or interruption foreseen (lose 0%, expose 1%, interrupt 1%); the apply may fail part-way (97%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\npostgresql_database.app: database s55_app owned by s55_app; open sessions: 1 as role s55_app; tables: public.app_t (1,000 rows, owner s55_app)\npostgresql_role.app: role s55_app, can log in, has a password; open sessions: 1 in database s55_app\n\nActions, in order:\n1. Create postgresql_grant.reader: database = \"s55_app\"; role = \"s55_reader\"; schema = \"public\"; object_type = \"table\"; objects = [\"app_t\"]; privileges = [\"SELECT\"]\n2. Create postgresql_role.reader: name = \"s55_reader\"; login = true\n\nHow these providers behave: Clients log in with a role's name and password: after a role is renamed, gets a new password, or has login = false, new connections with the old name or password fail; sessions already open stay open. A privilege granted to PUBLIC applies to every role, including any role that can log in.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_324e08d87c12d508a54064aa",
+ "usage": {
+  "input_tokens": 2072,
+  "output_tokens": 0
+ },
+ "s": 2.25
+}

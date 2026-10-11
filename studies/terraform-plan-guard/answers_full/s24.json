@@ -1,0 +1,30 @@
+{
+ "id": 24,
+ "p": {
+  "lost": 0.9688562154769897,
+  "down": 0.970687747001648,
+  "exposed": 0.006692850962281227,
+  "fails": 0.016914913430809975
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "lost",
+   "down"
+  ],
+  "reason": "may permanently lose stored data (97%); may interrupt a running service during the apply (97%)"
+ },
+ "rule": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\ndocker_container.db: container tfg-s24-db, image postgres:17-alpine, running; publishes 127.0.0.1:47096 -> 5432/tcp (answering); environment: PGDATA=/var/lib/postgresql/pgdata, POSTGRES_PASSWORD=(secret); named volume tfg-s24-data mounted at /var/lib/postgresql/data (4 KB); data directory /var/lib/postgresql/pgdata is in the container's own filesystem, on no volume (39 MB)\ndocker_volume.data: volume tfg-s24-data (4 KB), used by tfg-s24-db\n\nActions, in order:\n1. Replace docker_container.db (destroy the old one, then create the new one, forced by the change to env): env: [\"PGDATA=/var/lib/postgresql/pgdata\", \"POSTGRES_PASSWORD=(secret)\"] -> [\"PGDATA=/var/lib/postgresql/pgdata\", \"POSTGRES_PASSWORD=(secret)\", \"TZ=UTC\"]; volumes: {container_path = \"/var/lib/postgresql/data\", read_only = false, volume_name = \"tfg-s24-data\"} -> {container_path = \"/var/lib/postgresql/data\", volume_name = \"tfg-s24-data\"}\n\nHow these providers behave: Destroying a Docker container also deletes its anonymous volumes; a named volume or a host directory mounted into it is kept unless that volume is destroyed too. A new container starts from its image: files the old one wrote outside its named volumes and host directories are not in it. Docker refuses to create a container whose name, or published host port, is already in use, and the change fails. The postgres image applies POSTGRES_PASSWORD and POSTGRES_HOST_AUTH_METHOD only when it initializes an empty data directory; a data directory that already holds a database keeps its users and pg_hba.conf. A Docker port published with ip 0.0.0.0 (or with no ip) is reachable from every network the server is on; with ip 127.0.0.1 only from the server itself.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_ee411211b74a75aa186e73fd",
+ "usage": {
+  "input_tokens": 2948,
+  "output_tokens": 0
+ },
+ "s": 1.21
+}

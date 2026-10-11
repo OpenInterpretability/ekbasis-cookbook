@@ -1,0 +1,29 @@
+{
+ "id": 54,
+ "p": {
+  "lost": 0.0019267345778644085,
+  "down": 0.005911069456487894,
+  "exposed": 0.949669361114502,
+  "fails": 0.016914913430809975
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "exposed"
+  ],
+  "reason": "may expose a service or data more widely (95%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": true,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\npostgresql_database.app: database s54_app owned by s54_app; open sessions: 1 as role s54_app; tables: public.app_t (1,000 rows, owner s54_app)\npostgresql_role.app: role s54_app, can log in, has a password; open sessions: 1 in database s54_app\n\nActions, in order:\n1. Create postgresql_grant.pub: database = \"s54_app\"; role = \"public\"; schema = \"public\"; object_type = \"table\"; objects = [\"app_t\"]; privileges = [\"SELECT\"]\n\nHow these providers behave: A privilege granted to PUBLIC applies to every role, including any role that can log in.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_f3f4c15bde5f532ce3e7caed",
+ "usage": {
+  "input_tokens": 1800,
+  "output_tokens": 0
+ },
+ "s": 0.95
+}

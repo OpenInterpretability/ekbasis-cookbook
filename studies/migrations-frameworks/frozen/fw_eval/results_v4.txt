@@ -1,0 +1,40 @@
+items 411, excluded 21, analysed 390; sent to the model 238, answered 238
+exclusions: {'untracked_rows': 17, 'named_table_not_seeded': 4}
+decided in code: {'ok_empty': 60, None: 238, 'cannot_foresee_render': 20, 'cannot_foresee_code': 72}
+truth: {'ok': 313, 'fails': 27, 'loses': 50}
+
+== django (registered, per framework)
+  product   n=235 accuracy 0.762  recall 0.942 (49/52)  reason exact 0.490 (n=49)  false alarms on benign 0.290 (53/183)
+  rules     n=235 accuracy 0.762  recall 0.654 (34/52)  reason exact 0.882 (n=34)  false alarms on benign 0.208 (38/183)
+  P1 accuracy 0.762 [0.706,0.817]; minus rules +0.000 [-0.081,+0.081] -> FAIL
+  P2 reason exact 24/49 [0.356,0.625] -> FAIL
+  P3 false alarms 53/183 [0.229,0.359]; rules 0.208; McNemar p=0.1053 -> FAIL
+  P4 recall 0.942 [0.844,0.980] -> PASS
+  C1 cannot foresee: 72/235 = 0.306 (reported, no target)
+
+== alembic (registered, per framework)
+  product   n=155 accuracy 0.884  recall 0.960 (24/25)  reason exact 0.583 (n=24)  false alarms on benign 0.131 (17/130)
+  rules     n=155 accuracy 0.768  recall 0.640 (16/25)  reason exact 0.688 (n=16)  false alarms on benign 0.208 (27/130)
+  P1 accuracy 0.884 [0.826,0.935]; minus rules +0.116 [+0.032,+0.200] -> PASS
+  P2 reason exact 14/24 [0.388,0.755] -> FAIL
+  P3 false alarms 17/130 [0.083,0.199]; rules 0.208; McNemar p=0.1433 -> FAIL
+  P4 recall 0.960 [0.805,0.993] -> PASS
+  C1 cannot foresee: 20/155 = 0.129 (reported, no target)
+
+== all (secondary)
+  product   n=390 accuracy 0.810  recall 0.948 (73/77)  reason exact 0.521 (n=73)  false alarms on benign 0.224 (70/313)
+  rules     n=390 accuracy 0.764  recall 0.649 (50/77)  reason exact 0.820 (n=50)  false alarms on benign 0.208 (65/313)
+  P1 accuracy 0.810 [0.772,0.849]; minus rules +0.046 [-0.013,+0.105] -> FAIL
+  P2 reason exact 38/73 [0.408,0.631] -> FAIL
+  P3 false alarms 70/313 [0.181,0.273]; rules 0.208; McNemar p=0.7069 -> FAIL
+  P4 recall 0.948 [0.874,0.980] -> PASS
+  C1 cannot foresee: 92/390 = 0.236 (reported, no target)
+
+== Exploratory
+  answered  n=298 accuracy 0.950  recall 0.909 (40/44)  reason exact 0.950 (n=40)  false alarms on benign 0.043 (11/254)
+  airflow   n= 77 accuracy 0.909  recall 1.000 (8/8)  reason exact 0.625 (n=8)  false alarms on benign 0.101 (7/69)
+  healthche n= 85 accuracy 0.847  recall 1.000 (24/24)  reason exact 0.625 (n=24)  false alarms on benign 0.213 (13/61)
+  netbox    n= 73 accuracy 0.699  recall 1.000 (14/14)  reason exact 0.143 (n=14)  false alarms on benign 0.373 (22/59)
+  prefect   n= 78 accuracy 0.859  recall 0.941 (16/17)  reason exact 0.562 (n=16)  false alarms on benign 0.164 (10/61)
+  wagtail   n= 77 accuracy 0.727  recall 0.786 (11/14)  reason exact 0.636 (n=11)  false alarms on benign 0.286 (18/63)
+cost: 1,113,313 input tokens; model median 1.42 s

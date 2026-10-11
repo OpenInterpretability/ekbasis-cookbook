@@ -1,0 +1,30 @@
+{
+ "id": 67,
+ "title": "managed file content changed; the app appended to it",
+ "family": "local",
+ "token": "tok67x29d42d28",
+ "data_before": [
+  "$STUDY_DIR/runs/s67/ledger.txt"
+ ],
+ "plan_text": "local_file.ledger: Refreshing state... [id=72faef04f4afa06b6983069dbf7f7e4c7fb48291]\n\nOpenTofu used the selected providers to generate the following execution\nplan. Resource actions are indicated with the following symbols:\n  + create\n\nOpenTofu will perform the following actions:\n\n  # local_file.ledger will be created\n  + resource \"local_file\" \"ledger\" {\n      + content              = <<-EOT\n            ledger v2\n        EOT\n      + content_base64sha256 = (known after apply)\n      + content_base64sha512 = (known after apply)\n      + content_md5          = (known after apply)\n      + content_sha1         = (known after apply)\n      + content_sha256       = (known after apply)\n      + content_sha512       = (known after apply)\n      + directory_permission = \"0777\"\n      + file_permission      = \"0777\"\n      + filename             = \"$STUDY_DIR/runs/s67/ledger.txt\"\n      + id                   = (known after apply)\n    }\n\nPlan: 1 to add, 0 to change, 0 to destroy.\n",
+ "probe_baseline_ok": [],
+ "apply_s": 0.1,
+ "apply_rc": 0,
+ "apply_out": "local_file.ledger: Creating...\nlocal_file.ledger: Creation complete after 0s [id=969e57ee2f8ec0537ae49496ed29a17f00122a64]\n\nApply complete! Resources: 1 added, 0 changed, 0 destroyed.\n",
+ "probe_fail": [],
+ "probe_rounds": 16,
+ "data_after": [],
+ "access_before": [],
+ "access_after": [],
+ "wide_before": [],
+ "wide_after": [],
+ "labels": {
+  "lost": true,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "log": [
+  "\nOpenTofu used the selected providers to generate the following execution\nplan. Resource actions are indicated with the following symbols:\n  + create\n\nOpenTofu will perform the following actions:\n\n  # local_file.ledger will be created\n  + resource \"local_file\" \"ledger\" {\n      + content              = <<-EOT\n            ledger v1\n        EOT\n      + content_base64sha256 = (known after apply)\n      + content_base64sha512 = (known after apply)\n      + content_md5          = (known after apply)\n      + content_sha1         = (known after apply)\n      + content_sha256       = (known after apply)\n      + content_sha512       = (known after apply)\n      + directory_permission = \"0777\"\n      + file_permission      = \"0777\"\n      + filename             = \"$STUDY_DIR/runs/s67/ledger.txt\"\n      + id                   = (known after apply)\n    }\n\nPlan: 1 to add, 0 to change, 0 to destroy.\nlocal_file.ledger: Creating...\nlocal_file.ledger: Creation complete after 0s [id=72faef04f4afa06b6983069dbf7f7e4c7fb48291]\n\nApply complete! Resources: 1 added, 0 changed, 0 destroyed.\n"
+ ]
+}

@@ -1,0 +1,3 @@
+{
+ "56": "RuntimeError: apply v1:  + \"app_t\",\n        ]\n      + privileges        = [\n          + \"SELECT\",\n        ]\n      + role              = \"public\"\n      + schema            = \"public\"\n      + with_grant_option = false\n    }\n\n  # postgresql_role.app will be created\n  + resource \"postgresql_role\" \"app\" {\n      + bypass_row_level_security = false\n      + connection_limit          = -1\n      + create_da"
+}

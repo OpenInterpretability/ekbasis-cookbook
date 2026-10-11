@@ -1,0 +1,30 @@
+items 587, excluded 16, analysed 571; sent to the model 278, answered 278
+exclusions: {'untracked_rows': 11, 'named_table_not_seeded': 5}
+
+######## django: 317 migrations, answered 242, code not foreseen 75
+
+== django: registered P1-P4, on the migrations the product answers
+  product   n=242 accuracy 0.955  recall 0.824 (28/34)  reason exact 1.000 (n=28)  false alarms on benign 0.024 (5/208)
+  rules     n=242 accuracy 0.826  recall 1.000 (34/34)  reason exact 0.912 (n=34)  false alarms on benign 0.202 (42/208)
+  P1 accuracy 0.955 [0.926,0.979]; minus rules +0.128 [+0.079,+0.178] -> PASS
+  P2 reason exact 28/28 [0.879,1.000] -> PASS
+  P3 false alarms 5/208 [0.010,0.055]; rules 0.202; McNemar p=0.0000 -> PASS
+  P4 recall 0.824 [0.665,0.917] -> FAIL
+  C1 cannot foresee: 1/242 = 0.004 (reported, no target)
+  reported: code not foreseen 75/317 = 0.237; truth among them {'ok': 51, 'loses': 17, 'fails': 7}
+  reported: total recall (code not foreseen counted as not caught) 28/58 = 0.483
+
+######## alembic: 254 migrations, answered 141, code not foreseen 113
+
+== alembic: registered P1-P4, on the migrations the product answers
+  product   n=141 accuracy 0.986  recall 1.000 (13/13)  reason exact 1.000 (n=13)  false alarms on benign 0.016 (2/128)
+  rules     n=141 accuracy 0.773  recall 1.000 (13/13)  reason exact 0.846 (n=13)  false alarms on benign 0.250 (32/128)
+  P1 accuracy 0.986 [0.965,1.000]; minus rules +0.213 [+0.149,+0.284] -> PASS
+  P2 reason exact 13/13 [0.772,1.000] -> PASS
+  P3 false alarms 2/128 [0.004,0.055]; rules 0.250; McNemar p=0.0000 -> PASS
+  P4 recall 1.000 [0.772,1.000] -> PASS
+  C1 cannot foresee: 0/141 = 0.000 (reported, no target)
+  reported: code not foreseen 113/254 = 0.445; truth among them {'ok': 84, 'loses': 12, 'fails': 17}
+  reported: total recall (code not foreseen counted as not caught) 13/42 = 0.310
+
+cost: 1,628,820 input tokens; model median 1.29 s

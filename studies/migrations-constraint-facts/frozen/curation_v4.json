@@ -1,0 +1,125 @@
+{
+ "out_of_scope_or_unknown": {
+  "T1#3": [
+   "not_migration",
+   "grant missing for runtime queries; no migration failed"
+  ],
+  "T1#5": [
+   "fails_env",
+   "managed Postgres forbids reading pg_authid"
+  ],
+  "T1#8": [
+   "unknown",
+   "revert, no reason"
+  ],
+  "T1#12": [
+   "duration",
+   "deadlock on upgrade, concurrent index ops"
+  ],
+  "T1#13": [
+   "unknown",
+   "revert, no reason"
+  ],
+  "T1#14": [
+   "unknown",
+   "revert, no reason"
+  ],
+  "T1#15": [
+   "fails_env",
+   "roles/privileges for a custom instance user"
+  ],
+  "T1#17": [
+   "unknown",
+   "renamed and IF EXISTS added; failure not described"
+  ],
+  "T1#19": [
+   "fails_env",
+   "hard-coded public schema"
+  ],
+  "T1#24": [
+   "fails_env",
+   "GRANT to CURRENT_USER needs privileges"
+  ],
+  "T1#25": [
+   "duration",
+   "re-run takes table locks"
+  ],
+  "T1#26": [
+   "duration",
+   "deadlock on dotcom (table locks)"
+  ],
+  "T1#27": [
+   "duration",
+   "deadlocked on S2"
+  ],
+  "T1#31": [
+   "unknown",
+   "revert of feature work"
+  ],
+  "T1#32": [
+   "unknown",
+   "revert merge"
+  ],
+  "T1#42": [
+   "unknown",
+   "partial revert, no failure stated"
+  ],
+  "T1#51": [
+   "unknown",
+   "revert"
+  ],
+  "T1#55": [
+   "unknown",
+   "revert"
+  ],
+  "T1#62": [
+   "unknown",
+   "'fix migrations' rewrites the copy; failure not stated"
+  ],
+  "T1#63": [
+   "unknown",
+   "same PR family"
+  ],
+  "T1#83": [
+   "fails_env",
+   "hard-coded schema"
+  ],
+  "T1#88": [
+   "fails_env",
+   "'\\v' escape differs across PostgreSQL versions"
+  ],
+  "T1#90": [
+   "unknown",
+   "ownership recovery; failure not stated"
+  ],
+  "T1#105": [
+   "fails_env",
+   "pgcrypto extension missing"
+  ],
+  "T1#106": [
+   "unknown",
+   "query rewrite; failure not stated"
+  ],
+  "T1#108": [
+   "fails_env",
+   "NULLS NOT DISTINCT needs PostgreSQL 15"
+  ],
+  "T1#109": [
+   "unknown",
+   "CHECK removed; reason not stated"
+  ],
+  "T1#112": [
+   "duration",
+   "prefix triggers rolled back for performance"
+  ],
+  "T1#113": [
+   "duration",
+   "prefix migrations batched"
+  ],
+  "T1b#60d7887a8": [
+   "unknown",
+   "instance_groups edited and fixed; failure not stated"
+  ]
+ },
+ "rule": "every other commit read (T1 0-118, T1b 0-46) was a feature, renumbering, idempotency/re-run, runner state or product behaviour: no incident"
+}

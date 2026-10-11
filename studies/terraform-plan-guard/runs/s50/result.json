@@ -1,0 +1,36 @@
+{
+ "id": 50,
+ "title": "schema with tables removed, drop_cascade = false",
+ "family": "pgschema",
+ "token": "tok50x20264fff",
+ "data_before": [
+  "db s50_app.app.app_t (1000 rows)"
+ ],
+ "plan_text": "postgresql_schema.app: Refreshing state... [id=s50_app.app]\npostgresql_role.app: Refreshing state... [id=s50_app]\npostgresql_database.app: Refreshing state... [id=s50_app]\n\nOpenTofu used the selected providers to generate the following execution\nplan. Resource actions are indicated with the following symbols:\n  - destroy\n\nOpenTofu will perform the following actions:\n\n  # postgresql_schema.app will be destroyed\n  # (because postgresql_schema.app is not in configuration)\n  - resource \"postgresql_schema\" \"app\" {\n      - database      = \"s50_app\" -> null\n      - drop_cascade  = false -> null\n      - id            = \"s50_app.app\" -> null\n      - if_not_exists = true -> null\n      - name          = \"app\" -> null\n      - owner         = \"s50_app\" -> null\n    }\n\nPlan: 0 to add, 0 to change, 1 to destroy.\n",
+ "probe_baseline_ok": [
+  true
+ ],
+ "apply_s": 0.2,
+ "apply_rc": 1,
+ "apply_out": "postgresql_schema.app: Destroying... [id=s50_app.app]\n\nError: error deleting schema: pq: cannot drop schema app because other objects depend on it (2BP01)\n\n",
+ "probe_fail": [
+  0
+ ],
+ "probe_rounds": 15,
+ "data_after": [
+  "db s50_app.app.app_t (1000 rows)"
+ ],
+ "access_before": [],
+ "access_after": [],
+ "wide_before": [],
+ "wide_after": [],
+ "labels": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": true
+ },
+ "log": [
+  "\nOpenTofu used the selected providers to generate the following execution\nplan. Resource actions are indicated with the following symbols:\n  + create\n\nOpenTofu will perform the following actions:\n\n  # postgresql_database.app will be created\n  + resource \"postgresql_database\" \"app\" {\n      + allow_connections      = true\n      + alter_object_ownership = false\n      + connection_limit       = -1\n      + encoding               = (known after apply)\n      + id                     = (known after apply)\n      + is_template            = (known after apply)\n      + lc_collate             = (known after apply)\n      + lc_ctype               = (known after apply)\n      + name                   = \"s50_app\"\n      + owner                  = \"s50_app\"\n      + tablespace_name        = (known after apply)\n      + template               = (known after apply)\n    }\n\n  # postgresql_role.app will be created\n  + resource \"postgresql_role\" \"app\" {\n      + bypass_row_level_security = false\n      + connection_limit          = -1\n      + create_database           = false\n      + create_role               = false\n      + encrypted_password        = true\n      + id                        = (known after apply)\n      + inherit                   = true\n      + login                     = true\n      + name                      = \"s50_app\"\n      + password                  = (sensitive value)\n      + password_wo               = (write-only attribute)\n      + replication               = false\n      + skip_drop_role            = false\n      + skip_reassign_owned       = false\n      + superuser                 = false\n      + valid_until               = \"infinity\"\n    }\n\n  # postgresql_schema.app will be created\n  + resource \"postgresql_schema\" \"app\" {\n      + database      = \"s50_app\"\n      + drop_cascade  = false\n      + id            = (known after apply)\n      + if_not_exists = true\n      + name          = \"app\"\n      + owner         = \"s50_app\"\n\n      + policy (known after apply)\n    }\n\nPlan: 3 to add, 0 to change, 0 to destroy.\npostgresql_role.app: Creating...\npostgresql_role.app: Creation complete after 0s [id=s50_app]\npostgresql_database.app: Creating...\npostgresql_database.app: Creation complete after 0s [id=s50_app]\npostgresql_schema.app: Creating...\npostgresql_schema.app: Creation complete after 0s [id=s50_app.app]\n\nApply complete! Resources: 3 added, 0 changed, 0 destroyed.\n"
+ ]
+}

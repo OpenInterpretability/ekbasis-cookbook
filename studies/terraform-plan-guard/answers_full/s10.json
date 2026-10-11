@@ -1,0 +1,29 @@
+{
+ "id": 10,
+ "p": {
+  "lost": 0.14033624529838562,
+  "down": 0.9553191661834717,
+  "exposed": 0.004331502132117748,
+  "fails": 0.9875683188438416
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "down"
+  ],
+  "reason": "may interrupt a running service during the apply (96%); the apply may fail part-way (99%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\ndocker_container.web: container tfg-s10-web, image nginx:1.27-alpine, running; publishes 127.0.0.1:47040 -> 80/tcp (answering); no volumes or host directories mounted\n\nActions, in order:\n1. Create docker_container.frontend: name = \"tfg-s10-web\"; image = \"nginx:1.27-alpine\"; ports = {external = 47040, internal = 80, ip = \"127.0.0.1\", protocol = \"tcp\"}\n2. Destroy docker_container.web (it was removed from the configuration)\n\nHow these providers behave: Destroying a Docker container also deletes its anonymous volumes; a named volume or a host directory mounted into it is kept unless that volume is destroyed too. A new container starts from its image: files the old one wrote outside its named volumes and host directories are not in it. Docker refuses to create a container whose name, or published host port, is already in use, and the change fails. A Docker port published with ip 0.0.0.0 (or with no ip) is reachable from every network the server is on; with ip 127.0.0.1 only from the server itself.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_92cc65eb0eb1bf38e317b7af",
+ "usage": {
+  "input_tokens": 2284,
+  "output_tokens": 0
+ },
+ "s": 1.06
+}

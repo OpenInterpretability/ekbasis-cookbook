@@ -1,0 +1,42 @@
+{
+ "containers": {
+  "docker_container.cache": {
+   "name": "tfg-s33-cache",
+   "exists": true,
+   "running": true,
+   "image": "redis:7-alpine",
+   "declared_volumes": [
+    "/data"
+   ],
+   "env": {
+    "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+    "REDIS_VERSION": "7.4.11"
+   },
+   "mounts": [
+    {
+     "type": "volume",
+     "name": "f86d6b548af94efc3b4cdd5c47bd1c2e99f88767aa222c8ca227c4dcf5a72d4c",
+     "source": null,
+     "dest": "/data",
+     "anonymous": true,
+     "kb": 4
+    }
+   ],
+   "unmounted_data_dirs": {},
+   "ports": [
+    {
+     "internal": "6379/tcp",
+     "host_ip": "127.0.0.1",
+     "host_port": 47132,
+     "answers": true
+    }
+   ],
+   "size_rw_kb": 4,
+   "restart": "no"
+  }
+ },
+ "volumes": {},
+ "databases": {},
+ "roles": {},
+ "files": {}
+}

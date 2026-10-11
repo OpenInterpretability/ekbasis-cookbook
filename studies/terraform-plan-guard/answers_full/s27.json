@@ -1,0 +1,30 @@
+{
+ "id": 27,
+ "p": {
+  "lost": 0.985042929649353,
+  "down": 0.9796676635742188,
+  "exposed": 0.003376612439751625,
+  "fails": 0.005554925184696913
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "lost",
+   "down"
+  ],
+  "reason": "may permanently lose stored data (99%); may interrupt a running service during the apply (98%)"
+ },
+ "rule": {
+  "lost": true,
+  "down": true,
+  "exposed": false,
+  "risky": true
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\ndocker_container.db: container tfg-s27-db, image postgres:17-alpine, running; publishes 127.0.0.1:47108 -> 5432/tcp (answering); environment: PGDATA=/var/lib/postgresql/data, POSTGRES_PASSWORD=(secret); named volume tfg-s27-data mounted at /var/lib/postgresql/data (39 MB)\ndocker_volume.data: volume tfg-s27-data (39 MB), used by tfg-s27-db\n\nActions, in order:\n1. Destroy docker_container.db (it was removed from the configuration)\n2. Destroy docker_volume.data (it was removed from the configuration)\n\nHow these providers behave: Destroying a Docker container also deletes its anonymous volumes; a named volume or a host directory mounted into it is kept unless that volume is destroyed too. A new container starts from its image: files the old one wrote outside its named volumes and host directories are not in it. Docker refuses to delete a volume that a container (running or stopped) still uses, and the change fails. A Docker port published with ip 0.0.0.0 (or with no ip) is reachable from every network the server is on; with ip 127.0.0.1 only from the server itself.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_ef2c345b74d27276ddeec2b7",
+ "usage": {
+  "input_tokens": 2284,
+  "output_tokens": 0
+ },
+ "s": 2.01
+}

@@ -1,0 +1,51 @@
+== T1 (primary set, n=9) and T1+T1b (secondary, n=10)
+T1 regime N [P1 (primary)]: caught OLD 3/9, NEW 3/9; net +0; gains []; losses []; McNemar one-sided p=1.000
+T1 regime R [secondary]: caught OLD 2/9, NEW 2/9; net +0; gains []; losses []; McNemar one-sided p=1.000
+T1+T1b regime N [secondary]: caught OLD 4/10, NEW 4/10; net +0; gains []; losses []; McNemar one-sided p=1.000
+   windmill-otel-dup                fails_data   OLD missed(ok; L0.0 F0.07)  NEW missed(ok; L0.0 F0.07)
+   windmill-ducklake-null           fails_data   OLD missed(ok; L0.1 F0.18)  NEW missed(ok; L0.1 F0.18)
+   sourcegraph-batch-spec-fk        fails_data   OLD caught_wrong_why(loses; L0.97 F0.13)  NEW caught_wrong_why(loses; L0.97 F0.13)
+   sourcegraph-commit-dates-dup     fails_data   OLD missed(ok; L0.0 F0.08)  NEW missed(ok; L0.0 F0.08)
+   harness-ai-task-ref              fails_schema OLD cannot_foresee(cannot_foresee; LNone FNone)  NEW cannot_foresee(cannot_foresee; LNone FNone)
+   openmeter-subject-updated-at     fails_data   OLD missed(ok; L0.01 F0.25)  NEW missed(ok; L0.01 F0.08)
+   teable-last-visit-dup            fails_data   OLD caught(fails; L0.0 F0.71)  NEW caught(fails; L0.0 F0.68)
+   inbox-reply-memory-drop          fails_schema OLD caught(schema; L0.0 F1.0)  NEW caught(schema; L0.0 F1.0)
+   inbox-scheduled-actions-syntax   fails_schema OLD caught(schema; L0.0 F1.0)  NEW caught(schema; L0.0 F1.0)
+   windmill-remove-demo-fk          fails_data   OLD caught(schema; L0.0 F1.0)  NEW caught(schema; L0.0 F1.0)
+T1+T1b regime R [secondary]: caught OLD 3/10, NEW 3/10; net +0; gains []; losses []; McNemar one-sided p=1.000
+   windmill-otel-dup                fails_data   OLD missed(ok; L0.0 F0.04)  NEW missed(ok; L0.0 F0.04)
+   windmill-ducklake-null           fails_data   OLD missed(ok; L0.12 F0.15)  NEW missed(ok; L0.12 F0.15)
+   sourcegraph-batch-spec-fk        fails_data   OLD caught_wrong_why(loses; L0.96 F0.16)  NEW caught_wrong_why(loses; L0.96 F0.16)
+   sourcegraph-commit-dates-dup     fails_data   OLD missed(ok; L0.0 F0.01)  NEW missed(ok; L0.0 F0.01)
+   harness-ai-task-ref              fails_schema OLD cannot_foresee(cannot_foresee; LNone FNone)  NEW cannot_foresee(cannot_foresee; LNone FNone)
+   openmeter-subject-updated-at     fails_data   OLD missed(ok; L0.01 F0.2)  NEW missed(ok; L0.01 F0.07)
+   teable-last-visit-dup            fails_data   OLD missed(ok; L0.0 F0.03)  NEW missed(ok; L0.0 F0.04)
+   inbox-reply-memory-drop          fails_schema OLD caught(schema; L0.0 F1.0)  NEW caught(schema; L0.0 F1.0)
+   inbox-scheduled-actions-syntax   fails_schema OLD caught(schema; L0.0 F1.0)  NEW caught(schema; L0.0 F1.0)
+   windmill-remove-demo-fk          fails_data   OLD caught(schema; L0.0 F1.0)  NEW caught(schema; L0.0 F1.0)
+
+== T2 (v3 184; labels_v3)
+-- regime R
+OLD: false alarms 20/128 = 0.156; recall 54/56 = 0.964; reason exact 49/54; accuracy 162/184
+NEW: false alarms 21/128 = 0.164; recall 54/56 = 0.964; reason exact 51/54; accuracy 161/184
+unanswered 0 [] | changed items 43
+benign: new alarms 2, alarms removed 1 | risky: newly flagged 0, no longer flagged 0
+  benign new alarm: calcom/20220622110735_allow_one_schedule_to_apply_to_multiple_event_types
+  benign new alarm: langfuse/20251211204006_dataset_items_switch_pk
+  benign alarm removed: lemmy/2022-11-21-204256_user-following
+
+-- regime N
+OLD: false alarms 19/128 = 0.148; recall 54/56 = 0.964; reason exact 46/54; accuracy 163/184
+NEW: false alarms 22/128 = 0.172; recall 54/56 = 0.964; reason exact 50/54; accuracy 160/184
+unanswered 0 [] | changed items 43
+benign: new alarms 3, alarms removed 0 | risky: newly flagged 0, no longer flagged 0
+  benign new alarm: calcom/20220622110735_allow_one_schedule_to_apply_to_multiple_event_types
+  benign new alarm: langfuse/20251211204006_dataset_items_switch_pk
+  benign new alarm: lemmy/2022-11-21-204256_user-following
+
+
+== Registered decision (recomputed)
+P1 T1 regime N: NEW - OLD = 0 (p=1.000, n=9) -> FAIL
+P2 T2 regime R: NEW false alarms 21/128 -> PASS
+P3 T2 regime N: NEW - OLD false alarms = +3 items -> PASS
+P4 T2 regime R: recall NEW 54/56 vs OLD 54/56 -> PASS

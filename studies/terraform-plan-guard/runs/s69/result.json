@@ -1,0 +1,28 @@
+{
+ "id": 69,
+ "title": "unused random_password length changed",
+ "family": "local",
+ "token": "tok69xa25aafb1",
+ "data_before": [],
+ "plan_text": "random_password.x: Refreshing state... [id=none]\n\nOpenTofu used the selected providers to generate the following execution\nplan. Resource actions are indicated with the following symbols:\n-/+ destroy and then create replacement\n\nOpenTofu will perform the following actions:\n\n  # random_password.x must be replaced\n-/+ resource \"random_password\" \"x\" {\n      ~ bcrypt_hash = (sensitive value)\n      ~ id          = \"none\" -> (known after apply)\n      ~ length      = 16 -> 24 # forces replacement\n      ~ result      = (sensitive value)\n        # (9 unchanged attributes hidden)\n    }\n\nPlan: 1 to add, 0 to change, 1 to destroy.\n",
+ "probe_baseline_ok": [],
+ "apply_s": 0.2,
+ "apply_rc": 0,
+ "apply_out": "random_password.x: Destroying... [id=none]\nrandom_password.x: Destruction complete after 0s\nrandom_password.x: Creating...\nrandom_password.x: Creation complete after 0s [id=none]\n\nApply complete! Resources: 1 added, 0 changed, 1 destroyed.\n",
+ "probe_fail": [],
+ "probe_rounds": 16,
+ "data_after": [],
+ "access_before": [],
+ "access_after": [],
+ "wide_before": [],
+ "wide_after": [],
+ "labels": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "failed": false
+ },
+ "log": [
+  "\nOpenTofu used the selected providers to generate the following execution\nplan. Resource actions are indicated with the following symbols:\n  + create\n\nOpenTofu will perform the following actions:\n\n  # random_password.x will be created\n  + resource \"random_password\" \"x\" {\n      + bcrypt_hash = (sensitive value)\n      + id          = (known after apply)\n      + length      = 16\n      + lower       = true\n      + min_lower   = 0\n      + min_numeric = 0\n      + min_special = 0\n      + min_upper   = 0\n      + number      = true\n      + numeric     = true\n      + result      = (sensitive value)\n      + special     = true\n      + upper       = true\n    }\n\nPlan: 1 to add, 0 to change, 0 to destroy.\nrandom_password.x: Creating...\nrandom_password.x: Creation complete after 0s [id=none]\n\nApply complete! Resources: 1 added, 0 changed, 0 destroyed.\n"
+ ]
+}

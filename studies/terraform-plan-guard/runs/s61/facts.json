@@ -1,0 +1,52 @@
+{
+ "containers": {},
+ "volumes": {},
+ "databases": {
+  "s61_app": {
+   "name": "s61_app",
+   "exists": true,
+   "owner": "s61_app",
+   "allow_connections": true,
+   "connection_limit": -1,
+   "acl": null,
+   "tables": [
+    {
+     "schema": "public",
+     "table": "app_t",
+     "owner": "s61_app",
+     "rows": 1000,
+     "acl": null
+    }
+   ],
+   "extensions": [
+    {
+     "name": "hstore",
+     "columns": [
+      "public.app_t.h"
+     ]
+    }
+   ],
+   "sessions": {
+    "s61_app": 1
+   },
+   "schemas": [
+    {
+     "name": "public",
+     "owner": "pg_database_owner"
+    }
+   ]
+  }
+ },
+ "roles": {
+  "postgresql_role.app": {
+   "name": "s61_app",
+   "exists": true,
+   "login": true,
+   "sessions": {
+    "s61_app": 1
+   },
+   "owns_databases": 1
+  }
+ },
+ "files": {}
+}

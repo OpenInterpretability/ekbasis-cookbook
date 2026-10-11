@@ -1,0 +1,29 @@
+{
+ "id": 2,
+ "p": {
+  "lost": 0.17328819632530212,
+  "down": 0.8807970285415649,
+  "exposed": 0.004331502132117748,
+  "fails": 0.7879312038421631
+ },
+ "verdict": {
+  "risky": true,
+  "flags": [
+   "down"
+  ],
+  "reason": "may interrupt a running service during the apply (88%); the apply may fail part-way (79%)"
+ },
+ "rule": {
+  "lost": false,
+  "down": false,
+  "exposed": false,
+  "risky": false
+ },
+ "state": "An OpenTofu (Terraform) plan is about to be applied to live infrastructure on one server: Docker containers and volumes, and a PostgreSQL server whose databases are used by running applications. Applying the plan carries out the resource changes below in dependency order. Replacing a resource destroys the old one and then creates the new one, unless the plan says the new one is created first (create_before_destroy). If a change fails, the apply stops there; the changes already made stay made.\n\nCurrent state:\ndocker_container.web: container tfg-s2-web, image nginx:1.27-alpine, running; publishes 127.0.0.1:47008 -> 80/tcp (answering); no volumes or host directories mounted\n\nActions, in order:\n1. Replace docker_container.web (create the new one first, then destroy the old one (create_before_destroy), forced by the change to image): image: \"nginx:1.27-alpine\" -> \"nginx:1.26-alpine\"\n\nHow these providers behave: Destroying a Docker container also deletes its anonymous volumes; a named volume or a host directory mounted into it is kept unless that volume is destroyed too. A new container starts from its image: files the old one wrote outside its named volumes and host directories are not in it. Docker refuses to create a container whose name, or published host port, is already in use, and the change fails. A Docker port published with ip 0.0.0.0 (or with no ip) is reachable from every network the server is on; with ip 127.0.0.1 only from the server itself.\n\nThe questions are about the state after all these actions.",
+ "request_id": "req_63634a40ae069b18fb7baf6d",
+ "usage": {
+  "input_tokens": 2156,
+  "output_tokens": 0
+ },
+ "s": 1.09
+}

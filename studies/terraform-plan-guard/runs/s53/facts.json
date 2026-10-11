@@ -1,0 +1,49 @@
+{
+ "containers": {},
+ "volumes": {},
+ "databases": {
+  "s53_app": {
+   "name": "s53_app",
+   "exists": true,
+   "owner": "s53_app",
+   "allow_connections": true,
+   "connection_limit": -1,
+   "acl": null,
+   "tables": [
+    {
+     "schema": "public",
+     "table": "app_t",
+     "owner": "s53_app",
+     "rows": 1000,
+     "acl": null
+    }
+   ],
+   "extensions": [],
+   "sessions": {
+    "s53_app": 1
+   },
+   "schemas": [
+    {
+     "name": "public",
+     "owner": "pg_database_owner"
+    },
+    {
+     "name": "app",
+     "owner": "s53_app"
+    }
+   ]
+  }
+ },
+ "roles": {
+  "postgresql_role.app": {
+   "name": "s53_app",
+   "exists": true,
+   "login": true,
+   "sessions": {
+    "s53_app": 1
+   },
+   "owns_databases": 1
+  }
+ },
+ "files": {}
+}
