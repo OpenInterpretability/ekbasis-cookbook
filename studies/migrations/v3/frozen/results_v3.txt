@@ -1,0 +1,20 @@
+items 184; sent to the model 184; answered 184; decided in code 0
+truth: risky 56 (fails 21, loses only 35), benign 128
+
+rules      accuracy 0.696  recall 0.982 (55/56)  reason exact 0.836 (n=55)  false alarms on benign 0.430 (55/128)
+product    accuracy 0.875  recall 0.946 (53/56)  reason exact 0.925 (n=53)  false alarms on benign 0.156 (20/128)
+
+== Registered (PREREG_v3 section 4)
+P1 verdict accuracy 0.875 [0.826,0.924]; minus rules +0.179 [+0.109,+0.250] -> PASS
+P2 reason exact on true-risky flagged items 49/53 = 0.925 [0.821,0.970] -> PASS
+P3 false alarms on benign 20/128 = 0.156 [0.103,0.229]; rules 0.430; McNemar p=0.0000 -> PASS
+P4 recall 0.946 [0.854,0.982] -> PASS
+
+== Exploratory
+stratum A: n=84 truth risky 52; product accuracy 0.786; rules 0.679
+stratum B: n=63 truth risky 4; product accuracy 0.952; rules 0.540
+stratum C: n=37 truth risky 0; product accuracy 0.946; rules 1.000
+reason on failing migrations flagged: 'fails' 16/19
+reason on loss-only migrations flagged: 'loses' 33/34
+v2 reason order (loss first) would be exact on 38/53
+cost: 871,314 input tokens (median 4255); model median 1.36 s; queue median 0.00 s

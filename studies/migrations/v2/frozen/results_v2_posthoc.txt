@@ -1,0 +1,2 @@
+POST HOC a2 p_lost*(1-p_fails): lost(A) AUROC 0.916 PRF [0.745, 0.888, 0.81] ECE 0.118; false alarms failing 12/45, clean 37/164; missed losses 18/161
+POST HOC a1 p_lost*(1-p_fails): lost(A) AUROC 0.933 PRF [0.772, 0.863, 0.815] ECE 0.110; false alarms failing 11/45, clean 30/164; missed losses 22/161

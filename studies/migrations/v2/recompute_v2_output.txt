@@ -1,0 +1,11 @@
+stratum A n=370 lost=161; all n=582 fails=64
+v1: lost(A) AUROC 0.931 P 0.692 R 0.975 F1 0.809 ECE 0.166 | fails AUROC 0.963 P 0.587 R 0.844 F1 0.692
+a2: lost(A) AUROC 0.921 P 0.683 R 0.975 F1 0.803 ECE 0.180 | fails AUROC 0.945 P 0.606 R 0.672 F1 0.637
+a1: lost(A) AUROC 0.933 P 0.704 R 0.975 F1 0.818 ECE 0.152 | fails AUROC 0.966 P 0.646 R 0.797 F1 0.713
+R3 lost(A) F1 0.768; failure rule F1 0.397
+H1 false alarms on failing migrations (A, n=45): v1 36 -> a2 35; McNemar p=1.0000 -> FAIL
+H2 lost AUROC 0.921 [0.893,0.947] -> PASS
+H3 F1(a2) - F1(R3) +0.035 [+0.011,+0.060] -> PASS
+H4 fails AUROC 0.945 [0.922,0.964], F1 - rule +0.240 [+0.143,+0.332] -> PASS
+H5 ECE lost(A) 0.180 -> FAIL
+H6 AUROC(a2) - AUROC(v1) -0.010 [-0.021,+0.002] -> PASS

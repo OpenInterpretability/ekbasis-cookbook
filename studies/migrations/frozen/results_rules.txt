@@ -1,0 +1,47 @@
+sampled items: 599
+exclusions (an item can have several): {'state_too_long': 2, 'fails_on_empty_schema': 7, 'named_table_not_seeded': 4, 'untracked_rows': 6}
+included: 582  (risky-looking 518, benign-looking 64)
+by repo: {'calcom': 59, 'cratesio': 53, 'documenso': 51, 'formbricks': 58, 'hoppscotch': 20, 'kratos': 60, 'langfuse': 60, 'lemmy': 54, 'mattermost': 60, 'triggerdev': 60, 'umami': 23, 'vaultwarden': 24}
+stratum A: n=370 lost=170 fails=46 half=28
+stratum B: n=153 lost=0 fails=18 half=5
+stratum C: n=59 lost=0 fails=0 half=0
+label lost : 170 / 582
+label fails: 64 / 582
+label half : 33 / 582
+tx-mode labels: lost 160 fails 71
+(lost, fails) cells: {(True, False): 160, (False, False): 358, (True, True): 10, (False, True): 54}
+loss mechanisms (items): {'overwritten': 23, 'dropped': 86, 'rows_deleted': 53, 'other': 6, 'cast': 3, 'partial_copy': 12}
+fail SQLSTATEs (items): {'22P02': 18, '23502': 25, '23503': 17, '23505': 2, 'P0001': 1, '22001': 1}
+items with a synthetic-cast failure: 19
+state tokens (est.): median 2052, p90 4153, max 7359; shrink levels {0: 458, 1: 22, 2: 33, 3: 69}
+
+== rule baselines (no model)
+lost:R1                n=582 pos=170  AUROC 0.828 [0.794,0.860]  P 0.688 R 0.806 F1 0.743 [0.690,0.790]  Brier 0.163
+lost:R2                n=582 pos=170  AUROC 0.757 [0.733,0.782]  P 0.459 R 1.000 F1 0.630 [0.581,0.677]  Brier 0.344
+lost:R3                n=582 pos=170  AUROC 0.878 [0.850,0.904]  P 0.671 R 0.947 F1 0.785 [0.736,0.828]  Brier 0.151
+fails:F1               n=582 pos= 64  AUROC 0.797 [0.755,0.831]  P 0.252 R 0.938 F1 0.397 [0.323,0.466]  Brier 0.313
+half:H1                n=582 pos= 33  AUROC 0.832 [0.780,0.872]  P 0.170 R 0.939 F1 0.288 [0.209,0.363]  Brier 0.263
+-- stratum A (primary population for lost): n=370
+   lost:R1                n=370 pos=170  AUROC 0.748 [0.706,0.791]  P 0.688 R 0.806 F1 0.743 [0.689,0.790]  Brier 0.257
+   lost:R2                n=370 pos=170  AUROC 0.500 [0.500,0.500]  P 0.459 R 1.000 F1 0.630 [0.577,0.674]  Brier 0.541
+   lost:R3                n=370 pos=170  AUROC 0.776 [0.738,0.813]  P 0.671 R 0.947 F1 0.785 [0.739,0.826]  Brier 0.238
+   fails:F1               n=370 pos= 46  AUROC 0.767 [0.715,0.812]  P 0.255 R 0.913 F1 0.398 [0.310,0.477]  Brier 0.343
+   half:H1                n=370 pos= 28  AUROC 0.811 [0.750,0.859]  P 0.198 R 0.929 F1 0.327 [0.226,0.418]  Brier 0.289
+-- S1 no partial-copy-only losses: n=573
+   lost:R1                n=573 pos=161  AUROC 0.822 [0.788,0.857]  P 0.674 R 0.795 F1 0.729 [0.677,0.776]  Brier 0.166
+   lost:R2                n=573 pos=161  AUROC 0.757 [0.734,0.782]  P 0.446 R 1.000 F1 0.617 [0.566,0.665]  Brier 0.349
+   lost:R3                n=573 pos=161  AUROC 0.901 [0.881,0.921]  P 0.669 R 0.994 F1 0.800 [0.756,0.841]  Brier 0.140
+   fails:F1               n=573 pos= 63  AUROC 0.798 [0.759,0.832]  P 0.253 R 0.937 F1 0.399 [0.327,0.465]  Brier 0.311
+   half:H1                n=573 pos= 32  AUROC 0.833 [0.781,0.873]  P 0.169 R 0.938 F1 0.287 [0.203,0.368]  Brier 0.260
+-- S2 no synthetic-cast failures: n=563
+   lost:R1                n=563 pos=168  AUROC 0.833 [0.798,0.867]  P 0.714 R 0.804 F1 0.756 [0.702,0.803]  Brier 0.155
+   lost:R2                n=563 pos=168  AUROC 0.768 [0.743,0.793]  P 0.479 R 1.000 F1 0.647 [0.598,0.694]  Brier 0.325
+   lost:R3                n=563 pos=168  AUROC 0.898 [0.872,0.921]  P 0.721 R 0.952 F1 0.821 [0.775,0.861]  Brier 0.124
+   fails:F1               n=563 pos= 45  AUROC 0.795 [0.750,0.834]  P 0.191 R 0.933 F1 0.317 [0.244,0.390]  Brier 0.321
+   half:H1                n=563 pos= 23  AUROC 0.844 [0.791,0.880]  P 0.132 R 0.957 F1 0.232 [0.154,0.305]  Brier 0.259
+-- risky-looking only: n=518
+   lost:R1                n=518 pos=168  AUROC 0.819 [0.783,0.854]  P 0.688 R 0.815 F1 0.747 [0.695,0.796]  Brier 0.180
+   lost:R2                n=518 pos=168  AUROC 0.719 [0.692,0.744]  P 0.460 R 1.000 F1 0.630 [0.582,0.676]  Brier 0.380
+   lost:R3                n=518 pos=168  AUROC 0.863 [0.835,0.890]  P 0.674 R 0.946 F1 0.787 [0.742,0.829]  Brier 0.166
+   fails:F1               n=518 pos= 63  AUROC 0.781 [0.744,0.812]  P 0.252 R 0.952 F1 0.399 [0.331,0.466]  Brier 0.349
+   half:H1                n=518 pos= 33  AUROC 0.814 [0.765,0.853]  P 0.170 R 0.939 F1 0.288 [0.210,0.367]  Brier 0.295

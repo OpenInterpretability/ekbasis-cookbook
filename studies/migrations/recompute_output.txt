@@ -1,0 +1,54 @@
+items 582; lost 170, fails 64, half_applied 33
+  stratum A: n=370 lost=170 fails=46 half=28
+  stratum B: n=153 lost=0 fails=18 half=5
+  stratum C: n=59 lost=0 fails=0 half=0
+
+== Registered analysis (PREREG 5.3)
+H1 lost, stratum A, Ekbasis        n=370 pos=170  AUROC 0.948 [0.924,0.968]  P 0.731 R 0.976 F1 0.836 [0.794,0.873]  ECE 0.142
+   repo-cluster CI [0.913,0.977] -> H1 PASS
+H2 F1(Ekbasis) - F1(R3), stratum A: +0.051 [+0.023,+0.081] -> PASS
+H3 fails, all, Ekbasis             n=582 pos= 64  AUROC 0.963 [0.942,0.980]  P 0.587 R 0.844 F1 0.692 [0.605,0.770]  ECE 0.063
+   F1(Ekbasis) - F1(rule F1): +0.295 [+0.222,+0.374] -> H3 PASS
+H4 half applied, all (exploratory) n=582 pos= 33  AUROC 0.938 [0.913,0.959]  P 0.329 R 0.697 F1 0.447 [0.326,0.559]  ECE 0.085
+H5 ECE lost, stratum A: 0.142 -> FAIL
+
+== Rules (no model)
+R1 lost, stratum A                 n=370 pos=170  AUROC 0.748 [0.706,0.791]  P 0.688 R 0.806 F1 0.743 [0.689,0.790]  ECE 0.257
+R2 lost, stratum A                 n=370 pos=170  AUROC 0.500 [0.500,0.500]  P 0.459 R 1.000 F1 0.630 [0.577,0.674]  ECE 0.541
+R3 lost, stratum A                 n=370 pos=170  AUROC 0.776 [0.738,0.813]  P 0.671 R 0.947 F1 0.785 [0.739,0.826]  ECE 0.238
+F1 fails, all                      n=582 pos= 64  AUROC 0.797 [0.755,0.831]  P 0.252 R 0.938 F1 0.397 [0.323,0.466]  ECE 0.313
+H1 half applied, all               n=582 pos= 33  AUROC 0.832 [0.780,0.872]  P 0.170 R 0.939 F1 0.288 [0.209,0.363]  ECE 0.263
+
+== Secondary and sensitivity (PREREG 5.4)
+S1 no partial-copy-only losses: lost, A n=361 pos=161  AUROC 0.955 [0.934,0.974]  P 0.723 R 0.988 F1 0.835 [0.791,0.873]  ECE 0.142
+   F1(Ekbasis) - F1(R3): +0.035 [+0.010,+0.062]
+S1 no partial-copy-only losses: fails, all n=573 pos= 63  AUROC 0.966 [0.944,0.982]  P 0.600 R 0.857 F1 0.706 [0.618,0.780]  ECE 0.061
+S2 no synthetic-cast failures: lost, A n=351 pos=168  AUROC 0.957 [0.935,0.976]  P 0.781 R 0.976 F1 0.868 [0.829,0.903]  ECE 0.110
+   F1(Ekbasis) - F1(R3): +0.047 [+0.019,+0.077]
+S2 no synthetic-cast failures: fails, all n=563 pos= 45  AUROC 0.951 [0.922,0.975]  P 0.479 R 0.778 F1 0.593 [0.485,0.691]  ECE 0.067
+transactional runner labels, lost: pos=160 AUROC 0.964 P 0.684 R 0.975 F1 0.804
+transactional runner labels, fails: pos=71 AUROC 0.945 P 0.598 R 0.775 F1 0.675
+at R3's recall 0.947 (stratum A): R3 precision 0.671, Ekbasis precision 0.805 (threshold 0.915)
+two-stage R3 AND Ekbasis (stratum A): P 0.750 R 0.935 F1 0.832
+
+== Error analysis (exploratory, after the run)
+lost, A, migrations that fail      n= 46 pos= 10  AUROC 0.757 [0.577,0.911]  P 0.270 R 1.000 F1 0.426 [0.227,0.593]  ECE 0.560
+lost, A, migrations that run cleanly n=324 pos=160  AUROC 0.985 [0.974,0.993]  P 0.821 R 0.975 F1 0.891 [0.853,0.925]  ECE 0.084
+false alarms on lost (stratum A): 61, of which in failing migrations: 27
+
+== Exploratory: the same 60 items, Ekbasis vs GLM vs rules
+lost: Ekbasis                      n= 60 pos= 24  AUROC 0.991 [0.970,1.000]  P 0.828 R 1.000 F1 0.906 [0.809,0.979]  ECE 0.070
+lost: GLM                          n= 60 pos= 24  AUROC 0.936 [0.861,1.000]  P 1.000 R 0.875 F1 0.933 [0.844,1.000]  ECE 0.056
+lost: rule R3                      n= 60 pos= 24  AUROC 0.875 [0.785,0.951]  P 0.786 R 0.917 F1 0.846 [0.723,0.939]  ECE 0.133
+   AUROC(Ekbasis) - AUROC(GLM): +0.055 [-0.003,+0.124]
+   F1(Ekbasis) - F1(GLM): -0.028 [-0.148,+0.084]
+fails: Ekbasis                     n= 60 pos= 16  AUROC 0.968 [0.921,0.995]  P 0.765 R 0.812 F1 0.788 [0.609,0.919]  ECE 0.106
+fails: GLM                         n= 60 pos= 16  AUROC 0.907 [0.792,0.991]  P 0.867 R 0.812 F1 0.839 [0.667,0.963]  ECE 0.082
+fails: rule F1                     n= 60 pos= 16  AUROC 0.787 [0.689,0.872]  P 0.484 R 0.938 F1 0.638 [0.458,0.778]  ECE 0.283
+   AUROC(Ekbasis) - AUROC(GLM): +0.061 [-0.008,+0.151]
+   F1(Ekbasis) - F1(GLM): -0.051 [-0.203,+0.095]
+half: Ekbasis                      n= 60 pos= 11  AUROC 0.929 [0.853,0.985]  P 0.500 R 0.636 F1 0.560 [0.286,0.762]  ECE 0.126
+half: GLM                          n= 60 pos= 11  AUROC 0.825 [0.652,0.978]  P 0.727 R 0.727 F1 0.727 [0.462,0.909]  ECE 0.094
+half: rule H1                      n= 60 pos= 11  AUROC 0.857 [0.790,0.915]  P 0.440 R 1.000 F1 0.611 [0.410,0.769]  ECE 0.233
+   AUROC(Ekbasis) - AUROC(GLM): +0.104 [-0.038,+0.262]
+   F1(Ekbasis) - F1(GLM): -0.167 [-0.419,+0.075]

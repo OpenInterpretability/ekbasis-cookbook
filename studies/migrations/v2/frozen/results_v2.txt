@@ -1,0 +1,29 @@
+items with every arm answered: 582 of 582; arms: ['v1', 'a2', 'a1']
+  a2: model median 1.13 s, queue median 1.01 s, input tokens 2,309,590 (median 3176)
+  a1: model median 1.82 s, queue median 1.01 s, input tokens 3,070,189 (median 4926)
+
+labels (product regime, this run): stratum A n=370 lost=161; all n=582 fails=64
+v1  lost(A): AUROC 0.931  P 0.692 R 0.975 F1 0.809  ECE 0.166 | fails(all): AUROC 0.963  P 0.587 R 0.844 F1 0.692  ECE 0.063
+a2  lost(A): AUROC 0.921  P 0.683 R 0.975 F1 0.803  ECE 0.180 | fails(all): AUROC 0.945  P 0.606 R 0.672 F1 0.637  ECE 0.042
+a1  lost(A): AUROC 0.933  P 0.704 R 0.975 F1 0.818  ECE 0.152 | fails(all): AUROC 0.966  P 0.646 R 0.797 F1 0.713  ECE 0.041
+R3  lost(A): P 0.642 R 0.957 F1 0.768; rule F1 fails(all): F1 0.397
+
+== Registered hypotheses (PREREG_v2 section 5)
+H1 loss false alarms on failing migrations (A, n=45): v1 36 (0.80) -> a2 35 (0.78); McNemar exact p=1.0000 -> FAIL
+H2 lost AUROC (A) 0.921 [0.893,0.947] -> PASS
+H3 F1(a2) - F1(R3), lost (A): +0.035 [+0.011,+0.060] -> PASS
+H4 fails AUROC (all) 0.945 [0.922,0.964]; F1(a2) - F1(rule) +0.240 [+0.143,+0.332] -> PASS
+H5 ECE lost (A) 0.180 -> FAIL
+H6 AUROC(a2) - AUROC(v1), lost (A): -0.010 [-0.021,+0.002] -> PASS
+
+== Exploratory
+v1 lost AUROC (A, transaction files, n=329): 0.934
+v1 lost AUROC (A, autocommit files, n=41): 0.858
+a2 lost AUROC (A, transaction files, n=329): 0.919
+a2 lost AUROC (A, autocommit files, n=41): 0.886
+a1 lost AUROC (A, transaction files, n=329): 0.936
+a1 lost AUROC (A, autocommit files, n=41): 0.841
+v1: loss false alarms on failing / on clean migrations (A): 36/45 / 34/164
+a2: loss false alarms on failing / on clean migrations (A): 35/45 / 38/164
+a1: loss false alarms on failing / on clean migrations (A): 35/45 / 31/164
+v1 lost AUROC (A) against the study run's labels in the product regime: 0.931

@@ -1,0 +1,6 @@
+rules    accuracy 0.696 recall 0.982 reason exact 0.836 (n=55) false alarms on benign 0.430 (128)
+product  accuracy 0.875 recall 0.946 reason exact 0.925 (n=53) false alarms on benign 0.156 (128)
+P1 accuracy 0.875 [0.826,0.924], minus rules +0.179 [+0.109,+0.250] -> PASS
+P2 reason exact 49/53 [0.821,0.970] -> PASS
+P3 false alarms 20/128 [0.103,0.229], rules 0.430, McNemar p=0.0000 -> PASS
+P4 recall 0.946 -> PASS

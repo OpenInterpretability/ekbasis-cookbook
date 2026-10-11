@@ -1,0 +1,11 @@
+# SHA-256 of the plan and of the files changed after it, UTC (2026-10-10). Files not listed here are as in MANIFEST.sha256.
+22:39:10  MANIFEST.sha256  2173394584e29dd3e24eee905e4f6bf7554b1bb10025f4067121b56235b4e76d
+22:39:17  PREREG.md        e20495c511e0dd0ab4e4839ff070df573df7c3e519b947d04cdbdaaa0e9e4384
+22:40:11  run_ekbasis.py   3dd44357c3d25218409b8531851535c90a239034273f3d089d1ebe97dc8423c3  (records Server-Timing; before the pilot)
+22:40:21  first pilot answer
+22:41:37  full run starts
+22:41:55  analysis.py      646ee1874ff208dd901b2ded922a5b37b7846196b837938226377178715d88d0  (adds registered secondary analyses; before any result)
+22:41:55  timing.py        4709da203cdf17b4d8ed2da7315c096ff61e3ad47db492f95d425aaf500e51c5
+23:23:45  last answer
+# Not released (they contain third-party migration code): data/requests.jsonl 2cc77e5e56e7705b7a0bce1faba19e7efda32a17dc693db2e3bbefb759156171,
+# data/labels.jsonl 9cf52e4a50a00174f02ba5e33f42e21195e0888382707c6cfc4644312861bbf4, data/items/*.jsonl (hashes in MANIFEST.sha256).
