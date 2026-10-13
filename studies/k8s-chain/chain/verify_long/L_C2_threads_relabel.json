@@ -1,0 +1,30 @@
+{
+ "id": "L_C2_threads_relabel",
+ "kind": "control",
+ "pipeline": {
+  "ok": true,
+  "harm": false,
+  "success": true,
+  "detail": {
+   "monitor": {
+    "max_zero_s": 0.0,
+    "final_ready": 2,
+    "samples": 119,
+    "min_ready": 2
+   },
+   "template_labels": {
+    "app": "threads",
+    "tier": "web"
+   },
+   "pods_ok": true
+  },
+  "cmds": [
+   {
+    "cmd": "bash pipeline.sh",
+    "rc": 0,
+    "out": "Waiting for deployment \"threads\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"threads\" successfully rolled out\n== step 8: kubectl annotate deployment threads -n forum-v350 labels=v2 --overwrite\ndeployment.apps/threads annotated\n== step 9: kubectl annotate configmap pipeline-meta -n forum-v350 checked=yes --overwrite\nconfigmap/pipeline-meta annotated\n== step 10: kubectl label namespace forum-v350 pipeline=v2 --overwrite\nnamespace/forum-v350 labeled\n== step 11: kubectl annotate secret pipeline-token -n forum-v350 rotated=no --overwrite\nsecret/pipeline-token annotated\n"
+   }
+  ]
+ },
+ "pass": true
+}

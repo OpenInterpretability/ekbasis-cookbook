@@ -1,0 +1,19 @@
+{"t": 1791854681.1718779, "engine": "glm", "ms": 67963, "in": 4202, "out": 7568, "ok": true, "attempt": 1}
+{"t": 1791854710.033995, "engine": "glm", "ms": 28860, "in": 2125, "out": 3714, "ok": true, "attempt": 0}
+{"t": 1791854784.9746292, "engine": "glm", "ms": 74939, "in": 4630, "out": 7107, "ok": true, "attempt": 1}
+{"t": 1791854846.180526, "engine": "glm", "ms": 61203, "in": 4678, "out": 7193, "ok": true, "attempt": 1}
+{"t": 1791854913.594481, "engine": "glm", "ms": 67412, "in": 4732, "out": 8000, "ok": false, "error": "unparsable: "}
+{"t": 1791854935.968818, "engine": "glm", "ms": 18723, "in": 1829, "out": 2446, "ok": true, "attempt": 0}
+{"t": 1791854962.741041, "engine": "glm", "ms": 26771, "in": 1853, "out": 2447, "ok": true, "attempt": 0}
+{"t": 1791854983.282688, "engine": "glm", "ms": 20540, "in": 2043, "out": 2052, "ok": true, "attempt": 0}
+{"t": 1791855014.6704981, "engine": "glm", "ms": 31384, "in": 2067, "out": 1784, "ok": true, "attempt": 0}
+{"t": 1791855083.474106, "engine": "glm", "ms": 66359, "in": 1887, "out": 2255, "ok": true, "attempt": 0}
+{"t": 1791855207.913053, "engine": "glm", "ms": 121963, "in": 4888, "out": 8000, "ok": false, "error": "unparsable: "}
+{"t": 1791855300.542892, "engine": "glm", "ms": 90402, "in": 4888, "out": 8000, "ok": false, "error": "unparsable: "}
+{"t": 1791855395.0693629, "engine": "glm", "ms": 85032, "in": 4670, "out": 7911, "ok": true, "attempt": 1}
+{"t": 1791855472.052275, "engine": "glm", "ms": 58750, "in": 4030, "out": 6923, "ok": true, "attempt": 1}
+{"t": 1791855504.579977, "engine": "glm", "ms": 32525, "in": 2200, "out": 3979, "ok": true, "attempt": 0}
+{"t": 1791855575.107096, "engine": "glm", "ms": 70524, "in": 4438, "out": 8000, "ok": false, "error": "unparsable: "}
+{"t": 1791855607.823602, "engine": "glm", "ms": 30563, "in": 1965, "out": 3169, "ok": true, "attempt": 0}
+{"t": 1791855652.301077, "engine": "glm", "ms": 44473, "in": 2150, "out": 3493, "ok": true, "attempt": 0}
+{"t": 1791855674.425067, "engine": "glm", "ms": 19610, "in": 1986, "out": 2185, "ok": true, "attempt": 0}

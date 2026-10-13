@@ -1,0 +1,30 @@
+{
+ "id": "P_C2_threads_relabel",
+ "kind": "control",
+ "pipeline": {
+  "ok": true,
+  "harm": false,
+  "success": true,
+  "detail": {
+   "monitor": {
+    "max_zero_s": 0.0,
+    "final_ready": 2,
+    "samples": 117,
+    "min_ready": 2
+   },
+   "template_labels": {
+    "app": "threads",
+    "tier": "web"
+   },
+   "pods_ok": true
+  },
+  "cmds": [
+   {
+    "cmd": "bash pipeline.sh",
+    "rc": 0,
+    "out": "ut to finish: 1 out of 2 new replicas have been updated...\nWaiting for deployment \"threads\" rollout to finish: 1 out of 2 new replicas have been updated...\nWaiting for deployment \"threads\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"threads\" rollout to finish: 1 old replicas are pending termination...\nWaiting for deployment \"threads\" rollout to finish: 1 old replicas are pending termination...\ndeployment \"threads\" successfully rolled out\n== step 4: kubectl annotate deployment threads -n forum-v3ef labels=v2 --overwrite\ndeployment.apps/threads annotated\n"
+   }
+  ]
+ },
+ "pass": true
+}
