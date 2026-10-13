@@ -1,0 +1,18 @@
+{"t": 1791866940.327434, "engine": "glm", "ms": 12496, "in": 3846, "out": 1767, "ok": true, "attempt": 0}
+{"t": 1791866942.651946, "engine": "glm", "ms": 14822, "in": 3806, "out": 2135, "ok": true, "attempt": 0}
+{"t": 1791866943.417883, "engine": "glm", "ms": 15587, "in": 3865, "out": 2369, "ok": true, "attempt": 0}
+{"t": 1791866948.070761, "engine": "glm", "ms": 20240, "in": 3826, "out": 3111, "ok": true, "attempt": 0}
+{"t": 1791866967.7864692, "engine": "glm", "ms": 39955, "in": 7768, "out": 8000, "ok": false, "error": "unparsable: "}
+{"t": 1791866979.6411588, "engine": "glm", "ms": 9409, "in": 1480, "out": 1511, "ok": true, "attempt": 0}
+{"t": 1791866981.626255, "engine": "glm", "ms": 11394, "in": 1500, "out": 1567, "ok": true, "attempt": 0}
+{"t": 1791866988.793658, "engine": "glm", "ms": 18561, "in": 1519, "out": 2847, "ok": true, "attempt": 0}
+{"t": 1791866989.42662, "engine": "glm", "ms": 19194, "in": 1460, "out": 2784, "ok": true, "attempt": 0}
+{"t": 1791866999.101323, "engine": "glm", "ms": 7298, "in": 1461, "out": 1136, "ok": true, "attempt": 0}
+{"t": 1791867020.538639, "engine": "glm", "ms": 18100, "in": 3933, "out": 2101, "ok": true, "attempt": 0}
+{"t": 1791867023.37094, "engine": "glm", "ms": 20935, "in": 3767, "out": 2606, "ok": true, "attempt": 0}
+{"t": 1791867023.37219, "engine": "glm", "ms": 20934, "in": 3953, "out": 2522, "ok": true, "attempt": 0}
+{"t": 1791867063.962743, "engine": "glm", "ms": 61527, "in": 7830, "out": 8000, "ok": false, "error": "unparsable: "}
+{"t": 1791867087.5352361, "engine": "glm", "ms": 20595, "in": 3767, "out": 3133, "ok": true, "attempt": 0}
+{"t": 1791867097.6813052, "engine": "glm", "ms": 8348, "in": 1492, "out": 1441, "ok": true, "attempt": 0}
+{"t": 1791867109.082437, "engine": "glm", "ms": 9876, "in": 1320, "out": 1297, "ok": true, "attempt": 0}
+{"t": 1791867110.727359, "engine": "glm", "ms": 11524, "in": 1340, "out": 1604, "ok": true, "attempt": 0}

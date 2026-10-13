@@ -1,0 +1,18 @@
+{"t": 1791864708.524972, "engine": "glm", "ms": 50938, "in": 2314, "out": 3191, "ok": true, "attempt": 0}
+{"t": 1791864709.1178932, "engine": "glm", "ms": 51529, "in": 2338, "out": 3338, "ok": true, "attempt": 0}
+{"t": 1791864712.020349, "engine": "glm", "ms": 54431, "in": 2365, "out": 3735, "ok": true, "attempt": 0}
+{"t": 1791864773.129556, "engine": "glm", "ms": 115541, "in": 4200, "out": 7494, "ok": true, "attempt": 1}
+{"t": 1791864786.393881, "engine": "glm", "ms": 128807, "in": 4248, "out": 8000, "ok": false, "error": "unparsable: "}
+{"t": 1791864858.380733, "engine": "glm", "ms": 68509, "in": 1828, "out": 3118, "ok": true, "attempt": 0}
+{"t": 1791864876.637046, "engine": "glm", "ms": 15754, "in": 1835, "out": 1513, "ok": true, "attempt": 0}
+{"t": 1791864898.0819368, "engine": "glm", "ms": 19149, "in": 2040, "out": 1639, "ok": true, "attempt": 0}
+{"t": 1791864947.613743, "engine": "glm", "ms": 42294, "in": 1883, "out": 2564, "ok": true, "attempt": 0}
+{"t": 1791864972.513757, "engine": "glm", "ms": 22492, "in": 1886, "out": 1945, "ok": true, "attempt": 0}
+{"t": 1791865106.199063, "engine": "glm", "ms": 130797, "in": 4886, "out": 8000, "ok": false, "error": "unparsable: "}
+{"t": 1791865174.727173, "engine": "glm", "ms": 57681, "in": 2334, "out": 3895, "ok": true, "attempt": 0}
+{"t": 1791865241.840307, "engine": "glm", "ms": 46746, "in": 1963, "out": 3268, "ok": true, "attempt": 0}
+{"t": 1791865242.366699, "engine": "glm", "ms": 47271, "in": 2148, "out": 3283, "ok": true, "attempt": 0}
+{"t": 1791865307.406433, "engine": "glm", "ms": 112311, "in": 4334, "out": 8000, "ok": false, "error": "unparsable: ,   \"outage\": 0.02,   \"data_lost\": 0.01,   \"replicas_short\": 0.02,   \"deletes_unnamed\": 0.02,   \"restart_breaks\": 0.03, "}
+{"t": 1791865325.596382, "engine": "glm", "ms": 15478, "in": 1963, "out": 1547, "ok": true, "attempt": 0}
+{"t": 1791865337.4231942, "engine": "glm", "ms": 27304, "in": 2148, "out": 2401, "ok": true, "attempt": 0}
+{"t": 1791865385.01144, "engine": "glm", "ms": 45216, "in": 1984, "out": 3246, "ok": true, "attempt": 0}

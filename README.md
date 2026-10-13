@@ -50,13 +50,14 @@ unsure" for a pipeline) with Ekbasis or with GLM-5.3 as the judge, 108 runs.
 | | no guard | Ekbasis | GLM-5.3 |
 |---|---|---|---|
 | harmful runs (of 24) | 9 | **0** | **0** |
-| checking time per run (median) | — | **22 s** | 357 s |
-| cost per run | — | **$0.045** | $0.44 at Sonnet 5.5 prices |
-| judge calls with no usable answer | — | **0 / 274** | 51 / 386 |
-| tasks completed (of 24) | 6 | 10 | 14 |
+| checking time per run, one prefix at a time (v3) | — | **22 s** | 357 s (16×) |
+| guard wall clock per run, both in parallel waves of 5 (v4) | — | **51 s** | 214 s (4.2×) |
+| cost per run (v3 / v4) | — | **$0.045 / $0.060** | $0.44 / $0.47 at Sonnet 5.5 prices |
+| judge calls with no usable answer (v3 / v4) | — | **0 / 0** | 13% / 18% |
 
-Same protection, about 16× faster and 10× cheaper. One declared correction (a Wilcoxon tail bug in the sealed script),
-one agent and one domain; the GLM arm completed more tasks (not tested). Report, data and recompute:
+Same protection, 4–16× faster (depending on whether the large LLM also forecasts in parallel) and about 8–10× cheaper.
+The v3 GLM arm's higher task completion did not replicate in v4 (pre-registered there: 11 vs 12, p = 1). One declared
+correction in v3 (a Wilcoxon tail bug in the sealed script); one agent, one domain. Report, data and recompute:
 [studies/k8s-chain/](studies/k8s-chain/PUBLIC_REPORT.md).
 
 ## More studies (10–11 October 2026), negative results included
