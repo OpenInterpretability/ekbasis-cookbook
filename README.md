@@ -49,10 +49,13 @@ with this simulated user, so the guard's measured gain is asking a third as ofte
 | Kubernetes, Claude Haiku 5.5 (three studies) | harmful runs 9, 8, 9 → **0, 0, 0** of 24 | — | — |
 | Kubernetes, **Claude Sonnet 5.5** | **15 → 0** of 24 (p = 3×10⁻⁵) | 7 → **22** | $0.008 |
 | **PostgreSQL**, Claude Haiku 5.5 | **16 → 6** of 24 (p = 0.001) | 4 → **11** | $0.001 |
+| PostgreSQL, the agent **following our guide alone** (no automatic guard) | **16 → 4** of 24 (p = 0.0002) | 6 → **18** | $0.006 |
 
 The guard does not only block: it shows the safe way, and the agents finish more of their work. The stronger agent
 caused more harm on its own. The 6 harmful runs left on PostgreSQL are the 3 tasks the pre-registration said the guard
-missed (a job outside the database, auto-renew, ON DELETE SET NULL). Tasks written by us, simulated users, 24 harmful
+missed (a job outside the database, auto-renew, ON DELETE SET NULL). **An agent given only our guide for agents
+(`agents.md`, with its list of where hidden consequences live) and the CLI protected itself as well as the guard in
+code**, and finished the most tasks. Tasks written by us, simulated users, 24 harmful
 runs per study. Reports: [Kubernetes](studies/k8s-chain/PUBLIC_REPORT.md) · [PostgreSQL](studies/sql-chain/PUBLIC_REPORT.md).
 
 ## Kubernetes pipelines: Ekbasis vs a large LLM as the judge (pre-registered)
