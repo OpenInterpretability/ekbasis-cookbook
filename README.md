@@ -55,7 +55,9 @@ unsure" for a pipeline) with Ekbasis or with GLM-5.3 as the judge, 108 runs.
 | cost per run (v3 / v4) | — | **$0.045 / $0.060** | $0.44 / $0.47 at Sonnet 5.5 prices |
 | judge calls with no usable answer (v3 / v4) | — | **0 / 0** | 13% / 18% |
 
-Same protection, 4–16× faster (depending on whether the large LLM also forecasts in parallel) and about 8–10× cheaper.
+**The same protection as a large LLM judge, at about one-eighth of the cost**: Ekbasis reads the state and answers in one
+pass without generating a single token. It is also 4–16× faster (depending on whether the large LLM also forecasts in
+parallel) and always answered.
 The v3 GLM arm's higher task completion did not replicate in v4 (pre-registered there: 11 vs 12, p = 1). One declared
 correction in v3 (a Wilcoxon tail bug in the sealed script); one agent, one domain. Report, data and recompute:
 [studies/k8s-chain/](studies/k8s-chain/PUBLIC_REPORT.md).

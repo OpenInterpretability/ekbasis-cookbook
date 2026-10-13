@@ -95,9 +95,10 @@ p = 0.004); controls kept. The pre-registered "fewer interruptions than the step
 
 ## What it shows, and what it does not
 
-- With either judge, the chain guard took the agent from 9 harmful runs in 24 to 0. Ekbasis gave that protection
-  **about 16× faster** than a large LLM forecasting one prefix at a time (v3) and **about 4× faster** when both forecast
-  in parallel (v4), **8–10× cheaper**, and always answered: it reads the state and returns calibrated
+- With either judge, the chain guard took the agent from 9 harmful runs in 24 to 0. Ekbasis gave that protection **at
+  about one-eighth of the cost** of a large LLM ($0.045–0.06 vs $0.44–0.47 per agent run at Claude Sonnet 5.5 prices),
+  **about 16× faster** than the LLM forecasting one prefix at a time (v3) and **about 4× faster** when both forecast in
+  parallel (v4), and always answered: it reads the state and returns calibrated
   probabilities in one forward pass, without generating text. A guard that runs before every batch of actions has to be
   fast and cheap enough to stay on.
 - One agent (Claude Haiku 5.5), one domain (Kubernetes), simulated users, 108 runs in v3.
