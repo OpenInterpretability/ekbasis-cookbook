@@ -8,6 +8,12 @@ Every number in this repo was measured, not estimated. The suites are in [`examp
 
 ---
 
+## Recipes
+
+- **[Check a plan before your agent runs it](recipes/check-a-plan/)**: a batch of tool calls, a script or a pipeline,
+  checked before anything runs (run the safe part, look before the first risky step). Python, TypeScript and
+  `ekbasis plan-check`; runs in a minute on a simulated server.
+
 ## The agent study: does the guard actually protect agents?
 
 47 in-lab tasks across 7 apps (calendar, chat, cloud, drive, files, mail, shop), each run in two conditions: `blind` (no model) vs `see` (consults Ekbasis before acting). Agent: GLM-5.3-Flash. The same 47 tasks were **run three times**; the second and third runs called Ekbasis **through the hosted API**, with an ordinary API key. Same tasks and agent each time: this shows the result holds from run to run, not across new tasks.
