@@ -42,6 +42,19 @@ non-inferiority to the Sonnet forecaster within 8 pts **failed** (+2.8 [−5.6, 
 with this simulated user, so the guard's measured gain is asking a third as often. Details, limits and cost (descriptive):
 [docs/K8S_STUDY.md](docs/K8S_STUDY.md) · data and rerun: [studies/k8s/](studies/k8s/).
 
+## Agents running pipelines: the chain guard across agents and domains (pre-registered)
+
+| | no guard → chain guard + Ekbasis | tasks completed | extra cost per run |
+|---|---|---|---|
+| Kubernetes, Claude Haiku 5.5 (three studies) | harmful runs 9, 8, 9 → **0, 0, 0** of 24 | — | — |
+| Kubernetes, **Claude Sonnet 5.5** | **15 → 0** of 24 (p = 3×10⁻⁵) | 7 → **22** | $0.008 |
+| **PostgreSQL**, Claude Haiku 5.5 | **16 → 6** of 24 (p = 0.001) | 4 → **11** | $0.001 |
+
+The guard does not only block: it shows the safe way, and the agents finish more of their work. The stronger agent
+caused more harm on its own. The 6 harmful runs left on PostgreSQL are the 3 tasks the pre-registration said the guard
+missed (a job outside the database, auto-renew, ON DELETE SET NULL). Tasks written by us, simulated users, 24 harmful
+runs per study. Reports: [Kubernetes](studies/k8s-chain/PUBLIC_REPORT.md) · [PostgreSQL](studies/sql-chain/PUBLIC_REPORT.md).
+
 ## Kubernetes pipelines: Ekbasis vs a large LLM as the judge (pre-registered)
 
 18 multi-step pipelines on a real cluster, 12 with a hidden harm; agent Claude Haiku 5.5; the chain guard ("look when

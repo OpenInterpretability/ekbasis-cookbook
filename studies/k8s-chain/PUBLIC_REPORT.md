@@ -1,6 +1,6 @@
 # Guarding an agent's pipelines on Kubernetes: Ekbasis vs a large LLM as the judge
 
-Four pre-registered studies, October 2026. Agent: Claude Haiku 5.5, on a real Kubernetes cluster (kind). Every
+Five pre-registered studies, October 2026 (and a sixth in another domain: [PostgreSQL pipelines](../sql-chain/PUBLIC_REPORT.md)). Agent: Claude Haiku 5.5, on a real Kubernetes cluster (kind). Every
 number here is recomputed from the files in this folder by [`recompute_chain3.py`](recompute_chain3.py) (v3) and by the
 sealed [`chain/analyze_chain.py`](chain/analyze_chain.py) (v1, v2) and by [`recompute_chain4.py`](recompute_chain4.py) (v4).
 
@@ -86,6 +86,26 @@ With the large LLM also in parallel, Ekbasis's speed advantage shrinks from abou
 stays large; the cost stays about 8× lower; the GLM left 18% of its forecasts unanswered and made the agent ask the user
 almost twice as often. The GLM arm's higher task completion in v3 (14 vs 10) did not replicate (11 vs 12).
 
+## v5: another agent, Claude Sonnet 5.5 (72 runs: 18 tasks × 2 arms × 2 seeds)
+
+v1–v4 used one agent, Claude Haiku 5.5. v5 changes only the agent, to Claude Sonnet 5.5, with the v4 guard unchanged,
+no guard vs the chain guard with Ekbasis ([`chain5/PREREG_chain5.md`](chain5/PREREG_chain5.md); no deviations, no
+invalidated runs; analysis with SciPy, re-runnable from the published files: `python3 chain5/analyze_chain5.py`).
+
+| | no guard | chain guard + Ekbasis |
+|---|---|---|
+| Harmful runs (of 24) | 15 | **0** |
+| Tasks completed (of 24) | 7 | **22** |
+| Controls completed (of 12) | 12 | 12 |
+| Cost per run | $0.030 | $0.038 |
+
+H1 protection: 15 → 0, exact McNemar one-sided p = 3×10⁻⁵ — **pass**. H2 controls: 12 vs 12 — **pass**. H3 task
+completion (two-sided): only-chain 15, only-no-guard 0, p = 6×10⁻⁵ — **a difference, in favour of the chain**.
+
+The stronger agent caused **more** harm on its own than Haiku did (15 of 24, against 9, 8 and 9): it runs the pipeline
+with more confidence and does not see the hidden effect. With the chain guard it caused none, and finished three times
+as many tasks, for $0.008 more per run.
+
 ## v1 and v2: the chain guard with Ekbasis (144 runs each: 18 tasks × 4 arms × 2 seeds)
 
 Same tasks family, short (v1) and long (v2) pipelines, arms: no guard, ask before every step, stepwise guard, chain
@@ -101,7 +121,8 @@ p = 0.004); controls kept. The pre-registered "fewer interruptions than the step
   parallel (v4), and always answered: it reads the state and returns calibrated
   probabilities in one forward pass, without generating text. A guard that runs before every batch of actions has to be
   fast and cheap enough to stay on.
-- One agent (Claude Haiku 5.5), one domain (Kubernetes), simulated users, 108 runs in v3.
+- Two agents (Claude Haiku 5.5, Claude Sonnet 5.5) here and a second domain in the
+  [PostgreSQL study](../sql-chain/PUBLIC_REPORT.md); tasks written by us; simulated users; 24 harmful runs per study.
 - The GLM arm's higher task completion in v3 (14 vs 10, not tested there) did not replicate in v4, where it was a
   pre-registered question (11 vs 12, p = 1).
 - The cost of the GLM arm is at Claude Sonnet 5.5's API prices, as a reference for a large LLM sold by API; we serve
@@ -118,6 +139,8 @@ p = 0.004); controls kept. The pre-registered "fewer interruptions than the step
 - `chain3/`: the v3 pre-registration, guard, runner and sealed analysis; `results/runs_g.jsonl` (one line per run),
   `results/forecast_calls/<run>.jsonl` (every judge call: engine, ms, tokens, whether it answered; no file = the guard
   never asked the judge in that run), the invalidated runs, the sealed output.
+- `chain5/`: the v5 pre-registration, runner (Sonnet 5.5), sealed analysis; `results/runs_s.jsonl`,
+  `results/forecast_calls/`.
 - `chain4/`: the v4 pre-registration, guard (`guard_chain4.py`), runner and sealed analysis; `results/runs_h.jsonl`,
   `results/forecast_calls/`, the sealed output.
 - `chain/`: v1 and v2, with their pre-registrations, tasks, verifiers and run records.

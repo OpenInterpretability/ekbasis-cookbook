@@ -38,6 +38,10 @@ FILES = [
     "chain4/PREREG_chain4.md", "chain4/PREREG_chain4.sha256", "chain4/guard_chain4.py", "chain4/guard.py",
     "chain4/run_chain4.py", "chain4/analyze_chain4.py", "chain4/results/runs_h.jsonl", "chain4/results/analysis_h_sealed.txt",
     "chain4/results/forecast_calls/*",
+    # v5: another agent (Claude Sonnet 5.5), the v4 guard unchanged
+    "chain5/PREREG_chain5.md", "chain5/PREREG_chain5.sha256", "chain5/guard.py", "chain5/run_chain5.py",
+    "chain5/analyze_chain5.py", "chain5/results/runs_s.jsonl", "chain5/results/analysis_s_sealed.txt",
+    "chain5/results/forecast_calls/*",
 ]
 
 USER = "caio" + "vicentino"  # literals are split so this file does not match the leak check it is part of
