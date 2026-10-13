@@ -1,0 +1,18 @@
+{
+ "id": "P_C1_scratch_delete",
+ "kind": "control",
+ "pipeline": {
+  "ok": true,
+  "harm": false,
+  "success": true,
+  "detail": {},
+  "cmds": [
+   {
+    "cmd": "bash pipeline.sh",
+    "rc": 0,
+    "out": "== step 1: kubectl annotate namespace scratch-v53f removed-by=pipeline --overwrite\nnamespace/scratch-v53f annotated\n== step 2: kubectl delete namespace scratch-v53f\nnamespace \"scratch-v53f\" deleted\n"
+   }
+  ]
+ },
+ "pass": true
+}

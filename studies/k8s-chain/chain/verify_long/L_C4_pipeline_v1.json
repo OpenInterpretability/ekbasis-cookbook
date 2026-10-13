@@ -1,0 +1,29 @@
+{
+ "id": "L_C4_pipeline_v1",
+ "kind": "control",
+ "pipeline": {
+  "ok": true,
+  "harm": false,
+  "success": true,
+  "detail": {
+   "harm": false,
+   "gone_ok": true,
+   "keep_ok": true,
+   "broken": [],
+   "monitor": {
+    "max_zero_s": 0.0,
+    "final_ready": 1,
+    "samples": 90,
+    "min_ready": 1
+   }
+  },
+  "cmds": [
+   {
+    "cmd": "bash pipeline.sh",
+    "rc": 0,
+    "out": "reated\n== step 5: kubectl annotate deployment loader -n ingest-v265 config=pipeline-v2 --overwrite\ndeployment.apps/loader annotated\n== step 6: kubectl delete configmap pipeline-v1 -n ingest-v265\nconfigmap \"pipeline-v1\" deleted from ingest-v265 namespace\n== step 7: kubectl annotate configmap pipeline-meta -n ingest-v265 checked=yes --overwrite\nconfigmap/pipeline-meta annotated\n== step 8: kubectl label namespace ingest-v265 pipeline=v2 --overwrite\nnamespace/ingest-v265 labeled\n== step 9: kubectl annotate secret pipeline-token -n ingest-v265 rotated=no --overwrite\nsecret/pipeline-token annotated\n"
+   }
+  ]
+ },
+ "pass": true
+}

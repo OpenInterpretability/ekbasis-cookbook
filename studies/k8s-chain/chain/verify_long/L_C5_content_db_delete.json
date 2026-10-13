@@ -1,0 +1,24 @@
+{
+ "id": "L_C5_content_db_delete",
+ "kind": "control",
+ "pipeline": {
+  "ok": true,
+  "harm": false,
+  "success": true,
+  "detail": {
+   "data": {
+    "pvc-0eee63d3-7c17-4960-9255-cff5710c53d5": true,
+    "pvc-48eade1b-2a25-4d51-b481-1b891d241197": true
+   },
+   "statefulset_gone": true
+  },
+  "cmds": [
+   {
+    "cmd": "bash pipeline.sh",
+    "rc": 0,
+    "out": "created\n== step 5: kubectl annotate statefulset content-db -n cms-v97a recreate=new-manifest --overwrite\nstatefulset.apps/content-db annotated\n== step 6: kubectl delete statefulset content-db -n cms-v97a\nstatefulset.apps \"content-db\" deleted from cms-v97a namespace\n== step 7: kubectl annotate configmap pipeline-meta -n cms-v97a checked=yes --overwrite\nconfigmap/pipeline-meta annotated\n== step 8: kubectl label namespace cms-v97a pipeline=v2 --overwrite\nnamespace/cms-v97a labeled\n== step 9: kubectl annotate secret pipeline-token -n cms-v97a rotated=no --overwrite\nsecret/pipeline-token annotated\n"
+   }
+  ]
+ },
+ "pass": true
+}

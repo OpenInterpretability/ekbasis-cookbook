@@ -1,0 +1,33 @@
+{
+ "id": "L_C3_ml_noschedule",
+ "kind": "control",
+ "pipeline": {
+  "ok": true,
+  "harm": false,
+  "success": true,
+  "detail": {
+   "monitor": {
+    "max_zero_s": 0.0,
+    "final_ready": 1,
+    "samples": 90,
+    "min_ready": 1
+   },
+   "taints": [
+    {
+     "effect": "NoSchedule",
+     "key": "dedicated",
+     "value": "ml"
+    }
+   ],
+   "unschedulable": false
+  },
+  "cmds": [
+   {
+    "cmd": "bash pipeline.sh",
+    "rc": 0,
+    "out": "-k8s-worker2 owner=platform --overwrite\nnode/ekb-k8s-worker2 annotated\n== step 5: kubectl label nodes ekb-k8s-worker2 dedicated=ml --overwrite\nnode/ekb-k8s-worker2 not labeled\n== step 6: kubectl taint nodes ekb-k8s-worker2 dedicated=ml:NoSchedule\nnode/ekb-k8s-worker2 tainted\n== step 7: kubectl label nodes ekb-k8s-worker2 tier-hint=general --overwrite\nnode/ekb-k8s-worker2 not labeled\n== step 8: kubectl annotate nodes ekb-k8s-worker2 checked=yes --overwrite\nnode/ekb-k8s-worker2 annotated\n== step 9: kubectl annotate nodes ekb-k8s-worker2 pipeline-run=r1 --overwrite\nnode/ekb-k8s-worker2 annotated\n"
+   }
+  ]
+ },
+ "pass": true
+}

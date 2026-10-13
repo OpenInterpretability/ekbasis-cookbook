@@ -42,6 +42,23 @@ non-inferiority to the Sonnet forecaster within 8 pts **failed** (+2.8 [−5.6, 
 with this simulated user, so the guard's measured gain is asking a third as often. Details, limits and cost (descriptive):
 [docs/K8S_STUDY.md](docs/K8S_STUDY.md) · data and rerun: [studies/k8s/](studies/k8s/).
 
+## Kubernetes pipelines: Ekbasis vs a large LLM as the judge (pre-registered)
+
+18 multi-step pipelines on a real cluster, 12 with a hidden harm; agent Claude Haiku 5.5; the chain guard ("look when
+unsure" for a pipeline) with Ekbasis or with GLM-5.3 as the judge, 108 runs.
+
+| | no guard | Ekbasis | GLM-5.3 |
+|---|---|---|---|
+| harmful runs (of 24) | 9 | **0** | **0** |
+| checking time per run (median) | — | **22 s** | 357 s |
+| cost per run | — | **$0.045** | $0.44 at Sonnet 5.5 prices |
+| judge calls with no usable answer | — | **0 / 274** | 51 / 386 |
+| tasks completed (of 24) | 6 | 10 | 14 |
+
+Same protection, about 16× faster and 10× cheaper. One declared correction (a Wilcoxon tail bug in the sealed script),
+one agent and one domain; the GLM arm completed more tasks (not tested). Report, data and recompute:
+[studies/k8s-chain/](studies/k8s-chain/PUBLIC_REPORT.md).
+
 ## More studies (10–11 October 2026), negative results included
 
 | study | result | where |

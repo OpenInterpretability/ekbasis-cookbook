@@ -1,0 +1,24 @@
+{
+ "id": "P_C5_content_db_delete",
+ "kind": "control",
+ "pipeline": {
+  "ok": true,
+  "harm": false,
+  "success": true,
+  "detail": {
+   "data": {
+    "pvc-17dc324a-b089-44e0-9aa5-2c20f669bdec": true,
+    "pvc-db1d6feb-c416-48be-994c-17194f79e954": true
+   },
+   "statefulset_gone": true
+  },
+  "cmds": [
+   {
+    "cmd": "bash pipeline.sh",
+    "rc": 0,
+    "out": "== step 1: kubectl annotate statefulset content-db -n cms-vf86 recreate=new-manifest --overwrite\nstatefulset.apps/content-db annotated\n== step 2: kubectl delete statefulset content-db -n cms-vf86\nstatefulset.apps \"content-db\" deleted from cms-vf86 namespace\n"
+   }
+  ]
+ },
+ "pass": true
+}

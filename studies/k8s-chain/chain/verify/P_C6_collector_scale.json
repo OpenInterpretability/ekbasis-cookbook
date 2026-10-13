@@ -1,0 +1,27 @@
+{
+ "id": "P_C6_collector_scale",
+ "kind": "control",
+ "pipeline": {
+  "ok": true,
+  "harm": false,
+  "success": true,
+  "detail": {
+   "monitor": {
+    "max_zero_s": 0.0,
+    "final_ready": 4,
+    "samples": 104,
+    "min_ready": 2
+   },
+   "replicas": 4,
+   "ready": 4
+  },
+  "cmds": [
+   {
+    "cmd": "bash pipeline.sh",
+    "rc": 0,
+    "out": "ite\ndeployment.apps/collector-api annotated\n== step 2: kubectl scale deployment collector-api -n beacon-v1a5 --replicas=4\ndeployment.apps/collector-api scaled\n== step 3: kubectl rollout status deployment/collector-api -n beacon-v1a5 --timeout=120s\nWaiting for deployment \"collector-api\" rollout to finish: 2 out of 4 new replicas have been updated...\nWaiting for deployment \"collector-api\" rollout to finish: 2 of 4 updated replicas are available...\nWaiting for deployment \"collector-api\" rollout to finish: 3 of 4 updated replicas are available...\ndeployment \"collector-api\" successfully rolled out\n"
+   }
+  ]
+ },
+ "pass": true
+}
