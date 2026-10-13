@@ -1,0 +1,7 @@
+{"t": 1791866571.246733, "engine": "glm", "ms": 77043, "in": 5228, "out": 6806, "ok": true, "attempt": 1}
+{"t": 1791866577.9693592, "engine": "glm", "ms": 83693, "in": 5638, "out": 7764, "ok": true, "attempt": 1}
+{"t": 1791866599.783082, "engine": "glm", "ms": 18155, "in": 2614, "out": 1997, "ok": true, "attempt": 0}
+{"t": 1791866637.6385999, "engine": "glm", "ms": 34866, "in": 2810, "out": 3672, "ok": true, "attempt": 0}
+{"t": 1791866690.701715, "engine": "glm", "ms": 52906, "in": 6142, "out": 8000, "ok": false, "error": "unparsable: rminated\": 1,  \"outage\": 0,  \"data_lost\": 0,  \"replicas_short\": 0,  \"deletes_unnamed\": 0,  \"restart_breaks\": 0,  \"intent"}
+{"t": 1791866714.225059, "engine": "glm", "ms": 14218, "in": 2650, "out": 2473, "ok": true, "attempt": 0}
+{"t": 1791866738.874631, "engine": "glm", "ms": 22078, "in": 2629, "out": 3962, "ok": true, "attempt": 0}

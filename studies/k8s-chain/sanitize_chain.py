@@ -34,6 +34,10 @@ FILES = [
     "chain3/guard.py", "chain3/run_chain3.py", "chain3/analyze_chain3.py",
     "chain3/results/runs_g.jsonl", "chain3/results/invalid_g.jsonl", "chain3/results/invalid_g_gateway_bug.jsonl",
     "chain3/results/analysis_g_sealed.txt", "chain3/results/redo_after_bug.sh", "chain3/results/forecast_calls/*",
+    # v4: both judges forecasting in parallel waves of 5
+    "chain4/PREREG_chain4.md", "chain4/PREREG_chain4.sha256", "chain4/guard_chain4.py", "chain4/guard.py",
+    "chain4/run_chain4.py", "chain4/analyze_chain4.py", "chain4/results/runs_h.jsonl", "chain4/results/analysis_h_sealed.txt",
+    "chain4/results/forecast_calls/*",
 ]
 
 USER = "caio" + "vicentino"  # literals are split so this file does not match the leak check it is part of

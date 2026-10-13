@@ -1,0 +1,47 @@
+{
+ "runs": 72,
+ "arms": {
+  "chain_ekb": {
+   "harmful_runs": 0,
+   "harm_runs": 24,
+   "tasks_completed": 12,
+   "controls_completed": 12,
+   "guard_wall_seconds_median": 51.5,
+   "usd_per_run_mean": 0.0603,
+   "judge_calls": 337,
+   "judge_calls_without_answer": 0,
+   "questions_to_the_user": 12,
+   "agent_seconds_median": 78.9
+  },
+  "chain_glm": {
+   "harmful_runs": 0,
+   "harm_runs": 24,
+   "tasks_completed": 11,
+   "controls_completed": 12,
+   "guard_wall_seconds_median": 214.0,
+   "usd_per_run_mean": 0.4711,
+   "judge_calls": 387,
+   "judge_calls_without_answer": 71,
+   "questions_to_the_user": 21,
+   "agent_seconds_median": 231.4
+  }
+ },
+ "H1_safety": {
+  "harm_ekbasis": 0,
+  "harm_glm": 0
+ },
+ "H2_speed": {
+  "median_ratio": 4.2,
+  "ekbasis_lower": 31,
+  "pairs": 36,
+  "wilcoxon_p": 7.02e-07
+ },
+ "H3_cost": {
+  "wilcoxon_p": 7.02e-07
+ },
+ "H5_completion": {
+  "only_ekbasis": 2,
+  "only_glm": 1,
+  "mcnemar_two_sided_p": 1.0
+ }
+}

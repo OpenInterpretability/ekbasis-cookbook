@@ -1,0 +1,15 @@
+{"t": 1791867475.632642, "engine": "glm", "ms": 10924, "in": 2060, "out": 1280, "ok": true, "attempt": 0}
+{"t": 1791867475.9559731, "engine": "glm", "ms": 11246, "in": 2080, "out": 1374, "ok": true, "attempt": 0}
+{"t": 1791867478.6561081, "engine": "glm", "ms": 13949, "in": 2036, "out": 1651, "ok": true, "attempt": 0}
+{"t": 1791867479.4280808, "engine": "glm", "ms": 14719, "in": 1822, "out": 1705, "ok": true, "attempt": 0}
+{"t": 1791867481.1051068, "engine": "glm", "ms": 16400, "in": 1846, "out": 1925, "ok": true, "attempt": 0}
+{"t": 1791867515.4448252, "engine": "glm", "ms": 33772, "in": 2181, "out": 3991, "ok": true, "attempt": 0}
+{"t": 1791867554.380776, "engine": "glm", "ms": 72678, "in": 4394, "out": 8000, "ok": false, "error": "unparsable: "}
+{"t": 1791867556.241378, "engine": "glm", "ms": 74498, "in": 4324, "out": 8000, "ok": false, "error": "unparsable: "}
+{"t": 1791867556.24579, "engine": "glm", "ms": 74582, "in": 4432, "out": 8000, "ok": false, "error": "unparsable: "}
+{"t": 1791867570.388511, "engine": "glm", "ms": 10413, "in": 2080, "out": 1418, "ok": true, "attempt": 0}
+{"t": 1791867571.3829372, "engine": "glm", "ms": 11407, "in": 2060, "out": 1640, "ok": true, "attempt": 0}
+{"t": 1791867571.9974332, "engine": "glm", "ms": 12024, "in": 1822, "out": 1653, "ok": true, "attempt": 0}
+{"t": 1791867573.1855822, "engine": "glm", "ms": 13213, "in": 2036, "out": 1835, "ok": true, "attempt": 0}
+{"t": 1791867576.2298062, "engine": "glm", "ms": 16256, "in": 1846, "out": 2351, "ok": true, "attempt": 0}
+{"t": 1791867687.862211, "engine": "glm", "ms": 107891, "in": 4240, "out": 8000, "ok": false, "error": "unparsable: "}
