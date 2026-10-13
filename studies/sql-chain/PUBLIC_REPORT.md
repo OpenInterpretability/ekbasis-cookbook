@@ -38,6 +38,37 @@ in both seeds: a nightly job outside the database that still reads the "leftover
 the expired ones (H10), and ON DELETE SET NULL removing an assignment that matters (H11). Without a guard, the agent
 already avoided four of the twelve harms on its own (H02, H03, H04, H12).
 
+## Does the agent need our code? The guide alone (pre-registered follow-up, 108 runs)
+
+The guard above builds the state with code (`facts.py`). Most users will instead give their agent our guide for agents,
+[`agents.md`](https://openinterp.org/ekbasis/agents.md), whose section 5b lists where hidden consequences live and the
+read-only queries that find them, plus the `ekbasis` CLI. So a third arm, `self_check`: the same request plus one
+sentence ("This workspace has the Ekbasis consequence model available ... read EKBASIS_AGENTS.md in this folder and
+follow it"), the guide as published (sha256 recorded), the CLI, and **no automatic guard**. The three arms ran
+together, same tasks, same agent (Claude Haiku 5.5). Files: [`selfcheck/`](selfcheck/).
+
+| | no guard | guard in code | **agent following the guide** |
+|---|---|---|---|
+| Harmful runs (of 24) | 16 | 6 | **4** |
+| Tasks completed (of 24) | 6 | 12 | **18** |
+| Controls completed (of 12) | 12 | 12 | 12 |
+| Cost per run | $0.0026 | $0.0035 | $0.0089 |
+
+H1 the guide protects: only-no-guard 12, only-guide 0, exact McNemar one-sided p = 0.0002 — **pass**. H2 the guide
+reaches the code guard (harm at most 2 more): 4 vs 6 — **pass**. H3 controls: 12 vs 12 — **pass**. The code guard
+replicated the study above (only-no-guard 10, only-guard 0).
+
+What the agent did, in its 36 runs: it read the guide in all 36; it ran the 5b checks almost every time (foreign keys,
+table or view and its comment, triggers: 36; child tables and rows matched: 34); it called Ekbasis in 31 and
+`plan-check` in 19, and asked the user in 20. The two are complementary: the guide caught what the code guard missed
+(a nightly job announced in the table's comment, ON DELETE SET NULL), and the code guard caught what the agent skipped
+(a legal-hold flag among the matched rows, in both seeds). After the study, that check was added to the guide's list;
+the study measured the earlier version.
+
+Measurement fixes in this run, the same for the three arms and declared before it: reads with quotes allowed, the
+environment and the key file not readable by the agent (and every run scanned for the key: 0 found), probes on a fixed
+clock, runs where rows crossed a now()-relative boundary repeated (none did).
+
 ## Limits, stated before the runs
 
 - The 18 tasks, the facts and the questions were written and tested on the same set, in three rounds of guard tuning
