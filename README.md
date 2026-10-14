@@ -25,6 +25,15 @@ Every number in this repo was measured, not estimated. The suites are in [`examp
 
 The guard did not just block damage: agents with it **completed their tasks about twice as often**. Through the hosted API: 224 calls, no errors, metering exact to the token. Details, data and a recompute script: [`studies/agents-3reps/`](studies/agents-3reps/). Limits: our own apps, one agent model; on real apps the gain held for Claude Sonnet but not for Claude Haiku ([paper](https://doi.org/10.5281/zenodo.23197341)).
 
+## Watching a misaligned agent (LinuxArena, pre-registered)
+
+An agent pursues a hidden harmful goal while doing real work on a Linux system; Ekbasis checks every action before it
+runs. At a 1% audit budget it caught **94.9%** of the successful attacks, against **74.9%** for the benchmark's GPT-5
+Nano monitor (+20.0 points [+8.1, +32.3]), and **91.5%** with thresholds from honest runs of the attacking agent
+itself. Together with Nano it adds +19.6 points. On hand-made sabotage it beat Nano but not Opus nor a length
+control, so no claim there; no adaptive attacker was tested. Questions in the client: `ekbasis.monitor()` (0.1.39).
+Report, sealed code and scores: [`studies/agent-monitor-linuxarena/`](studies/agent-monitor-linuxarena/).
+
 ## Kubernetes study: kubectl agents on a real cluster (pre-registered)
 
 24 fresh tasks on a real kind cluster (18 with a hidden harm: data loss, outage, broken restart, another team's object;
