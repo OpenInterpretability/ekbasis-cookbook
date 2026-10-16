@@ -5,15 +5,18 @@ Requirements: **vLLM ≥ 0.30.0** (older builds return wrong answers when severa
 ## Simple case: one dedicated GPU
 
 ```bash
-hf download caiovicentino1/Ekbasis-27B-INT4 --local-dir Ekbasis-27B-INT4
-bash Ekbasis-27B-INT4/serve_vllm.sh Ekbasis-27B-INT4 8001          # vLLM on 127.0.0.1:8001
-python Ekbasis-27B-INT4/serve.py --model Ekbasis-27B-INT4 --vllm-url http://127.0.0.1:8001 --port 8010
+hf download caiovicentino1/Ekbasis-Skopos-27B-INT4 --local-dir Ekbasis-Skopos-27B-INT4
+bash Ekbasis-Skopos-27B-INT4/serve_vllm.sh Ekbasis-Skopos-27B-INT4 8001          # vLLM on 127.0.0.1:8001
+python Ekbasis-Skopos-27B-INT4/serve.py --model Ekbasis-Skopos-27B-INT4 --vllm-url http://127.0.0.1:8001 --port 8010
 EKBASIS_URL=http://127.0.0.1:8010 ekbasis health
 ```
 
+The previous version, `caiovicentino1/Ekbasis-27B-INT4`, has the same size and is served the same way.
+
 ## Co-tenant case: sharing the GPUs with a production LLM
 
-Measured on a 4× B200 (183 GB each) sharing all 4 GPUs with a production SGLang TP4 deployment that holds ~171 GB/GPU. The free margin was 10.4–11.6 GB per GPU, and Ekbasis-27B-INT4 fits in it at TP4 with these settings:
+Measured on a 4× B200 (183 GB each) sharing all 4 GPUs with a production SGLang TP4 deployment that holds ~171 GB/GPU. The free margin was 10.4–11.6 GB per GPU, and Ekbasis-27B-INT4 fits in it at TP4 with these settings (measured with
+Ekbasis-27B-INT4; Ekbasis-Skopos-27B-INT4 has the same architecture and size, not measured in this setting):
 
 ```bash
 # isolated venv — never pip-install into the system env of the production process
