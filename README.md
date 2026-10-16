@@ -4,7 +4,7 @@ Recipes, skills, hooks and measured results for using [Ekbasis](https://github.c
 
 Every number in this repo was measured, not estimated. The suites are in [`examples/`](examples/) and re-runnable against any Ekbasis server.
 
-**Model:** the numbers here were measured on Ekbasis-27B-INT4 (vLLM ≥ 0.30, tensor-parallel); the hosted API will serve [Ekbasis-Skopos-27B-INT4](https://huggingface.co/caiovicentino1/Ekbasis-Skopos-27B-INT4) from 2026-10-30, on which they were not re-measured · Papers: [Look When Unsure, Check When Sure](https://doi.org/10.5281/zenodo.23146970) · [When Does a Consequence Model Make AI Agents Safer?](https://doi.org/10.5281/zenodo.23197341)
+**Model:** the hosted API serves [Ekbasis-Skopos-27B-INT4](https://huggingface.co/caiovicentino1/Ekbasis-Skopos-27B-INT4) since 2026-10-16; the numbers here stay as measured on Ekbasis-27B-INT4 (vLLM ≥ 0.30, tensor-parallel), not re-measured · Papers: [Look When Unsure, Check When Sure](https://doi.org/10.5281/zenodo.23146970) · [When Does a Consequence Model Make AI Agents Safer?](https://doi.org/10.5281/zenodo.23197341)
 
 ---
 
